@@ -246,8 +246,7 @@ Fixes #{number}
 
 {Description of how the fix was tested — tests run, manual verification, etc.}
 
----
-*Automated contribution via [github-ai-contributor](https://github.com/dmzoneill/github-ai-contributor)*"
+"
 ```
 
 ### h. Record the PR
@@ -347,3 +346,4 @@ Return a JSON object:
 - **Follow upstream conventions** — code style, naming, patterns
 - **One PR per issue** — don't bundle multiple fixes
 - **Check rate limit** periodically — stop if < 200 remaining
+- **Never mention Claude, Anthropic, or AI** — no Co-Authored-By headers, no AI attribution in commits, PRs, issues, or comments

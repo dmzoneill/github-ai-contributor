@@ -279,3 +279,4 @@ If there IS remaining work, do NOT output the promise tag. The ralph loop will r
 - Run tests before pushing if available
 - Track everything in the state file so the next iteration doesn't redo work
 - Respectful, well-documented PR descriptions
+- Never mention Claude, Anthropic, or AI in commits, PRs, issues, or comments — no Co-Authored-By headers, no AI attribution
