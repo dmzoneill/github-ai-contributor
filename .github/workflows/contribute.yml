@@ -38,6 +38,11 @@ jobs:
           echo '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}' > /tmp/gcp-credentials.json
           echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp-credentials.json" >> $GITHUB_ENV
 
+      - name: Configure git for commits
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Run contributor swarm
         env:
           CLAUDE_CODE_USE_VERTEX: ${{ secrets.CLAUDE_CODE_USE_VERTEX }}
@@ -87,7 +92,36 @@ jobs:
 
           IMPORTANT: You must actually run commands and do work. Do not skip steps."
 
-          # Run claude in background, capture output to log file
+          # --- Background state commit loop ---
+          # Commits and pushes .swarm-state.json every 5 minutes so state
+          # is preserved if the process hangs or the pipeline is terminated.
+          STATE_FILE=".claude/.swarm-state.json"
+          COMMIT_INTERVAL=300  # 5 minutes
+          STATE_HASH=""
+
+          (
+            sleep 60  # Wait for initial work before first check
+            while true; do
+              sleep $COMMIT_INTERVAL
+
+              # Only commit if file exists and is valid JSON (avoid partial writes)
+              if [ -f "$STATE_FILE" ] && python3 -c "import json; json.load(open('$STATE_FILE'))" 2>/dev/null; then
+                NEW_HASH=$(sha256sum "$STATE_FILE" | cut -d' ' -f1)
+                if [ "$NEW_HASH" != "$STATE_HASH" ]; then
+                  STATE_HASH="$NEW_HASH"
+                  git add -f "$STATE_FILE" 2>/dev/null || continue
+                  git diff --cached --quiet && continue
+                  git commit -m "chore: periodic state checkpoint" 2>/dev/null || continue
+                  git pull --rebase 2>/dev/null || true
+                  git push 2>/dev/null || true
+                  echo "--- [state committed and pushed] ---"
+                fi
+              fi
+            done
+          ) &
+          COMMIT_PID=$!
+
+          # --- Run claude in background ---
           touch /tmp/claude-output.log
           timeout --signal=TERM --kill-after=60 3600 \
             claude -p \
@@ -101,7 +135,7 @@ jobs:
           LAST_SIZE=0
           LAST_OUTPUT_TIME=$START_TIME
 
-          # Monitor loop: stream new output + heartbeat during silence
+          # --- Monitor loop: stream output + heartbeat ---
           while kill -0 $CLAUDE_PID 2>/dev/null; do
             CURRENT_SIZE=$(stat -c%s /tmp/claude-output.log 2>/dev/null || echo 0)
             if [ "$CURRENT_SIZE" -gt "$LAST_SIZE" ]; then
@@ -123,7 +157,7 @@ jobs:
             sleep 5
           done
 
-          # Flush any remaining output
+          # Flush remaining output
           CURRENT_SIZE=$(stat -c%s /tmp/claude-output.log 2>/dev/null || echo 0)
           if [ "$CURRENT_SIZE" -gt "$LAST_SIZE" ]; then
             tail -c +$((LAST_SIZE + 1)) /tmp/claude-output.log 2>/dev/null
@@ -132,6 +166,9 @@ jobs:
           wait $CLAUDE_PID 2>/dev/null || true
           ELAPSED=$(( $(date +%s) - START_TIME ))
           echo "=== Process finished after $((ELAPSED / 60))m $((ELAPSED % 60))s ==="
+
+          # Stop the background commit loop
+          kill $COMMIT_PID 2>/dev/null || true
 
       - name: Show summary
         if: always()
@@ -143,11 +180,11 @@ jobs:
         if: always()
         run: rm -f /tmp/gcp-credentials.json
 
-      - name: Commit state file
+      - name: Final state commit
         if: always()
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Pull in case the background loop pushed commits ahead of us
+          git pull --rebase 2>/dev/null || true
           git add -f .claude/.swarm-state.json 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "chore: update swarm state after contributor run"
+          git diff --cached --quiet || git commit -m "chore: final state update after contributor run"
           git push || true
