@@ -174,10 +174,56 @@ Valid types: `fix`, `feat`, `chore`, `docs`, `test`, `refactor`, `perf`, `style`
 
 `.claude/.swarm-state.json` has two sections:
 
-- **persistent**: Survives across GitHub Actions runs. Tracks PRs, issues, suggestions — the bot's long-term memory.
+- **persistent**: Survives across GitHub Actions runs. Tracks PRs, issues, suggestions, and cached knowledge — the bot's long-term memory.
 - **last_run**: Overwritten each run. Tracks what happened in the most recent run.
 
 The orchestrator reads persistent state at startup, passes relevant data to agents, then writes back updated state.
+
+### Cached Knowledge
+
+To avoid redundant API calls and re-analysis across runs, the state file caches:
+
+- **`repo_profiles`**: Per-repo metadata discovered during scanning. Keyed by upstream `owner/repo`. Cached on first discovery, refreshed when the rebase agent detects upstream changes.
+  ```json
+  {
+    "owner/repo": {
+      "language": "Python",
+      "default_branch": "main",
+      "description": "A CLI tool for managing containers",
+      "topics": ["cli", "containers", "devops"],
+      "build_system": "makefile",
+      "test_command": "make test",
+      "lint_command": "make lint",
+      "has_contributing_md": true,
+      "has_tests": true,
+      "project_type": "python-pipenv",
+      "key_conventions": "Uses black formatting, pytest, type hints throughout",
+      "last_profiled": "ISO-8601"
+    }
+  }
+  ```
+
+- **`evaluated_issues`**: Per-issue evaluation results. Keyed by `"owner/repo#number"`. Prevents re-reading and re-assessing issues across runs.
+  ```json
+  {
+    "owner/repo#42": {
+      "title": "Null pointer in parser",
+      "confidence": 95,
+      "decision": "fix_attempted",
+      "reason": "Clear stack trace, single-file fix, good test coverage",
+      "evaluated_at": "ISO-8601"
+    },
+    "owner/repo#15": {
+      "title": "Refactor authentication",
+      "confidence": 40,
+      "decision": "skipped",
+      "reason": "Requires multi-file architectural change, no test suite",
+      "evaluated_at": "ISO-8601"
+    }
+  }
+  ```
+
+Agents MUST check these caches before doing expensive operations (cloning repos, reading READMEs, evaluating issues). Write back any new discoveries.
 
 ## Slash Commands and Skills
 

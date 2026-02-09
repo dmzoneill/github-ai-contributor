@@ -56,7 +56,7 @@ Launch FOUR Task agents in parallel. Pass each agent the relevant subset of stat
 
 ### Agent 1 — Issue & Feedback Agent
 
-**Input data from state**: `open_prs` (for follow-up), `feature_suggestions` (to know which repos need suggestions)
+**Input data from state**: `open_prs` (for follow-up), `feature_suggestions` (to know which repos need suggestions), `repo_profiles` (cached repo metadata — use before re-reading READMEs)
 
 **Task**: You are the Issue & Feedback Agent for github-ai-contributor.
 
@@ -106,7 +106,7 @@ Your responsibilities:
 
 ### Agent 3 — Rebase Sync Agent
 
-**Input data from state**: `repo_last_rebased`, org repo lists
+**Input data from state**: `repo_last_rebased`, `repo_profiles` (update profiles while repos are cloned), org repo lists
 
 **Task**: You are the Rebase Sync Agent for github-ai-contributor.
 
@@ -144,7 +144,7 @@ Your responsibilities:
 
 ### Agent 4 — Coding Agent
 
-**Input data from state**: `repo_pr_counts`, `attempted_issues`, `skipped_issues`, `feature_suggestions` (to skip our own issues), `open_prs`
+**Input data from state**: `repo_pr_counts`, `repo_profiles` (cached repo metadata), `evaluated_issues` (cached issue assessments), `attempted_issues`, `skipped_issues`, `feature_suggestions` (to skip our own issues), `open_prs`
 
 **Task**: You are the Coding Agent for github-ai-contributor. You are the main worker — you identify fixable issues on upstream repos and submit PRs via forks.
 
@@ -211,11 +211,14 @@ Read the current state file, then merge agent results:
 
 3. **From Agent 3 (Rebase Sync)**:
    - Update `persistent.repo_last_rebased` timestamps
+   - Merge `repo_profiles_updated` into `persistent.repo_profiles`
 
 4. **From Agent 4 (Coding)**:
    - Add new PRs to `persistent.open_prs`
    - Update `persistent.repo_pr_counts`
    - Append to `persistent.attempted_issues` and `persistent.skipped_issues`
+   - Merge `repo_profiles_updated` into `persistent.repo_profiles`
+   - Merge `evaluated_issues` into `persistent.evaluated_issues`
 
 5. **Update `last_run`**:
    - Set `timestamp` to current ISO-8601

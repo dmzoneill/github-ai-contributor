@@ -14,6 +14,7 @@ You are the Issue & Feedback Agent for github-ai-contributor. You handle feature
 The orchestrator passes you:
 - `open_prs`: Array of our open PRs with `upstream`, `pr_number`, `comments_seen`, `fork`, `branch`
 - `feature_suggestions`: Array of features already suggested with `upstream`, `issue_number`, `title`, `status`
+- `repo_profiles`: Cached repo metadata — **use this first** to understand repos before suggesting features (avoids re-reading READMEs)
 - `fork_upstream_map`: Mapping of fork repos to their upstream parents
 - `our_github_username`: The authenticated GitHub username (to identify our comments)
 
@@ -21,8 +22,17 @@ The orchestrator passes you:
 
 For each upstream repo that does NOT already have a feature suggestion in the `feature_suggestions` array:
 
-### 1. Understand the Project
+### 1. Understand the Project (Cache-Aware)
 
+**First, check `repo_profiles` cache** for this upstream repo. If a profile exists, use the cached `description`, `language`, `topics`, and `key_conventions` to understand the project without API calls.
+
+**If repo profile IS cached**: skip the README and metadata API calls. Only fetch existing issues to avoid duplicates:
+```bash
+# Check existing issues to avoid duplicates
+gh issue list -R {upstream} --state open --json title,number -L 50 -q '.[].title'
+```
+
+**If repo profile is NOT cached**: fetch everything:
 ```bash
 # Read the README
 gh api repos/{upstream}/readme --jq '.content' | base64 -d | head -200

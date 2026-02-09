@@ -3,6 +3,8 @@
     "orgs": ["Redhat-forks"],
     "repo_pr_counts": {},
     "repo_last_rebased": {},
+    "repo_profiles": {},
+    "evaluated_issues": {},
     "open_prs": [],
     "closed_prs": [],
     "merged_prs": [],
