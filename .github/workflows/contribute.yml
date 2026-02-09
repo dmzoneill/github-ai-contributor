@@ -121,49 +121,77 @@ jobs:
           ) &
           COMMIT_PID=$!
 
-          # --- Run claude in background ---
-          touch /tmp/claude-output.log
+          # --- Stream filter script ---
+          # Reads stream-json from claude and prints human-readable status lines
+          cat > /tmp/stream-filter.py << 'PYEOF'
+import sys, json
+
+for line in sys.stdin:
+    line = line.strip()
+    if not line:
+        continue
+    try:
+        event = json.loads(line)
+    except json.JSONDecodeError:
+        print(line, flush=True)
+        continue
+
+    t = event.get("type", "")
+
+    if t == "assistant":
+        for block in event.get("message", {}).get("content", []):
+            if block.get("type") == "text":
+                text = block.get("text", "").strip()
+                if text:
+                    print(f"[text] {text[:500]}", flush=True)
+            elif block.get("type") == "tool_use":
+                name = block.get("name", "?")
+                inp = block.get("input", {})
+                if name == "Bash":
+                    cmd = inp.get("command", "")
+                    desc = inp.get("description", "")
+                    label = desc if desc else cmd[:120]
+                    print(f"[tool] Bash: {label}", flush=True)
+                elif name == "Task":
+                    desc = inp.get("description", inp.get("prompt", "")[:80])
+                    print(f"[tool] Task: {desc}", flush=True)
+                elif name == "Read":
+                    print(f"[tool] Read: {inp.get('file_path', '?')}", flush=True)
+                elif name == "Write":
+                    print(f"[tool] Write: {inp.get('file_path', '?')}", flush=True)
+                elif name == "Edit":
+                    print(f"[tool] Edit: {inp.get('file_path', '?')}", flush=True)
+                elif name == "Grep":
+                    print(f"[tool] Grep: {inp.get('pattern', '?')}", flush=True)
+                elif name == "Glob":
+                    print(f"[tool] Glob: {inp.get('pattern', '?')}", flush=True)
+                else:
+                    print(f"[tool] {name}", flush=True)
+    elif t == "result":
+        result = event.get("result", "")
+        cost = event.get("cost_usd", 0)
+        turns = event.get("num_turns", 0)
+        print(f"[done] turns={turns} cost=${cost:.4f}", flush=True)
+        if result:
+            for rline in result.strip().split("\n")[:5]:
+                print(f"  {rline[:200]}", flush=True)
+PYEOF
+
+          # --- Run claude with stream-json output ---
+          touch /tmp/claude-raw.log
+          START_TIME=$(date +%s)
+
           timeout --signal=TERM --kill-after=60 3600 \
             claude -p \
               --dangerously-skip-permissions \
+              --output-format stream-json \
               --verbose \
               --max-turns 200 \
-              "$PROMPT" > /tmp/claude-output.log 2>&1 &
-          CLAUDE_PID=$!
+              "$PROMPT" 2>&1 \
+            | tee /tmp/claude-raw.log \
+            | python3 /tmp/stream-filter.py \
+            || true
 
-          START_TIME=$(date +%s)
-          LAST_SIZE=0
-          LAST_OUTPUT_TIME=$START_TIME
-
-          # --- Monitor loop: stream output + heartbeat ---
-          while kill -0 $CLAUDE_PID 2>/dev/null; do
-            CURRENT_SIZE=$(stat -c%s /tmp/claude-output.log 2>/dev/null || echo 0)
-            if [ "$CURRENT_SIZE" -gt "$LAST_SIZE" ]; then
-              tail -c +$((LAST_SIZE + 1)) /tmp/claude-output.log 2>/dev/null
-              LAST_SIZE=$CURRENT_SIZE
-              LAST_OUTPUT_TIME=$(date +%s)
-            fi
-
-            NOW=$(date +%s)
-            SILENT=$((NOW - LAST_OUTPUT_TIME))
-            ELAPSED=$((NOW - START_TIME))
-
-            # Print heartbeat every 30s of silence
-            if [ "$SILENT" -ge 30 ]; then
-              echo "--- [${ELAPSED}s elapsed, ${SILENT}s since last output, pid=$CLAUDE_PID] ---"
-              LAST_OUTPUT_TIME=$NOW
-            fi
-
-            sleep 5
-          done
-
-          # Flush remaining output
-          CURRENT_SIZE=$(stat -c%s /tmp/claude-output.log 2>/dev/null || echo 0)
-          if [ "$CURRENT_SIZE" -gt "$LAST_SIZE" ]; then
-            tail -c +$((LAST_SIZE + 1)) /tmp/claude-output.log 2>/dev/null
-          fi
-
-          wait $CLAUDE_PID 2>/dev/null || true
           ELAPSED=$(( $(date +%s) - START_TIME ))
           echo "=== Process finished after $((ELAPSED / 60))m $((ELAPSED % 60))s ==="
 
@@ -173,8 +201,8 @@ jobs:
       - name: Show summary
         if: always()
         run: |
-          echo "=== Claude Output (last 200 lines) ==="
-          tail -200 /tmp/claude-output.log 2>/dev/null || echo "No output log found"
+          echo "=== Claude Raw Output (last 200 lines) ==="
+          tail -200 /tmp/claude-raw.log 2>/dev/null || echo "No output log found"
 
       - name: Cleanup credentials
         if: always()
