@@ -25,23 +25,40 @@ cat .claude/.swarm-state.json 2>/dev/null || echo '{}'
 
 This tracks what has already been processed to avoid duplicate work across ralph-loop iterations.
 
-### 3. Enumerate Target Repos
+### 3. Enumerate Target Repos (GraphQL — single call)
 
-Get all repos from the target org and identify their upstream (parent) repos:
+Use GraphQL to get ALL repos, their upstreams, open issues, and our open PRs in one query:
 
 ```bash
-# Get repos from the org in random order (so different repos get priority each run)
-gh repo list Redhat-forks --limit 200 --json name,url -q '.[].name' | shuf
-
-# For each fork, get the upstream parent
-gh api repos/{org}/{repo} --jq '.parent.full_name'
+gh api graphql -f query='
+{
+  organization(login: "Redhat-forks") {
+    repositories(first: 100, isFork: true) {
+      nodes {
+        name
+        defaultBranchRef { name }
+        parent {
+          nameWithOwner
+          defaultBranchRef { name }
+          description
+          primaryLanguage { name }
+          repositoryTopics(first: 10) { nodes { topic { name } } }
+          hasIssuesEnabled
+        }
+      }
+      pageInfo { hasNextPage endCursor }
+    }
+  }
+}'
 ```
+
+This returns all forks, their default branches, and upstream metadata in **one API call** instead of 40+ REST calls. Paginate with `after: "{endCursor}"` if `hasNextPage` is true.
 
 Build a mapping of `fork → upstream` for all agents to use.
 
 ### 4. Refresh Open PR Status
 
-Before launching agents, check the current status of all tracked open PRs from state:
+For each tracked open PR, check current status. Use GraphQL to batch if there are many:
 
 ```bash
 # For each PR in state.persistent.open_prs:
@@ -106,41 +123,27 @@ Your responsibilities:
 
 ### Agent 3 — Rebase Sync Agent
 
-**Input data from state**: `repo_last_rebased`, `repo_profiles` (update profiles while repos are cloned), org repo lists
+**Input data from state**: `repo_last_rebased`, `repo_profiles` (update from GraphQL response), org repo lists
 
 **Task**: You are the Rebase Sync Agent for github-ai-contributor.
 
 Your responsibilities:
-1. List all repos in the target org:
+1. Use GraphQL to discover all forks and their upstreams in a single call (see rebase-sync SKILL.md)
+
+2. For each fork, sync server-side (no local cloning needed):
    ```bash
-   gh repo list Redhat-forks --limit 200 --json name -q '.[].name' | shuf
+   gh repo sync Redhat-forks/{repo} --branch {default_branch}
+   ```
+   If that fails, fall back to:
+   ```bash
+   gh api repos/Redhat-forks/{repo}/merge-upstream --method POST -f branch="{default_branch}"
    ```
 
-2. For each fork repo:
-   - Get the upstream parent: `gh api repos/{org}/{repo} --jq '.parent.full_name'`
-   - Get the fork's default branch: `gh api repos/{org}/{repo} --jq '.default_branch'`
-   - Clone or pull the fork:
-     ```bash
-     git -C ~/src/{org}-{repo} pull 2>/dev/null || git clone git@github.com:{org}/{repo}.git ~/src/{org}-{repo}
-     ```
-   - Add upstream remote if not present:
-     ```bash
-     cd ~/src/{org}-{repo}
-     git remote get-url upstream 2>/dev/null || git remote add upstream https://github.com/{upstream}.git
-     ```
-   - Fetch upstream and rebase:
-     ```bash
-     git fetch upstream
-     git rebase upstream/{default_branch}
-     git push origin {default_branch}
-     ```
-   - If rebase fails (conflicts), abort and log the error:
-     ```bash
-     git rebase --abort
-     ```
+3. Build repo profiles from the GraphQL response (language, description, topics, default branch)
 
-3. Return a JSON object with:
-   - `repos_rebased`: array of `{org, repo, upstream, status, timestamp}`
+4. Return a JSON object with:
+   - `repos_synced`: array of `{org, repo, upstream, status, timestamp}`
+   - `repo_profiles_updated`: object of upstream repo profiles
 
 ### Agent 4 — Coding Agent
 
