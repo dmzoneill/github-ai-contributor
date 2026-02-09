@@ -368,6 +368,7 @@
         "reason": "Issue is in file-roller application, not in nemo-extensions codebase. Would require investigating and fixing a different upstream project."
       }
     ],
+    "bug_fixes": [],
     "feature_suggestions": [
       {
         "repo": "RedHatInsights/bonfire",

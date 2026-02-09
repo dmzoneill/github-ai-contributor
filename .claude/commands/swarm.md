@@ -1,11 +1,11 @@
 ---
-description: Launch the full contributor swarm — 4 agents work in parallel across all forked repos to contribute fixes to upstream projects
+description: Launch the full contributor swarm — 5 agents work in parallel across all forked repos to contribute fixes to upstream projects
 allowed-tools: Read, Grep, Glob, Bash(gh:*), Bash(git:*), Bash(cat:*), Bash(date:*), Bash(jq:*), Bash(ls:*), Bash(mkdir:*), Task
 ---
 
 # GitHub AI Contributor — Full Swarm
 
-You are the Orchestrator. You manage a swarm of 4 parallel agents that contribute fixes to upstream open-source repos via forks in the `Redhat-forks` org.
+You are the Orchestrator. You manage a swarm of 5 parallel agents that contribute fixes to upstream open-source repos via forks in the `Redhat-forks` org.
 
 ## Phase 0: Startup
 
@@ -67,9 +67,9 @@ gh pr view {pr_number} -R {upstream} --json state,mergedAt,closedAt,reviewDecisi
 
 Move merged PRs to `merged_prs`, closed PRs to `closed_prs`. Update `comments_seen` and `review_state`.
 
-## Phase 1: Launch All 4 Agents (Parallel)
+## Phase 1: Launch All 5 Agents (Parallel)
 
-Launch FOUR Task agents in parallel. Pass each agent the relevant subset of state data.
+Launch FIVE Task agents in parallel. Pass each agent the relevant subset of state data.
 
 ### Agent 1 — Issue & Feedback Agent
 
@@ -195,9 +195,44 @@ Your responsibilities:
    - `issues_attempted`: array of `{upstream, issue_number, confidence, result}`
    - `issues_skipped`: array of `{upstream, issue_number, reason}`
 
+### Agent 5 — Bug Scanner Agent
+
+**Input data from state**: `fork_upstream_map`, `repo_pr_counts`, `repo_profiles` (cached repo metadata), `bug_fixes` (bugs we've already reported and fixed — to avoid duplicates), `open_prs`, `our_github_username`
+
+**Task**: You are the Bug Scanner Agent for github-ai-contributor.
+
+Your responsibilities:
+
+1. **Select target repos**: From the fork→upstream mapping, pick up to 5 repos that are below the PR limits (max 3 total open PRs, max 2 bug fix PRs per upstream repo). Sort by PR count ascending for balanced distribution.
+
+2. **Clone and scan**: For each repo, clone/pull the upstream code and scan source files for critical bugs:
+   - Security: SQL injection, command injection, XSS, path traversal, hardcoded credentials
+   - Reliability: null pointer dereferences, unhandled exceptions, resource leaks, race conditions
+   - Data integrity: buffer overflows, integer overflows, off-by-one errors
+
+3. **Verify findings**: For each potential bug:
+   - Read surrounding code to confirm it's a real bug (not guarded elsewhere)
+   - Check existing open issues on upstream — **skip if the bug is already reported**
+   - Check `bug_fixes` state — **skip if we already reported/fixed it**
+   - Assess severity — only proceed with genuinely critical bugs
+   - Assess fix confidence — must be >= 90%
+
+4. **Report and fix**: For each verified bug:
+   a. Open a bug report issue on the upstream repo with location, description, impact, and suggested fix
+   b. Create a fix branch from `upstream/{default_branch}`
+   c. Implement the minimal fix
+   d. Run tests if available
+   e. Commit with conventional message referencing the issue: `fix: {description} (fixes #{issue_number})`
+   f. Push to fork, create PR to upstream referencing the bug report issue
+
+5. Return a JSON object with:
+   - `bug_fixes_created`: array of `{upstream, fork, issue_number, pr_number, branch, title, file_path, line_number, bug_type, severity, status}`
+   - `bugs_found_but_skipped`: array of `{upstream, file_path, line_number, reason}`
+   - `repos_scanned`, `repos_skipped_at_limit`, `total_bugs_found`, `total_fixes_submitted`
+
 ## Phase 2: Wait and Collect Results
 
-Wait for all 4 agents to complete. Collect their returned JSON results.
+Wait for all 5 agents to complete. Collect their returned JSON results.
 
 ## Phase 3: State Update & Report
 
@@ -223,7 +258,12 @@ Read the current state file, then merge agent results:
    - Merge `repo_profiles_updated` into `persistent.repo_profiles`
    - Merge `evaluated_issues` into `persistent.evaluated_issues`
 
-5. **Update `last_run`**:
+5. **From Agent 5 (Bug Scanner)**:
+   - Append `bug_fixes_created` to `persistent.bug_fixes`
+   - Add new PRs from bug fixes to `persistent.open_prs`
+   - Update `persistent.repo_pr_counts` for repos where bug fix PRs were created
+
+6. **Update `last_run`**:
    - Set `timestamp` to current ISO-8601
    - Increment `iteration`
    - Record `rate_limit_remaining`
@@ -245,12 +285,14 @@ PRs created:      X new
 PRs followed up:  X comments addressed
 CI fixes:         X pushed
 Features suggested: X new
+Bugs found & fixed: X new
 
 Actions taken:
 - [upstream/repo] Created PR #N fixing issue #M (null pointer in parser)
 - [upstream/repo] Responded to reviewer comment on PR #N
 - [upstream/repo] Fixed CI failure on PR #N (lint formatting)
 - [upstream/repo] Suggested feature: Add retry logic to HTTP client
+- [upstream/repo] Found bug: SQL injection in user handler, opened issue #99, created PR #55
 - [fork/repo] Rebased from upstream
 ...
 
@@ -278,6 +320,7 @@ If there IS remaining work, do NOT output the promise tag. The ralph loop will r
 - If rate limit drops below 200 during execution, stop and save state
 - All commits must pass commitlint validation
 - Never work on issues we created ourselves
+- Max 2 bug fix PRs per upstream repo, scan only 5 repos per iteration
 - Read CONTRIBUTING.md before making changes to any repo
 - Run tests before pushing if available
 - Track everything in the state file so the next iteration doesn't redo work

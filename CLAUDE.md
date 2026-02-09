@@ -49,9 +49,9 @@ No application code. Behavior is defined entirely by:
 - `.claude/.swarm-state.json` — persistent state across runs
 - Ralph-loop plugin for multi-iteration persistence
 
-### 4 Parallel Agents
+### 5 Parallel Agents
 
-The orchestrator (`/swarm`) spawns 4 specialized Task agents that run in parallel:
+The orchestrator (`/swarm`) spawns 5 specialized Task agents that run in parallel:
 
 ```mermaid
 graph TD
@@ -59,17 +59,21 @@ graph TD
     O --> A2[Agent 2<br/>Pipeline Fix]
     O --> A3[Agent 3<br/>Rebase Sync]
     O --> A4[Agent 4<br/>Coding Fix]
+    O --> A5[Agent 5<br/>Bug Scanner]
     A1 --> GH[GitHub API<br/>Upstream Repos]
     A2 --> GH
     A3 --> GH
     A4 --> GH
+    A5 --> GH
     A4 --> FK[Fork Repos<br/>Redhat-forks / dmzoneill-forks]
     A3 --> FK
+    A5 --> FK
     style O fill:#1f6feb,color:#fff
     style A1 fill:#238636,color:#fff
     style A2 fill:#238636,color:#fff
     style A3 fill:#238636,color:#fff
     style A4 fill:#da3633,color:#fff
+    style A5 fill:#da3633,color:#fff
     style GH fill:#30363d,color:#fff
     style FK fill:#30363d,color:#fff
 ```
@@ -82,19 +86,23 @@ graph TD
 
 **Agent 4 — Coding Fix**: The main worker. Scans upstream repos for open issues, assesses confidence, creates branches, implements fixes, runs tests, commits with conventional messages, pushes to fork, creates PRs to upstream. Balances work across repos.
 
+**Agent 5 — Bug Scanner**: Proactively scans upstream codebases for critical bugs (security vulnerabilities, null dereferences, resource leaks, etc.). Opens a bug report issue on upstream, then implements the fix and creates a PR referencing that issue. Max 2 bug fix PRs per repo, scans 5 repos per iteration. Tracks all reported bugs in state to avoid duplicates.
+
 ### Orchestration Flow
 
 ```mermaid
 graph TD
-    S["Phase 0: Startup<br/>Rate limit check + read state"] --> P1["Phase 1: Launch 4 agents<br/>(parallel)"]
+    S["Phase 0: Startup<br/>Rate limit check + read state"] --> P1["Phase 1: Launch 5 agents<br/>(parallel)"]
     P1 --> A1["Agent 1: Issue & Feedback"]
     P1 --> A2["Agent 2: Pipeline Fix"]
     P1 --> A3["Agent 3: Rebase Sync"]
     P1 --> A4["Agent 4: Coding Fix"]
+    P1 --> A5["Agent 5: Bug Scanner"]
     A1 --> P2["Phase 2: Wait + collect results"]
     A2 --> P2
     A3 --> P2
     A4 --> P2
+    A5 --> P2
     P2 --> P3["Phase 3: Merge state + report"]
     P3 --> CHK{"Remaining<br/>work?"}
     CHK -->|yes| RL["Ralph loop restarts"]
@@ -103,6 +111,7 @@ graph TD
     style S fill:#30363d,color:#fff
     style DONE fill:#238636,color:#fff
     style A4 fill:#da3633,color:#fff
+    style A5 fill:#da3633,color:#fff
 ```
 
 ## PR Lifecycle — Full Ownership
@@ -225,6 +234,25 @@ To avoid redundant API calls and re-analysis across runs, the state file caches:
   }
   ```
 
+- **`bug_fixes`**: Array of bug fix PRs created by the Bug Scanner agent. Tracks both the bug report issue and the fix PR per entry, keyed by upstream repo + file path to prevent duplicate reports across runs.
+  ```json
+  [
+    {
+      "upstream": "owner/repo",
+      "fork": "Redhat-forks/repo",
+      "issue_number": 99,
+      "pr_number": 55,
+      "branch": "fix/bug-99-sql-injection-user-handler",
+      "title": "fix: sanitize user input in SQL query",
+      "file_path": "src/handlers/user.py",
+      "line_number": 142,
+      "bug_type": "sql_injection",
+      "severity": "critical",
+      "status": "open"
+    }
+  ]
+  ```
+
 Agents MUST check these caches before doing expensive operations (cloning repos, reading READMEs, evaluating issues). Write back any new discoveries.
 
 ## Slash Commands and Skills
@@ -233,7 +261,7 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 
 | Command | Description |
 |---|---|
-| `/swarm` | Main orchestration — launches 4 agents in parallel |
+| `/swarm` | Main orchestration — launches 5 agents in parallel |
 | `/unleash` | Ralph-loop launcher — runs `/swarm` continuously |
 
 ### Skills (`.claude/skills/`)
@@ -244,6 +272,7 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 | `pipeline-fix` | Agent 2 | Fix CI failures on our open PRs |
 | `rebase-sync` | Agent 3 | Keep forks synced with upstream |
 | `coding-fix` | Agent 4 | Identify issues, write fixes, create PRs |
+| `bug-scanner` | Agent 5 | Scan codebases for critical bugs, report and fix them |
 
 ## Environment Variables
 
@@ -271,6 +300,7 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 - **Monitor and address ALL feedback** on our PRs — never abandon an open PR
 - **Fix CI/pipeline failures** on our PRs proactively
 - **Never work on issues we created ourselves** — feature suggestions are for the community
+- **Max 2 bug fix PRs per upstream repo** — bug scanner scans 5 repos per iteration, checks existing issues before reporting
 - **Read CONTRIBUTING.md** and upstream conventions before contributing
 - **Never push more than 10 fix commits per iteration**
 - **Track everything in state file** so next iteration doesn't redo work
@@ -286,7 +316,7 @@ github-ai-contributor/
 ├── .claude/
 │   ├── .swarm-state.json                  # Persistent state across runs
 │   ├── commands/
-│   │   ├── swarm.md                       # Main orchestration — launches 4 agents
+│   │   ├── swarm.md                       # Main orchestration — launches 5 agents
 │   │   └── unleash.md                     # Ralph-loop launcher
 │   └── skills/
 │       ├── issue-feedback/
@@ -295,8 +325,10 @@ github-ai-contributor/
 │       │   └── SKILL.md                   # Agent 2: fix CI failures on our PRs
 │       ├── rebase-sync/
 │       │   └── SKILL.md                   # Agent 3: rebase forks from upstream
-│       └── coding-fix/
-│           └── SKILL.md                   # Agent 4: identify issues, write code, create PRs
+│       ├── coding-fix/
+│       │   └── SKILL.md                   # Agent 4: identify issues, write code, create PRs
+│       └── bug-scanner/
+│           └── SKILL.md                   # Agent 5: scan for critical bugs, report and fix
 ├── .github/
 │   └── workflows/
 │       ├── main.yml                       # CI/CD (dispatch.yaml pattern)
