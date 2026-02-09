@@ -6,28 +6,29 @@ Runs every 3 hours via GitHub Actions (1-hour timeout per run), fully headless u
 
 ## How It Works
 
-```
-Upstream Repo (someone else's project)
-        |
-        | fork already exists in Redhat-forks
-        v
-   Our Fork ──────────────────────────────────────────────┐
-        |                                                  |
-        | rebase from upstream                             |
-        | scan upstream for open issues                    |
-        | assess confidence (>= 90%)                      |
-        | create fix branch                                |
-        | implement fix + run tests                        |
-        | push branch to fork                              |
-        |                                                  |
-        └──> PR from fork branch ──> upstream default branch
-                    |
-                    | monitor for lifetime
-                    | respond to reviews
-                    | fix CI failures
-                    | rebase on conflicts
-                    v
-              merged or closed
+```mermaid
+flowchart TD
+    U["Upstream Repo<br/>(someone else's project)"] -.->|fork already exists| F["Our Fork<br/>Redhat-forks"]
+    F --> S["Sync fork from upstream<br/>(gh repo sync)"]
+    S --> SC["Scan upstream for open issues"]
+    SC --> AS{"Confidence<br/>>= 90%?"}
+    AS -->|no| SK["Skip issue"]
+    AS -->|yes| BR["Create fix branch<br/>from upstream/main"]
+    BR --> FX["Implement fix + run tests"]
+    FX --> PS["Push branch to fork"]
+    PS --> PR["Create PR:<br/>fork branch → upstream"]
+    PR --> MN["Monitor PR lifetime"]
+    MN --> RV["Respond to reviews"]
+    MN --> CI["Fix CI failures"]
+    MN --> RB["Rebase on conflicts"]
+    MN --> DN{"Merged or<br/>closed?"}
+    DN -->|yes| DONE["Done — stop tracking"]
+    DN -->|no| MN
+    style U fill:#30363d,color:#fff
+    style F fill:#1f6feb,color:#fff
+    style PR fill:#238636,color:#fff
+    style DONE fill:#238636,color:#fff
+    style SK fill:#da3633,color:#fff
 ```
 
 ## Architecture
@@ -120,7 +121,7 @@ github-ai-contributor/
 │       ├── rebase-sync/          # Agent 3: fork-to-upstream sync
 │       └── coding-fix/           # Agent 4: issue fixing + PR creation
 ├── .github/workflows/
-│   ├── contribute.yml            # Every 6 hours via cron
+│   ├── contribute.yml            # Every 3 hours via cron
 │   └── main.yml                  # CI/CD dispatch wrapper
 └── .gitignore
 ```
