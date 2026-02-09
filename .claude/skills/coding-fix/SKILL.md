@@ -80,6 +80,26 @@ From the GraphQL response, filter the issues list:
 - Skip issues already in `skipped_issues` (already assessed)
 - Skip issues with labels like `wontfix`, `duplicate`, `invalid`
 - Skip issues that are actually pull requests
+- **Skip issues that already have a linked PR** (from anyone, not just us) — check via the `timelineItems` in GraphQL or:
+  ```bash
+  gh api graphql -f query='
+  query($owner: String!, $repo: String!, $number: Int!) {
+    repository(owner: $owner, name: $repo) {
+      issue(number: $number) {
+        timelineItems(itemTypes: [CROSS_REFERENCED_EVENT], first: 20) {
+          nodes {
+            ... on CrossReferencedEvent {
+              source {
+                ... on PullRequest { number state }
+              }
+            }
+          }
+        }
+      }
+    }
+  }' -f owner="{owner}" -f repo="{repo}" -F number={number}
+  ```
+  If any linked PR has `state: OPEN` or `state: MERGED`, skip this issue — it's already being addressed.
 - Prefer issues with labels like `bug`, `good first issue`, `help wanted`
 
 ## Step 4: Confidence Assessment

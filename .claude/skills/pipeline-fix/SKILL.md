@@ -18,21 +18,51 @@ The orchestrator passes you:
 
 For each open PR in the `open_prs` array:
 
-### 1. Check CI Status
+### 1. Check CI Status and Mergeability (GraphQL — single call per PR)
 
 ```bash
-gh pr checks {pr_number} -R {upstream}
+gh api graphql -f query='
+query($owner: String!, $repo: String!, $number: Int!) {
+  repository(owner: $owner, name: $repo) {
+    pullRequest(number: $number) {
+      mergeable
+      headRefOid
+      commits(last: 1) {
+        nodes {
+          commit {
+            statusCheckRollup {
+              state
+              contexts(first: 30) {
+                nodes {
+                  ... on CheckRun {
+                    name
+                    conclusion
+                    detailsUrl
+                    databaseId
+                  }
+                  ... on StatusContext {
+                    context
+                    state
+                    targetUrl
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}' -f owner="{owner}" -f repo="{repo}" -F number={number}
 ```
 
-Parse the output to determine:
-- All checks passing → record `ci_status: "passing"`, move on
-- Some checks failing → proceed to diagnosis
-- Checks pending → record `ci_status: "pending"`, move on
+This returns CI status for all checks, merge status, AND the head SHA in **one call** (was 3+ REST calls).
 
-Also check for merge conflicts:
-```bash
-gh pr view {pr_number} -R {upstream} --json mergeable --jq '.mergeable'
-```
+Parse the response:
+- `statusCheckRollup.state` is `SUCCESS` → record `ci_status: "passing"`, move on
+- `statusCheckRollup.state` is `FAILURE` → proceed to diagnosis (failed checks are in `contexts`)
+- `statusCheckRollup.state` is `PENDING` → record `ci_status: "pending"`, move on
+- `mergeable` is `CONFLICTING` → handle merge conflict
 
 ### 2. Diagnose CI Failures
 
@@ -80,8 +110,8 @@ gh api repos/{upstream}/actions/jobs/{job_id}/logs 2>&1 | tail -100
 ### 4. Apply the Fix
 
 ```bash
-# Clone/pull the fork
-git -C ~/src/{fork-path} pull 2>/dev/null || git clone git@github.com:{fork}/{repo}.git ~/src/{fork-path}
+# Clone/pull the fork (HTTPS — uses GITHUB_TOKEN via gh auth)
+git -C ~/src/{fork-path} pull 2>/dev/null || gh repo clone {fork}/{repo} ~/src/{fork-path}
 cd ~/src/{fork-path}
 
 # Checkout the PR branch

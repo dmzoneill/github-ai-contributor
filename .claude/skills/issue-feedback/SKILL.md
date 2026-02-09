@@ -22,34 +22,37 @@ The orchestrator passes you:
 
 For each upstream repo that does NOT already have a feature suggestion in the `feature_suggestions` array:
 
-### 1. Understand the Project (Cache-Aware)
+### 1. Understand the Project and Check Limits (GraphQL — single call)
 
-**First, check `repo_profiles` cache** for this upstream repo. If a profile exists, use the cached `description`, `language`, `topics`, and `key_conventions` to understand the project without API calls.
+Use a single GraphQL query to get repo metadata, existing issues, and our issue count:
 
-**If repo profile IS cached**: skip the README and metadata API calls. Only fetch existing issues to avoid duplicates:
 ```bash
-# Check existing issues to avoid duplicates
-gh issue list -R {upstream} --state open --json title,number -L 50 -q '.[].title'
+gh api graphql -f query='
+query($owner: String!, $repo: String!, $author: String!) {
+  repository(owner: $owner, name: $repo) {
+    description
+    primaryLanguage { name }
+    repositoryTopics(first: 10) { nodes { topic { name } } }
+    stargazerCount
+    issues(states: OPEN, first: 50, orderBy: {field: CREATED_AT, direction: DESC}) {
+      nodes { number title author { login } }
+    }
+    ourIssues: issues(states: OPEN, filterBy: {createdBy: $author}, first: 5) {
+      totalCount
+    }
+  }
+}' -f owner="{owner}" -f repo="{repo}" -f author="{our_username}"
 ```
 
-**If repo profile is NOT cached**: fetch everything:
-```bash
-# Read the README
-gh api repos/{upstream}/readme --jq '.content' | base64 -d | head -200
+This returns repo metadata, all open issue titles (for duplicate checking), AND our open issue count in **one call**.
 
-# Get repo metadata
-gh api repos/{upstream} --jq '{description: .description, language: .language, topics: .topics, stars: .stargazers_count}'
-
-# Check existing issues to avoid duplicates
-gh issue list -R {upstream} --state open --json title,number -L 50 -q '.[].title'
-```
+**If repo profile IS cached**: the metadata fields can be skipped, but still need the issues list and our count.
 
 ### 2. Check Limits
 
-**Before suggesting a feature**, verify we don't already have an open issue on this upstream repo:
-- Check `feature_suggestions` from state for this upstream repo
-- Also query: `gh issue list -R {upstream} --author {our_username} --state open --json number -q 'length'`
-- **Max 1 open feature suggestion per upstream repo** — if we already have one open, skip this repo
+From the GraphQL response:
+- If `ourIssues.totalCount >= 1`, skip this repo — **max 1 open feature suggestion per upstream repo**
+- Also check `feature_suggestions` from state for this upstream repo
 
 ### 3. Analyze and Suggest
 
@@ -98,18 +101,34 @@ Add to your output:
 
 For each open PR in the `open_prs` array:
 
-### 1. Check for New Comments
+### 1. Check for New Comments (GraphQL — single call per PR)
+
+Get all PR comments, review comments, and reviews in one query:
 
 ```bash
-# Get all comments on the PR
-gh api repos/{upstream}/pulls/{pr_number}/comments --jq '[.[] | {id: .id, user: .user.login, body: .body, created_at: .created_at, path: .path, line: .line}]'
-
-# Also get issue-level comments (general discussion)
-gh api repos/{upstream}/issues/{pr_number}/comments --jq '[.[] | {id: .id, user: .user.login, body: .body, created_at: .created_at}]'
-
-# Get review comments
-gh api repos/{upstream}/pulls/{pr_number}/reviews --jq '[.[] | {id: .id, user: .user.login, body: .body, state: .state}]'
+gh api graphql -f query='
+query($owner: String!, $repo: String!, $number: Int!) {
+  repository(owner: $owner, name: $repo) {
+    pullRequest(number: $number) {
+      comments(first: 50) {
+        totalCount
+        nodes { id author { login } body createdAt }
+      }
+      reviews(first: 20) {
+        nodes { id author { login } body state
+          comments(first: 20) {
+            nodes { id author { login } body path line createdAt }
+          }
+        }
+      }
+      mergeable
+      reviewDecision
+    }
+  }
+}' -f owner="{owner}" -f repo="{repo}" -F number={number}
 ```
+
+This returns all PR comments, review comments, reviews, mergeable status, and review decision in **one call** (was 3+ REST calls).
 
 Count total comments. Compare against `comments_seen` from state. If there are new comments, process them.
 
@@ -126,8 +145,8 @@ For each new comment from a reviewer (not from us):
 If a reviewer requests code changes:
 
 ```bash
-# Clone/pull the fork
-git -C ~/src/{fork-path} pull 2>/dev/null || git clone git@github.com:{fork}/{repo}.git ~/src/{fork-path}
+# Clone/pull the fork (HTTPS — uses GITHUB_TOKEN via gh auth)
+git -C ~/src/{fork-path} pull 2>/dev/null || gh repo clone {fork}/{repo} ~/src/{fork-path}
 cd ~/src/{fork-path}
 
 # Checkout the PR branch
