@@ -165,6 +165,7 @@ Valid types: `fix`, `feat`, `chore`, `docs`, `test`, `refactor`, `perf`, `style`
 ## Feature Suggestions
 
 - Suggest at least 1 feature per upstream repo (as a GitHub issue) if not already suggested
+- **Max 1 open feature suggestion per upstream repo** — do not create more if one is already open
 - Feature suggestions should be genuinely useful, well-reasoned, and specific
 - Track suggestions in `feature_suggestions` array in state file
 - **Never work on our own suggestions** — they are for the community, not for us

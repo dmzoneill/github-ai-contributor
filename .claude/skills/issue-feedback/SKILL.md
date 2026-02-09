@@ -44,7 +44,14 @@ gh api repos/{upstream} --jq '{description: .description, language: .language, t
 gh issue list -R {upstream} --state open --json title,number -L 50 -q '.[].title'
 ```
 
-### 2. Analyze and Suggest
+### 2. Check Limits
+
+**Before suggesting a feature**, verify we don't already have an open issue on this upstream repo:
+- Check `feature_suggestions` from state for this upstream repo
+- Also query: `gh issue list -R {upstream} --author {our_username} --state open --json number -q 'length'`
+- **Max 1 open feature suggestion per upstream repo** — if we already have one open, skip this repo
+
+### 3. Analyze and Suggest
 
 Think of a genuinely useful feature that:
 - Addresses a real gap in the project's functionality
@@ -53,7 +60,7 @@ Think of a genuinely useful feature that:
 - Does not duplicate an existing open issue
 - Would benefit the broader user community
 
-### 3. Create the Issue
+### 4. Create the Issue
 
 ```bash
 gh issue create -R {upstream} \

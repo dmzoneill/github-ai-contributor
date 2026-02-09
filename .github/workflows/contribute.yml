@@ -120,6 +120,11 @@ jobs:
 
           STEP 5: Rebase all forks from their upstream repos to keep them current.
 
+          STEP 5.5: ALWAYS check existing open PRs and issues we have per upstream repo BEFORE doing any work:
+            - Count our open PRs per upstream repo. Max 3 open PRs per repo. Do NOT create more if at limit.
+            - Count our open issues (feature suggestions) per upstream repo. Max 1 open issue per repo. Do NOT create more if at limit.
+            Skip repos that are already at their limits.
+
           STEP 6: Scan upstream repos for open issues. Skip issues we created ourselves.
           For each issue, assess confidence we can fix it (>= 90% threshold).
           Balance work across repos - max 3 open PRs per upstream repo.

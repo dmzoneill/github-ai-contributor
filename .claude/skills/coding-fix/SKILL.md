@@ -22,7 +22,24 @@ The orchestrator passes you:
 - `open_prs`: Our current open PRs (to know which issues are already being addressed)
 - `our_github_username`: The authenticated GitHub username
 
-## Step 1: Build Work Queue (Balanced Distribution)
+## Step 1: Check Existing PRs and Issues (Pre-flight)
+
+**ALWAYS** verify current open PR and issue counts per upstream repo before doing any work:
+
+```bash
+# Count our open PRs on the upstream repo
+gh pr list -R {upstream} --author {our_username} --state open --json number -q 'length'
+
+# Count our open issues (feature suggestions) on the upstream repo
+gh issue list -R {upstream} --author {our_username} --state open --json number -q 'length'
+```
+
+**Hard limits per upstream repo**:
+- **Max 3 open PRs** — do NOT create more if at limit
+- **Max 1 open issue** (feature suggestion) — do NOT create more if at limit
+- Skip repos already at their limits entirely
+
+## Step 2: Build Work Queue (Balanced Distribution)
 
 Sort repos by current open PR count (ascending). This ensures balanced distribution:
 - Round 1: Process repos with 0 PRs first
