@@ -14,6 +14,8 @@ You are the Coding Agent for github-ai-contributor. You are the main worker — 
 The orchestrator passes you:
 - `fork_upstream_map`: Mapping of `{org}/{repo}` → `{upstream_owner}/{upstream_repo}`
 - `repo_pr_counts`: Current open PR count per upstream repo
+- `repo_profiles`: Cached repo metadata (language, build system, test commands, conventions) — **use this first before re-discovering**
+- `evaluated_issues`: Cached per-issue evaluation results — **skip issues already evaluated here**
 - `attempted_issues`: Issues we've already tried to fix (don't retry)
 - `skipped_issues`: Issues we've already assessed and skipped (don't re-assess)
 - `feature_suggestions`: Our feature suggestion issues (never work on these)
@@ -46,6 +48,7 @@ gh issue list -R {upstream} --state open --json number,title,body,labels,author,
 ```
 
 **Filtering rules**:
+- Skip issues already in `evaluated_issues` cache (already assessed in a prior run — check key `"{upstream}#{number}"`)
 - Skip issues authored by our GitHub username
 - Skip issues that match any `issue_number` in `feature_suggestions`
 - Skip issues already in `attempted_issues` (already tried)
@@ -58,16 +61,21 @@ gh issue list -R {upstream} --state open --json number,title,body,labels,author,
 
 For each candidate issue, assess confidence (0-100%):
 
-### Read the Context
+### Read the Context (Cache-Aware)
+
+**First, check `repo_profiles` cache** for this upstream repo. If a profile exists and `last_profiled` is recent, use it directly — skip the README/CONTRIBUTING/metadata API calls.
 
 ```bash
-# Read the issue carefully
+# Read the issue carefully (always needed — issue content changes)
 gh issue view {number} -R {upstream} --json title,body,comments
+```
 
+**If repo profile is NOT cached** (or `last_profiled` is older than 7 days):
+
+```bash
 # Get repo structure
-gh api repos/{upstream} --jq '{language: .language, default_branch: .default_branch}'
+gh api repos/{upstream} --jq '{language: .language, default_branch: .default_branch, description: .description, topics: .topics}'
 
-# Read relevant source files
 # Clone the repo first if needed
 git -C ~/src/{org}-{repo} pull 2>/dev/null || git clone git@github.com:{org}/{repo}.git ~/src/{org}-{repo}
 
@@ -76,7 +84,30 @@ cat ~/src/{org}-{repo}/CONTRIBUTING.md 2>/dev/null || true
 
 # Read README for project context
 cat ~/src/{org}-{repo}/README.md 2>/dev/null | head -100
+
+# Detect build system and test/lint commands
+ls ~/src/{org}-{repo}/{Makefile,package.json,pyproject.toml,setup.py,go.mod,Cargo.toml,pytest.ini,.eslintrc*,.prettierrc*} 2>/dev/null
 ```
+
+**Build and cache the repo profile** from what you discover:
+```json
+{
+  "language": "Python",
+  "default_branch": "main",
+  "description": "...",
+  "topics": ["..."],
+  "build_system": "makefile|npm|pip|pipenv|cargo|go",
+  "test_command": "make test|npm test|pytest|go test ./...|cargo test",
+  "lint_command": "black .|npx eslint .|npx prettier --write .",
+  "has_contributing_md": true,
+  "has_tests": true,
+  "project_type": "python-pipenv|node|go|rust|other",
+  "key_conventions": "Brief notes on code style, patterns, etc.",
+  "last_profiled": "ISO-8601"
+}
+```
+
+**If repo profile IS cached**: use the cached `language`, `default_branch`, `test_command`, `lint_command`, `has_tests`, and `key_conventions` directly. Only clone/pull the repo if you need to read source files for the specific issue.
 
 ### Assess Confidence
 
@@ -103,6 +134,18 @@ cat ~/src/{org}-{repo}/README.md 2>/dev/null | head -100
 
 - **>= 90% confidence**: Proceed with fix
 - **< 90% confidence**: Add to `skipped_issues` with reason, move to next issue
+
+**Always record the evaluation** in your output's `evaluated_issues` map (keyed by `"{upstream}#{number}"`):
+```json
+{
+  "title": "Issue title",
+  "confidence": 85,
+  "decision": "skipped|fix_attempted",
+  "reason": "Brief explanation of confidence score",
+  "evaluated_at": "ISO-8601"
+}
+```
+This prevents re-evaluating the same issue in future runs.
 
 ## Step 4: Implement the Fix
 
@@ -133,8 +176,10 @@ git checkout -B "$BRANCH" upstream/{default_branch}
 
 ### c. Run Tests
 
+**If `repo_profiles` has a cached `test_command`**, use it directly. Otherwise detect:
+
 ```bash
-# Detect and run test suite
+# Use cached test_command if available, otherwise detect
 if [ -f Makefile ]; then
   make test 2>&1 || true
 elif [ -f package.json ]; then
@@ -150,8 +195,10 @@ fi
 
 ### d. Run Linters
 
+**If `repo_profiles` has a cached `lint_command`**, use it directly. Otherwise detect:
+
 ```bash
-# Detect and run linters
+# Use cached lint_command if available, otherwise detect
 if [ -f .eslintrc.json ] || [ -f .eslintrc.js ]; then
   npx eslint --fix . 2>/dev/null || true
 elif [ -f pyproject.toml ] && grep -q "black" pyproject.toml 2>/dev/null; then
@@ -247,6 +294,38 @@ Return a JSON object:
       "reason": "Issue requires complex multi-file refactor across 12 files with no test suite to verify"
     }
   ],
+  "repo_profiles_updated": {
+    "owner/repo": {
+      "language": "Python",
+      "default_branch": "main",
+      "description": "A CLI tool for managing containers",
+      "topics": ["cli", "containers"],
+      "build_system": "makefile",
+      "test_command": "make test",
+      "lint_command": "black .",
+      "has_contributing_md": true,
+      "has_tests": true,
+      "project_type": "python-pipenv",
+      "key_conventions": "Uses black, pytest, type hints",
+      "last_profiled": "ISO-8601"
+    }
+  },
+  "evaluated_issues": {
+    "owner/repo#42": {
+      "title": "Null pointer in parser",
+      "confidence": 95,
+      "decision": "fix_attempted",
+      "reason": "Clear stack trace, single-file fix",
+      "evaluated_at": "ISO-8601"
+    },
+    "owner/repo#15": {
+      "title": "Refactor authentication",
+      "confidence": 60,
+      "decision": "skipped",
+      "reason": "Multi-file refactor, no tests",
+      "evaluated_at": "ISO-8601"
+    }
+  },
   "repos_scanned": 25,
   "issues_evaluated": 40
 }
