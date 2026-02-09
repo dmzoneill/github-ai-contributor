@@ -1,6 +1,6 @@
 {
   "persistent": {
-    "orgs": ["Redhat-forks"],
+    "orgs": ["Redhat-forks", "dmzoneill-forks"],
     "repo_pr_counts": {
       "RedHatInsights/bonfire": 2,
       "ansible/awx": 3,

@@ -1,6 +1,6 @@
 # github-ai-contributor
 
-Prompt-driven, headless AI system that autonomously contributes to open-source repositories. It monitors repos forked into the [`Redhat-forks`](https://github.com/Redhat-forks) GitHub org, scans their upstream repos for open issues, assesses whether it can fix them with >= 90% confidence, and submits PRs back to the upstream. It also suggests features.
+Prompt-driven, headless AI system that autonomously contributes to open-source repositories. It monitors repos forked into the [`Redhat-forks`](https://github.com/Redhat-forks) and [`dmzoneill-forks`](https://github.com/dmzoneill-forks) GitHub orgs, scans their upstream repos for open issues, assesses whether it can fix them with >= 90% confidence, and submits PRs back to the upstream. It also suggests features.
 
 Runs every 3 hours via GitHub Actions (1-hour timeout per run), fully headless using `claude -p`. Contains **no application code** — entirely orchestrated by [Claude Code](https://claude.ai/code) via markdown prompts.
 
@@ -8,7 +8,7 @@ Runs every 3 hours via GitHub Actions (1-hour timeout per run), fully headless u
 
 ```mermaid
 flowchart TD
-    U["Upstream Repo<br/>(someone else's project)"] -.->|fork already exists| F["Our Fork<br/>Redhat-forks"]
+    U["Upstream Repo<br/>(someone else's project)"] -.->|fork already exists| F["Our Fork<br/>Redhat-forks / dmzoneill-forks"]
     F --> S["Sync fork from upstream<br/>(gh repo sync)"]
     S --> SC["Scan upstream for open issues"]
     SC --> AS{"Confidence<br/>>= 90%?"}
@@ -45,7 +45,7 @@ graph TD
     A2 --> GH
     A3 --> GH
     A4 --> GH
-    A4 --> FK[Fork Repos<br/>Redhat-forks]
+    A4 --> FK[Fork Repos<br/>Redhat-forks / dmzoneill-forks]
     A3 --> FK
     style O fill:#1f6feb,color:#fff
     style A1 fill:#238636,color:#fff
@@ -121,7 +121,8 @@ github-ai-contributor/
 │       ├── rebase-sync/          # Agent 3: fork-to-upstream sync
 │       └── coding-fix/           # Agent 4: issue fixing + PR creation
 ├── .github/workflows/
-│   ├── contribute.yml            # Every 3 hours via cron
+│   ├── contribute.yml            # Redhat-forks — every 3 hours
+│   ├── contribute-dmz.yml       # dmzoneill-forks — every 3 hours (offset)
 │   └── main.yml                  # CI/CD dispatch wrapper
 └── .gitignore
 ```
@@ -130,7 +131,11 @@ github-ai-contributor/
 
 ### Automated (GitHub Actions)
 
-The `contribute.yml` workflow runs every 3 hours with a 1-hour timeout. It can also be triggered manually via `workflow_dispatch`.
+Two separate workflows run every 3 hours (offset by 1.5 hours so they don't overlap), each with a 1-hour timeout:
+- `contribute.yml` — Redhat-forks
+- `contribute-dmz.yml` — dmzoneill-forks
+
+Both can be triggered manually via `workflow_dispatch`.
 
 ### Manual (Claude Code CLI)
 

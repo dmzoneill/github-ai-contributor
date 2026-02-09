@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Project Is
 
-`github-ai-contributor` is a prompt-driven, headless AI system that autonomously contributes to open-source repositories. It monitors repos forked into the `Redhat-forks` GitHub org, scans their **upstream** (original) repos for open issues, assesses whether it can fix them with >= 90% confidence, and submits PRs back to the upstream. It also suggests features. Runs every 3 hours via GitHub Actions (1-hour timeout per run), fully headless using `claude -p`.
+`github-ai-contributor` is a prompt-driven, headless AI system that autonomously contributes to open-source repositories. It monitors repos forked into the `Redhat-forks` and `dmzoneill-forks` GitHub orgs, scans their **upstream** (original) repos for open issues, assesses whether it can fix them with >= 90% confidence, and submits PRs back to the upstream. It also suggests features. Runs every 3 hours via GitHub Actions (1-hour timeout per run, separate workflows per org), fully headless using `claude -p`.
 
 This project contains **no Python/Node code** — it is entirely orchestrated by Claude Code via markdown prompts, following the same architecture as `github-ai-maintainer`.
 
@@ -12,7 +12,7 @@ This project contains **no Python/Node code** — it is entirely orchestrated by
 
 `github-ai-maintainer` works on repos we **own** (dmzoneill's repos). This project works on **other people's repos** via forks:
 
-1. Repos are already forked into the `Redhat-forks` org
+1. Repos are already forked into the `Redhat-forks` or `dmzoneill-forks` org
 2. We scan the **upstream** (original) repo for open issues
 3. We **rebase our fork from upstream** to ensure we have the latest code
 4. We create a branch **from upstream's default branch** (not origin's — the fork may have unsynced commits) named after the issue ID (e.g. `fix/issue-42-description`)
@@ -30,6 +30,7 @@ This project contains **no Python/Node code** — it is entirely orchestrated by
 | Org | Description |
 |---|---|
 | `Redhat-forks` | Forks of Red Hat ecosystem projects |
+| `dmzoneill-forks` | Personal forks of open-source projects |
 
 ## Contributor Identity
 
@@ -62,7 +63,7 @@ graph TD
     A2 --> GH
     A3 --> GH
     A4 --> GH
-    A4 --> FK[Fork Repos<br/>Redhat-forks]
+    A4 --> FK[Fork Repos<br/>Redhat-forks / dmzoneill-forks]
     A3 --> FK
     style O fill:#1f6feb,color:#fff
     style A1 fill:#238636,color:#fff
@@ -299,7 +300,8 @@ github-ai-contributor/
 ├── .github/
 │   └── workflows/
 │       ├── main.yml                       # CI/CD (dispatch.yaml pattern)
-│       └── contribute.yml                 # Main workflow — every 6 hours
+│       ├── contribute.yml                 # Redhat-forks — every 3 hours
+│       └── contribute-dmz.yml            # dmzoneill-forks — every 3 hours (offset)
 └── .gitignore
 ```
 

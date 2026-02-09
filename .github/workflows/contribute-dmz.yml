@@ -1,8 +1,8 @@
-name: Contribute Redhat forks
+name: Contribute my forks
 
 on:
   schedule:
-    - cron: '0 */3 * * *'  # Every 3 hours
+    - cron: '30 1,4,7,10,13,16,19,22 * * *'  # Every 3 hours, offset 1.5h from Redhat
   workflow_dispatch: {}     # Manual trigger
 
 permissions:
@@ -44,7 +44,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          # Use gh as git credential helper so HTTPS cloning/pushing works with GITHUB_TOKEN
           gh auth setup-git
 
       - name: Create stream filter
@@ -107,7 +106,7 @@ jobs:
           CLOUD_ML_REGION: ${{ secrets.CLOUD_ML_REGION }}
           GITHUB_TOKEN: ${{ secrets.PROFILE_HOOK }}
         run: |
-          PROMPT="You are the contributor swarm orchestrator for github-ai-contributor. You MUST use tools to do real work. Do NOT just output text.
+          PROMPT="You are the contributor swarm orchestrator for github-ai-contributor. You MUST use tools to do real work. Do NOT just output text. TARGET ORG: dmzoneill-forks
 
           STEP 1: Run this command to check rate limit:
             gh api rate_limit --jq .rate.remaining
@@ -117,7 +116,7 @@ jobs:
             cat .claude/.swarm-state.json 2>/dev/null || echo {}
 
           STEP 3: List all repos in target org and RANDOMIZE the order:
-            gh repo list Redhat-forks --limit 200 --json name,url -q .[].name | shuf
+            gh repo list dmzoneill-forks --limit 200 --json name,url -q .[].name | shuf
 
           STEP 4: For each fork (in the randomized order), identify the upstream (parent) repo:
             gh api repos/{org}/{repo} --jq .parent.full_name
@@ -211,8 +210,7 @@ jobs:
       - name: Final state commit
         if: always()
         run: |
-          # Pull in case the background loop pushed commits ahead of us
           git pull --rebase 2>/dev/null || true
           git add -f .claude/.swarm-state.json 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "chore: final state update after contributor run"
+          git diff --cached --quiet || git commit -m "chore: final state update after dmz contributor run"
           git push || true
