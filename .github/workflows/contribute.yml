@@ -43,6 +43,59 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Create stream filter
+        run: |
+          python3 -c "
+          import sys, os
+          script = '''import sys, json
+
+          for line in sys.stdin:
+              line = line.strip()
+              if not line:
+                  continue
+              try:
+                  event = json.loads(line)
+              except json.JSONDecodeError:
+                  print(line, flush=True)
+                  continue
+              t = event.get('type', '')
+              if t == 'assistant':
+                  for block in event.get('message', {}).get('content', []):
+                      if block.get('type') == 'text':
+                          text = block.get('text', '').strip()
+                          if text:
+                              for tl in text.split(chr(10)):
+                                  print('[text] ' + tl[:300], flush=True)
+                      elif block.get('type') == 'tool_use':
+                          name = block.get('name', '?')
+                          inp = block.get('input', {})
+                          if name == 'Bash':
+                              desc = inp.get('description', '')
+                              cmd = inp.get('command', '')
+                              label = desc if desc else cmd[:120]
+                              print('[tool] Bash: ' + label, flush=True)
+                          elif name == 'Task':
+                              desc = inp.get('description', str(inp.get('prompt', ''))[:80])
+                              print('[tool] Task: ' + desc, flush=True)
+                          elif name in ('Read', 'Write', 'Edit'):
+                              print('[tool] ' + name + ': ' + inp.get('file_path', '?'), flush=True)
+                          elif name in ('Grep', 'Glob'):
+                              print('[tool] ' + name + ': ' + inp.get('pattern', '?'), flush=True)
+                          else:
+                              print('[tool] ' + name, flush=True)
+              elif t == 'result':
+                  result = event.get('result', '')
+                  cost = event.get('cost_usd', 0)
+                  turns = event.get('num_turns', 0)
+                  print('[done] turns=' + str(turns) + ' cost=\$' + f'{cost:.4f}', flush=True)
+                  if result:
+                      for rl in result.strip().split(chr(10))[:5]:
+                          print('  ' + rl[:200], flush=True)
+          '''
+          with open('/tmp/stream-filter.py', 'w') as f:
+              f.write(script)
+          "
+
       - name: Run contributor swarm
         env:
           CLAUDE_CODE_USE_VERTEX: ${{ secrets.CLAUDE_CODE_USE_VERTEX }}
@@ -93,18 +146,13 @@ jobs:
           IMPORTANT: You must actually run commands and do work. Do not skip steps."
 
           # --- Background state commit loop ---
-          # Commits and pushes .swarm-state.json every 5 minutes so state
-          # is preserved if the process hangs or the pipeline is terminated.
           STATE_FILE=".claude/.swarm-state.json"
-          COMMIT_INTERVAL=300  # 5 minutes
+          COMMIT_INTERVAL=300
           STATE_HASH=""
-
           (
-            sleep 60  # Wait for initial work before first check
+            sleep 60
             while true; do
               sleep $COMMIT_INTERVAL
-
-              # Only commit if file exists and is valid JSON (avoid partial writes)
               if [ -f "$STATE_FILE" ] && python3 -c "import json; json.load(open('$STATE_FILE'))" 2>/dev/null; then
                 NEW_HASH=$(sha256sum "$STATE_FILE" | cut -d' ' -f1)
                 if [ "$NEW_HASH" != "$STATE_HASH" ]; then
@@ -120,62 +168,6 @@ jobs:
             done
           ) &
           COMMIT_PID=$!
-
-          # --- Stream filter script ---
-          # Reads stream-json from claude and prints human-readable status lines
-          cat > /tmp/stream-filter.py << 'PYEOF'
-import sys, json
-
-for line in sys.stdin:
-    line = line.strip()
-    if not line:
-        continue
-    try:
-        event = json.loads(line)
-    except json.JSONDecodeError:
-        print(line, flush=True)
-        continue
-
-    t = event.get("type", "")
-
-    if t == "assistant":
-        for block in event.get("message", {}).get("content", []):
-            if block.get("type") == "text":
-                text = block.get("text", "").strip()
-                if text:
-                    print(f"[text] {text[:500]}", flush=True)
-            elif block.get("type") == "tool_use":
-                name = block.get("name", "?")
-                inp = block.get("input", {})
-                if name == "Bash":
-                    cmd = inp.get("command", "")
-                    desc = inp.get("description", "")
-                    label = desc if desc else cmd[:120]
-                    print(f"[tool] Bash: {label}", flush=True)
-                elif name == "Task":
-                    desc = inp.get("description", inp.get("prompt", "")[:80])
-                    print(f"[tool] Task: {desc}", flush=True)
-                elif name == "Read":
-                    print(f"[tool] Read: {inp.get('file_path', '?')}", flush=True)
-                elif name == "Write":
-                    print(f"[tool] Write: {inp.get('file_path', '?')}", flush=True)
-                elif name == "Edit":
-                    print(f"[tool] Edit: {inp.get('file_path', '?')}", flush=True)
-                elif name == "Grep":
-                    print(f"[tool] Grep: {inp.get('pattern', '?')}", flush=True)
-                elif name == "Glob":
-                    print(f"[tool] Glob: {inp.get('pattern', '?')}", flush=True)
-                else:
-                    print(f"[tool] {name}", flush=True)
-    elif t == "result":
-        result = event.get("result", "")
-        cost = event.get("cost_usd", 0)
-        turns = event.get("num_turns", 0)
-        print(f"[done] turns={turns} cost=${cost:.4f}", flush=True)
-        if result:
-            for rline in result.strip().split("\n")[:5]:
-                print(f"  {rline[:200]}", flush=True)
-PYEOF
 
           # --- Run claude with stream-json output ---
           touch /tmp/claude-raw.log
@@ -195,7 +187,6 @@ PYEOF
           ELAPSED=$(( $(date +%s) - START_TIME ))
           echo "=== Process finished after $((ELAPSED / 60))m $((ELAPSED % 60))s ==="
 
-          # Stop the background commit loop
           kill $COMMIT_PID 2>/dev/null || true
 
       - name: Show summary
