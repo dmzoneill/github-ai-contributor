@@ -4,6 +4,7 @@
     "repo_pr_counts": {
       "RedHatInsights/bonfire": 2,
       "ansible/awx": 3,
+      "ansible/ansible-lint": 1,
       "benthomasson/dataverse-integration": 1,
       "flozz/cover-thumbnailer": 1,
       "linuxmint/nemo-extensions": 1,
@@ -59,7 +60,57 @@
       "text-to-img-craiyon-scrapper": "2026-02-09T20:28:53Z",
       "DoorButler": "2026-02-09T20:28:55Z",
       "go-binance": "2026-02-09T20:28:56Z",
-      "Freenove_RFID_Starter_Kit_for_Raspberry_Pi": "2026-02-09T20:28:58Z"
+      "Freenove_RFID_Starter_Kit_for_Raspberry_Pi": "2026-02-09T20:28:58Z",
+      "event-driven-ansible": "2026-02-09T21:16:01Z",
+      "edge-frontend": "2026-02-09T21:16:01Z",
+      "insights-chrome": "2026-02-09T21:16:01Z",
+      "awx-plugins": "2026-02-09T21:16:01Z",
+      "dataverse-integration": "2026-02-09T21:16:01Z",
+      "ansible-ai-connect-operator": "2026-02-09T21:16:01Z",
+      "platform-services-utilities": "2026-02-09T21:16:01Z",
+      "eda-server": "2026-02-09T21:16:01Z",
+      "ansible-compat": "2026-02-09T21:16:01Z",
+      "insights-analytics-collector": "2026-02-09T21:16:01Z",
+      "ansible-creator": "2026-02-09T21:16:01Z",
+      "podman-desktop": "2026-02-09T21:16:01Z",
+      "ansible-builder": "2026-02-09T21:16:01Z",
+      "ansible-navigator": "2026-02-09T21:16:01Z",
+      "ansible-azure-mgmt": "2026-02-09T21:16:01Z",
+      "ansible-chatbot-service": "2026-02-09T21:16:01Z",
+      "tower-analytics-frontend": "2026-02-09T21:16:01Z",
+      "ansible-lint": "2026-02-09T21:16:01Z",
+      "awx-operator": "2026-02-09T21:16:01Z",
+      "bonfire-tekton": "2026-02-09T21:16:01Z",
+      "ansible-documentation": "2026-02-09T21:16:01Z",
+      "ansible-runner": "2026-02-09T21:16:01Z",
+      "galaxy_ng": "2026-02-09T21:16:01Z",
+      "insights-mcp": "2026-02-09T21:16:01Z",
+      "azure": "2026-02-09T21:16:01Z",
+      "django-ansible-base": "2026-02-09T21:16:01Z",
+      "ansible": "2026-02-09T21:16:01Z",
+      "vscode-ansible": "2026-02-09T21:16:01Z",
+      "handbook": "2026-02-09T21:16:01Z",
+      "ansible-podman-collections": "2026-02-09T21:16:01Z",
+      "podman-compose": "2026-02-09T21:16:01Z",
+      "receptor": "2026-02-09T21:16:01Z",
+      "ansible-dev-environment": "2026-02-09T21:16:01Z",
+      "tower-packaging": "2026-02-09T21:16:01Z",
+      "zuul-config": "2026-02-09T21:16:01Z",
+      "aap-gateway": "2026-02-09T21:16:01Z",
+      "insights-host-inventory": "2026-02-09T21:16:01Z",
+      "ansible-sign": "2026-02-09T21:16:01Z",
+      "edge-api": "2026-02-09T21:16:01Z",
+      "metrics-utility": "2026-02-09T21:16:01Z",
+      "clowder": "2026-02-09T21:16:01Z",
+      "aap-azurerm": "2026-02-09T21:16:01Z",
+      "rhsm-subscriptions": "2026-02-09T21:16:01Z",
+      "podman": "2026-02-09T21:16:01Z",
+      "qontract-schemas": "2026-02-09T21:16:01Z",
+      "frontend-operator": "2026-02-09T21:16:01Z",
+      "awx": "2026-02-09T21:16:01Z",
+      "tower": "2026-02-09T21:16:01Z",
+      "pytest-ansible": "2026-02-09T21:16:01Z",
+      "ansible-dev-tools": "2026-02-09T21:16:01Z"
     },
     "repo_profiles": {
       "flozz/cover-thumbnailer": {
@@ -134,6 +185,41 @@
         "decision": "skipped",
         "reason": "Issue is in file-roller application, not nemo-extensions; would require investigating different codebase",
         "evaluated_at": "2026-02-09T20:40:00Z"
+      },
+      "ansible/pytest-ansible#523": {
+        "title": "Dependency to ansible-compat package is missing",
+        "confidence": 100,
+        "decision": "already_fixed",
+        "reason": "Already fixed by PR #526 (merged 2025-11-12), dependency present in pyproject.toml",
+        "evaluated_at": "2026-02-09T21:20:00Z"
+      },
+      "ansible/ansible-lint#4946": {
+        "title": "Pre-commit hook not supported with Python 3.14",
+        "confidence": 95,
+        "decision": "fix_attempted",
+        "reason": "Simple configuration update to support Python 3.14 in pre-commit hook",
+        "evaluated_at": "2026-02-09T21:20:00Z"
+      },
+      "ansible/ansible-lint#4952": {
+        "title": "yaml checks are skipped",
+        "confidence": 70,
+        "decision": "skipped",
+        "reason": "Configuration parsing issue requiring deeper investigation, below 90% threshold",
+        "evaluated_at": "2026-02-09T21:20:00Z"
+      },
+      "ansible/ansible-runner#1474": {
+        "title": "Link to GitHub repo on docs page",
+        "confidence": 75,
+        "decision": "skipped",
+        "reason": "Requires understanding sphinx_ansible_theme configuration, below 90% threshold",
+        "evaluated_at": "2026-02-09T21:20:00Z"
+      },
+      "containers/podman-compose#1357": {
+        "title": "Variable on first line of .env ignored",
+        "confidence": 70,
+        "decision": "skipped",
+        "reason": "Complex bug potentially in python-dotenv library, requires reproduction and testing, below 90% threshold",
+        "evaluated_at": "2026-02-09T21:20:00Z"
       }
     },
     "open_prs": [
@@ -200,7 +286,8 @@
         "url": "https://github.com/flozz/cover-thumbnailer/pull/25",
         "status": "open",
         "fixes_issue": 23,
-        "created_at": "2026-02-09T20:32:00Z"
+        "created_at": "2026-02-09T20:32:00Z",
+        "ci_status": "No CI checks configured"
       },
       {
         "repo": "linuxmint/nemo-extensions",
@@ -209,7 +296,8 @@
         "url": "https://github.com/linuxmint/nemo-extensions/pull/572",
         "status": "open",
         "fixes_issue": 560,
-        "created_at": "2026-02-09T20:35:00Z"
+        "created_at": "2026-02-09T20:35:00Z",
+        "ci_status": "No CI checks configured"
       },
       {
         "repo": "micheleg/dash-to-dock",
@@ -218,7 +306,8 @@
         "url": "https://github.com/micheleg/dash-to-dock/pull/2494",
         "status": "open",
         "fixes_issue": 2482,
-        "created_at": "2026-02-09T20:38:00Z"
+        "created_at": "2026-02-09T20:38:00Z",
+        "ci_status": "No CI checks configured"
       },
       {
         "repo": "gnome-terminator/terminator",
@@ -227,7 +316,8 @@
         "url": "https://github.com/gnome-terminator/terminator/pull/1055",
         "status": "open",
         "fixes_issue": 1051,
-        "created_at": "2026-02-09T20:42:00Z"
+        "created_at": "2026-02-09T20:42:00Z",
+        "ci_status": "No CI checks configured"
       },
       {
         "repo": "gnome-terminator/terminator",
@@ -235,7 +325,19 @@
         "title": "fix: handle invalid regex patterns in search gracefully",
         "url": "https://github.com/gnome-terminator/terminator/pull/1054",
         "status": "open",
-        "comment_from_maintainer": "Positive feedback received, awaiting review"
+        "comment_from_maintainer": "Positive feedback received from mattrose on 2026-02-09, response posted acknowledging feedback",
+        "ci_status": "1 check passing (build Python 3.10)"
+      },
+      {
+        "repo": "ansible/ansible-lint",
+        "pr_number": 4959,
+        "title": "fix: update pre-commit hook to support Python 3.14",
+        "url": "https://github.com/ansible/ansible-lint/pull/4959",
+        "status": "open",
+        "fixes_issue": 4946,
+        "created_at": "2026-02-09T21:20:00Z",
+        "branch": "fix/issue-4946-python-3.14-pre-commit",
+        "fork": "Redhat-forks/ansible-lint"
       }
     ],
     "closed_prs": [
@@ -383,84 +485,97 @@
         "title": "feat: Add snapshot and restore functionality for macOS VMs",
         "status": "open",
         "created_at": "2026-02-09"
+      },
+      {
+        "repo": "containers/podman",
+        "issue_number": 28055,
+        "title": "feat: Add container health check testing and validation CLI",
+        "status": "open",
+        "created_at": "2026-02-09"
+      },
+      {
+        "repo": "podman-desktop/podman-desktop",
+        "issue_number": 16147,
+        "title": "feat: Add container resource usage trends and historical metrics",
+        "status": "open",
+        "created_at": "2026-02-09"
+      },
+      {
+        "repo": "ansible/eda-server",
+        "issue_number": 1470,
+        "title": "feat: Add rulebook simulation and dry-run mode for testing",
+        "status": "open",
+        "created_at": "2026-02-09"
+      },
+      {
+        "repo": "ansible/ansible-builder",
+        "issue_number": 772,
+        "title": "feat: Add dependency conflict detection and resolution suggestions",
+        "status": "open",
+        "created_at": "2026-02-09"
       }
     ]
   },
   "last_run": {
-    "timestamp": "2026-02-09T20:36:00Z",
-    "iteration": 2,
-    "rate_limit_remaining": 4778,
-    "repos_scanned": 56,
-    "dmzoneill_forks_synced": 49,
-    "dmzoneill_forks_errors": 6,
+    "timestamp": "2026-02-09T21:16:01Z",
+    "iteration": 3,
+    "rate_limit_remaining": 4827,
+    "org_focus": "Redhat-forks",
+    "repos_scanned": 53,
+    "redhat_forks_synced": 50,
+    "redhat_forks_errors": 3,
     "actions_taken": [
-      "Agent 1 (Issue & Feedback): Responded to maintainer comment on terminator PR #1054",
-      "Agent 1 (Issue & Feedback): Created 4 feature suggestions (Jackett, Sonarr, cover-thumbnailer, Docker-OSX)",
-      "Agent 2 (Pipeline Fix): Checked all open PRs for CI status",
-      "Agent 2 (Pipeline Fix): Identified Konflux failures on bonfire PRs (Red Hat internal infrastructure, not fixable)",
-      "Agent 2 (Pipeline Fix): Verified all PRs have no merge conflicts",
-      "Agent 3 (Rebase Sync): Synced 49 dmzoneill-forks repos with upstream",
-      "Agent 3 (Rebase Sync): 6 repos had merge conflicts requiring manual resolution",
-      "Agent 4 (Coding Fix): Evaluated 5 issues from dmzoneill-forks repos",
-      "Agent 4 (Coding Fix): Created 4 new PRs fixing upstream issues",
-      "Agent 4 (Coding Fix): Skipped 1 issue (wrong codebase)"
+      "Agent 3 (Rebase Sync): Synced 50/53 Redhat-forks repos with upstream (94.3% success rate)",
+      "Agent 3 (Rebase Sync): 3 repos have merge conflicts (bonfire, insights-frontend-builder-common, insights-ingress-go)",
+      "Agent 3 (Rebase Sync): 5 repos fast-forwarded (tower, awx, metrics-utility, vscode-ansible, handbook)",
+      "Agent 1 (Issue & Feedback): Monitored all 12 open PRs for reviewer comments",
+      "Agent 1 (Issue & Feedback): Created 4 feature suggestions (podman, podman-desktop, eda-server, ansible-builder)",
+      "Agent 2 (Pipeline Fix): Checked all 13 open PRs for CI status",
+      "Agent 2 (Pipeline Fix): Verified all PRs mergeable with no merge conflicts",
+      "Agent 2 (Pipeline Fix): Identified bonfire Konflux failures (Red Hat internal, not fixable)",
+      "Agent 4 (Coding Fix): Evaluated 8 issues across multiple Redhat-forks repos",
+      "Agent 4 (Coding Fix): Created 1 new PR (ansible-lint #4959)",
+      "Agent 4 (Coding Fix): Skipped 5 issues (1 already fixed, 3 our suggestions, 1 below threshold)"
     ],
     "new_prs_created": [
       {
-        "repo": "flozz/cover-thumbnailer",
-        "pr_number": 25,
-        "url": "https://github.com/flozz/cover-thumbnailer/pull/25",
-        "fixes_issue": 23
-      },
-      {
-        "repo": "linuxmint/nemo-extensions",
-        "pr_number": 572,
-        "url": "https://github.com/linuxmint/nemo-extensions/pull/572",
-        "fixes_issue": 560
-      },
-      {
-        "repo": "micheleg/dash-to-dock",
-        "pr_number": 2494,
-        "url": "https://github.com/micheleg/dash-to-dock/pull/2494",
-        "fixes_issue": 2482
-      },
-      {
-        "repo": "gnome-terminator/terminator",
-        "pr_number": 1055,
-        "url": "https://github.com/gnome-terminator/terminator/pull/1055",
-        "fixes_issue": 1051
+        "repo": "ansible/ansible-lint",
+        "pr_number": 4959,
+        "url": "https://github.com/ansible/ansible-lint/pull/4959",
+        "fixes_issue": 4946
       }
     ],
     "new_feature_suggestions": [
       {
-        "repo": "Jackett/Jackett",
-        "issue_number": 16571,
-        "url": "https://github.com/Jackett/Jackett/issues/16571"
+        "repo": "containers/podman",
+        "issue_number": 28055,
+        "url": "https://github.com/containers/podman/issues/28055"
       },
       {
-        "repo": "Sonarr/Sonarr",
-        "issue_number": 8402,
-        "url": "https://github.com/Sonarr/Sonarr/issues/8402"
+        "repo": "podman-desktop/podman-desktop",
+        "issue_number": 16147,
+        "url": "https://github.com/podman-desktop/podman-desktop/issues/16147"
       },
       {
-        "repo": "flozz/cover-thumbnailer",
-        "issue_number": 26,
-        "url": "https://github.com/flozz/cover-thumbnailer/issues/26"
+        "repo": "ansible/eda-server",
+        "issue_number": 1470,
+        "url": "https://github.com/ansible/eda-server/issues/1470"
       },
       {
-        "repo": "sickcodes/Docker-OSX",
-        "issue_number": 916,
-        "url": "https://github.com/sickcodes/Docker-OSX/issues/916"
+        "repo": "ansible/ansible-builder",
+        "issue_number": 772,
+        "url": "https://github.com/ansible/ansible-builder/issues/772"
       }
     ],
     "errors": [
-      "6 dmzoneill-forks repos have merge conflicts and need manual resolution (etcd, binance-official-api-docs, markdown-badges, Sonarr, filebot, scripts)"
+      "3 Redhat-forks repos have merge conflicts requiring manual resolution (bonfire, insights-frontend-builder-common, insights-ingress-go)",
+      "bonfire fork conflict is CRITICAL - has 2 open PRs to upstream"
     ],
     "next_run_priorities": [
-      "Monitor newly created PRs for reviewer feedback",
-      "Continue monitoring existing PRs for CI failures and comments",
-      "Continue creating feature suggestions for remaining repos",
-      "Resolve merge conflicts in 6 dmzoneill-forks repos"
+      "Resolve bonfire merge conflict (CRITICAL - has 2 open PRs)",
+      "Monitor all 13 open PRs for reviewer feedback",
+      "Continue creating feature suggestions for remaining Redhat-forks repos",
+      "Continue scanning for high-confidence issues to fix"
     ]
   }
 }
