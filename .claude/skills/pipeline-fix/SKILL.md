@@ -186,3 +186,4 @@ Return a JSON object:
 - Run tests before pushing if available
 - If a fix is too complex (major refactor needed), log it and move on — don't break the PR further
 - Max 3 fix attempts per PR per iteration to avoid commit spam
+- Never mention Claude, Anthropic, or AI — no AI attribution in commits, PRs, or comments

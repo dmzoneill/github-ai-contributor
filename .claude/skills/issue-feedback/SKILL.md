@@ -72,8 +72,7 @@ gh issue create -R {upstream} \
 ### Additional Context
 {Any relevant details, examples, or references}
 
----
-*This feature suggestion was generated based on analysis of the project.*"
+"
 ```
 
 ### 4. Record the Suggestion
@@ -200,3 +199,4 @@ Return a JSON object:
 - Keep responses concise and actionable
 - When implementing code changes from feedback, run tests before pushing if available
 - Use conventional commit messages for all follow-up commits
+- Never mention Claude, Anthropic, or AI — no AI attribution in issues, comments, PRs, or commits

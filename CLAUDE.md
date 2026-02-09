@@ -272,6 +272,7 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 - **Read CONTRIBUTING.md** and upstream conventions before contributing
 - **Never push more than 10 fix commits per iteration**
 - **Track everything in state file** so next iteration doesn't redo work
+- **Never mention Claude, Anthropic, or AI in commits, PRs, issues, or comments** — no Co-Authored-By headers, no AI attribution, no references to being an AI agent anywhere in contributions
 
 ## Project Structure
 
