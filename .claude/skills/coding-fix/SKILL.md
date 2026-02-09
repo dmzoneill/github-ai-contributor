@@ -22,19 +22,40 @@ The orchestrator passes you:
 - `open_prs`: Our current open PRs (to know which issues are already being addressed)
 - `our_github_username`: The authenticated GitHub username
 
-## Step 1: Check Existing PRs and Issues (Pre-flight)
+## Step 1: Bulk Discovery (GraphQL)
 
-**ALWAYS** verify current open PR and issue counts per upstream repo before doing any work:
+Use GraphQL to get open issues and our PR/issue counts across multiple upstream repos in a single call:
 
 ```bash
-# Count our open PRs on the upstream repo
-gh pr list -R {upstream} --author {our_username} --state open --json number -q 'length'
-
-# Count our open issues (feature suggestions) on the upstream repo
-gh issue list -R {upstream} --author {our_username} --state open --json number -q 'length'
+# Get open issues + our PRs for a specific upstream repo
+gh api graphql -f query='
+query($owner: String!, $repo: String!, $author: String!) {
+  repository(owner: $owner, name: $repo) {
+    issues(states: OPEN, first: 20, orderBy: {field: CREATED_AT, direction: DESC}) {
+      nodes {
+        number
+        title
+        body
+        author { login }
+        labels(first: 5) { nodes { name } }
+        createdAt
+      }
+    }
+    ourPRs: pullRequests(states: OPEN, first: 10) {
+      nodes {
+        number
+        author { login }
+      }
+    }
+  }
+}' -f owner="{owner}" -f repo="{repo}" -f author="{our_username}"
 ```
 
-**Hard limits per upstream repo**:
+This returns open issues AND our open PR count in **one call per repo** instead of 3+ REST calls.
+
+### Pre-flight Limits Check
+
+From the GraphQL response, count PRs where `author.login` matches our username:
 - **Max 3 open PRs** — do NOT create more if at limit
 - **Max 1 open issue** (feature suggestion) — do NOT create more if at limit
 - Skip repos already at their limits entirely
@@ -47,22 +68,9 @@ Sort repos by current open PR count (ascending). This ensures balanced distribut
 - Round 3: Repos with 2 PRs
 - Skip repos already at max (3 open PRs)
 
-```python
-# Conceptual sort (implement via shell/jq):
-sorted_repos = sorted(fork_upstream_map.items(), key=lambda x: repo_pr_counts.get(x[1], 0))
-```
+## Step 3: Scan for Issues
 
-## Step 2: Scan for Issues
-
-For each upstream repo in priority order (below max 3 PRs):
-
-```bash
-# Get open issues (not PRs)
-gh issue list -R {upstream} --state open --json number,title,body,labels,author,createdAt -L 20
-
-# Check if issue author is us (skip our own feature suggestions)
-# Also skip issues already in attempted_issues or skipped_issues
-```
+From the GraphQL response, filter the issues list:
 
 **Filtering rules**:
 - Skip issues already in `evaluated_issues` cache (already assessed in a prior run — check key `"{upstream}#{number}"`)
@@ -74,7 +82,7 @@ gh issue list -R {upstream} --state open --json number,title,body,labels,author,
 - Skip issues that are actually pull requests
 - Prefer issues with labels like `bug`, `good first issue`, `help wanted`
 
-## Step 3: Confidence Assessment
+## Step 4: Confidence Assessment
 
 For each candidate issue, assess confidence (0-100%):
 
@@ -93,8 +101,8 @@ gh issue view {number} -R {upstream} --json title,body,comments
 # Get repo structure
 gh api repos/{upstream} --jq '{language: .language, default_branch: .default_branch, description: .description, topics: .topics}'
 
-# Clone the repo first if needed
-git -C ~/src/{org}-{repo} pull 2>/dev/null || git clone git@github.com:{org}/{repo}.git ~/src/{org}-{repo}
+# Clone the repo first if needed (HTTPS — uses GITHUB_TOKEN for auth)
+git -C ~/src/{org}-{repo} pull 2>/dev/null || gh repo clone {org}/{repo} ~/src/{org}-{repo}
 
 # Read CONTRIBUTING.md if it exists
 cat ~/src/{org}-{repo}/CONTRIBUTING.md 2>/dev/null || true
@@ -164,7 +172,7 @@ ls ~/src/{org}-{repo}/{Makefile,package.json,pyproject.toml,setup.py,go.mod,Carg
 ```
 This prevents re-evaluating the same issue in future runs.
 
-## Step 4: Implement the Fix
+## Step 5: Implement the Fix
 
 ### a. Prepare the Branch
 
@@ -172,7 +180,10 @@ This prevents re-evaluating the same issue in future runs.
 cd ~/src/{org}-{repo}
 
 # Ensure upstream remote exists and is current
+# Upstream is read-only, HTTPS is fine
 git remote get-url upstream 2>/dev/null || git remote add upstream https://github.com/{upstream}.git
+# Ensure origin uses HTTPS with token auth (gh handles this automatically)
+git remote set-url origin https://github.com/{org}/{repo}.git
 git fetch upstream
 git fetch origin
 
@@ -270,7 +281,7 @@ Fixes #{number}
 
 Capture the PR number from the output and add to results.
 
-## Step 5: Move to Next Repo
+## Step 6: Move to Next Repo
 
 After creating 1 PR for a repo, move to the next repo in the priority queue (balanced rounds). Continue until:
 - Max 5 fix attempts per iteration reached

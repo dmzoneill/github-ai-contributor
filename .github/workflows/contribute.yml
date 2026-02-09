@@ -38,10 +38,14 @@ jobs:
           echo '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}' > /tmp/gcp-credentials.json
           echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp-credentials.json" >> $GITHUB_ENV
 
-      - name: Configure git for commits
+      - name: Configure git
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_HOOK }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # Use gh as git credential helper so HTTPS cloning/pushing works with GITHUB_TOKEN
+          gh auth setup-git
 
       - name: Create stream filter
         run: |
