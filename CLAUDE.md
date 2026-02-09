@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Project Is
 
-`github-ai-contributor` is a prompt-driven, headless AI system that autonomously contributes to open-source repositories. It monitors repos forked into the `Redhat-forks` GitHub org, scans their **upstream** (original) repos for open issues, assesses whether it can fix them with >= 90% confidence, and submits PRs back to the upstream. It also suggests features. Runs every 6 hours via GitHub Actions, fully headless using `claude -p`.
+`github-ai-contributor` is a prompt-driven, headless AI system that autonomously contributes to open-source repositories. It monitors repos forked into the `Redhat-forks` GitHub org, scans their **upstream** (original) repos for open issues, assesses whether it can fix them with >= 90% confidence, and submits PRs back to the upstream. It also suggests features. Runs every 3 hours via GitHub Actions (1-hour timeout per run), fully headless using `claude -p`.
 
 This project contains **no Python/Node code** — it is entirely orchestrated by Claude Code via markdown prompts, following the same architecture as `github-ai-maintainer`.
 

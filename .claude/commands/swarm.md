@@ -30,8 +30,8 @@ This tracks what has already been processed to avoid duplicate work across ralph
 Get all repos from the target org and identify their upstream (parent) repos:
 
 ```bash
-# Get repos from the org
-gh repo list Redhat-forks --limit 200 --json name,url -q '.[].name'
+# Get repos from the org in random order (so different repos get priority each run)
+gh repo list Redhat-forks --limit 200 --json name,url -q '.[].name' | shuf
 
 # For each fork, get the upstream parent
 gh api repos/{org}/{repo} --jq '.parent.full_name'
@@ -113,7 +113,7 @@ Your responsibilities:
 Your responsibilities:
 1. List all repos in the target org:
    ```bash
-   gh repo list Redhat-forks --limit 200 --json name -q '.[].name'
+   gh repo list Redhat-forks --limit 200 --json name -q '.[].name' | shuf
    ```
 
 2. For each fork repo:

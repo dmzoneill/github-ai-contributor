@@ -2,7 +2,7 @@
 
 Prompt-driven, headless AI system that autonomously contributes to open-source repositories. It monitors repos forked into the [`Redhat-forks`](https://github.com/Redhat-forks) GitHub org, scans their upstream repos for open issues, assesses whether it can fix them with >= 90% confidence, and submits PRs back to the upstream. It also suggests features.
 
-Runs every 6 hours via GitHub Actions, fully headless using `claude -p`. Contains **no application code** — entirely orchestrated by [Claude Code](https://claude.ai/code) via markdown prompts.
+Runs every 3 hours via GitHub Actions (1-hour timeout per run), fully headless using `claude -p`. Contains **no application code** — entirely orchestrated by [Claude Code](https://claude.ai/code) via markdown prompts.
 
 ## How It Works
 
@@ -129,7 +129,7 @@ github-ai-contributor/
 
 ### Automated (GitHub Actions)
 
-The `contribute.yml` workflow runs every 6 hours. It can also be triggered manually via `workflow_dispatch`.
+The `contribute.yml` workflow runs every 3 hours with a 1-hour timeout. It can also be triggered manually via `workflow_dispatch`.
 
 ### Manual (Claude Code CLI)
 
