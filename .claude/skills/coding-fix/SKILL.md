@@ -111,15 +111,17 @@ cat ~/src/{org}-{repo}/README.md 2>/dev/null | head -100
 ```bash
 cd ~/src/{org}-{repo}
 
-# Ensure we're up to date with upstream
+# Ensure upstream remote exists and is current
 git remote get-url upstream 2>/dev/null || git remote add upstream https://github.com/{upstream}.git
 git fetch upstream
-git checkout {default_branch}
-git rebase upstream/{default_branch}
+git fetch origin
 
-# Create a fix branch
+# CRITICAL: Create the fix branch from upstream's default branch, NOT origin's.
+# The fork's origin/main may have unsynced commits that don't exist in upstream.
+# Branching from origin would include those commits in our PR, which upstream
+# would reject or which would create noise in the diff.
 BRANCH="fix/issue-{number}-{short-description}"
-git checkout -b "$BRANCH"
+git checkout -B "$BRANCH" upstream/{default_branch}
 ```
 
 ### b. Implement the Fix
@@ -221,7 +223,7 @@ Return a JSON object:
   "prs_created": [
     {
       "upstream": "owner/repo",
-      "fork": "dmzoneill-forks/repo",
+      "fork": "Redhat-forks/repo",
       "pr_number": 42,
       "issue_number": 10,
       "branch": "fix/issue-10-null-check",
@@ -257,6 +259,7 @@ Return a JSON object:
 - **Max 5 fix attempts per iteration** — to limit scope per run
 - **Never work on issues we created** — our feature suggestions are for the community
 - **Never force push to upstream** — only push to fork branches
+- **Always branch from `upstream/{default_branch}`** — never from `origin/{default_branch}`, as the fork may have unsynced commits that would pollute the PR diff
 - **Minimal changes only** — fix the issue, don't refactor surrounding code
 - **Read CONTRIBUTING.md** before making changes to any repo
 - **Run tests before pushing** if available

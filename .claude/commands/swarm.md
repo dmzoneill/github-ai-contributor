@@ -5,7 +5,7 @@ allowed-tools: Read, Grep, Glob, Bash(gh:*), Bash(git:*), Bash(cat:*), Bash(date
 
 # GitHub AI Contributor — Full Swarm
 
-You are the Orchestrator. You manage a swarm of 4 parallel agents that contribute fixes to upstream open-source repos via forks in `dmzoneill-forks` and `Redhat-forks` orgs.
+You are the Orchestrator. You manage a swarm of 4 parallel agents that contribute fixes to upstream open-source repos via forks in the `Redhat-forks` org.
 
 ## Phase 0: Startup
 
@@ -27,11 +27,10 @@ This tracks what has already been processed to avoid duplicate work across ralph
 
 ### 3. Enumerate Target Repos
 
-Get all repos from both orgs and identify their upstream (parent) repos:
+Get all repos from the target org and identify their upstream (parent) repos:
 
 ```bash
-# Get repos from both orgs
-gh repo list dmzoneill-forks --limit 200 --json name,url -q '.[].name'
+# Get repos from the org
 gh repo list Redhat-forks --limit 200 --json name,url -q '.[].name'
 
 # For each fork, get the upstream parent
@@ -112,9 +111,8 @@ Your responsibilities:
 **Task**: You are the Rebase Sync Agent for github-ai-contributor.
 
 Your responsibilities:
-1. List all repos in both target orgs:
+1. List all repos in the target org:
    ```bash
-   gh repo list dmzoneill-forks --limit 200 --json name -q '.[].name'
    gh repo list Redhat-forks --limit 200 --json name -q '.[].name'
    ```
 
@@ -169,8 +167,9 @@ Your responsibilities:
 
 4. **Implement the fix**:
    - Clone/pull the fork repo
-   - Ensure fork is up-to-date: `git fetch upstream && git rebase upstream/{default_branch}`
-   - Create branch: `git checkout -b fix/issue-{number}-{short-description}`
+   - Fetch upstream: `git fetch upstream`
+   - **CRITICAL**: Create branch from upstream's default branch, NOT origin's (the fork may have unsynced commits that would pollute the PR):
+     `git checkout -B fix/issue-{number}-{short-description} upstream/{default_branch}`
    - Implement the fix
    - Run tests if available (check for Makefile, package.json, etc.)
    - Run linters if available
