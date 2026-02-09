@@ -1,24 +1,201 @@
 {
   "persistent": {
     "orgs": ["Redhat-forks"],
-    "repo_pr_counts": {},
+    "repo_pr_counts": {
+      "RedHatInsights/bonfire": 2,
+      "ansible/awx": 3,
+      "benthomasson/dataverse-integration": 1
+    },
     "repo_last_rebased": {},
     "repo_profiles": {},
     "evaluated_issues": {},
-    "open_prs": [],
-    "closed_prs": [],
+    "open_prs": [
+      {
+        "repo": "RedHatInsights/bonfire",
+        "pr_number": 528,
+        "title": "fix: handle missing keycloak secret in namespace describe",
+        "url": "https://github.com/RedHatInsights/bonfire/pull/528",
+        "status": "open"
+      },
+      {
+        "repo": "RedHatInsights/bonfire",
+        "pr_number": 526,
+        "title": "fix: optimize namespace refresh function to avoid unnecessary deepcopy",
+        "url": "https://github.com/RedHatInsights/bonfire/pull/526",
+        "status": "open"
+      },
+      {
+        "repo": "ansible/awx",
+        "pr_number": 14965,
+        "title": "Update PR template",
+        "url": "https://github.com/ansible/awx/pull/14965",
+        "status": "open"
+      },
+      {
+        "repo": "ansible/awx",
+        "pr_number": 14852,
+        "title": "Fix formsubmiterror not showing",
+        "url": "https://github.com/ansible/awx/pull/14852",
+        "status": "open"
+      },
+      {
+        "repo": "ansible/awx",
+        "pr_number": 14838,
+        "title": "Monthly issue metrics",
+        "url": "https://github.com/ansible/awx/pull/14838",
+        "status": "open"
+      },
+      {
+        "repo": "ansible/ansible-sign",
+        "pr_number": 101,
+        "title": "fix: handle symlink loops gracefully in manifest processing",
+        "url": "https://github.com/ansible/ansible-sign/pull/101",
+        "status": "open"
+      },
+      {
+        "repo": "benthomasson/dataverse-integration",
+        "pr_number": 3,
+        "title": "AAP-64892 - docs: Update dbt setup & dataproduct-config status",
+        "url": "https://github.com/benthomasson/dataverse-integration/pull/3",
+        "status": "open"
+      }
+    ],
+    "closed_prs": [
+      {
+        "repo": "RedHatInsights/insights-analytics-collector",
+        "pr_number": 24,
+        "title": "Uploader strategies",
+        "url": "https://github.com/RedHatInsights/insights-analytics-collector/pull/24",
+        "closed_at": "2026-02-09",
+        "reason": "Closed due to formatting issues and excessive reformatting obscuring functional changes"
+      },
+      {
+        "repo": "ansible/awx",
+        "pr_number": 14823,
+        "title": "Stale action for prs issues",
+        "url": "https://github.com/ansible/awx/pull/14823",
+        "closed_at": "2026-02-09",
+        "reason": "Closed per maintainer request to put on hold until success criteria are defined"
+      }
+    ],
     "merged_prs": [],
     "attempted_issues": [],
     "skipped_issues": [],
-    "feature_suggestions": []
+    "feature_suggestions": [
+      {
+        "repo": "RedHatInsights/bonfire",
+        "issue_number": 527,
+        "title": "Add namespace cost estimation and resource quota warnings",
+        "status": "open"
+      },
+      {
+        "repo": "RedHatInsights/bonfire",
+        "issue_number": 288,
+        "title": "metadata.labels 63-character limit",
+        "status": "open"
+      },
+      {
+        "repo": "ansible/vscode-ansible",
+        "issue_number": 2558,
+        "title": "feat: Add support for snippet templates from custom directories",
+        "status": "open"
+      },
+      {
+        "repo": "ansible/vscode-ansible",
+        "issue_number": 2557,
+        "title": "Add inline variable value preview on hover",
+        "status": "open"
+      },
+      {
+        "repo": "ansible/awx",
+        "issue_number": 16270,
+        "title": "Add bulk operations support for job templates",
+        "status": "open"
+      },
+      {
+        "repo": "ansible/ansible-lint",
+        "issue_number": 4958,
+        "title": "feat: Add JSON output format for CI/CD pipeline integration",
+        "status": "open"
+      },
+      {
+        "repo": "ansible/ansible-lint",
+        "issue_number": 4957,
+        "title": "Add support for custom rule templates via configuration",
+        "status": "open"
+      },
+      {
+        "repo": "RedHatInsights/clowder",
+        "issue_number": 1670,
+        "title": "Add ClowdApp validation webhook for early error detection",
+        "status": "open"
+      },
+      {
+        "repo": "ansible/receptor",
+        "issue_number": 1521,
+        "title": "Add built-in health check and metrics endpoints",
+        "status": "open"
+      },
+      {
+        "repo": "ansible/ansible-navigator",
+        "issue_number": 2095,
+        "title": "feat: Add session replay capability for debugging",
+        "status": "open",
+        "created_at": "2026-02-09"
+      },
+      {
+        "repo": "ansible/metrics-utility",
+        "issue_number": 324,
+        "title": "feat: Add Prometheus metrics exporter",
+        "status": "open",
+        "created_at": "2026-02-09"
+      },
+      {
+        "repo": "ansible/django-ansible-base",
+        "issue_number": 933,
+        "title": "feat: Add comprehensive audit logging middleware",
+        "status": "open",
+        "created_at": "2026-02-09"
+      },
+      {
+        "repo": "app-sre/qontract-schemas",
+        "issue_number": 974,
+        "title": "feat: Add schema versioning and migration support",
+        "status": "open",
+        "created_at": "2026-02-09"
+      },
+      {
+        "repo": "ansible/ansible-ai-connect-operator",
+        "issue_number": 711,
+        "title": "feat: Add AI model performance metrics and monitoring",
+        "status": "open",
+        "created_at": "2026-02-09"
+      }
+    ]
   },
   "last_run": {
-    "timestamp": null,
-    "iteration": 0,
-    "rate_limit_remaining": null,
-    "repos_scanned": 0,
-    "actions_taken": [],
-    "errors": [],
-    "next_run_priorities": []
+    "timestamp": "2026-02-09T18:00:00Z",
+    "iteration": 1,
+    "rate_limit_remaining": 4699,
+    "repos_scanned": 30,
+    "actions_taken": [
+      "Responded to PR #24 review feedback on insights-analytics-collector",
+      "Closed PR #24 on insights-analytics-collector due to formatting issues",
+      "Responded to and closed PR #14823 on awx per maintainer request",
+      "Created feature suggestion #2095 on ansible-navigator (session replay)",
+      "Created feature suggestion #324 on metrics-utility (Prometheus export)",
+      "Created feature suggestion #933 on django-ansible-base (audit logging)",
+      "Created feature suggestion #974 on qontract-schemas (schema versioning)",
+      "Created feature suggestion #711 on ansible-ai-connect-operator (model metrics)"
+    ],
+    "errors": [
+      "Rate limiting encountered during feature suggestion creation - several repos throttled",
+      "Some repos have issues disabled (galaxy_ng) or are archived (edge-frontend, ansible-runner)"
+    ],
+    "next_run_priorities": [
+      "Continue creating feature suggestions for remaining repos after rate limit reset",
+      "Monitor existing open PRs for new comments/reviews",
+      "Check CI status on open PRs"
+    ]
   }
 }
