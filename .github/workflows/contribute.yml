@@ -2,7 +2,7 @@ name: Contributor Swarm
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
+    - cron: '0 */3 * * *'  # Every 3 hours
   workflow_dispatch: {}     # Manual trigger
 
 permissions:
@@ -14,7 +14,7 @@ permissions:
 jobs:
   contribute:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 75
 
     steps:
       - name: Checkout repo
@@ -46,7 +46,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PROFILE_HOOK }}
         run: |
           # Force line-buffered output so GitHub Actions shows progress in real-time
-          script -q -e -c 'claude -p \
+          # timeout kills claude after 1 hour (3600s) so cleanup steps still run
+          script -q -e -c 'timeout --signal=TERM --kill-after=60 3600 claude -p \
             --dangerously-skip-permissions \
             --verbose \
             --max-turns 200 \
@@ -59,10 +60,10 @@ jobs:
           STEP 2: Run this command to read the swarm state:
             cat .claude/.swarm-state.json 2>/dev/null || echo {}
 
-          STEP 3: List all repos in target orgs:
-            gh repo list Redhat-forks --limit 200 --json name,url -q .[].name
+          STEP 3: List all repos in target org and RANDOMIZE the order:
+            gh repo list Redhat-forks --limit 200 --json name,url -q .[].name | shuf
 
-          STEP 4: For each fork, identify the upstream (parent) repo:
+          STEP 4: For each fork (in the randomized order), identify the upstream (parent) repo:
             gh api repos/{org}/{repo} --jq .parent.full_name
 
           STEP 5: Rebase all forks from their upstream repos to keep them current.
@@ -72,7 +73,7 @@ jobs:
           Balance work across repos - max 3 open PRs per upstream repo.
 
           STEP 7: For fixable issues:
-          - Create branch: fix/issue-{number}-{short-description}
+          - Create branch from upstream default branch (NOT origin): fix/issue-{number}-{short-description}
           - Implement the fix
           - Run available tests/linters
           - Commit with commitlint-valid conventional message
@@ -90,7 +91,7 @@ jobs:
 
           STEP 11: Output a summary of all actions taken.
 
-          IMPORTANT: You must actually run commands and do work. Do not skip steps."' /tmp/claude-output.log
+          IMPORTANT: You must actually run commands and do work. Do not skip steps."' /tmp/claude-output.log || true
 
       - name: Show summary
         if: always()

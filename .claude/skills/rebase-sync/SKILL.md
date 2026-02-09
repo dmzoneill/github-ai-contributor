@@ -20,8 +20,8 @@ The orchestrator passes you:
 ### 1. List All Repos in Target Orgs
 
 ```bash
-# Get repos from the target org
-gh repo list Redhat-forks --limit 200 --json name -q '.[].name'
+# Get repos from the target org in random order
+gh repo list Redhat-forks --limit 200 --json name -q '.[].name' | shuf
 ```
 
 ### 2. For Each Fork Repo
