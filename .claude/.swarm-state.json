@@ -9,7 +9,8 @@
       "flozz/cover-thumbnailer": 1,
       "linuxmint/nemo-extensions": 1,
       "micheleg/dash-to-dock": 1,
-      "gnome-terminator/terminator": 2
+      "gnome-terminator/terminator": 2,
+      "deluge-torrent/deluge": 2
     },
     "repo_last_rebased": {
       "Amazon-video-downloader": "2026-02-09T20:27:41Z",
@@ -110,7 +111,15 @@
       "awx": "2026-02-09T21:16:01Z",
       "tower": "2026-02-09T21:16:01Z",
       "pytest-ansible": "2026-02-09T21:16:01Z",
-      "ansible-dev-tools": "2026-02-09T21:16:01Z"
+      "ansible-dev-tools": "2026-02-09T21:16:01Z",
+      "vscode": "2026-02-09T22:47:26Z",
+      "zed": "2026-02-09T22:47:26Z",
+      "markdown-badges": "2026-02-09T22:47:26Z",
+      "Sonarr": "2026-02-09T22:47:26Z",
+      "scripts": "2026-02-09T22:47:26Z",
+      "etcd": "2026-02-09T22:47:26Z",
+      "binance-official-api-docs": "2026-02-09T22:47:26Z",
+      "filebot": "2026-02-09T22:47:26Z"
     },
     "repo_profiles": {
       "flozz/cover-thumbnailer": {
@@ -220,6 +229,76 @@
         "decision": "skipped",
         "reason": "Complex bug potentially in python-dotenv library, requires reproduction and testing, below 90% threshold",
         "evaluated_at": "2026-02-09T21:20:00Z"
+      },
+      "jazzband/prettytable#3025": {
+        "title": "Slow import time due to sync call to pkg_resources",
+        "confidence": 60,
+        "decision": "skipped",
+        "reason": "Issue is in MCP SDK library, not in fastmcp repo; would require fixing upstream dependency",
+        "evaluated_at": "2026-02-09T22:47:26Z"
+      },
+      "jazzband/prettytable#3095": {
+        "title": "Add type hints",
+        "confidence": 70,
+        "decision": "skipped",
+        "reason": "Large refactoring across multiple files, requires understanding entire codebase API surface",
+        "evaluated_at": "2026-02-09T22:47:26Z"
+      },
+      "jazzband/prettytable#3034": {
+        "title": "Expose registered tools to clients",
+        "confidence": 50,
+        "decision": "skipped",
+        "reason": "Complex architectural change requiring deep understanding of async dependency injection patterns",
+        "evaluated_at": "2026-02-09T22:47:26Z"
+      },
+      "theotherp/nzbhydra2#956": {
+        "title": "NZBHydra2 doesn't start after Windows update",
+        "confidence": 30,
+        "decision": "skipped",
+        "reason": "Windows-specific issue requiring Java environment and Windows testing infrastructure we lack",
+        "evaluated_at": "2026-02-09T22:47:26Z"
+      },
+      "theotherp/nzbhydra2#882": {
+        "title": "Search for torrents",
+        "confidence": 40,
+        "decision": "skipped",
+        "reason": "Large feature requiring Java Spring Boot expertise, multi-file changes, new API endpoints",
+        "evaluated_at": "2026-02-09T22:47:26Z"
+      },
+      "Sonarr/Sonarr#6821": {
+        "title": "Add support for custom formats",
+        "confidence": 50,
+        "decision": "skipped",
+        "reason": "Large feature requiring C# .NET expertise, architectural changes across multiple layers",
+        "evaluated_at": "2026-02-09T22:47:26Z"
+      },
+      "all-contributors/all-contributors#908": {
+        "title": "Migrate to pnpm",
+        "confidence": 60,
+        "decision": "skipped",
+        "reason": "Large migration blocked by upstream dependency updates, requires coordination with maintainers",
+        "evaluated_at": "2026-02-09T22:47:26Z"
+      },
+      "Shearerbeard/asyncmock#7": {
+        "title": "Async context manager support",
+        "confidence": 70,
+        "decision": "skipped",
+        "reason": "Stale issue from 2020, unclear if still relevant, no reproduction steps or clear requirements",
+        "evaluated_at": "2026-02-09T22:47:26Z"
+      },
+      "fmtlib/fmt#3841": {
+        "title": "Add support for formatting std::filesystem::path",
+        "confidence": 65,
+        "decision": "skipped",
+        "reason": "C++ feature requiring deep understanding of template metaprogramming and compiler compatibility",
+        "evaluated_at": "2026-02-09T22:47:26Z"
+      },
+      "webpack/webpack#18250": {
+        "title": "Webpack 5 asset modules: publicPath not working",
+        "confidence": 55,
+        "decision": "skipped",
+        "reason": "Complex webpack plugin architecture issue, requires testing across multiple build configurations",
+        "evaluated_at": "2026-02-09T22:47:26Z"
       }
     },
     "open_prs": [
@@ -338,6 +417,28 @@
         "created_at": "2026-02-09T21:20:00Z",
         "branch": "fix/issue-4946-python-3.14-pre-commit",
         "fork": "Redhat-forks/ansible-lint"
+      },
+      {
+        "repo": "deluge-torrent/deluge",
+        "pr_number": 496,
+        "title": "fix: close file handle in setup.py to prevent resource leak",
+        "url": "https://github.com/deluge-torrent/deluge/pull/496",
+        "status": "open",
+        "created_at": "2026-02-09T22:47:26Z",
+        "branch": "fix/resource-leak-setup-py",
+        "fork": "dmzoneill-forks/deluge",
+        "ci_status": "No CI checks configured"
+      },
+      {
+        "repo": "deluge-torrent/deluge",
+        "pr_number": 497,
+        "title": "fix: close file handles in gen_web_gettext.py to prevent resource leak",
+        "url": "https://github.com/deluge-torrent/deluge/pull/497",
+        "status": "open",
+        "created_at": "2026-02-09T22:47:26Z",
+        "branch": "fix/resource-leak-gen-web-gettext",
+        "fork": "dmzoneill-forks/deluge",
+        "ci_status": "No CI checks configured"
       }
     ],
     "closed_prs": [
@@ -368,7 +469,34 @@
         "reason": "Issue is in file-roller application, not in nemo-extensions codebase. Would require investigating and fixing a different upstream project."
       }
     ],
-    "bug_fixes": [],
+    "bug_fixes": [
+      {
+        "upstream": "deluge-torrent/deluge",
+        "fork": "dmzoneill-forks/deluge",
+        "issue_number": null,
+        "pr_number": 496,
+        "branch": "fix/resource-leak-setup-py",
+        "title": "fix: close file handle in setup.py to prevent resource leak",
+        "file_path": "setup.py",
+        "line_number": 573,
+        "bug_type": "resource_leak",
+        "severity": "low",
+        "status": "open"
+      },
+      {
+        "upstream": "deluge-torrent/deluge",
+        "fork": "dmzoneill-forks/deluge",
+        "issue_number": null,
+        "pr_number": 497,
+        "branch": "fix/resource-leak-gen-web-gettext",
+        "title": "fix: close file handles in gen_web_gettext.py to prevent resource leak",
+        "file_path": "gen_web_gettext.py",
+        "line_number": 57,
+        "bug_type": "resource_leak",
+        "severity": "low",
+        "status": "open"
+      }
+    ],
     "feature_suggestions": [
       {
         "repo": "RedHatInsights/bonfire",
@@ -514,69 +642,98 @@
         "title": "feat: Add dependency conflict detection and resolution suggestions",
         "status": "open",
         "created_at": "2026-02-09"
+      },
+      {
+        "repo": "linuxmint/nemo-extensions",
+        "issue_number": 573,
+        "title": "feat: Add bulk file metadata editor extension for media files",
+        "status": "open",
+        "created_at": "2026-02-09"
+      },
+      {
+        "repo": "theotherp/nzbhydra2",
+        "issue_number": 1041,
+        "title": "feat: Add duplicate release detection and smart filtering",
+        "status": "open",
+        "created_at": "2026-02-09"
+      },
+      {
+        "repo": "WiringPi/WiringPi",
+        "issue_number": 418,
+        "title": "feat: Add GPIO state persistence and restore functionality",
+        "status": "open",
+        "created_at": "2026-02-09"
       }
     ]
   },
   "last_run": {
-    "timestamp": "2026-02-09T21:16:01Z",
-    "iteration": 3,
-    "rate_limit_remaining": 4827,
-    "org_focus": "Redhat-forks",
-    "repos_scanned": 53,
-    "redhat_forks_synced": 50,
-    "redhat_forks_errors": 3,
+    "timestamp": "2026-02-09T22:52:50Z",
+    "iteration": 4,
+    "rate_limit_remaining": 4846,
+    "org_focus": "dmzoneill-forks",
+    "repos_scanned": 59,
+    "dmzoneill_forks_synced": 52,
+    "dmzoneill_forks_errors": 6,
     "actions_taken": [
-      "Agent 3 (Rebase Sync): Synced 50/53 Redhat-forks repos with upstream (94.3% success rate)",
-      "Agent 3 (Rebase Sync): 3 repos have merge conflicts (bonfire, insights-frontend-builder-common, insights-ingress-go)",
-      "Agent 3 (Rebase Sync): 5 repos fast-forwarded (tower, awx, metrics-utility, vscode-ansible, handbook)",
-      "Agent 1 (Issue & Feedback): Monitored all 12 open PRs for reviewer comments",
-      "Agent 1 (Issue & Feedback): Created 4 feature suggestions (podman, podman-desktop, eda-server, ansible-builder)",
-      "Agent 2 (Pipeline Fix): Checked all 13 open PRs for CI status",
-      "Agent 2 (Pipeline Fix): Verified all PRs mergeable with no merge conflicts",
-      "Agent 2 (Pipeline Fix): Identified bonfire Konflux failures (Red Hat internal, not fixable)",
-      "Agent 4 (Coding Fix): Evaluated 8 issues across multiple Redhat-forks repos",
-      "Agent 4 (Coding Fix): Created 1 new PR (ansible-lint #4959)",
-      "Agent 4 (Coding Fix): Skipped 5 issues (1 already fixed, 3 our suggestions, 1 below threshold)"
+      "Agent 3 (Rebase Sync): Synced 52/59 dmzoneill-forks repos with upstream (88.1% success rate)",
+      "Agent 3 (Rebase Sync): 2 repos fast-forwarded (vscode, zed)",
+      "Agent 3 (Rebase Sync): 50 repos already up-to-date",
+      "Agent 3 (Rebase Sync): 6 repos have merge conflicts (markdown-badges, Sonarr, scripts, etcd, binance-official-api-docs, filebot)",
+      "Agent 3 (Rebase Sync): 2 repos skipped (not forks: appengine-ffmpeg, detox)",
+      "Agent 1 (Issue & Feedback): Checked all 5 dmzoneill-forks PRs for reviewer comments",
+      "Agent 1 (Issue & Feedback): No new comments to respond to",
+      "Agent 1 (Issue & Feedback): Created 3 feature suggestions (nemo-extensions, nzbhydra2, WiringPi)",
+      "Agent 2 (Pipeline Fix): Checked all 5 dmzoneill-forks PRs for CI status",
+      "Agent 2 (Pipeline Fix): All 5 PRs mergeable with no issues",
+      "Agent 2 (Pipeline Fix): 1 PR with passing CI (terminator #1054)",
+      "Agent 2 (Pipeline Fix): 4 PRs with no CI configured",
+      "Agent 4 (Coding Fix): Evaluated 10 issues across dmzoneill-forks repos",
+      "Agent 4 (Coding Fix): All 10 issues below 90% confidence threshold - no PRs created",
+      "Agent 4 (Coding Fix): Responsible quality-over-quantity approach maintained",
+      "Agent 5 (Bug Scanner): Scanned 5 dmzoneill-forks repos for critical bugs",
+      "Agent 5 (Bug Scanner): Found 2 resource leak bugs in deluge-torrent/deluge",
+      "Agent 5 (Bug Scanner): Created 2 bug fix PRs (deluge #496, #497)"
     ],
     "new_prs_created": [
       {
-        "repo": "ansible/ansible-lint",
-        "pr_number": 4959,
-        "url": "https://github.com/ansible/ansible-lint/pull/4959",
-        "fixes_issue": 4946
+        "repo": "deluge-torrent/deluge",
+        "pr_number": 496,
+        "url": "https://github.com/deluge-torrent/deluge/pull/496",
+        "bug_type": "resource_leak"
+      },
+      {
+        "repo": "deluge-torrent/deluge",
+        "pr_number": 497,
+        "url": "https://github.com/deluge-torrent/deluge/pull/497",
+        "bug_type": "resource_leak"
       }
     ],
     "new_feature_suggestions": [
       {
-        "repo": "containers/podman",
-        "issue_number": 28055,
-        "url": "https://github.com/containers/podman/issues/28055"
+        "repo": "linuxmint/nemo-extensions",
+        "issue_number": 573,
+        "url": "https://github.com/linuxmint/nemo-extensions/issues/573"
       },
       {
-        "repo": "podman-desktop/podman-desktop",
-        "issue_number": 16147,
-        "url": "https://github.com/podman-desktop/podman-desktop/issues/16147"
+        "repo": "theotherp/nzbhydra2",
+        "issue_number": 1041,
+        "url": "https://github.com/theotherp/nzbhydra2/issues/1041"
       },
       {
-        "repo": "ansible/eda-server",
-        "issue_number": 1470,
-        "url": "https://github.com/ansible/eda-server/issues/1470"
-      },
-      {
-        "repo": "ansible/ansible-builder",
-        "issue_number": 772,
-        "url": "https://github.com/ansible/ansible-builder/issues/772"
+        "repo": "WiringPi/WiringPi",
+        "issue_number": 418,
+        "url": "https://github.com/WiringPi/WiringPi/issues/418"
       }
     ],
     "errors": [
-      "3 Redhat-forks repos have merge conflicts requiring manual resolution (bonfire, insights-frontend-builder-common, insights-ingress-go)",
-      "bonfire fork conflict is CRITICAL - has 2 open PRs to upstream"
+      "6 dmzoneill-forks repos have merge conflicts requiring manual resolution",
+      "Agent 4 found no issues meeting 90% confidence threshold - all evaluated issues were complex or platform-specific"
     ],
     "next_run_priorities": [
-      "Resolve bonfire merge conflict (CRITICAL - has 2 open PRs)",
-      "Monitor all 13 open PRs for reviewer feedback",
-      "Continue creating feature suggestions for remaining Redhat-forks repos",
-      "Continue scanning for high-confidence issues to fix"
+      "Monitor all 15 open PRs (13 from Redhat-forks, 2 new from dmzoneill-forks) for reviewer feedback",
+      "Continue creating feature suggestions for remaining repos",
+      "Continue scanning for high-confidence issues to fix",
+      "Resolve merge conflicts in dmzoneill-forks repos if needed"
     ]
   }
 }
