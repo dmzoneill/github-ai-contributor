@@ -10,7 +10,7 @@ Start a ralph-loop that continuously runs the full contributor swarm until all r
 ## What This Does
 
 Invokes `/ralph-loop` with the `/swarm` command as the prompt. The ralph loop will:
-1. Run `/swarm` — which launches 4 parallel agents (issue-feedback, pipeline-fix, rebase-sync, coding-fix)
+1. Run `/swarm` — which launches 5 parallel agents (issue-feedback, pipeline-fix, rebase-sync, coding-fix, bug-scanner)
 2. When `/swarm` finishes an iteration, ralph-loop feeds it back in
 3. Each iteration sees previous work via the state file and git history
 4. When everything is done (no fixable issues, no unmonitored PRs, all features suggested), the swarm outputs its completion promise and stops
