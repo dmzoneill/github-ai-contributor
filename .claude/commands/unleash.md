@@ -20,7 +20,7 @@ Invokes `/ralph-loop` with the `/swarm` command as the prompt. The ralph loop wi
 Invoke the ralph-loop skill with the swarm as the task:
 
 ```
-/ralph-loop "Run /swarm to contribute to all upstream repos via forks in dmzoneill-forks and Redhat-forks orgs. Scan upstream issues, assess confidence, implement fixes, create PRs, follow up on reviews, fix CI failures, suggest features. Each iteration: scan for new work, process it, update state file. Output <promise>I DONE DID IT - ALL CONTRIBUTIONS ARE MADE AND I'M HELPING</promise> when zero work remains." --completion-promise "I DONE DID IT" --max-iterations 20
+/ralph-loop "Run /swarm to contribute to all upstream repos via forks in Redhat-forks org. Scan upstream issues, assess confidence, implement fixes, create PRs, follow up on reviews, fix CI failures, suggest features. Each iteration: scan for new work, process it, update state file. Output <promise>I DONE DID IT - ALL CONTRIBUTIONS ARE MADE AND I'M HELPING</promise> when zero work remains." --completion-promise "I DONE DID IT" --max-iterations 20
 ```
 
 ## Monitoring

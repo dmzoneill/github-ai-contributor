@@ -60,7 +60,6 @@ jobs:
             cat .claude/.swarm-state.json 2>/dev/null || echo {}
 
           STEP 3: List all repos in target orgs:
-            gh repo list dmzoneill-forks --limit 200 --json name,url -q .[].name
             gh repo list Redhat-forks --limit 200 --json name,url -q .[].name
 
           STEP 4: For each fork, identify the upstream (parent) repo:

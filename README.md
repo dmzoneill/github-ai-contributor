@@ -1,6 +1,6 @@
 # github-ai-contributor
 
-Prompt-driven, headless AI system that autonomously contributes to open-source repositories. It monitors repos forked into the [`dmzoneill-forks`](https://github.com/dmzoneill-forks) and [`Redhat-forks`](https://github.com/Redhat-forks) GitHub orgs, scans their upstream repos for open issues, assesses whether it can fix them with >= 90% confidence, and submits PRs back to the upstream. It also suggests features.
+Prompt-driven, headless AI system that autonomously contributes to open-source repositories. It monitors repos forked into the [`Redhat-forks`](https://github.com/Redhat-forks) GitHub org, scans their upstream repos for open issues, assesses whether it can fix them with >= 90% confidence, and submits PRs back to the upstream. It also suggests features.
 
 Runs every 6 hours via GitHub Actions, fully headless using `claude -p`. Contains **no application code** — entirely orchestrated by [Claude Code](https://claude.ai/code) via markdown prompts.
 
@@ -9,7 +9,7 @@ Runs every 6 hours via GitHub Actions, fully headless using `claude -p`. Contain
 ```
 Upstream Repo (someone else's project)
         |
-        | fork already exists in dmzoneill-forks / Redhat-forks
+        | fork already exists in Redhat-forks
         v
    Our Fork ──────────────────────────────────────────────┐
         |                                                  |
@@ -44,7 +44,7 @@ graph TD
     A2 --> GH
     A3 --> GH
     A4 --> GH
-    A4 --> FK[Fork Repos<br/>dmzoneill-forks / Redhat-forks]
+    A4 --> FK[Fork Repos<br/>Redhat-forks]
     A3 --> FK
     style O fill:#1f6feb,color:#fff
     style A1 fill:#238636,color:#fff

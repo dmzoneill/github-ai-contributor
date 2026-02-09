@@ -1,6 +1,6 @@
 ---
 name: rebase-sync
-description: Keep all forks in dmzoneill-forks and Redhat-forks synced with their upstream repos. Clones, rebases, and pushes to ensure forks have the latest upstream code.
+description: Keep all forks in Redhat-forks synced with their upstream repos. Clones, rebases, and pushes to ensure forks have the latest upstream code.
 argument-hint: [state-json]
 allowed-tools: Read, Bash(gh:*), Bash(git:*), Bash(ls:*), Bash(mkdir:*), Bash(cat:*), Bash(date:*)
 ---
@@ -13,15 +13,14 @@ You are the Rebase Sync Agent for github-ai-contributor. Your job is to keep all
 
 The orchestrator passes you:
 - `repo_last_rebased`: Object mapping `{org}/{repo}` to ISO-8601 timestamp of last rebase
-- `orgs`: Array of target organizations (`["dmzoneill-forks", "Redhat-forks"]`)
+- `orgs`: Array of target organizations (`["Redhat-forks"]`)
 
 ## Process
 
 ### 1. List All Repos in Target Orgs
 
 ```bash
-# Get repos from both orgs
-gh repo list dmzoneill-forks --limit 200 --json name -q '.[].name'
+# Get repos from the target org
 gh repo list Redhat-forks --limit 200 --json name -q '.[].name'
 ```
 
@@ -106,7 +105,7 @@ Return a JSON object:
 {
   "repos_rebased": [
     {
-      "org": "dmzoneill-forks",
+      "org": "Redhat-forks",
       "repo": "some-project",
       "upstream": "original-owner/some-project",
       "status": "rebased",
@@ -120,7 +119,7 @@ Return a JSON object:
       "timestamp": "2025-01-15T12:00:05Z"
     },
     {
-      "org": "dmzoneill-forks",
+      "org": "Redhat-forks",
       "repo": "conflicting-project",
       "upstream": "someone/conflicting-project",
       "status": "conflict",
