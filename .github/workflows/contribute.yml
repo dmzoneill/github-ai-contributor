@@ -45,13 +45,7 @@ jobs:
           CLOUD_ML_REGION: ${{ secrets.CLOUD_ML_REGION }}
           GITHUB_TOKEN: ${{ secrets.PROFILE_HOOK }}
         run: |
-          # Force line-buffered output so GitHub Actions shows progress in real-time
-          # timeout kills claude after 1 hour (3600s) so cleanup steps still run
-          script -q -e -c 'timeout --signal=TERM --kill-after=60 3600 claude -p \
-            --dangerously-skip-permissions \
-            --verbose \
-            --max-turns 200 \
-            "You are the contributor swarm orchestrator for github-ai-contributor. You MUST use tools to do real work. Do NOT just output text.
+          PROMPT="You are the contributor swarm orchestrator for github-ai-contributor. You MUST use tools to do real work. Do NOT just output text.
 
           STEP 1: Run this command to check rate limit:
             gh api rate_limit --jq .rate.remaining
@@ -91,7 +85,53 @@ jobs:
 
           STEP 11: Output a summary of all actions taken.
 
-          IMPORTANT: You must actually run commands and do work. Do not skip steps."' /tmp/claude-output.log || true
+          IMPORTANT: You must actually run commands and do work. Do not skip steps."
+
+          # Run claude in background, capture output to log file
+          touch /tmp/claude-output.log
+          timeout --signal=TERM --kill-after=60 3600 \
+            claude -p \
+              --dangerously-skip-permissions \
+              --verbose \
+              --max-turns 200 \
+              "$PROMPT" > /tmp/claude-output.log 2>&1 &
+          CLAUDE_PID=$!
+
+          START_TIME=$(date +%s)
+          LAST_SIZE=0
+          LAST_OUTPUT_TIME=$START_TIME
+
+          # Monitor loop: stream new output + heartbeat during silence
+          while kill -0 $CLAUDE_PID 2>/dev/null; do
+            CURRENT_SIZE=$(stat -c%s /tmp/claude-output.log 2>/dev/null || echo 0)
+            if [ "$CURRENT_SIZE" -gt "$LAST_SIZE" ]; then
+              tail -c +$((LAST_SIZE + 1)) /tmp/claude-output.log 2>/dev/null
+              LAST_SIZE=$CURRENT_SIZE
+              LAST_OUTPUT_TIME=$(date +%s)
+            fi
+
+            NOW=$(date +%s)
+            SILENT=$((NOW - LAST_OUTPUT_TIME))
+            ELAPSED=$((NOW - START_TIME))
+
+            # Print heartbeat every 30s of silence
+            if [ "$SILENT" -ge 30 ]; then
+              echo "--- [${ELAPSED}s elapsed, ${SILENT}s since last output, pid=$CLAUDE_PID] ---"
+              LAST_OUTPUT_TIME=$NOW
+            fi
+
+            sleep 5
+          done
+
+          # Flush any remaining output
+          CURRENT_SIZE=$(stat -c%s /tmp/claude-output.log 2>/dev/null || echo 0)
+          if [ "$CURRENT_SIZE" -gt "$LAST_SIZE" ]; then
+            tail -c +$((LAST_SIZE + 1)) /tmp/claude-output.log 2>/dev/null
+          fi
+
+          wait $CLAUDE_PID 2>/dev/null || true
+          ELAPSED=$(( $(date +%s) - START_TIME ))
+          echo "=== Process finished after $((ELAPSED / 60))m $((ELAPSED % 60))s ==="
 
       - name: Show summary
         if: always()
