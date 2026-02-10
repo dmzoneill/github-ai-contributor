@@ -180,14 +180,34 @@ BRANCH="fix/bug-{issue_number}-{short-description}"
 git checkout -B "$BRANCH" upstream/{default_branch}
 ```
 
-### c. Apply the Fix
+### c. Check Upstream Conventions
+
+Before making changes, check for contribution guidelines:
+
+```bash
+# Check for CONTRIBUTING.md
+for f in CONTRIBUTING.md .github/CONTRIBUTING.md docs/CONTRIBUTING.md; do
+  [ -f "$f" ] && cat "$f" && break
+done
+
+# Also check README for contributing section
+grep -i -A 20 "contribut\|development\|commit.*message\|pull.*request" README.md 2>/dev/null | head -40
+```
+
+Look for commit message format, PR template (`.github/PULL_REQUEST_TEMPLATE.md`), code style requirements, and development setup in the README. Follow THEIR conventions.
+
+### d. Apply the Fix
 
 - Make the minimal change needed to fix the bug
 - Follow the repo's existing code style and conventions
 - Don't refactor surrounding code
 - Add a code comment only if the fix logic is non-obvious
 
-### d. Run Tests
+### e. Write Tests (if test framework available)
+
+If the repo has a test framework, add a regression test that covers the bug fix. Follow existing test patterns. Skip if no test framework exists or the fix is trivial.
+
+### f. Run Tests
 
 ```bash
 # Use cached test_command from repo_profiles if available, otherwise detect
@@ -204,22 +224,24 @@ elif [ -f Cargo.toml ]; then
 fi
 ```
 
-### e. Commit
+### g. Commit
 
 ```bash
 git add -A
 git commit -m "fix: {concise description of the bug fix} (fixes #{issue_number})"
 ```
 
-Commit message MUST be commitlint-valid conventional format and reference the bug report issue.
+The commit message format depends on upstream conventions:
+- **If CONTRIBUTING.md specifies a format**: follow THEIR format exactly
+- **Otherwise**: use commitlint-valid conventional format and reference the bug report issue
 
-### f. Push to Fork
+### h. Push to Fork
 
 ```bash
 git push origin "$BRANCH"
 ```
 
-### g. Create PR to Upstream
+### i. Create PR to Upstream
 
 ```bash
 gh pr create \
@@ -247,12 +269,16 @@ Fixes #{issue_number}
 
 ## Testing
 
-{How the fix was verified — tests run, manual review, etc.}
+{ONLY include if tests were actually run or written. Be specific:
+- If you wrote new tests: describe what they test
+- If you ran existing tests: state the command and result
+- If no test framework exists: say 'No test framework available — verified by code review'
+- NEVER claim tests were run if they weren't}
 
 "
 ```
 
-### h. Record the Fix
+### j. Record the Fix
 
 Track both the bug report issue and the fix PR in your output. This is critical — the state tracks what we've reported so we never duplicate a bug report.
 

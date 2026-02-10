@@ -215,14 +215,41 @@ BRANCH="fix/issue-{number}-{short-description}"
 git checkout -B "$BRANCH" upstream/{default_branch}
 ```
 
-### b. Implement the Fix
+### b. Check Upstream Conventions
+
+Before making any changes, check for contribution guidelines:
+
+```bash
+# Check for CONTRIBUTING.md, .github/CONTRIBUTING.md, or docs/CONTRIBUTING.md
+for f in CONTRIBUTING.md .github/CONTRIBUTING.md docs/CONTRIBUTING.md; do
+  [ -f "$f" ] && cat "$f" && break
+done
+
+# Also check README for contributing section
+grep -i -A 20 "contribut\|development\|commit.*message\|pull.*request" README.md 2>/dev/null | head -40
+```
+
+Look for:
+- **Commit message format** — the repo may use a different convention than commitlint (e.g. `[component] description`, `PREFIX: description`). If so, follow THEIR format instead of ours.
+- **PR template** — check `.github/PULL_REQUEST_TEMPLATE.md` and follow it if present.
+- **Code style requirements** — any specific formatting or linting rules.
+- **Development setup** — build/test instructions in the README.
+
+### c. Implement the Fix
 
 - Read the relevant source files identified during assessment
 - Make the minimal changes needed to fix the issue
 - Follow the repo's existing code style and conventions
 - Don't change anything outside the scope of the fix
 
-### c. Run Tests
+### d. Write Tests (if test framework available)
+
+If the repo has a test framework (detected from test files, pytest, jest, go test, etc.):
+- **Add or update tests** that cover the fix — a regression test that would have caught the bug
+- Follow the existing test patterns and file structure in the repo
+- If no test framework exists, or the fix is trivial (typo, import, config change), skip this step
+
+### e. Run Tests
 
 **If `repo_profiles` has a cached `test_command`**, use it directly. Otherwise detect:
 
@@ -263,10 +290,11 @@ git add -A
 git commit -m "fix: {concise description of the fix} (fixes #{number})"
 ```
 
-The commit message MUST be commitlint-valid:
-- Type: `fix`, `feat`, `chore`, `docs`, `test`, `refactor`
-- Format: `type(optional-scope): description`
-- Reference the issue: `(fixes #{number})` or `(closes #{number})`
+The commit message format depends on upstream conventions:
+- **If CONTRIBUTING.md specifies a format**: follow THEIR format exactly
+- **Otherwise**: use commitlint-valid conventional format: `type(optional-scope): description (fixes #{number})`
+- Valid types: `fix`, `feat`, `chore`, `docs`, `test`, `refactor`
+- Reference the issue where possible
 
 ### f. Push to Fork
 
@@ -292,7 +320,11 @@ Fixes #{number}
 
 ## Testing
 
-{Description of how the fix was tested — tests run, manual verification, etc.}
+{ONLY include this section if tests were actually run or written. Be specific:
+- If you wrote new tests: describe what they test
+- If you ran existing tests: state the command and result (e.g. 'pytest passed — 42 tests, 0 failures')
+- If no test framework exists: say 'No test framework available — verified by code review'
+- NEVER claim tests were run if they weren't}
 
 "
 ```
