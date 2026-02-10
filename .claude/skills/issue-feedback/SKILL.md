@@ -97,7 +97,35 @@ Add to your output:
 }
 ```
 
-## Part 2: PR Comment Follow-up
+## Part 2: Feature Suggestion Follow-up
+
+For each open feature suggestion in the `feature_suggestions` array (where `status` is "open" or "suggested"):
+
+### 1. Check for Comments
+
+```bash
+gh issue view {issue_number} -R {upstream} --json comments,state --jq '{state, comments: [.comments[] | {author: .author.login, body, createdAt}]}'
+```
+
+### 2. Respond to Maintainer Feedback
+
+For each comment from a maintainer (not from us):
+- **If they suggest narrowing scope**: agree and offer to update the issue or close in favor of an existing one
+- **If they ask clarifying questions**: provide clear, specific answers
+- **If they push back on the idea**: acknowledge their perspective respectfully, don't argue
+- **If they ask us to close it**: close the issue gracefully with a thank you
+- **If the issue was closed by a maintainer**: update status to "closed" in your output
+
+```bash
+# Respond to maintainer comment
+gh issue comment {issue_number} -R {upstream} --body "{thoughtful response}"
+```
+
+### 3. Update Status
+
+If the issue was closed (by us or the maintainer), record `"status": "closed"` in your output so the state gets updated.
+
+## Part 3: PR Comment Follow-up
 
 For each open PR in the `open_prs` array:
 
@@ -204,6 +232,15 @@ Return a JSON object:
       "status": "suggested"
     }
   ],
+  "feature_followups": [
+    {
+      "upstream": "owner/repo",
+      "issue_number": 456,
+      "comments_responded": 2,
+      "status": "open",
+      "actions": ["acknowledged scope feedback", "agreed to narrow approach"]
+    }
+  ],
   "pr_followups": [
     {
       "upstream": "owner/repo",
@@ -219,8 +256,8 @@ Return a JSON object:
 
 ## Rules
 
-- **Follow-up on existing PRs/issues is NEVER rate limited** — always respond to every comment, review, and feedback on our open PRs regardless of any iteration limits. Only the creation of NEW feature suggestions is subject to per-repo limits.
-- Never leave a reviewer comment unanswered
+- **Follow-up on existing PRs/issues is NEVER rate limited** — always respond to every comment, review, and feedback on our open PRs AND our open feature suggestion issues regardless of any iteration limits. Only the creation of NEW feature suggestions is subject to per-repo limits.
+- Never leave a reviewer or maintainer comment unanswered — on PRs OR feature suggestion issues
 - Feature suggestions must be genuinely useful and specific — no low-effort suggestions
 - Do not duplicate existing open issues when suggesting features
 - Be respectful and professional in all interactions — we are guests in these repos

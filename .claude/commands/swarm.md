@@ -84,7 +84,14 @@ Your responsibilities:
    - Create a GitHub issue on the upstream repo with a well-written feature request
    - Record it in your output as a feature suggestion
 
-2. **PR comment follow-up**: For each open PR in the state's `open_prs` array:
+2. **Feature suggestion follow-up**: For each open feature suggestion in the state's `feature_suggestions` array (status: "open" or "suggested"):
+   - Check for new comments on the issue: `gh issue view {issue_number} -R {upstream} --json comments`
+   - If maintainers have responded with feedback, questions, or suggestions — respond thoughtfully
+   - Acknowledge valid concerns, agree to narrow scope if asked, provide clarifications
+   - If they suggest closing in favor of another issue, agree gracefully
+   - Never leave a maintainer's comment on our feature suggestion unanswered
+
+3. **PR comment follow-up**: For each open PR in the state's `open_prs` array:
    - Check for new comments since `comments_seen` count
    - Read all new comments from reviewers
    - For each comment: determine if it requests code changes, asks a question, or is informational
@@ -92,8 +99,9 @@ Your responsibilities:
    - For questions: respond with a clear, helpful answer
    - Never leave a reviewer comment unanswered
 
-3. Return a JSON object with:
+4. Return a JSON object with:
    - `feature_suggestions`: array of `{upstream, issue_number, title, status}`
+   - `feature_followups`: array of `{upstream, issue_number, comments_responded}`
    - `pr_followups`: array of `{upstream, pr_number, comments_addressed, commits_pushed}`
 
 ### Agent 2 — Pipeline Agent
