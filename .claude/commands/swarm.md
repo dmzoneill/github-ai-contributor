@@ -155,7 +155,7 @@ Your responsibilities:
 
 1. **Build the work queue**: Get the fork→upstream mapping. For each upstream repo, count current open PRs from the state. Sort repos by PR count ascending (balanced distribution).
 
-2. **Balanced rounds**: Process repos in order. For each repo below the max (6 open PRs):
+2. **Balanced rounds**: Process repos in order. For each repo below the max (4 open PRs):
    - Scan upstream for open issues: `gh issue list -R {upstream} --state open --json number,title,body,labels,author -L 20`
    - **Skip issues we created ourselves** — check if author matches our GitHub username
    - **Skip issues already in `attempted_issues` or `skipped_issues`**
@@ -188,7 +188,7 @@ Your responsibilities:
        --body "Fixes #{number}\n\n{detailed description of changes}"
      ```
 
-5. **Move to next repo** after creating 1 PR (balanced rounds). Continue until max 10 fix attempts per iteration.
+5. **Move to next repo** after creating 1 PR (balanced rounds). Continue until max 50 fix attempts per iteration.
 
 6. Return a JSON object with:
    - `prs_created`: array of `{upstream, fork, pr_number, issue_number, branch, title}`
@@ -203,7 +203,7 @@ Your responsibilities:
 
 Your responsibilities:
 
-1. **Select target repos**: From the fork→upstream mapping, pick up to 10 repos that are below the PR limits (max 6 total open PRs, max 4 bug fix PRs per upstream repo). Sort by PR count ascending for balanced distribution.
+1. **Select target repos**: From the fork→upstream mapping, pick up to 10 repos that are below the PR limits (max 4 total open PRs, max 1 bug fix PR per upstream repo). Sort by PR count ascending for balanced distribution.
 
 2. **Clone and scan**: For each repo, clone/pull the upstream code and scan source files for critical bugs:
    - Security: SQL injection, command injection, XSS, path traversal, hardcoded credentials
@@ -315,13 +315,13 @@ If there IS remaining work, do NOT output the promise tag. The ralph loop will r
 - **IMPORTANT: All limits below apply ONLY to creating NEW PRs/issues.** Follow-up on existing PRs (responding to reviews, fixing CI, rebasing) is NEVER rate limited — always handle ALL follow-up work first.
 - Never push more than 20 new fix commits per iteration
 - Max 6 new open PRs per upstream repo, balanced across repos
-- Max 10 new fix attempts per iteration
+- Max 50 new fix attempts per iteration
 - 90% confidence threshold before attempting fixes
 - Never force push to upstream (only to fork branch for conflict resolution)
 - If rate limit drops below 200 during execution, stop and save state
 - All commits must pass commitlint validation
 - Never work on issues we created ourselves
-- Max 4 bug fix PRs per upstream repo, scan only 10 repos per iteration
+- Max 1 bug fix PR per upstream repo, scan only 20 repos per iteration
 - Read CONTRIBUTING.md before making changes to any repo
 - Run tests before pushing if available
 - Track everything in the state file so the next iteration doesn't redo work

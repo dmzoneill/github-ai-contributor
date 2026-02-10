@@ -1,6 +1,6 @@
 ---
 name: bug-scanner
-description: Scan upstream repo codebases for critical bugs, open bug report issues, implement fixes, and create PRs referencing those issues. Proactively finds defects by reading source code. Max 4 bug fix PRs per repo, 10 repos per iteration.
+description: Scan upstream repo codebases for critical bugs, open bug report issues, implement fixes, and create PRs referencing those issues. Proactively finds defects by reading source code. Max 1 bug fix PR per repo, 20 repos per iteration.
 argument-hint: [state-json]
 allowed-tools: Read, Grep, Glob, Bash(gh:*), Bash(git:*), Bash(make:*), Bash(python:*), Bash(pip:*), Bash(pipenv:*), Bash(npm:*), Bash(pytest:*), Bash(node:*), Bash(go:*), Bash(cargo:*), Bash(cat:*), Bash(ls:*), Bash(mkdir:*), Bash(jq:*)
 ---
@@ -41,13 +41,13 @@ query($owner: String!, $repo: String!, $author: String!) {
 
 From the GraphQL response:
 - Count PRs where `author.login` matches our username
-- **Max 6 total open PRs per upstream repo** (shared limit with coding agent) — skip if at limit
-- Count how many of our open PRs are bug fixes from this agent (check `bug_fixes` state) — **max 4 bug fix PRs per upstream repo**
+- **Max 4 total open PRs per upstream repo** (shared limit with coding agent) — skip if at limit
+- Count how many of our open PRs are bug fixes from this agent (check `bug_fixes` state) — **max 1 bug fix PR per upstream repo**
 - Collect all open issue titles and bodies — used later to check if a bug is already reported
 
-### Select 10 Repos
+### Select 20 Repos
 
-Sort repos by current open PR count (ascending) for balanced distribution. Select the first 10 repos that are below limits. Stop after 10 repos.
+Sort repos by current open PR count (ascending) for balanced distribution. Select the first 20 repos that are below limits. Stop after 20 repos.
 
 ## Step 2: Clone and Scan
 
@@ -302,9 +302,9 @@ Return a JSON object:
 
 ## Rules
 
-- **Max 4 bug fix PRs per upstream repo** — check before creating
-- **Max 6 total open PRs per upstream repo** (shared with coding agent)
-- **Scan only 10 repos per iteration** — then stop
+- **Max 1 bug fix PR per upstream repo** — check before creating
+- **Max 4 total open PRs per upstream repo** (shared with coding agent)
+- **Scan only 20 repos per iteration** — then stop
 - **Only report genuine, verifiable bugs** with clear evidence in the code
 - **Never fix style issues, performance suggestions, or speculative concerns**
 - **Always check existing open issues first** — never fix a bug that's already reported (someone may already be working on it)

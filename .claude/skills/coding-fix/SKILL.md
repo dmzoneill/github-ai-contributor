@@ -56,7 +56,7 @@ This returns open issues AND our open PR count in **one call per repo** instead 
 ### Pre-flight Limits Check
 
 From the GraphQL response, count PRs where `author.login` matches our username:
-- **Max 6 open PRs** — do NOT create more if at limit
+- **Max 4 open PRs** — do NOT create more if at limit
 - **Max 1 open issue** (feature suggestion) — do NOT create more if at limit
 - Skip repos already at their limits entirely
 
@@ -66,7 +66,7 @@ Sort repos by current open PR count (ascending). This ensures balanced distribut
 - Round 1: Process repos with 0 PRs first
 - Round 2: Repos with 1 PR
 - Round 3: Repos with 2 PRs
-- Skip repos already at max (6 open PRs)
+- Skip repos already at max (4 open PRs)
 
 ## Step 3: Scan for Issues
 
@@ -304,7 +304,7 @@ Capture the PR number from the output and add to results.
 ## Step 6: Move to Next Repo
 
 After creating 1 PR for a repo, move to the next repo in the priority queue (balanced rounds). Continue until:
-- Max 10 fix attempts per iteration reached
+- Max 50 fix attempts per iteration reached
 - All repos at max PR count (6)
 - No more fixable issues found
 - Rate limit approaching (< 200 remaining)
@@ -383,7 +383,7 @@ Return a JSON object:
 - **Rate limits apply ONLY to creating new PRs** — the per-repo and per-iteration limits below cap new work only. Follow-up on existing PRs (responding to reviews, fixing CI, rebasing) is never limited.
 - **90% confidence threshold** — do not attempt fixes below this
 - **Max 6 new open PRs per upstream repo** — balanced across repos
-- **Max 10 new fix attempts per iteration** — to limit scope per run
+- **Max 50 new fix attempts per iteration** — to limit scope per run
 - **Never work on issues we created** — our feature suggestions are for the community
 - **Never force push to upstream** — only push to fork branches
 - **Always branch from `upstream/{default_branch}`** — never from `origin/{default_branch}`, as the fork may have unsynced commits that would pollute the PR diff

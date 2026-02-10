@@ -86,7 +86,7 @@ graph TD
 
 **Agent 4 — Coding Fix**: The main worker. Scans upstream repos for open issues, assesses confidence, creates branches, implements fixes, runs tests, commits with conventional messages, pushes to fork, creates PRs to upstream. Balances work across repos.
 
-**Agent 5 — Bug Scanner**: Proactively scans upstream codebases for critical bugs (security vulnerabilities, null dereferences, resource leaks, etc.). Opens a bug report issue on upstream, then implements the fix and creates a PR referencing that issue. Max 4 bug fix PRs per repo, scans 10 repos per iteration. Tracks all reported bugs in state to avoid duplicates.
+**Agent 5 — Bug Scanner**: Proactively scans upstream codebases for critical bugs (security vulnerabilities, null dereferences, resource leaks, etc.). Opens a bug report issue on upstream, then implements the fix and creates a PR referencing that issue. Max 1 bug fix PR per repo, scans 20 repos per iteration. Tracks all reported bugs in state to avoid duplicates.
 
 ### Orchestration Flow
 
@@ -152,8 +152,8 @@ To avoid overwhelming any single upstream repo:
 1. Sort repos by current open PR count (ascending)
 2. Round 1: 1 PR per repo before any repo gets 2
 3. Round 2: 2 per repo before any gets 3
-4. **Max 6 open PRs per upstream repo**
-5. Max 10 fix attempts per iteration
+4. **Max 4 open PRs per upstream repo**
+5. Max 50 fix attempts per iteration
 
 ## Commitlint
 
@@ -287,12 +287,12 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 ## Safety Rails
 
 - **IMPORTANT: All rate limits and caps below apply ONLY to creating NEW PRs, issues, and feature suggestions.** Following up on existing PRs/issues (responding to reviewer comments, fixing CI failures, rebasing, addressing requested changes) is NEVER rate limited — always process ALL follow-up work regardless of limits.
-- **Max 6 new open PRs per upstream repo**, balanced across repos
+- **Max 4 new open PRs per upstream repo**, balanced across repos
 - **90% confidence threshold** before attempting fixes
 - **Never force push to upstream** — only to our fork branch for conflict resolution
 - **All commits must pass commitlint** validation (conventional commit format)
 - **Rate limit monitoring** — stop if < 200 remaining during execution, don't start if < 500
-- **Max 10 fix attempts per iteration**
+- **Max 50 fix attempts per iteration**
 - **Max 40 ralph-loop iterations**
 - **Never modify files outside the fix scope**
 - **Run tests before pushing** (if available)
@@ -301,7 +301,7 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 - **Monitor and address ALL feedback** on our PRs — never abandon an open PR
 - **Fix CI/pipeline failures** on our PRs proactively
 - **Never work on issues we created ourselves** — feature suggestions are for the community
-- **Max 4 bug fix PRs per upstream repo** — bug scanner scans 10 repos per iteration, checks existing issues before reporting
+- **Max 1 bug fix PR per upstream repo** — bug scanner scans 20 repos per iteration, checks existing issues before reporting, checks existing issues before reporting
 - **Read CONTRIBUTING.md** and upstream conventions before contributing
 - **Never push more than 20 fix commits per iteration**
 - **Track everything in state file** so next iteration doesn't redo work
