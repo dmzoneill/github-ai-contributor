@@ -38,12 +38,25 @@ jobs:
           echo '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}' > /tmp/gcp-credentials.json
           echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp-credentials.json" >> $GITHUB_ENV
 
-      - name: Configure git
+      - name: Import GPG key and configure git
         env:
           GITHUB_TOKEN: ${{ secrets.PROFILE_HOOK }}
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # Import GPG private key
+          echo "$GPG_PRIVATE_KEY" | base64 --decode | gpg --batch --import
+          # Trust the key ultimately
+          echo "${{ secrets.GPG_KEY_ID }}:6:" | gpg --import-ownertrust
+          # Configure GPG for non-interactive use in CI
+          echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
+          echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
+          gpgconf --kill gpg-agent
+          # Configure git identity and signing
+          git config --global user.name "David O Neill"
+          git config --global user.email "dmz.oneill@gmail.com"
+          git config --global user.signingkey "${{ secrets.GPG_KEY_ID }}"
+          git config --global commit.gpgsign true
+          git config --global tag.gpgsign true
           # Use gh as git credential helper so HTTPS cloning/pushing works with GITHUB_TOKEN
           gh auth setup-git
 
