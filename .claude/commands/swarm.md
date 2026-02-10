@@ -155,7 +155,7 @@ Your responsibilities:
 
 1. **Build the work queue**: Get the fork→upstream mapping. For each upstream repo, count current open PRs from the state. Sort repos by PR count ascending (balanced distribution).
 
-2. **Balanced rounds**: Process repos in order. For each repo below the max (4 open PRs):
+2. **Balanced rounds**: Process repos in order. For each repo below the max (1 open PR):
    - Scan upstream for open issues: `gh issue list -R {upstream} --state open --json number,title,body,labels,author -L 20`
    - **Skip issues we created ourselves** — check if author matches our GitHub username
    - **Skip issues already in `attempted_issues` or `skipped_issues`**
@@ -165,8 +165,8 @@ Your responsibilities:
    - Read the issue description carefully
    - Read the relevant source code in the repo
    - Assess confidence level (0-100%)
-   - If < 80%: add to `skipped_issues` with reason, move on
-   - If >= 80%: proceed with fix
+   - If < 90%: add to `skipped_issues` with reason, move on
+   - If >= 90%: proceed with fix
 
 4. **Implement the fix**:
    - Clone/pull the fork repo
@@ -203,7 +203,7 @@ Your responsibilities:
 
 Your responsibilities:
 
-1. **Select target repos**: From the fork→upstream mapping, pick up to 10 repos that are below the PR limits (max 4 total open PRs, max 3 bug fix PRs per upstream repo). Sort by PR count ascending for balanced distribution.
+1. **Select target repos**: From the fork→upstream mapping, pick up to 10 repos that are below the PR limits (max 1 total open PR, max 1 bug fix PR per upstream repo). Sort by PR count ascending for balanced distribution.
 
 2. **Clone and scan**: For each repo, clone/pull the upstream code and scan source files for critical bugs:
    - Security: SQL injection, command injection, XSS, path traversal, hardcoded credentials
@@ -215,7 +215,7 @@ Your responsibilities:
    - Check existing open issues on upstream — **skip if the bug is already reported**
    - Check `bug_fixes` state — **skip if we already reported/fixed it**
    - Assess severity — only proceed with genuinely critical bugs
-   - Assess fix confidence — must be >= 80%
+   - Assess fix confidence — must be >= 90%
 
 4. **Report and fix**: For each verified bug:
    a. Open a bug report issue on the upstream repo with location, description, impact, and suggested fix
@@ -315,8 +315,8 @@ If there IS remaining work, do NOT output the promise tag. The ralph loop will r
 - **IMPORTANT: All limits below apply ONLY to creating NEW PRs/issues.** Follow-up on existing PRs (responding to reviews, fixing CI, rebasing) is NEVER rate limited — always handle ALL follow-up work first.
 - Never push more than 20 new fix commits per iteration
 - Max 6 new open PRs per upstream repo, balanced across repos
-- Max 50 new fix attempts per iteration
-- 80% confidence threshold before attempting fixes
+- Max 12 new fix attempts per iteration
+- 90% confidence threshold before attempting fixes
 - Never force push to upstream (only to fork branch for conflict resolution)
 - If rate limit drops below 200 during execution, stop and save state
 - All commits must pass commitlint validation

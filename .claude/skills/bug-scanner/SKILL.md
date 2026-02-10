@@ -1,6 +1,6 @@
 ---
 name: bug-scanner
-description: Scan upstream repo codebases for critical bugs, open bug report issues, implement fixes, and create PRs referencing those issues. Proactively finds defects by reading source code. Max 3 bug fix PRs per repo, 20 repos per iteration.
+description: Scan upstream repo codebases for critical bugs, open bug report issues, implement fixes, and create PRs referencing those issues. Proactively finds defects by reading source code. Max 1 bug fix PR per repo, 20 repos per iteration.
 argument-hint: [state-json]
 allowed-tools: Read, Grep, Glob, Bash(gh:*), Bash(git:*), Bash(make:*), Bash(python:*), Bash(pip:*), Bash(pipenv:*), Bash(npm:*), Bash(pytest:*), Bash(node:*), Bash(go:*), Bash(cargo:*), Bash(cat:*), Bash(ls:*), Bash(mkdir:*), Bash(jq:*)
 ---
@@ -41,8 +41,8 @@ query($owner: String!, $repo: String!, $author: String!) {
 
 From the GraphQL response:
 - Count PRs where `author.login` matches our username
-- **Max 4 total open PRs per upstream repo** (shared limit with coding agent) — skip if at limit
-- Count how many of our open PRs are bug fixes from this agent (check `bug_fixes` state) — **max 3 bug fix PRs per upstream repo**
+- **Max 1 total open PR per upstream repo** (shared limit with coding agent) — skip if at limit
+- Count how many of our open PRs are bug fixes from this agent (check `bug_fixes` state) — **max 1 bug fix PR per upstream repo**
 - Collect all open issue titles and bodies — used later to check if a bug is already reported
 
 ### Select 20 Repos
@@ -122,14 +122,14 @@ For each potential bug found:
 2. **Check if the bug is already reported** — search the open issues list (collected in Step 1) for matching keywords, file paths, or descriptions. If an existing open issue covers the same bug, **skip it**.
 3. **Check if we already filed a fix** — look in `bug_fixes` state array for the same repo + file path combination.
 4. **Assess severity** — only proceed with genuinely critical bugs. Skip style issues, performance suggestions, or speculative concerns.
-5. **Assess fix confidence** — must be >= 80% confident the fix is correct and won't break anything.
+5. **Assess fix confidence** — must be >= 90% confident the fix is correct and won't break anything.
 
 Only proceed if:
 - The bug is real and verifiable in the code
 - No existing open issue covers it
 - We haven't already fixed it
 - The fix is clear and minimal
-- Confidence >= 80%
+- Confidence >= 90%
 
 ## Step 3: Report and Fix the Bug
 
@@ -302,14 +302,14 @@ Return a JSON object:
 
 ## Rules
 
-- **Max 3 bug fix PRs per upstream repo** — check before creating
-- **Max 4 total open PRs per upstream repo** (shared with coding agent)
+- **Max 1 bug fix PR per upstream repo** — check before creating
+- **Max 1 total open PR per upstream repo** (shared with coding agent)
 - **Scan only 20 repos per iteration** — then stop
 - **Only report genuine, verifiable bugs** with clear evidence in the code
 - **Never fix style issues, performance suggestions, or speculative concerns**
 - **Always check existing open issues first** — never fix a bug that's already reported (someone may already be working on it)
 - **Include exact file path and line number** in PR description
-- **80% fix confidence threshold** — don't submit if unsure the fix is correct
+- **90% fix confidence threshold** — don't submit if unsure the fix is correct
 - **Minimal changes only** — fix the bug, don't refactor surrounding code
 - **Always branch from `upstream/{default_branch}`** — never from `origin/{default_branch}`
 - **Run tests before pushing** if available
