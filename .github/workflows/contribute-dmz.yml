@@ -182,7 +182,7 @@ jobs:
                   STATE_HASH="$NEW_HASH"
                   git add -f "$STATE_FILE" 2>/dev/null || continue
                   git diff --cached --quiet && continue
-                  git commit -m "chore: periodic state checkpoint" 2>/dev/null || continue
+                  git commit --no-gpg-sign -m "chore: periodic state checkpoint" 2>/dev/null || continue
                   git pull --rebase 2>/dev/null || true
                   git push 2>/dev/null || true
                   echo "--- [state committed and pushed] ---"
@@ -227,5 +227,5 @@ jobs:
         run: |
           git pull --rebase 2>/dev/null || true
           git add -f .claude/.swarm-state.json 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "chore: final state update after dmz contributor run"
+          git diff --cached --quiet || git commit --no-gpg-sign -m "chore: final state update after dmz contributor run"
           git push || true
