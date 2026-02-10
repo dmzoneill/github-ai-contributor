@@ -203,7 +203,7 @@ Your responsibilities:
 
 Your responsibilities:
 
-1. **Select target repos**: From the fork→upstream mapping, pick up to 10 repos that are below the PR limits (max 4 total open PRs, max 1 bug fix PR per upstream repo). Sort by PR count ascending for balanced distribution.
+1. **Select target repos**: From the fork→upstream mapping, pick up to 10 repos that are below the PR limits (max 4 total open PRs, max 3 bug fix PRs per upstream repo). Sort by PR count ascending for balanced distribution.
 
 2. **Clone and scan**: For each repo, clone/pull the upstream code and scan source files for critical bugs:
    - Security: SQL injection, command injection, XSS, path traversal, hardcoded credentials
@@ -321,7 +321,7 @@ If there IS remaining work, do NOT output the promise tag. The ralph loop will r
 - If rate limit drops below 200 during execution, stop and save state
 - All commits must pass commitlint validation
 - Never work on issues we created ourselves
-- Max 1 bug fix PR per upstream repo, scan only 20 repos per iteration
+- Max 3 bug fix PRs per upstream repo, scan only 20 repos per iteration
 - Read CONTRIBUTING.md before making changes to any repo
 - Run tests before pushing if available
 - Track everything in the state file so the next iteration doesn't redo work
