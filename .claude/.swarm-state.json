@@ -5,15 +5,20 @@
       "dmzoneill-forks"
     ],
     "repo_pr_counts": {
-      "RedHatInsights/bonfire": 2,
+      "RedHatInsights/bonfire": 0,
       "ansible/awx": 3,
       "ansible/ansible-lint": 1,
       "benthomasson/dataverse-integration": 1,
       "flozz/cover-thumbnailer": 1,
       "linuxmint/nemo-extensions": 1,
       "micheleg/dash-to-dock": 1,
-      "gnome-terminator/terminator": 2,
-      "deluge-torrent/deluge": 2
+      "gnome-terminator/terminator": 1,
+      "deluge-torrent/deluge": 2,
+      "asterisk/asterisk": 1,
+      "rootpd/go-binance": 1,
+      "WiringPi/WiringPi": 1,
+      "nicolasff/webdis": 1,
+      "FreePBX/core": 1
     },
     "repo_last_rebased": {
       "Amazon-video-downloader": "2026-02-09T20:27:41Z",
@@ -28,7 +33,7 @@
       "deluge": "2026-02-09T20:27:55Z",
       "docker-ce": "2026-02-09T20:27:56Z",
       "shields-with-icon": "2026-02-09T20:27:59Z",
-      "fastmcp": "2026-02-09T20:28:01Z",
+      "fastmcp": "2026-02-10T02:25:18Z",
       "nzbhydra2": "2026-02-09T20:28:02Z",
       "node-binance-api": "2026-02-09T20:28:04Z",
       "seedmage": "2026-02-09T20:28:06Z",
@@ -37,7 +42,7 @@
       "doorbell-pi": "2026-02-09T20:28:13Z",
       "Docker-OSX": "2026-02-09T20:28:15Z",
       "cryptopia-api-php": "2026-02-09T20:28:16Z",
-      "Jackett": "2026-02-09T20:28:18Z",
+      "Jackett": "2026-02-10T02:25:18Z",
       "all-contributors": "2026-02-09T20:28:19Z",
       "binance-java-api": "2026-02-09T20:28:21Z",
       "contrib": "2026-02-09T20:28:22Z",
@@ -57,7 +62,7 @@
       "trollolo": "2026-02-09T20:28:43Z",
       "spksrc": "2026-02-09T20:28:45Z",
       "PHP_CodeSniffer": "2026-02-09T20:28:46Z",
-      "terminator": "2026-02-09T20:28:47Z",
+      "terminator": "2026-02-10T02:25:18Z",
       "docker-deluge": "2026-02-09T20:28:49Z",
       "core": "2026-02-09T20:28:50Z",
       "PHP-Daemon": "2026-02-09T20:28:52Z",
@@ -115,8 +120,8 @@
       "tower": "2026-02-09T21:16:01Z",
       "pytest-ansible": "2026-02-09T21:16:01Z",
       "ansible-dev-tools": "2026-02-09T21:16:01Z",
-      "vscode": "2026-02-09T22:47:26Z",
-      "zed": "2026-02-09T22:47:26Z",
+      "vscode": "2026-02-10T02:25:18Z",
+      "zed": "2026-02-10T02:25:18Z",
       "markdown-badges": "2026-02-09T22:47:26Z",
       "Sonarr": "2026-02-09T22:47:26Z",
       "scripts": "2026-02-09T22:47:26Z",
@@ -400,25 +405,51 @@
         "decision": "skipped",
         "reason": "Simple addition but need to verify compatibility, below 90%",
         "evaluated_at": "2026-02-10T00:00:00Z"
+      },
+      "asterisk/asterisk#1761": {
+        "title": "TALK_DETECT docs wording mistake",
+        "confidence": 95,
+        "decision": "fix_attempted",
+        "reason": "Clear documentation error with exact correction needed",
+        "evaluated_at": "2026-02-10T00:00:00Z"
+      },
+      "rootpd/go-binance#7": {
+        "title": "json tag 't' used twice in same structure",
+        "confidence": 95,
+        "decision": "fix_attempted",
+        "reason": "Duplicate JSON tag causing Go compilation error, fix clearly documented in issue",
+        "evaluated_at": "2026-02-10T00:00:00Z"
+      },
+      "WiringPi/WiringPi#404": {
+        "title": "Missing I2C Close function",
+        "confidence": 95,
+        "decision": "fix_attempted",
+        "reason": "Simple wrapper function addition for API consistency",
+        "evaluated_at": "2026-02-10T00:00:00Z"
+      },
+      "nicolasff/webdis#245": {
+        "title": "Potential integer overflow in sds.c",
+        "confidence": 90,
+        "decision": "fix_attempted",
+        "reason": "CVE with reference patch from Redis CVE-2021-21309, clear security fix",
+        "evaluated_at": "2026-02-10T00:00:00Z"
+      },
+      "FreePBX/core#123": {
+        "title": "Quick Create issue, Wrong type of input for extension",
+        "confidence": 92,
+        "decision": "fix_attempted",
+        "reason": "HTML input type number strips leading zeros, simple fix to text input with pattern validation",
+        "evaluated_at": "2026-02-10T00:00:00Z"
+      },
+      "nicolasff/webdis#250": {
+        "title": "Potential realloc function",
+        "confidence": 85,
+        "decision": "skipped",
+        "reason": "Memory leak in realloc requires deeper call chain analysis, below 90% threshold",
+        "evaluated_at": "2026-02-10T00:00:00Z"
       }
     },
     "open_prs": [
-      {
-        "repo": "RedHatInsights/bonfire",
-        "pr_number": 528,
-        "title": "fix: handle missing keycloak secret in namespace describe",
-        "url": "https://github.com/RedHatInsights/bonfire/pull/528",
-        "status": "open",
-        "ci_status": "Konflux checks failing (Red Hat internal infrastructure)"
-      },
-      {
-        "repo": "RedHatInsights/bonfire",
-        "pr_number": 526,
-        "title": "fix: optimize namespace refresh function to avoid unnecessary deepcopy",
-        "url": "https://github.com/RedHatInsights/bonfire/pull/526",
-        "status": "open",
-        "ci_status": "Konflux checks failing (Red Hat internal infrastructure)"
-      },
       {
         "repo": "ansible/awx",
         "pr_number": 14965,
@@ -491,17 +522,6 @@
       },
       {
         "repo": "gnome-terminator/terminator",
-        "pr_number": 1055,
-        "title": "fix: handle both string and bytes in feed method for drag-and-drop",
-        "url": "https://github.com/gnome-terminator/terminator/pull/1055",
-        "status": "open",
-        "fixes_issue": 1051,
-        "created_at": "2026-02-09T20:42:00Z",
-        "ci_status": "No CI checks configured",
-        "comment_from_maintainer": "Responded to mattrose question about testing on 2026-02-10"
-      },
-      {
-        "repo": "gnome-terminator/terminator",
         "pr_number": 1054,
         "title": "fix: handle invalid regex patterns in search gracefully",
         "url": "https://github.com/gnome-terminator/terminator/pull/1054",
@@ -541,6 +561,66 @@
         "branch": "fix/resource-leak-gen-web-gettext",
         "fork": "dmzoneill-forks/deluge",
         "ci_status": "No CI checks configured"
+      },
+      {
+        "repo": "asterisk/asterisk",
+        "pr_number": 1764,
+        "title": "docs: fix TALK_DETECT dsp_talking_threshold description",
+        "url": "https://github.com/asterisk/asterisk/pull/1764",
+        "status": "open",
+        "fixes_issue": 1761,
+        "created_at": "2026-02-10T00:00:00Z",
+        "branch": "fix/issue-1761-talkdetect-doc-typo",
+        "fork": "dmzoneill-forks/asterisk",
+        "ci_status": "No CI checks configured"
+      },
+      {
+        "repo": "rootpd/go-binance",
+        "pr_number": 10,
+        "title": "fix: remove duplicate json tag 't' in account update struct",
+        "url": "https://github.com/rootpd/go-binance/pull/10",
+        "status": "open",
+        "fixes_issue": 7,
+        "created_at": "2026-02-10T00:00:00Z",
+        "branch": "fix/issue-7-duplicate-json-tag",
+        "fork": "dmzoneill-forks/go-binance",
+        "ci_status": "No CI checks configured"
+      },
+      {
+        "repo": "WiringPi/WiringPi",
+        "pr_number": 419,
+        "title": "feat: add wiringPiI2CClose function for I2C cleanup",
+        "url": "https://github.com/WiringPi/WiringPi/pull/419",
+        "status": "open",
+        "fixes_issue": 404,
+        "created_at": "2026-02-10T00:00:00Z",
+        "branch": "fix/issue-404-i2c-close-function",
+        "fork": "dmzoneill-forks/WiringPi",
+        "ci_status": "No CI checks configured"
+      },
+      {
+        "repo": "nicolasff/webdis",
+        "pr_number": 261,
+        "title": "fix: prevent integer overflow in sds string allocation",
+        "url": "https://github.com/nicolasff/webdis/pull/261",
+        "status": "open",
+        "fixes_issue": 245,
+        "created_at": "2026-02-10T00:00:00Z",
+        "branch": "fix/issue-245-integer-overflow-sds",
+        "fork": "dmzoneill-forks/webdis",
+        "ci_status": "No CI checks configured"
+      },
+      {
+        "repo": "FreePBX/core",
+        "pr_number": 172,
+        "title": "fix: change extension input from number to text to preserve leading zeros",
+        "url": "https://github.com/FreePBX/core/pull/172",
+        "status": "open",
+        "fixes_issue": 123,
+        "created_at": "2026-02-10T00:00:00Z",
+        "branch": "fix/issue-123-extension-input-type",
+        "fork": "dmzoneill-forks/core",
+        "ci_status": "No CI checks configured"
       }
     ],
     "closed_prs": [
@@ -559,9 +639,34 @@
         "url": "https://github.com/ansible/awx/pull/14823",
         "closed_at": "2026-02-09",
         "reason": "Closed per maintainer request to put on hold until success criteria are defined"
+      },
+      {
+        "repo": "RedHatInsights/bonfire",
+        "pr_number": 526,
+        "title": "fix: optimize namespace refresh function to avoid unnecessary deepcopy",
+        "url": "https://github.com/RedHatInsights/bonfire/pull/526",
+        "closed_at": "2026-02-10",
+        "reason": "Duplicate of #529 per maintainer"
       }
     ],
-    "merged_prs": [],
+    "merged_prs": [
+      {
+        "repo": "RedHatInsights/bonfire",
+        "pr_number": 528,
+        "title": "fix: handle missing keycloak secret in namespace describe",
+        "url": "https://github.com/RedHatInsights/bonfire/pull/528",
+        "merged_at": "2026-02-10",
+        "fixes_issue": null
+      },
+      {
+        "repo": "gnome-terminator/terminator",
+        "pr_number": 1055,
+        "title": "fix: handle both string and bytes in feed method for drag-and-drop",
+        "url": "https://github.com/gnome-terminator/terminator/pull/1055",
+        "merged_at": "2026-02-10",
+        "fixes_issue": 1051
+      }
+    ],
     "attempted_issues": [],
     "skipped_issues": [
       {
@@ -800,61 +905,141 @@
         "title": "feat: Add performance monitoring and page load metrics dashboard",
         "status": "open",
         "created_at": "2026-02-10"
+      },
+      {
+        "repo": "zed-industries/zed",
+        "issue_number": 48841,
+        "title": "feat: Add integrated code review and diff comment annotations",
+        "status": "open",
+        "created_at": "2026-02-10"
+      },
+      {
+        "repo": "etcd-io/etcd",
+        "issue_number": 21283,
+        "title": "feat: Add built-in backup verification and integrity testing",
+        "status": "open",
+        "created_at": "2026-02-10"
+      },
+      {
+        "repo": "asterisk/asterisk",
+        "issue_number": 1763,
+        "title": "feat: Add native WebRTC SFU mode for scalable conferencing",
+        "status": "open",
+        "created_at": "2026-02-10"
+      },
+      {
+        "repo": "squizlabs/PHP_CodeSniffer",
+        "issue_number": 3968,
+        "title": "feat: Add incremental scanning for faster CI/CD pipeline integration",
+        "status": "open",
+        "created_at": "2026-02-10"
+      },
+      {
+        "repo": "webpack/webpack",
+        "issue_number": 20435,
+        "title": "feat: Add build performance profiling and optimization suggestions",
+        "status": "open",
+        "created_at": "2026-02-10"
       }
     ]
   },
   "last_run": {
-    "timestamp": "2026-02-10T00:00:00Z",
-    "iteration": 5,
-    "rate_limit_remaining": 4848,
-    "org_focus": "Redhat-forks",
-    "repos_scanned": 67,
-    "redhat_forks_synced": 49,
-    "redhat_forks_conflicts": 3,
+    "timestamp": "2026-02-10T02:25:18Z",
+    "iteration": 6,
+    "rate_limit_remaining": 4629,
+    "org_focus": "dmzoneill-forks",
+    "repos_scanned": 61,
+    "dmzoneill_forks_synced": 5,
+    "dmzoneill_forks_conflicts": 6,
     "actions_taken": [
-      "Agent 3 (Rebase Sync): Synced 49/52 Redhat-forks repos (94.2% success rate)",
-      "Agent 3 (Rebase Sync): 3 repos with merge conflicts (bonfire, insights-frontend-builder-common, insights-ingress-go)",
+      "Agent 3 (Rebase Sync): Synced 5/61 dmzoneill-forks repos (8.2% needed updates)",
+      "Agent 3 (Rebase Sync): 50 repos already up-to-date",
+      "Agent 3 (Rebase Sync): 6 repos with merge conflicts (scripts, filebot, Sonarr, binance-official-api-docs, etcd, markdown-badges)",
+      "Agent 3 (Rebase Sync): 2 repos not forks (appengine-ffmpeg, detox)",
       "Agent 1 (Issue & Feedback): Checked all 15 open PRs for new comments",
-      "Agent 1 (Issue & Feedback): Responded to 1 PR comment (terminator #1055)",
-      "Agent 1 (Issue & Feedback): Created 5 feature suggestions (ansible-compat, ansible-runner, ansible-creator, podman-compose, insights-chrome)",
+      "Agent 1 (Issue & Feedback): Responded to 2 PR comments (terminator #1054, bonfire #526)",
+      "Agent 1 (Issue & Feedback): Created 5 feature suggestions (zed, etcd, asterisk, PHP_CodeSniffer, webpack)",
       "Agent 2 (Pipeline Fix): Checked CI status on all 15 PRs",
-      "Agent 2 (Pipeline Fix): 4 PRs with passing CI (ansible-lint #4959, ansible-sign #101, terminator #1054, #1055)",
-      "Agent 2 (Pipeline Fix): 2 PRs with Konflux failures (bonfire #528, #526 - internal Red Hat infrastructure)",
-      "Agent 2 (Pipeline Fix): 9 PRs with no CI configured",
-      "Agent 4 (Coding Fix): Scanned 15 upstream repos, evaluated 15 issues",
-      "Agent 4 (Coding Fix): 0 PRs created - all issues below 90% confidence threshold",
-      "Agent 4 (Coding Fix): Highest confidence was 85% (ansible-dev-tools#503)",
+      "Agent 2 (Pipeline Fix): 2 PRs merged since last check (bonfire #528, terminator #1055)",
+      "Agent 2 (Pipeline Fix): 1 PR closed (bonfire #526)",
+      "Agent 2 (Pipeline Fix): 2 PRs with all checks passing (ansible-lint #4959, ansible-sign #101)",
+      "Agent 2 (Pipeline Fix): 1 PR with merge conflict (awx #14852 - head repository inaccessible)",
+      "Agent 4 (Coding Fix): Scanned 12 upstream repos, evaluated 11 issues",
+      "Agent 4 (Coding Fix): 5 PRs created - all meeting 90%+ confidence threshold",
+      "Agent 4 (Coding Fix): Average confidence of created PRs: 93.4%",
       "Agent 5 (Bug Scanner): Scanned 5 upstream repos",
       "Agent 5 (Bug Scanner): 0 critical bugs found meeting severity and confidence criteria"
     ],
-    "new_prs_created": [],
+    "new_prs_created": [
+      {
+        "repo": "asterisk/asterisk",
+        "pr_number": 1764
+      },
+      {
+        "repo": "rootpd/go-binance",
+        "pr_number": 10
+      },
+      {
+        "repo": "WiringPi/WiringPi",
+        "pr_number": 419
+      },
+      {
+        "repo": "nicolasff/webdis",
+        "pr_number": 261
+      },
+      {
+        "repo": "FreePBX/core",
+        "pr_number": 172
+      }
+    ],
     "new_feature_suggestions": [
       {
-        "repo": "ansible/ansible-compat",
-        "issue_number": 558
+        "repo": "zed-industries/zed",
+        "issue_number": 48841
       },
       {
-        "repo": "ansible/ansible-runner",
-        "issue_number": 1478
+        "repo": "etcd-io/etcd",
+        "issue_number": 21283
       },
       {
-        "repo": "ansible/ansible-creator",
-        "issue_number": 516
+        "repo": "asterisk/asterisk",
+        "issue_number": 1763
       },
       {
-        "repo": "containers/podman-compose",
-        "issue_number": 1388
+        "repo": "squizlabs/PHP_CodeSniffer",
+        "issue_number": 3968
       },
       {
-        "repo": "RedHatInsights/insights-chrome",
-        "issue_number": 3367
+        "repo": "webpack/webpack",
+        "issue_number": 20435
       }
     ],
     "pr_comments_responded": [
       {
         "repo": "gnome-terminator/terminator",
-        "pr_number": 1055,
-        "comment_type": "maintainer_question"
+        "pr_number": 1054,
+        "comment_type": "maintainer_identity_question"
+      },
+      {
+        "repo": "RedHatInsights/bonfire",
+        "pr_number": 526,
+        "comment_type": "duplicate_notification"
+      }
+    ],
+    "prs_merged": [
+      {
+        "repo": "RedHatInsights/bonfire",
+        "pr_number": 528
+      },
+      {
+        "repo": "gnome-terminator/terminator",
+        "pr_number": 1055
+      }
+    ],
+    "prs_closed": [
+      {
+        "repo": "RedHatInsights/bonfire",
+        "pr_number": 526
       }
     ]
   }
