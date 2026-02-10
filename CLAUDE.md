@@ -86,7 +86,7 @@ graph TD
 
 **Agent 4 — Coding Fix**: The main worker. Scans upstream repos for open issues, assesses confidence, creates branches, implements fixes, runs tests, commits with conventional messages, pushes to fork, creates PRs to upstream. Balances work across repos.
 
-**Agent 5 — Bug Scanner**: Proactively scans upstream codebases for critical bugs (security vulnerabilities, null dereferences, resource leaks, etc.). Opens a bug report issue on upstream, then implements the fix and creates a PR referencing that issue. Max 2 bug fix PRs per repo, scans 5 repos per iteration. Tracks all reported bugs in state to avoid duplicates.
+**Agent 5 — Bug Scanner**: Proactively scans upstream codebases for critical bugs (security vulnerabilities, null dereferences, resource leaks, etc.). Opens a bug report issue on upstream, then implements the fix and creates a PR referencing that issue. Max 4 bug fix PRs per repo, scans 10 repos per iteration. Tracks all reported bugs in state to avoid duplicates.
 
 ### Orchestration Flow
 
@@ -152,8 +152,8 @@ To avoid overwhelming any single upstream repo:
 1. Sort repos by current open PR count (ascending)
 2. Round 1: 1 PR per repo before any repo gets 2
 3. Round 2: 2 per repo before any gets 3
-4. **Max 3 open PRs per upstream repo**
-5. Max 5 fix attempts per iteration
+4. **Max 6 open PRs per upstream repo**
+5. Max 10 fix attempts per iteration
 
 ## Commitlint
 
@@ -175,7 +175,7 @@ Valid types: `fix`, `feat`, `chore`, `docs`, `test`, `refactor`, `perf`, `style`
 ## Feature Suggestions
 
 - Suggest at least 1 feature per upstream repo (as a GitHub issue) if not already suggested
-- **Max 1 open feature suggestion per upstream repo** — do not create more if one is already open
+- **Max 2 open feature suggestions per upstream repo** — do not create more if at limit
 - Feature suggestions should be genuinely useful, well-reasoned, and specific
 - Track suggestions in `feature_suggestions` array in state file
 - **Never work on our own suggestions** — they are for the community, not for us
@@ -286,13 +286,13 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 
 ## Safety Rails
 
-- **Max 3 open PRs per upstream repo**, balanced across repos
+- **Max 6 open PRs per upstream repo**, balanced across repos
 - **90% confidence threshold** before attempting fixes
 - **Never force push to upstream** — only to our fork branch for conflict resolution
 - **All commits must pass commitlint** validation (conventional commit format)
 - **Rate limit monitoring** — stop if < 200 remaining during execution, don't start if < 500
-- **Max 5 fix attempts per iteration**
-- **Max 20 ralph-loop iterations**
+- **Max 10 fix attempts per iteration**
+- **Max 40 ralph-loop iterations**
 - **Never modify files outside the fix scope**
 - **Run tests before pushing** (if available)
 - **Respectful PR descriptions** — contributing to others' projects
@@ -300,9 +300,9 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 - **Monitor and address ALL feedback** on our PRs — never abandon an open PR
 - **Fix CI/pipeline failures** on our PRs proactively
 - **Never work on issues we created ourselves** — feature suggestions are for the community
-- **Max 2 bug fix PRs per upstream repo** — bug scanner scans 5 repos per iteration, checks existing issues before reporting
+- **Max 4 bug fix PRs per upstream repo** — bug scanner scans 10 repos per iteration, checks existing issues before reporting
 - **Read CONTRIBUTING.md** and upstream conventions before contributing
-- **Never push more than 10 fix commits per iteration**
+- **Never push more than 20 fix commits per iteration**
 - **Track everything in state file** so next iteration doesn't redo work
 - **Never mention Claude, Anthropic, or AI in commits, PRs, issues, or comments** — no Co-Authored-By headers, no AI attribution, no references to being an AI agent anywhere in contributions
 
