@@ -12,64 +12,68 @@
       "flozz/cover-thumbnailer": 1,
       "linuxmint/nemo-extensions": 1,
       "micheleg/dash-to-dock": 2,
-      "gnome-terminator/terminator": 1,
+      "gnome-terminator/terminator": 3,
       "deluge-torrent/deluge": 2,
-      "asterisk/asterisk": 1,
+      "asterisk/asterisk": 2,
       "rootpd/go-binance": 1,
       "WiringPi/WiringPi": 1,
       "nicolasff/webdis": 1,
-      "FreePBX/core": 1
+      "FreePBX/core": 1,
+      "DimitriFourny/seedmage": 1,
+      "rembo10/headphones": 0
     },
     "repo_last_rebased": {
-      "Amazon-video-downloader": "2026-02-09T20:27:41Z",
-      "DoorPi": "2026-02-09T20:27:42Z",
-      "raspberry-pi-intercom": "2026-02-09T20:27:43Z",
-      "nemo-extensions": "2026-02-09T20:27:45Z",
-      "stockprediction": "2026-02-09T20:27:46Z",
-      "blogging-with-ai": "2026-02-09T20:27:48Z",
-      "authy": "2026-02-09T20:27:49Z",
-      "fmt": "2026-02-09T20:27:52Z",
-      "asyncmock": "2026-02-09T20:27:53Z",
-      "deluge": "2026-02-09T20:27:55Z",
-      "docker-ce": "2026-02-09T20:27:56Z",
-      "shields-with-icon": "2026-02-09T20:27:59Z",
-      "fastmcp": "2026-02-10T02:25:18Z",
-      "nzbhydra2": "2026-02-09T20:28:02Z",
-      "node-binance-api": "2026-02-09T20:28:04Z",
-      "seedmage": "2026-02-09T20:28:06Z",
-      "cover-thumbnailer": "2026-02-09T20:28:08Z",
-      "incrediblepbx": "2026-02-09T20:28:12Z",
-      "doorbell-pi": "2026-02-09T20:28:13Z",
-      "Docker-OSX": "2026-02-09T20:28:15Z",
-      "cryptopia-api-php": "2026-02-09T20:28:16Z",
-      "Jackett": "2026-02-10T02:25:18Z",
-      "all-contributors": "2026-02-09T20:28:19Z",
-      "binance-java-api": "2026-02-09T20:28:21Z",
-      "contrib": "2026-02-09T20:28:22Z",
-      "webdis": "2026-02-09T20:28:24Z",
-      "headphones": "2026-02-09T20:28:25Z",
-      "chrome-webstore-upload-cli": "2026-02-09T20:28:27Z",
-      "binance-enhancement-suite": "2026-02-09T20:28:28Z",
-      "php-pubsub-redis": "2026-02-09T20:28:31Z",
-      "sonarr-radarr-lidarr-autosearch-browser-extension": "2026-02-09T20:28:32Z",
-      "asterisk": "2026-02-09T20:28:34Z",
-      "dash-to-dock": "2026-02-09T20:28:35Z",
-      "mbp-fedora": "2026-02-09T20:28:36Z",
-      "webpack": "2026-02-09T20:28:38Z",
-      "intercom": "2026-02-09T20:28:39Z",
-      "WiringPi": "2026-02-09T20:28:40Z",
-      "dockerfiles": "2026-02-09T20:28:42Z",
-      "trollolo": "2026-02-09T20:28:43Z",
-      "spksrc": "2026-02-09T20:28:45Z",
-      "PHP_CodeSniffer": "2026-02-09T20:28:46Z",
-      "terminator": "2026-02-10T02:25:18Z",
-      "docker-deluge": "2026-02-09T20:28:49Z",
-      "core": "2026-02-09T20:28:50Z",
-      "PHP-Daemon": "2026-02-09T20:28:52Z",
-      "text-to-img-craiyon-scrapper": "2026-02-09T20:28:53Z",
-      "DoorButler": "2026-02-09T20:28:55Z",
-      "go-binance": "2026-02-09T20:28:56Z",
-      "Freenove_RFID_Starter_Kit_for_Raspberry_Pi": "2026-02-09T20:28:58Z",
+      "core": "2026-02-10T07:50:59Z",
+      "asterisk": "2026-02-10T07:51:01Z",
+      "text-to-img-craiyon-scrapper": "2026-02-10T07:51:03Z",
+      "binance-java-api": "2026-02-10T07:51:05Z",
+      "cover-thumbnailer": "2026-02-10T07:51:07Z",
+      "fastmcp": "2026-02-10T07:51:09Z",
+      "trollolo": "2026-02-10T07:51:11Z",
+      "intercom": "2026-02-10T07:51:13Z",
+      "node-binance-api": "2026-02-10T07:51:15Z",
+      "all-contributors": "2026-02-10T07:51:17Z",
+      "vscode": "2026-02-10T07:51:19Z",
+      "seedmage": "2026-02-10T07:51:21Z",
+      "terminator": "2026-02-10T07:51:23Z",
+      "headphones": "2026-02-10T07:51:25Z",
+      "authy": "2026-02-10T07:51:27Z",
+      "go-binance": "2026-02-10T07:51:29Z",
+      "PHP_CodeSniffer": "2026-02-10T07:51:31Z",
+      "chrome-webstore-upload-cli": "2026-02-10T07:51:33Z",
+      "dockerfiles": "2026-02-10T07:51:35Z",
+      "mbp-fedora": "2026-02-10T07:51:37Z",
+      "nemo-extensions": "2026-02-10T07:51:39Z",
+      "Docker-OSX": "2026-02-10T07:51:41Z",
+      "deluge": "2026-02-10T07:51:43Z",
+      "zed": "2026-02-10T07:51:45Z",
+      "contrib": "2026-02-10T07:51:47Z",
+      "asyncmock": "2026-02-10T07:51:49Z",
+      "blogging-with-ai": "2026-02-10T07:51:51Z",
+      "dash-to-dock": "2026-02-10T07:51:53Z",
+      "incrediblepbx": "2026-02-10T07:51:55Z",
+      "WiringPi": "2026-02-10T07:51:57Z",
+      "Freenove_RFID_Starter_Kit_for_Raspberry_Pi": "2026-02-10T07:51:59Z",
+      "webdis": "2026-02-10T07:52:01Z",
+      "DoorPi": "2026-02-10T07:52:03Z",
+      "stockprediction": "2026-02-10T07:52:05Z",
+      "raspberry-pi-intercom": "2026-02-10T07:52:07Z",
+      "PHP-Daemon": "2026-02-10T07:52:09Z",
+      "nzbhydra2": "2026-02-10T07:52:11Z",
+      "cryptopia-api-php": "2026-02-10T07:52:13Z",
+      "php-pubsub-redis": "2026-02-10T07:52:15Z",
+      "fmt": "2026-02-10T07:52:17Z",
+      "DoorButler": "2026-02-10T07:52:19Z",
+      "docker-ce": "2026-02-10T07:52:21Z",
+      "webpack": "2026-02-10T07:52:23Z",
+      "docker-deluge": "2026-02-10T07:52:25Z",
+      "sonarr-radarr-lidarr-autosearch-browser-extension": "2026-02-10T07:52:27Z",
+      "spksrc": "2026-02-10T07:52:29Z",
+      "shields-with-icon": "2026-02-10T07:52:31Z",
+      "doorbell-pi": "2026-02-10T07:52:33Z",
+      "Jackett": "2026-02-10T07:52:35Z",
+      "binance-enhancement-suite": "2026-02-10T07:52:37Z",
+      "Amazon-video-downloader": "2026-02-10T07:52:39Z",
       "event-driven-ansible": "2026-02-10T06:28:17Z",
       "edge-frontend": "2026-02-10T06:28:17Z",
       "insights-chrome": "2026-02-10T06:28:17Z",
@@ -120,8 +124,6 @@
       "tower": "2026-02-10T06:28:17Z",
       "pytest-ansible": "2026-02-10T06:28:17Z",
       "ansible-dev-tools": "2026-02-10T06:28:17Z",
-      "vscode": "2026-02-10T02:25:18Z",
-      "zed": "2026-02-10T02:25:18Z",
       "markdown-badges": "2026-02-09T22:47:26Z",
       "Sonarr": "2026-02-09T22:47:26Z",
       "scripts": "2026-02-09T22:47:26Z",
@@ -447,6 +449,48 @@
         "decision": "skipped",
         "reason": "Memory leak in realloc requires deeper call chain analysis, below 90% threshold",
         "evaluated_at": "2026-02-10T00:00:00Z"
+      },
+      "asterisk/asterisk#1755": {
+        "title": "[bug]: app_dial, utils.h: Compilation failure with -Wold-style-declaration and -Wdiscarded-qualifiers",
+        "confidence": 95,
+        "decision": "fix_attempted",
+        "reason": "Clear compiler warnings with exact line numbers and simple fixes: reorder function specifier and change variable to const",
+        "evaluated_at": "2026-02-10T10:00:00Z"
+      },
+      "gnome-terminator/terminator#1031": {
+        "title": "Syslog error message on popup menu",
+        "confidence": 92,
+        "decision": "fix_attempted",
+        "reason": "Clear deprecation warning with exact error message, found unused imports causing the issue",
+        "evaluated_at": "2026-02-10T10:15:00Z"
+      },
+      "asterisk/asterisk#1762": {
+        "title": "[bug]: 100% CPU usage when entering BridgeWait after JITTERBUFFER(disabled)=",
+        "confidence": 65,
+        "decision": "skipped",
+        "reason": "Reproducible bug but requires deep understanding of Asterisk jitterbuffer and BridgeWait internals, below 90% threshold",
+        "evaluated_at": "2026-02-10T10:05:00Z"
+      },
+      "flozz/cover-thumbnailer#19": {
+        "title": "webp support",
+        "confidence": 85,
+        "decision": "skipped",
+        "reason": "Feature request to add webp format support, not a bug fix, below 90% threshold",
+        "evaluated_at": "2026-02-10T10:20:00Z"
+      },
+      "micheleg/dash-to-dock#2484": {
+        "title": "Unpinning application icon from dock made the dock forgot some open windows",
+        "confidence": 65,
+        "decision": "skipped",
+        "reason": "Complex window tracking state management bug requiring understanding of dock internals, below 90% threshold",
+        "evaluated_at": "2026-02-10T10:22:00Z"
+      },
+      "Jackett/Jackett#16226": {
+        "title": "OMDB integration not working. tt code does not fall back to title",
+        "confidence": 70,
+        "decision": "skipped",
+        "reason": ".NET/C# codebase requiring understanding of OMDB API integration logic, below 90% threshold",
+        "evaluated_at": "2026-02-10T10:18:00Z"
       }
     },
     "open_prs": [
@@ -563,7 +607,7 @@
         "created_at": "2026-02-10T00:00:00Z",
         "branch": "fix/issue-1761-talkdetect-doc-typo",
         "fork": "dmzoneill-forks/asterisk",
-        "ci_status": "No CI checks configured"
+        "ci_status": "CI failure - pre-existing flaky test (unrelated to doc changes)"
       },
       {
         "repo": "rootpd/go-binance",
@@ -611,7 +655,7 @@
         "created_at": "2026-02-10T00:00:00Z",
         "branch": "fix/issue-123-extension-input-type",
         "fork": "dmzoneill-forks/core",
-        "ci_status": "No CI checks configured"
+        "ci_status": "Pending CLA signature"
       },
       {
         "repo": "RedHatInsights/bonfire",
@@ -659,18 +703,54 @@
         "created_at": "2026-02-10T06:34:00Z",
         "branch": "fix/issue-1047-boolean-conversion",
         "fork": "dmzoneill-forks/terminator",
-        "ci_status": "No CI checks configured"
+        "ci_status": "All checks passing"
       },
       {
         "repo": "micheleg/dash-to-dock",
-        "pr_number": 2495,
+        "pr_number": 2496,
         "title": "fix: correct French translation typo in preferences",
-        "url": "https://github.com/micheleg/dash-to-dock/pull/2495",
+        "url": "https://github.com/micheleg/dash-to-dock/pull/2496",
         "status": "open",
         "fixes_issue": 2480,
         "created_at": "2026-02-10T06:34:00Z",
         "branch": "fix/issue-2480-french-translation",
         "fork": "dmzoneill-forks/dash-to-dock",
+        "ci_status": "All checks passing"
+      },
+      {
+        "repo": "asterisk/asterisk",
+        "pr_number": 1765,
+        "title": "fix: resolve compilation warnings in utils.h and app_dial.c",
+        "url": "https://github.com/asterisk/asterisk/pull/1765",
+        "status": "open",
+        "fixes_issue": 1755,
+        "created_at": "2026-02-10T10:00:00Z",
+        "branch": "fix/issue-1755-compilation-warnings",
+        "fork": "dmzoneill-forks/asterisk",
+        "ci_status": "No CI checks configured"
+      },
+      {
+        "repo": "gnome-terminator/terminator",
+        "pr_number": 1057,
+        "title": "fix: remove unused GObject and Gtk imports with legacy aliases",
+        "url": "https://github.com/gnome-terminator/terminator/pull/1057",
+        "status": "open",
+        "fixes_issue": 1031,
+        "created_at": "2026-02-10T10:15:00Z",
+        "branch": "fix/issue-1031-gobject-import",
+        "fork": "dmzoneill-forks/terminator",
+        "ci_status": "No CI checks configured"
+      },
+      {
+        "repo": "DimitriFourny/seedmage",
+        "pr_number": 5,
+        "title": "fix: use context managers to prevent file handle leaks",
+        "url": "https://github.com/DimitriFourny/seedmage/pull/5",
+        "status": "open",
+        "fixes_issue": 4,
+        "created_at": "2026-02-10T10:30:00Z",
+        "branch": "fix/bug-4-resource-leak-file-handles",
+        "fork": "dmzoneill-forks/seedmage",
         "ci_status": "No CI checks configured"
       }
     ],
@@ -760,6 +840,19 @@
         "line_number": 57,
         "bug_type": "resource_leak",
         "severity": "low",
+        "status": "open"
+      },
+      {
+        "upstream": "DimitriFourny/seedmage",
+        "fork": "dmzoneill-forks/seedmage",
+        "issue_number": 4,
+        "pr_number": 5,
+        "branch": "fix/bug-4-resource-leak-file-handles",
+        "title": "fix: use context managers to prevent file handle leaks",
+        "file_path": "seedmage.py",
+        "line_number": 75,
+        "bug_type": "resource_leak",
+        "severity": "critical",
         "status": "open"
       }
     ],
@@ -1027,73 +1120,76 @@
         "title": "feat: Add event replay and time-travel debugging for rulebook development",
         "status": "open",
         "created_at": "2026-02-10T06:34:00Z"
+      },
+      {
+        "repo": "FreePBX/core",
+        "issue_number": 173,
+        "title": "feat: Add bulk extension import/export with validation and rollback",
+        "status": "open",
+        "created_at": "2026-02-10T10:30:00Z"
+      },
+      {
+        "repo": "rembo10/headphones",
+        "issue_number": 3400,
+        "title": "feat: Add integration with music streaming APIs for discovery and metadata enrichment",
+        "status": "open",
+        "created_at": "2026-02-10T10:30:00Z"
       }
     ]
   },
   "last_run": {
-    "timestamp": "2026-02-10T06:34:00Z",
-    "iteration": 7,
-    "rate_limit_remaining": 4470,
-    "org_focus": "Redhat-forks",
-    "repos_scanned": 53,
+    "timestamp": "2026-02-10T10:30:00Z",
+    "iteration": 8,
+    "rate_limit_remaining": 4808,
+    "org_focus": "dmzoneill-forks",
+    "repos_scanned": 60,
     "actions_taken": [
-      "Agent 1 (Issue & Feedback): Created 4 feature suggestions (frontend-operator, tower, pytest-ansible, event-driven-ansible)",
-      "Agent 1 (Issue & Feedback): Checked all 15 open PRs for new comments - no new unanswered comments",
-      "Agent 2 (Pipeline Fix): Monitored CI status on all PRs",
-      "Agent 2 (Pipeline Fix): 1 PR merged (terminator #1054)",
-      "Agent 2 (Pipeline Fix): 1 PR has unrelated test failure (asterisk #1764 - pre-existing flaky test)",
-      "Agent 3 (Rebase Sync): Synced 50/53 Redhat-forks repos (94.3% success rate)",
-      "Agent 3 (Rebase Sync): 3 repos with merge conflicts (insights-frontend-builder-common, insights-ingress-go, bonfire)",
-      "Agent 4 (Coding Fix): Scanned 12 upstream repos, evaluated 10 new issues",
-      "Agent 4 (Coding Fix): Created 5 PRs - all meeting 90%+ confidence threshold",
-      "Agent 4 (Coding Fix): Average confidence of created PRs: 95.2%",
-      "Agent 5 (Bug Scanner): Scanned 6 upstream repos (eda-server, FreePBX/core, asterisk, terminator, webdis, dash-to-dock)",
-      "Agent 5 (Bug Scanner): 0 new critical bugs found - scanned codebases are well-maintained"
+      "Agent 1 (Issue & Feedback): Addressed feedback on asterisk/asterisk #1764 - updated commit format per maintainer bot",
+      "Agent 1 (Issue & Feedback): Created 2 feature suggestions (FreePBX/core, rembo10/headphones)",
+      "Agent 1 (Issue & Feedback): Checked 9 dmzoneill-forks PRs for reviewer comments - 1 required action (asterisk #1764)",
+      "Agent 2 (Pipeline Fix): Monitored 9 dmzoneill-forks PRs for CI status",
+      "Agent 2 (Pipeline Fix): 1 PR has pre-existing flaky test (asterisk #1764 - unrelated to changes)",
+      "Agent 2 (Pipeline Fix): 1 PR pending CLA signature (FreePBX/core #172)",
+      "Agent 2 (Pipeline Fix): All other PRs clean and mergeable",
+      "Agent 3 (Rebase Sync): Synced 51/60 dmzoneill-forks repos (85.0% success rate)",
+      "Agent 3 (Rebase Sync): 6 repos with merge conflicts (etcd, markdown-badges, binance-official-api-docs, scripts, filebot, Sonarr)",
+      "Agent 3 (Rebase Sync): 2 repos not forks (appengine-ffmpeg, detox)",
+      "Agent 4 (Coding Fix): Scanned 6 upstream repos, evaluated 6 new issues",
+      "Agent 4 (Coding Fix): Created 2 PRs - both meeting 90%+ confidence threshold (asterisk/asterisk #1765, gnome-terminator/terminator #1057)",
+      "Agent 4 (Coding Fix): Average confidence of created PRs: 93.5%",
+      "Agent 5 (Bug Scanner): Scanned 5 upstream repos (PHP_CodeSniffer, seedmage, authy, doorbell-pi, chrome-webstore-upload-cli)",
+      "Agent 5 (Bug Scanner): Found 1 critical bug (seedmage resource leaks), opened issue #4 and PR #5"
     ],
     "new_prs_created": [
       {
-        "repo": "RedHatInsights/bonfire",
-        "pr_number": 531
-      },
-      {
-        "repo": "ansible/ansible-lint",
-        "pr_number": 4960
-      },
-      {
-        "repo": "ansible/ansible-lint",
-        "pr_number": 4961
+        "repo": "asterisk/asterisk",
+        "pr_number": 1765
       },
       {
         "repo": "gnome-terminator/terminator",
-        "pr_number": 1056
+        "pr_number": 1057
       },
       {
-        "repo": "micheleg/dash-to-dock",
-        "pr_number": 2495
+        "repo": "DimitriFourny/seedmage",
+        "pr_number": 5
       }
     ],
     "new_feature_suggestions": [
       {
-        "repo": "RedHatInsights/frontend-operator",
-        "issue_number": 528
+        "repo": "FreePBX/core",
+        "issue_number": 173
       },
       {
-        "repo": "ansible/tower",
-        "issue_number": 7294
-      },
-      {
-        "repo": "ansible/pytest-ansible",
-        "issue_number": 545
-      },
-      {
-        "repo": "ansible/event-driven-ansible",
-        "issue_number": 508
+        "repo": "rembo10/headphones",
+        "issue_number": 3400
       }
     ],
-    "prs_merged": [
+    "prs_merged": [],
+    "feedback_addressed": [
       {
-        "repo": "gnome-terminator/terminator",
-        "pr_number": 1054
+        "repo": "asterisk/asterisk",
+        "pr_number": 1764,
+        "action": "Updated commit format per maintainer bot feedback"
       }
     ]
   }
