@@ -132,6 +132,8 @@ This returns all PR comments, review comments, reviews, mergeable status, and re
 
 Count total comments. Compare against `comments_seen` from state. If there are new comments, process them.
 
+**Also check `reviewDecision`**: If `reviewDecision` is `CHANGES_REQUESTED`, re-process the most recent review's comments even if `comments_seen` hasn't changed. A reviewer may click "Request Changes" on existing comments without leaving a new comment — we must still act on it. Process all comments from the latest review with `state: "CHANGES_REQUESTED"` and implement the requested changes.
+
 ### 2. Categorize Each New Comment
 
 For each new comment from a reviewer (not from us):
