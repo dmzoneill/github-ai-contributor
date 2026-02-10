@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Project Is
 
-`github-ai-contributor` is a prompt-driven, headless AI system that autonomously contributes to open-source repositories. It monitors repos forked into the `Redhat-forks` and `dmzoneill-forks` GitHub orgs, scans their **upstream** (original) repos for open issues, assesses whether it can fix them with >= 90% confidence, and submits PRs back to the upstream. It also suggests features. Runs every 3 hours via GitHub Actions (1-hour timeout per run, separate workflows per org), fully headless using `claude -p`.
+`github-ai-contributor` is a prompt-driven, headless AI system that autonomously contributes to open-source repositories. It monitors repos forked into the `Redhat-forks` and `dmzoneill-forks` GitHub orgs, scans their **upstream** (original) repos for open issues, assesses whether it can fix them with >= 80% confidence, and submits PRs back to the upstream. It also suggests features. Runs every 3 hours via GitHub Actions (1-hour timeout per run, separate workflows per org), fully headless using `claude -p`.
 
 This project contains **no Python/Node code** — it is entirely orchestrated by Claude Code via markdown prompts, following the same architecture as `github-ai-maintainer`.
 
@@ -129,7 +129,7 @@ We own every PR from creation to merge/close:
 
 Before attempting to fix an issue, the Coding Agent assesses confidence:
 
-- **>= 90%**: Proceed with fix
+- **>= 80%**: Proceed with fix
 - **< 90%**: Skip the issue, add to `skipped_issues` in state with reason
 
 Factors that increase confidence:
@@ -288,7 +288,7 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 
 - **IMPORTANT: All rate limits and caps below apply ONLY to creating NEW PRs, issues, and feature suggestions.** Following up on existing PRs/issues (responding to reviewer comments, fixing CI failures, rebasing, addressing requested changes) is NEVER rate limited — always process ALL follow-up work regardless of limits.
 - **Max 4 new open PRs per upstream repo**, balanced across repos
-- **90% confidence threshold** before attempting fixes
+- **80% confidence threshold** before attempting fixes
 - **Never force push to upstream** — only to our fork branch for conflict resolution
 - **All commits must pass commitlint** validation (conventional commit format)
 - **Rate limit monitoring** — stop if < 200 remaining during execution, don't start if < 500

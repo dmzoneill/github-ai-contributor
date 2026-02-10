@@ -166,7 +166,7 @@ Your responsibilities:
    - Read the relevant source code in the repo
    - Assess confidence level (0-100%)
    - If < 90%: add to `skipped_issues` with reason, move on
-   - If >= 90%: proceed with fix
+   - If >= 80%: proceed with fix
 
 4. **Implement the fix**:
    - Clone/pull the fork repo
@@ -215,7 +215,7 @@ Your responsibilities:
    - Check existing open issues on upstream — **skip if the bug is already reported**
    - Check `bug_fixes` state — **skip if we already reported/fixed it**
    - Assess severity — only proceed with genuinely critical bugs
-   - Assess fix confidence — must be >= 90%
+   - Assess fix confidence — must be >= 80%
 
 4. **Report and fix**: For each verified bug:
    a. Open a bug report issue on the upstream repo with location, description, impact, and suggested fix
@@ -316,7 +316,7 @@ If there IS remaining work, do NOT output the promise tag. The ralph loop will r
 - Never push more than 20 new fix commits per iteration
 - Max 6 new open PRs per upstream repo, balanced across repos
 - Max 50 new fix attempts per iteration
-- 90% confidence threshold before attempting fixes
+- 80% confidence threshold before attempting fixes
 - Never force push to upstream (only to fork branch for conflict resolution)
 - If rate limit drops below 200 during execution, stop and save state
 - All commits must pass commitlint validation

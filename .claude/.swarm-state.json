@@ -918,13 +918,6 @@
         "reason": "Bug in directory isolation cleanup logic, below 90% threshold",
         "evaluated_at": "2026-02-10T00:00:00Z"
       },
-      "ansible/ansible-runner#1415": {
-        "title": "make rotate_artifacts accessible from env/settings",
-        "confidence": 95,
-        "decision": "skipped",
-        "reason": "Has open PR #1417 with changes requested",
-        "evaluated_at": "2026-02-10T00:00:00Z"
-      },
       "ansible/ansible-runner#1390": {
         "title": "RunnerConfig.prepare_env() does not respect the ansible config",
         "confidence": 55,
@@ -981,20 +974,6 @@
         "reason": "Large refactoring to migrate CLI framework",
         "evaluated_at": "2026-02-10T00:00:00Z"
       },
-      "ansible/ansible-dev-tools#503": {
-        "title": "Launching container as UID 1000 prompts for zsh configuration",
-        "confidence": 85,
-        "decision": "skipped",
-        "reason": "Bug with clear root cause but multiple potential solutions, below 90%",
-        "evaluated_at": "2026-02-10T00:00:00Z"
-      },
-      "ansible/ansible-dev-tools#510": {
-        "title": "Include molecule-plugins",
-        "confidence": 80,
-        "decision": "skipped",
-        "reason": "Simple addition but need to verify compatibility, below 90%",
-        "evaluated_at": "2026-02-10T00:00:00Z"
-      },
       "asterisk/asterisk#1761": {
         "title": "TALK_DETECT docs wording mistake",
         "confidence": 95,
@@ -1030,13 +1009,6 @@
         "reason": "HTML input type number strips leading zeros, simple fix to text input with pattern validation",
         "evaluated_at": "2026-02-10T00:00:00Z"
       },
-      "nicolasff/webdis#250": {
-        "title": "Potential realloc function",
-        "confidence": 85,
-        "decision": "skipped",
-        "reason": "Memory leak in realloc requires deeper call chain analysis, below 90% threshold",
-        "evaluated_at": "2026-02-10T00:00:00Z"
-      },
       "asterisk/asterisk#1755": {
         "title": "[bug]: app_dial, utils.h: Compilation failure with -Wold-style-declaration and -Wdiscarded-qualifiers",
         "confidence": 95,
@@ -1057,13 +1029,6 @@
         "decision": "skipped",
         "reason": "Reproducible bug but requires deep understanding of Asterisk jitterbuffer and BridgeWait internals, below 90% threshold",
         "evaluated_at": "2026-02-10T10:05:00Z"
-      },
-      "flozz/cover-thumbnailer#19": {
-        "title": "webp support",
-        "confidence": 85,
-        "decision": "skipped",
-        "reason": "Feature request to add webp format support, not a bug fix, below 90% threshold",
-        "evaluated_at": "2026-02-10T10:20:00Z"
       },
       "micheleg/dash-to-dock#2484": {
         "title": "Unpinning application icon from dock made the dock forgot some open windows",
@@ -1353,7 +1318,7 @@
       "all-contributors/allcontributors.org": {
         "language": "MDX",
         "default_branch": "main",
-        "description": "✨ The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code ✨",
+        "description": "\u2728 The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code \u2728",
         "topics": [
           "contributors",
           "all-contributors",
@@ -2143,7 +2108,7 @@
       "jlowin/fastmcp": {
         "language": "Python",
         "default_branch": "main",
-        "description": "🚀 The fast, Pythonic way to build MCP servers and clients",
+        "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients",
         "topics": [
           "model-context-protocol",
           "fastmcp",
@@ -2167,7 +2132,7 @@
       "zed-industries/zed": {
         "language": "Rust",
         "default_branch": "main",
-        "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "description": "Code at the speed of thought \u2013 Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
         "topics": [
           "text-editor",
           "zed",

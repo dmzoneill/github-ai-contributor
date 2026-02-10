@@ -144,7 +144,7 @@ jobs:
             Skip repos that are already at their limits.
 
           STEP 6: Scan upstream repos for open issues. Skip issues we created ourselves.
-          For each issue, assess confidence we can fix it (>= 90% threshold).
+          For each issue, assess confidence we can fix it (>= 80% threshold).
           Balance work across repos - max 4 open PRs per upstream repo.
 
           STEP 7: For fixable issues:

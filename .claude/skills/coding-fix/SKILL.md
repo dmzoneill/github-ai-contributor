@@ -177,8 +177,8 @@ ls ~/src/{org}-{repo}/{Makefile,package.json,pyproject.toml,setup.py,go.mod,Carg
 
 ### Decision
 
-- **>= 90% confidence**: Proceed with fix
-- **< 90% confidence**: Add to `skipped_issues` with reason, move to next issue
+- **>= 80% confidence**: Proceed with fix
+- **< 80% confidence**: Add to `skipped_issues` with reason, move to next issue
 
 **Always record the evaluation** in your output's `evaluated_issues` map (keyed by `"{upstream}#{number}"`):
 ```json
@@ -381,7 +381,7 @@ Return a JSON object:
 ## Rules
 
 - **Rate limits apply ONLY to creating new PRs** — the per-repo and per-iteration limits below cap new work only. Follow-up on existing PRs (responding to reviews, fixing CI, rebasing) is never limited.
-- **90% confidence threshold** — do not attempt fixes below this
+- **80% confidence threshold** — do not attempt fixes below this
 - **Max 6 new open PRs per upstream repo** — balanced across repos
 - **Max 50 new fix attempts per iteration** — to limit scope per run
 - **Never work on issues we created** — our feature suggestions are for the community

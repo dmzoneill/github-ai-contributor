@@ -122,14 +122,14 @@ For each potential bug found:
 2. **Check if the bug is already reported** — search the open issues list (collected in Step 1) for matching keywords, file paths, or descriptions. If an existing open issue covers the same bug, **skip it**.
 3. **Check if we already filed a fix** — look in `bug_fixes` state array for the same repo + file path combination.
 4. **Assess severity** — only proceed with genuinely critical bugs. Skip style issues, performance suggestions, or speculative concerns.
-5. **Assess fix confidence** — must be >= 90% confident the fix is correct and won't break anything.
+5. **Assess fix confidence** — must be >= 80% confident the fix is correct and won't break anything.
 
 Only proceed if:
 - The bug is real and verifiable in the code
 - No existing open issue covers it
 - We haven't already fixed it
 - The fix is clear and minimal
-- Confidence >= 90%
+- Confidence >= 80%
 
 ## Step 3: Report and Fix the Bug
 
@@ -309,7 +309,7 @@ Return a JSON object:
 - **Never fix style issues, performance suggestions, or speculative concerns**
 - **Always check existing open issues first** — never fix a bug that's already reported (someone may already be working on it)
 - **Include exact file path and line number** in PR description
-- **90% fix confidence threshold** — don't submit if unsure the fix is correct
+- **80% fix confidence threshold** — don't submit if unsure the fix is correct
 - **Minimal changes only** — fix the bug, don't refactor surrounding code
 - **Always branch from `upstream/{default_branch}`** — never from `origin/{default_branch}`
 - **Run tests before pushing** if available
