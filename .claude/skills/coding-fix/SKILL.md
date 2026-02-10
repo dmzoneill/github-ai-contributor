@@ -451,7 +451,7 @@ Return a JSON object:
 - **Read CONTRIBUTING.md** before making changes to any repo
 - **Run tests before pushing** if available
 - **Commitlint-valid messages** — all commits must be conventional format
-- **Respectful PR descriptions** — we're contributing to someone else's project
+- **Follow the Communication Style in CLAUDE.md** — PR descriptions should be concise and direct, sound like a real developer. No corporate speak, no filler, no essays. 3-5 sentence summary max.
 - **Follow upstream conventions** — code style, naming, patterns
 - **One PR per issue** — don't bundle multiple fixes
 - **Check rate limit** periodically — stop if < 200 remaining

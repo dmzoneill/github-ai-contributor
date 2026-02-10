@@ -363,6 +363,7 @@ Return a JSON object:
 - **Run tests before pushing** if available
 - **Commitlint-valid messages** — all commits must be conventional format
 - **Follow upstream code style and conventions**
+- **Follow the Communication Style in CLAUDE.md** — bug reports and PR descriptions should be concise, direct, and sound like a real developer. No corporate speak.
 - **Read CONTRIBUTING.md** before making changes to any repo
 - **Check rate limits** every 2 repos — stop if < 200 remaining
 - **Never mention Claude, Anthropic, or AI** — no AI attribution in commits, PRs, or comments
