@@ -194,7 +194,19 @@ done
 grep -i -A 20 "contribut\|development\|commit.*message\|pull.*request" README.md 2>/dev/null | head -40
 ```
 
-Look for commit message format, PR template (`.github/PULL_REQUEST_TEMPLATE.md`), code style requirements, and development setup in the README. Follow THEIR conventions.
+Also check for:
+```bash
+# Check for DCO sign-off requirement
+grep -i -l "sign-off\|DCO\|Developer Certificate" CONTRIBUTING.md .github/CONTRIBUTING.md 2>/dev/null
+
+# Check for changelog requirement
+ls CHANGELOG.md CHANGES.md HISTORY.md 2>/dev/null
+
+# Check for PR template
+ls .github/PULL_REQUEST_TEMPLATE.md 2>/dev/null
+```
+
+Look for commit message format, DCO sign-off requirements, PR template, changelog requirements, code style, and development setup in the README. Follow THEIR conventions.
 
 ### d. Apply the Fix
 
@@ -224,16 +236,26 @@ elif [ -f Cargo.toml ]; then
 fi
 ```
 
-### g. Commit
+### g. Pre-commit Checks
 
 ```bash
+# Revert any accidentally modified generated files
+git diff --name-only | grep -E '(package-lock\.json|yarn\.lock|Pipfile\.lock|go\.sum|Cargo\.lock|\.min\.js|\.min\.css|dist/|build/)' && git checkout -- $(git diff --name-only | grep -E '(package-lock\.json|yarn\.lock|Pipfile\.lock|go\.sum|Cargo\.lock|\.min\.js|\.min\.css|dist/|build/)') 2>/dev/null || true
+```
+
+### h. Commit
+
+```bash
+# If DCO sign-off is required, add --signoff
 git add -A
 git commit -m "fix: {concise description of the bug fix} (fixes #{issue_number})"
+# OR with sign-off: git commit --signoff -m "fix: ..."
 ```
 
 The commit message format depends on upstream conventions:
 - **If CONTRIBUTING.md specifies a format**: follow THEIR format exactly
 - **Otherwise**: use commitlint-valid conventional format and reference the bug report issue
+- **If DCO required**: use `--signoff` flag
 
 ### h. Push to Fork
 

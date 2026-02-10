@@ -229,9 +229,23 @@ done
 grep -i -A 20 "contribut\|development\|commit.*message\|pull.*request" README.md 2>/dev/null | head -40
 ```
 
+Also check for:
+```bash
+# Check for DCO sign-off requirement
+grep -i -l "sign-off\|DCO\|Developer Certificate" CONTRIBUTING.md .github/CONTRIBUTING.md docs/CONTRIBUTING.md 2>/dev/null
+
+# Check for changelog requirement
+ls CHANGELOG.md CHANGES.md HISTORY.md changelogs/ 2>/dev/null
+
+# Check for PR template
+ls .github/PULL_REQUEST_TEMPLATE.md .github/PULL_REQUEST_TEMPLATE/ 2>/dev/null
+```
+
 Look for:
 - **Commit message format** — the repo may use a different convention than commitlint (e.g. `[component] description`, `PREFIX: description`). If so, follow THEIR format instead of ours.
+- **DCO sign-off** — if the project requires `Signed-off-by:` lines (common in CNCF, Linux kernel ecosystem), add `--signoff` flag to `git commit`.
 - **PR template** — check `.github/PULL_REQUEST_TEMPLATE.md` and follow it if present.
+- **Changelog** — if the project maintains a CHANGELOG.md, add an entry for the fix under the `Unreleased` or next version section.
 - **Code style requirements** — any specific formatting or linting rules.
 - **Development setup** — build/test instructions in the README.
 
@@ -283,11 +297,24 @@ elif [ -f .prettierrc ] || [ -f .prettierrc.json ]; then
 fi
 ```
 
-### e. Commit
+### e. Pre-commit Checks
+
+Before committing, verify:
+```bash
+# Ensure we haven't modified generated files (revert if so)
+git diff --name-only | grep -E '(package-lock\.json|yarn\.lock|Pipfile\.lock|go\.sum|Cargo\.lock|\.min\.js|\.min\.css|dist/|build/)' && git checkout -- $(git diff --name-only | grep -E '(package-lock\.json|yarn\.lock|Pipfile\.lock|go\.sum|Cargo\.lock|\.min\.js|\.min\.css|dist/|build/)') 2>/dev/null || true
+
+# Verify the diff is small and focused — if more than 10 files changed, something is wrong
+git diff --stat | tail -1
+```
+
+### f. Commit
 
 ```bash
+# If DCO sign-off is required, add --signoff
 git add -A
 git commit -m "fix: {concise description of the fix} (fixes #{number})"
+# OR with sign-off: git commit --signoff -m "fix: ..."
 ```
 
 The commit message format depends on upstream conventions:
@@ -295,14 +322,15 @@ The commit message format depends on upstream conventions:
 - **Otherwise**: use commitlint-valid conventional format: `type(optional-scope): description (fixes #{number})`
 - Valid types: `fix`, `feat`, `chore`, `docs`, `test`, `refactor`
 - Reference the issue where possible
+- **If DCO required**: use `--signoff` flag to add `Signed-off-by:` line
 
-### f. Push to Fork
+### g. Push to Fork
 
 ```bash
 git push origin "$BRANCH"
 ```
 
-### g. Create PR to Upstream
+### h. Create PR to Upstream
 
 ```bash
 gh pr create \
