@@ -312,9 +312,10 @@ If there IS remaining work, do NOT output the promise tag. The ralph loop will r
 
 ## Safety Rails
 
-- Never push more than 20 fix commits per iteration
-- Max 6 open PRs per upstream repo, balanced across repos
-- Max 10 fix attempts per iteration
+- **IMPORTANT: All limits below apply ONLY to creating NEW PRs/issues.** Follow-up on existing PRs (responding to reviews, fixing CI, rebasing) is NEVER rate limited — always handle ALL follow-up work first.
+- Never push more than 20 new fix commits per iteration
+- Max 6 new open PRs per upstream repo, balanced across repos
+- Max 10 new fix attempts per iteration
 - 90% confidence threshold before attempting fixes
 - Never force push to upstream (only to fork branch for conflict resolution)
 - If rate limit drops below 200 during execution, stop and save state

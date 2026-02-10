@@ -207,6 +207,7 @@ Return a JSON object:
 
 ## Rules
 
+- **Pipeline fixes on existing PRs are NEVER rate limited** — always fix CI failures on ALL our open PRs regardless of any iteration limits. These are follow-up actions, not new work.
 - Always fetch and read logs before attempting a fix
 - For lint failures, prefer fixing the code over disabling the linter
 - Never modify upstream CI configuration — only fix our code

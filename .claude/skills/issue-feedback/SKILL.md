@@ -219,6 +219,7 @@ Return a JSON object:
 
 ## Rules
 
+- **Follow-up on existing PRs/issues is NEVER rate limited** — always respond to every comment, review, and feedback on our open PRs regardless of any iteration limits. Only the creation of NEW feature suggestions is subject to per-repo limits.
 - Never leave a reviewer comment unanswered
 - Feature suggestions must be genuinely useful and specific — no low-effort suggestions
 - Do not duplicate existing open issues when suggesting features

@@ -380,9 +380,10 @@ Return a JSON object:
 
 ## Rules
 
+- **Rate limits apply ONLY to creating new PRs** — the per-repo and per-iteration limits below cap new work only. Follow-up on existing PRs (responding to reviews, fixing CI, rebasing) is never limited.
 - **90% confidence threshold** — do not attempt fixes below this
-- **Max 6 open PRs per upstream repo** — balanced across repos
-- **Max 10 fix attempts per iteration** — to limit scope per run
+- **Max 6 new open PRs per upstream repo** — balanced across repos
+- **Max 10 new fix attempts per iteration** — to limit scope per run
 - **Never work on issues we created** — our feature suggestions are for the community
 - **Never force push to upstream** — only push to fork branches
 - **Always branch from `upstream/{default_branch}`** — never from `origin/{default_branch}`, as the fork may have unsynced commits that would pollute the PR diff

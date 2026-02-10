@@ -286,7 +286,8 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 
 ## Safety Rails
 
-- **Max 6 open PRs per upstream repo**, balanced across repos
+- **IMPORTANT: All rate limits and caps below apply ONLY to creating NEW PRs, issues, and feature suggestions.** Following up on existing PRs/issues (responding to reviewer comments, fixing CI failures, rebasing, addressing requested changes) is NEVER rate limited — always process ALL follow-up work regardless of limits.
+- **Max 6 new open PRs per upstream repo**, balanced across repos
 - **90% confidence threshold** before attempting fixes
 - **Never force push to upstream** — only to our fork branch for conflict resolution
 - **All commits must pass commitlint** validation (conventional commit format)
