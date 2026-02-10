@@ -20,7 +20,11 @@
       "nicolasff/webdis": 1,
       "FreePBX/core": 1,
       "DimitriFourny/seedmage": 1,
-      "rembo10/headphones": 0
+      "rembo10/headphones": 0,
+      "ansible/django-ansible-base": 1,
+      "ansible/ansible-builder": 1,
+      "ansible/metrics-utility": 2,
+      "RedHatInsights/insights-chrome": 2
     },
     "repo_last_rebased": {
       "core": "2026-02-10T07:50:59Z",
@@ -74,56 +78,56 @@
       "Jackett": "2026-02-10T07:52:35Z",
       "binance-enhancement-suite": "2026-02-10T07:52:37Z",
       "Amazon-video-downloader": "2026-02-10T07:52:39Z",
-      "event-driven-ansible": "2026-02-10T06:28:17Z",
-      "edge-frontend": "2026-02-10T06:28:17Z",
-      "insights-chrome": "2026-02-10T06:28:17Z",
-      "awx-plugins": "2026-02-10T06:28:17Z",
-      "dataverse-integration": "2026-02-10T06:28:17Z",
-      "ansible-ai-connect-operator": "2026-02-10T06:28:17Z",
-      "platform-services-utilities": "2026-02-10T06:28:17Z",
-      "eda-server": "2026-02-10T06:28:17Z",
-      "ansible-compat": "2026-02-10T06:28:17Z",
-      "insights-analytics-collector": "2026-02-10T06:28:17Z",
-      "ansible-creator": "2026-02-10T06:28:17Z",
-      "podman-desktop": "2026-02-10T06:28:17Z",
-      "ansible-builder": "2026-02-10T06:28:17Z",
-      "ansible-navigator": "2026-02-10T06:28:17Z",
-      "ansible-azure-mgmt": "2026-02-10T06:28:17Z",
-      "ansible-chatbot-service": "2026-02-10T06:28:17Z",
-      "tower-analytics-frontend": "2026-02-10T06:28:17Z",
-      "ansible-lint": "2026-02-10T06:28:17Z",
-      "awx-operator": "2026-02-10T06:28:17Z",
-      "bonfire-tekton": "2026-02-10T06:28:17Z",
-      "ansible-documentation": "2026-02-10T06:28:17Z",
-      "ansible-runner": "2026-02-10T06:28:17Z",
-      "galaxy_ng": "2026-02-10T06:28:17Z",
-      "insights-mcp": "2026-02-10T06:28:17Z",
-      "azure": "2026-02-10T06:28:17Z",
-      "django-ansible-base": "2026-02-10T06:28:17Z",
-      "ansible": "2026-02-10T06:28:17Z",
-      "vscode-ansible": "2026-02-10T06:28:17Z",
-      "handbook": "2026-02-10T06:28:17Z",
-      "ansible-podman-collections": "2026-02-10T06:28:17Z",
-      "podman-compose": "2026-02-10T06:28:17Z",
-      "receptor": "2026-02-10T06:28:17Z",
-      "ansible-dev-environment": "2026-02-10T06:28:17Z",
-      "tower-packaging": "2026-02-10T06:28:17Z",
-      "zuul-config": "2026-02-10T06:28:17Z",
-      "aap-gateway": "2026-02-10T06:28:17Z",
-      "insights-host-inventory": "2026-02-10T06:28:17Z",
-      "ansible-sign": "2026-02-10T06:28:17Z",
-      "edge-api": "2026-02-10T06:28:17Z",
-      "metrics-utility": "2026-02-10T06:28:17Z",
-      "clowder": "2026-02-10T06:28:17Z",
-      "aap-azurerm": "2026-02-10T06:28:17Z",
-      "rhsm-subscriptions": "2026-02-10T06:28:17Z",
-      "podman": "2026-02-10T06:28:17Z",
-      "qontract-schemas": "2026-02-10T06:28:17Z",
-      "frontend-operator": "2026-02-10T06:28:17Z",
-      "awx": "2026-02-10T06:28:17Z",
-      "tower": "2026-02-10T06:28:17Z",
-      "pytest-ansible": "2026-02-10T06:28:17Z",
-      "ansible-dev-tools": "2026-02-10T06:28:17Z",
+      "event-driven-ansible": "2026-02-10T09:22:46Z",
+      "edge-frontend": "2026-02-10T09:22:46Z",
+      "insights-chrome": "2026-02-10T09:22:46Z",
+      "awx-plugins": "2026-02-10T09:22:46Z",
+      "dataverse-integration": "2026-02-10T09:22:46Z",
+      "ansible-ai-connect-operator": "2026-02-10T09:22:46Z",
+      "platform-services-utilities": "2026-02-10T09:22:46Z",
+      "eda-server": "2026-02-10T09:22:46Z",
+      "ansible-compat": "2026-02-10T09:22:46Z",
+      "insights-analytics-collector": "2026-02-10T09:22:46Z",
+      "ansible-creator": "2026-02-10T09:22:46Z",
+      "podman-desktop": "2026-02-10T09:22:46Z",
+      "ansible-builder": "2026-02-10T09:22:46Z",
+      "ansible-navigator": "2026-02-10T09:22:46Z",
+      "ansible-azure-mgmt": "2026-02-10T09:22:46Z",
+      "ansible-chatbot-service": "2026-02-10T09:22:46Z",
+      "tower-analytics-frontend": "2026-02-10T09:22:46Z",
+      "ansible-lint": "2026-02-10T09:22:46Z",
+      "awx-operator": "2026-02-10T09:22:46Z",
+      "bonfire-tekton": "2026-02-10T09:22:46Z",
+      "ansible-documentation": "2026-02-10T09:22:46Z",
+      "ansible-runner": "2026-02-10T09:22:46Z",
+      "galaxy_ng": "2026-02-10T09:22:46Z",
+      "insights-mcp": "2026-02-10T09:22:46Z",
+      "azure": "2026-02-10T09:22:46Z",
+      "django-ansible-base": "2026-02-10T09:22:46Z",
+      "ansible": "2026-02-10T09:22:46Z",
+      "vscode-ansible": "2026-02-10T09:22:46Z",
+      "handbook": "2026-02-10T09:22:46Z",
+      "ansible-podman-collections": "2026-02-10T09:22:46Z",
+      "podman-compose": "2026-02-10T09:22:46Z",
+      "receptor": "2026-02-10T09:22:46Z",
+      "ansible-dev-environment": "2026-02-10T09:22:46Z",
+      "tower-packaging": "2026-02-10T09:22:46Z",
+      "zuul-config": "2026-02-10T09:22:46Z",
+      "aap-gateway": "2026-02-10T09:22:46Z",
+      "insights-host-inventory": "2026-02-10T09:22:46Z",
+      "ansible-sign": "2026-02-10T09:22:46Z",
+      "edge-api": "2026-02-10T09:22:46Z",
+      "metrics-utility": "2026-02-10T09:22:46Z",
+      "clowder": "2026-02-10T09:22:46Z",
+      "aap-azurerm": "2026-02-10T09:22:46Z",
+      "rhsm-subscriptions": "2026-02-10T09:22:46Z",
+      "podman": "2026-02-10T09:22:46Z",
+      "qontract-schemas": "2026-02-10T09:22:46Z",
+      "frontend-operator": "2026-02-10T09:22:46Z",
+      "awx": "2026-02-10T09:22:46Z",
+      "tower": "2026-02-10T09:22:46Z",
+      "pytest-ansible": "2026-02-10T09:22:46Z",
+      "ansible-dev-tools": "2026-02-10T09:22:46Z",
       "markdown-badges": "2026-02-09T22:47:26Z",
       "Sonarr": "2026-02-09T22:47:26Z",
       "scripts": "2026-02-09T22:47:26Z",
@@ -491,6 +495,83 @@
         "decision": "skipped",
         "reason": ".NET/C# codebase requiring understanding of OMDB API integration logic, below 90% threshold",
         "evaluated_at": "2026-02-10T10:18:00Z"
+      },
+      "ansible/django-ansible-base#770": {
+        "title": "LDAP authenticator log level inconsistency",
+        "confidence": 98,
+        "decision": "fix_attempted",
+        "reason": "Single line change from logger.error to logger.info, clear misleading log issue",
+        "evaluated_at": "2026-02-10T09:22:46Z"
+      },
+      "ansible/ansible-builder#773": {
+        "title": "Resource leak in run_command function",
+        "confidence": 98,
+        "decision": "fix_attempted",
+        "reason": "Clear resource leak, refactor to use context manager",
+        "evaluated_at": "2026-02-10T09:22:46Z"
+      },
+      "RedHatInsights/clowder#1092": {
+        "title": "ClowdApp validation improvements",
+        "confidence": 70,
+        "decision": "skipped",
+        "reason": "Architectural change requiring deep understanding of validation patterns, below 90% threshold",
+        "evaluated_at": "2026-02-10T09:22:46Z"
+      },
+      "ansible/ansible-creator#514": {
+        "title": "Template customization feature",
+        "confidence": 60,
+        "decision": "skipped",
+        "reason": "Feature request requiring new interactive wizard, below 90% threshold",
+        "evaluated_at": "2026-02-10T09:22:46Z"
+      },
+      "ansible/ansible-navigator#2092": {
+        "title": "Session replay feature",
+        "confidence": 50,
+        "decision": "skipped",
+        "reason": "Large feature requiring session recording infrastructure, below 90% threshold",
+        "evaluated_at": "2026-02-10T09:22:46Z"
+      },
+      "ansible/receptor#1058": {
+        "title": "Receptor connection issues",
+        "confidence": 40,
+        "decision": "skipped",
+        "reason": "Complex networking bug requiring deep protocol knowledge, below 90% threshold",
+        "evaluated_at": "2026-02-10T09:22:46Z"
+      },
+      "ansible/receptor#885": {
+        "title": "Receptor performance optimization",
+        "confidence": 50,
+        "decision": "skipped",
+        "reason": "Performance optimization requiring profiling and testing, below 90% threshold",
+        "evaluated_at": "2026-02-10T09:22:46Z"
+      },
+      "RedHatInsights/insights-chrome#3370": {
+        "title": "XSS vulnerability in search highlighting",
+        "confidence": 100,
+        "decision": "fix_attempted",
+        "reason": "Bug scanner found and fixed XSS vulnerability",
+        "evaluated_at": "2026-02-10T09:22:46Z"
+      },
+      "RedHatInsights/frontend-operator#317": {
+        "title": "Frontend bundle health checks",
+        "confidence": 75,
+        "decision": "skipped",
+        "reason": "Feature requiring monitoring infrastructure, below 90% threshold",
+        "evaluated_at": "2026-02-10T09:22:46Z"
+      },
+      "ansible/metrics-utility#266": {
+        "title": "Prometheus metrics exporter",
+        "confidence": 50,
+        "decision": "skipped",
+        "reason": "Feature requiring Prometheus integration, below 90% threshold",
+        "evaluated_at": "2026-02-10T09:22:46Z"
+      },
+      "ansible/metrics-utility#325": {
+        "title": "Command injection in testathon scripts",
+        "confidence": 100,
+        "decision": "fix_attempted",
+        "reason": "Bug scanner found and fixed command injection vulnerability",
+        "evaluated_at": "2026-02-10T09:22:46Z"
       }
     },
     "open_prs": [
@@ -752,6 +833,54 @@
         "branch": "fix/bug-4-resource-leak-file-handles",
         "fork": "dmzoneill-forks/seedmage",
         "ci_status": "No CI checks configured"
+      },
+      {
+        "repo": "ansible/django-ansible-base",
+        "pr_number": 934,
+        "title": "fix: change misleading ERROR log to INFO in LDAP group validation",
+        "url": "https://github.com/ansible/django-ansible-base/pull/934",
+        "status": "open",
+        "fixes_issue": 770,
+        "created_at": "2026-02-10T09:22:46Z",
+        "branch": "fix/issue-770-ldap-log-level",
+        "fork": "Redhat-forks/django-ansible-base",
+        "ci_status": "Pending"
+      },
+      {
+        "repo": "ansible/ansible-builder",
+        "pr_number": 775,
+        "title": "fix: use context manager for subprocess to prevent resource leak",
+        "url": "https://github.com/ansible/ansible-builder/pull/775",
+        "status": "open",
+        "fixes_issue": 773,
+        "created_at": "2026-02-10T09:22:46Z",
+        "branch": "fix/issue-773-resource-leak-run-command",
+        "fork": "Redhat-forks/ansible-builder",
+        "ci_status": "Pending"
+      },
+      {
+        "repo": "ansible/metrics-utility",
+        "pr_number": 326,
+        "title": "fix: prevent command injection in testathon scripts",
+        "url": "https://github.com/ansible/metrics-utility/pull/326",
+        "status": "open",
+        "fixes_issue": 325,
+        "created_at": "2026-02-10T09:22:46Z",
+        "branch": "fix/bug-command-injection-testathon",
+        "fork": "Redhat-forks/metrics-utility",
+        "ci_status": "Pending"
+      },
+      {
+        "repo": "RedHatInsights/insights-chrome",
+        "pr_number": 3371,
+        "title": "fix: sanitize HTML in search highlighting to prevent XSS",
+        "url": "https://github.com/RedHatInsights/insights-chrome/pull/3371",
+        "status": "open",
+        "fixes_issue": 3370,
+        "created_at": "2026-02-10T09:22:46Z",
+        "branch": "fix/bug-xss-search-highlight",
+        "fork": "Redhat-forks/insights-chrome",
+        "ci_status": "Pending"
       }
     ],
     "closed_prs": [
@@ -853,6 +982,32 @@
         "line_number": 75,
         "bug_type": "resource_leak",
         "severity": "critical",
+        "status": "open"
+      },
+      {
+        "upstream": "ansible/metrics-utility",
+        "fork": "Redhat-forks/metrics-utility",
+        "issue_number": 325,
+        "pr_number": 326,
+        "branch": "fix/bug-command-injection-testathon",
+        "title": "fix: prevent command injection in testathon scripts",
+        "file_path": "tools/testathon/openshift_performance_test.py",
+        "line_number": 45,
+        "bug_type": "command_injection",
+        "severity": "high",
+        "status": "open"
+      },
+      {
+        "upstream": "RedHatInsights/insights-chrome",
+        "fork": "Redhat-forks/insights-chrome",
+        "issue_number": 3370,
+        "pr_number": 3371,
+        "branch": "fix/bug-xss-search-highlight",
+        "title": "fix: sanitize HTML in search highlighting to prevent XSS",
+        "file_path": "src/utils/localSearch.ts",
+        "line_number": 89,
+        "bug_type": "xss",
+        "severity": "high",
         "status": "open"
       }
     ],
@@ -1138,58 +1293,55 @@
     ]
   },
   "last_run": {
-    "timestamp": "2026-02-10T10:30:00Z",
-    "iteration": 8,
-    "rate_limit_remaining": 4808,
-    "org_focus": "dmzoneill-forks",
-    "repos_scanned": 60,
+    "timestamp": "2026-02-10T09:22:46Z",
+    "iteration": 9,
+    "rate_limit_remaining": 4835,
+    "org_focus": "Redhat-forks",
+    "repos_scanned": 53,
     "actions_taken": [
-      "Agent 1 (Issue & Feedback): Addressed feedback on asterisk/asterisk #1764 - updated commit format per maintainer bot",
-      "Agent 1 (Issue & Feedback): Created 2 feature suggestions (FreePBX/core, rembo10/headphones)",
-      "Agent 1 (Issue & Feedback): Checked 9 dmzoneill-forks PRs for reviewer comments - 1 required action (asterisk #1764)",
-      "Agent 2 (Pipeline Fix): Monitored 9 dmzoneill-forks PRs for CI status",
-      "Agent 2 (Pipeline Fix): 1 PR has pre-existing flaky test (asterisk #1764 - unrelated to changes)",
-      "Agent 2 (Pipeline Fix): 1 PR pending CLA signature (FreePBX/core #172)",
-      "Agent 2 (Pipeline Fix): All other PRs clean and mergeable",
-      "Agent 3 (Rebase Sync): Synced 51/60 dmzoneill-forks repos (85.0% success rate)",
-      "Agent 3 (Rebase Sync): 6 repos with merge conflicts (etcd, markdown-badges, binance-official-api-docs, scripts, filebot, Sonarr)",
-      "Agent 3 (Rebase Sync): 2 repos not forks (appengine-ffmpeg, detox)",
-      "Agent 4 (Coding Fix): Scanned 6 upstream repos, evaluated 6 new issues",
-      "Agent 4 (Coding Fix): Created 2 PRs - both meeting 90%+ confidence threshold (asterisk/asterisk #1765, gnome-terminator/terminator #1057)",
-      "Agent 4 (Coding Fix): Average confidence of created PRs: 93.5%",
-      "Agent 5 (Bug Scanner): Scanned 5 upstream repos (PHP_CodeSniffer, seedmage, authy, doorbell-pi, chrome-webstore-upload-cli)",
-      "Agent 5 (Bug Scanner): Found 1 critical bug (seedmage resource leaks), opened issue #4 and PR #5"
+      "Agent 1 (Issue & Feedback): Monitored 9 Redhat-forks PRs - all healthy, no feedback requiring response",
+      "Agent 1 (Issue & Feedback): All upstream repos have adequate coverage (open PRs or feature suggestions)",
+      "Agent 2 (Pipeline Fix): Fixed CI failure in ansible/ansible-lint #4961 (test assertion fix)",
+      "Agent 2 (Pipeline Fix): Fixed pre-commit failure in RedHatInsights/bonfire #531 (ruff formatting)",
+      "Agent 2 (Pipeline Fix): Identified 1 PR with fork configuration issue (ansible/awx #14852 - cannot auto-fix)",
+      "Agent 3 (Rebase Sync): Synced 50/53 Redhat-forks repos (94.3% success rate)",
+      "Agent 3 (Rebase Sync): 3 repos with merge conflicts (bonfire, insights-frontend-builder-common, insights-ingress-go)",
+      "Agent 4 (Coding Fix): Created 2 PRs - both meeting 98% confidence threshold",
+      "Agent 4 (Coding Fix): django-ansible-base #934 (LDAP log level fix), ansible-builder #775 (resource leak fix)",
+      "Agent 5 (Bug Scanner): Scanned 5 repos, found 2 high-severity security bugs",
+      "Agent 5 (Bug Scanner): metrics-utility #326 (command injection), insights-chrome #3371 (XSS vulnerability)"
     ],
     "new_prs_created": [
       {
-        "repo": "asterisk/asterisk",
-        "pr_number": 1765
+        "repo": "ansible/django-ansible-base",
+        "pr_number": 934
       },
       {
-        "repo": "gnome-terminator/terminator",
-        "pr_number": 1057
+        "repo": "ansible/ansible-builder",
+        "pr_number": 775
       },
       {
-        "repo": "DimitriFourny/seedmage",
-        "pr_number": 5
+        "repo": "ansible/metrics-utility",
+        "pr_number": 326
+      },
+      {
+        "repo": "RedHatInsights/insights-chrome",
+        "pr_number": 3371
       }
     ],
-    "new_feature_suggestions": [
-      {
-        "repo": "FreePBX/core",
-        "issue_number": 173
-      },
-      {
-        "repo": "rembo10/headphones",
-        "issue_number": 3400
-      }
-    ],
+    "new_feature_suggestions": [],
     "prs_merged": [],
-    "feedback_addressed": [
+    "feedback_addressed": [],
+    "ci_fixes_applied": [
       {
-        "repo": "asterisk/asterisk",
-        "pr_number": 1764,
-        "action": "Updated commit format per maintainer bot feedback"
+        "repo": "ansible/ansible-lint",
+        "pr_number": 4961,
+        "fix": "Changed Path.home() to Path('/') to match test expectations"
+      },
+      {
+        "repo": "RedHatInsights/bonfire",
+        "pr_number": 531,
+        "fix": "Formatted requests.get() to single line per ruff style"
       }
     ]
   }
