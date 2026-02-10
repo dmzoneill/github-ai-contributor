@@ -581,7 +581,8 @@
         "title": "Update PR template",
         "url": "https://github.com/ansible/awx/pull/14965",
         "status": "open",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "ansible/awx"
       },
       {
         "repo": "ansible/awx",
@@ -589,7 +590,8 @@
         "title": "Fix formsubmiterror not showing",
         "url": "https://github.com/ansible/awx/pull/14852",
         "status": "open",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "ansible/awx"
       },
       {
         "repo": "ansible/awx",
@@ -597,7 +599,8 @@
         "title": "Monthly issue metrics",
         "url": "https://github.com/ansible/awx/pull/14838",
         "status": "open",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "ansible/awx"
       },
       {
         "repo": "ansible/ansible-sign",
@@ -605,7 +608,8 @@
         "title": "fix: handle symlink loops gracefully in manifest processing",
         "url": "https://github.com/ansible/ansible-sign/pull/101",
         "status": "open",
-        "ci_status": "All checks passing"
+        "ci_status": "All checks passing",
+        "upstream": "ansible/ansible-sign"
       },
       {
         "repo": "benthomasson/dataverse-integration",
@@ -613,7 +617,8 @@
         "title": "AAP-64892 - docs: Update dbt setup & dataproduct-config status",
         "url": "https://github.com/benthomasson/dataverse-integration/pull/3",
         "status": "open",
-        "ci_status": "Clean, ready to merge"
+        "ci_status": "Clean, ready to merge",
+        "upstream": "benthomasson/dataverse-integration"
       },
       {
         "repo": "flozz/cover-thumbnailer",
@@ -623,7 +628,8 @@
         "status": "open",
         "fixes_issue": 23,
         "created_at": "2026-02-09T20:32:00Z",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "flozz/cover-thumbnailer"
       },
       {
         "repo": "linuxmint/nemo-extensions",
@@ -633,7 +639,8 @@
         "status": "open",
         "fixes_issue": 560,
         "created_at": "2026-02-09T20:35:00Z",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "linuxmint/nemo-extensions"
       },
       {
         "repo": "micheleg/dash-to-dock",
@@ -643,7 +650,8 @@
         "status": "open",
         "fixes_issue": 2482,
         "created_at": "2026-02-09T20:38:00Z",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "micheleg/dash-to-dock"
       },
       {
         "repo": "ansible/ansible-lint",
@@ -654,7 +662,8 @@
         "fixes_issue": 4946,
         "created_at": "2026-02-09T21:20:00Z",
         "branch": "fix/issue-4946-python-3.14-pre-commit",
-        "fork": "Redhat-forks/ansible-lint"
+        "fork": "Redhat-forks/ansible-lint",
+        "upstream": "ansible/ansible-lint"
       },
       {
         "repo": "deluge-torrent/deluge",
@@ -665,7 +674,8 @@
         "created_at": "2026-02-09T22:47:26Z",
         "branch": "fix/resource-leak-setup-py",
         "fork": "dmzoneill-forks/deluge",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "deluge-torrent/deluge"
       },
       {
         "repo": "deluge-torrent/deluge",
@@ -676,7 +686,8 @@
         "created_at": "2026-02-09T22:47:26Z",
         "branch": "fix/resource-leak-gen-web-gettext",
         "fork": "dmzoneill-forks/deluge",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "deluge-torrent/deluge"
       },
       {
         "repo": "asterisk/asterisk",
@@ -688,7 +699,8 @@
         "created_at": "2026-02-10T00:00:00Z",
         "branch": "fix/issue-1761-talkdetect-doc-typo",
         "fork": "dmzoneill-forks/asterisk",
-        "ci_status": "CI failure - pre-existing flaky test (unrelated to doc changes)"
+        "ci_status": "CI failure - pre-existing flaky test (unrelated to doc changes)",
+        "upstream": "asterisk/asterisk"
       },
       {
         "repo": "rootpd/go-binance",
@@ -700,7 +712,8 @@
         "created_at": "2026-02-10T00:00:00Z",
         "branch": "fix/issue-7-duplicate-json-tag",
         "fork": "dmzoneill-forks/go-binance",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "rootpd/go-binance"
       },
       {
         "repo": "WiringPi/WiringPi",
@@ -712,7 +725,8 @@
         "created_at": "2026-02-10T00:00:00Z",
         "branch": "fix/issue-404-i2c-close-function",
         "fork": "dmzoneill-forks/WiringPi",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "WiringPi/WiringPi"
       },
       {
         "repo": "nicolasff/webdis",
@@ -724,7 +738,8 @@
         "created_at": "2026-02-10T00:00:00Z",
         "branch": "fix/issue-245-integer-overflow-sds",
         "fork": "dmzoneill-forks/webdis",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "nicolasff/webdis"
       },
       {
         "repo": "FreePBX/core",
@@ -736,7 +751,8 @@
         "created_at": "2026-02-10T00:00:00Z",
         "branch": "fix/issue-123-extension-input-type",
         "fork": "dmzoneill-forks/core",
-        "ci_status": "Pending CLA signature"
+        "ci_status": "Pending CLA signature",
+        "upstream": "FreePBX/core"
       },
       {
         "repo": "RedHatInsights/bonfire",
@@ -748,7 +764,8 @@
         "created_at": "2026-02-10T06:34:00Z",
         "branch": "fix/issue-362-github-token-validation",
         "fork": "Redhat-forks/bonfire",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "RedHatInsights/bonfire"
       },
       {
         "repo": "ansible/ansible-lint",
@@ -760,7 +777,8 @@
         "created_at": "2026-02-10T06:34:00Z",
         "branch": "fix/issue-4898-format-option-schema",
         "fork": "Redhat-forks/ansible-lint",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "ansible/ansible-lint"
       },
       {
         "repo": "ansible/ansible-lint",
@@ -772,7 +790,8 @@
         "created_at": "2026-02-10T06:34:00Z",
         "branch": "fix/issue-4943-no-git-directory",
         "fork": "Redhat-forks/ansible-lint",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "ansible/ansible-lint"
       },
       {
         "repo": "gnome-terminator/terminator",
@@ -784,7 +803,8 @@
         "created_at": "2026-02-10T06:34:00Z",
         "branch": "fix/issue-1047-boolean-conversion",
         "fork": "dmzoneill-forks/terminator",
-        "ci_status": "All checks passing"
+        "ci_status": "All checks passing",
+        "upstream": "gnome-terminator/terminator"
       },
       {
         "repo": "micheleg/dash-to-dock",
@@ -796,7 +816,8 @@
         "created_at": "2026-02-10T06:34:00Z",
         "branch": "fix/issue-2480-french-translation",
         "fork": "dmzoneill-forks/dash-to-dock",
-        "ci_status": "All checks passing"
+        "ci_status": "All checks passing",
+        "upstream": "micheleg/dash-to-dock"
       },
       {
         "repo": "asterisk/asterisk",
@@ -808,7 +829,8 @@
         "created_at": "2026-02-10T10:00:00Z",
         "branch": "fix/issue-1755-compilation-warnings",
         "fork": "dmzoneill-forks/asterisk",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "asterisk/asterisk"
       },
       {
         "repo": "gnome-terminator/terminator",
@@ -820,7 +842,8 @@
         "created_at": "2026-02-10T10:15:00Z",
         "branch": "fix/issue-1031-gobject-import",
         "fork": "dmzoneill-forks/terminator",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "gnome-terminator/terminator"
       },
       {
         "repo": "DimitriFourny/seedmage",
@@ -832,7 +855,8 @@
         "created_at": "2026-02-10T10:30:00Z",
         "branch": "fix/bug-4-resource-leak-file-handles",
         "fork": "dmzoneill-forks/seedmage",
-        "ci_status": "No CI checks configured"
+        "ci_status": "No CI checks configured",
+        "upstream": "DimitriFourny/seedmage"
       },
       {
         "repo": "ansible/django-ansible-base",
@@ -844,7 +868,8 @@
         "created_at": "2026-02-10T09:22:46Z",
         "branch": "fix/issue-770-ldap-log-level",
         "fork": "Redhat-forks/django-ansible-base",
-        "ci_status": "Pending"
+        "ci_status": "Pending",
+        "upstream": "ansible/django-ansible-base"
       },
       {
         "repo": "ansible/ansible-builder",
@@ -856,7 +881,8 @@
         "created_at": "2026-02-10T09:22:46Z",
         "branch": "fix/issue-773-resource-leak-run-command",
         "fork": "Redhat-forks/ansible-builder",
-        "ci_status": "Pending"
+        "ci_status": "Pending",
+        "upstream": "ansible/ansible-builder"
       },
       {
         "repo": "ansible/metrics-utility",
@@ -868,7 +894,8 @@
         "created_at": "2026-02-10T09:22:46Z",
         "branch": "fix/bug-command-injection-testathon",
         "fork": "Redhat-forks/metrics-utility",
-        "ci_status": "Pending"
+        "ci_status": "Pending",
+        "upstream": "ansible/metrics-utility"
       },
       {
         "repo": "RedHatInsights/insights-chrome",
@@ -880,7 +907,8 @@
         "created_at": "2026-02-10T09:22:46Z",
         "branch": "fix/bug-xss-search-highlight",
         "fork": "Redhat-forks/insights-chrome",
-        "ci_status": "Pending"
+        "ci_status": "Pending",
+        "upstream": "RedHatInsights/insights-chrome"
       }
     ],
     "closed_prs": [
@@ -1016,279 +1044,320 @@
         "repo": "RedHatInsights/bonfire",
         "issue_number": 527,
         "title": "Add namespace cost estimation and resource quota warnings",
-        "status": "open"
+        "status": "open",
+        "upstream": "RedHatInsights/bonfire"
       },
       {
         "repo": "RedHatInsights/bonfire",
         "issue_number": 288,
         "title": "metadata.labels 63-character limit",
-        "status": "open"
+        "status": "open",
+        "upstream": "RedHatInsights/bonfire"
       },
       {
         "repo": "ansible/vscode-ansible",
         "issue_number": 2558,
         "title": "feat: Add support for snippet templates from custom directories",
-        "status": "open"
+        "status": "open",
+        "upstream": "ansible/vscode-ansible"
       },
       {
         "repo": "ansible/vscode-ansible",
         "issue_number": 2557,
         "title": "Add inline variable value preview on hover",
-        "status": "open"
+        "status": "open",
+        "upstream": "ansible/vscode-ansible"
       },
       {
         "repo": "ansible/awx",
         "issue_number": 16270,
         "title": "Add bulk operations support for job templates",
-        "status": "open"
+        "status": "open",
+        "upstream": "ansible/awx"
       },
       {
         "repo": "ansible/ansible-lint",
         "issue_number": 4958,
         "title": "feat: Add JSON output format for CI/CD pipeline integration",
-        "status": "open"
+        "status": "open",
+        "upstream": "ansible/ansible-lint"
       },
       {
         "repo": "ansible/ansible-lint",
         "issue_number": 4957,
         "title": "Add support for custom rule templates via configuration",
-        "status": "open"
+        "status": "open",
+        "upstream": "ansible/ansible-lint"
       },
       {
         "repo": "RedHatInsights/clowder",
         "issue_number": 1670,
         "title": "Add ClowdApp validation webhook for early error detection",
-        "status": "open"
+        "status": "open",
+        "upstream": "RedHatInsights/clowder"
       },
       {
         "repo": "ansible/receptor",
         "issue_number": 1521,
         "title": "Add built-in health check and metrics endpoints",
-        "status": "open"
+        "status": "open",
+        "upstream": "ansible/receptor"
       },
       {
         "repo": "ansible/ansible-navigator",
         "issue_number": 2095,
         "title": "feat: Add session replay capability for debugging",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "ansible/ansible-navigator"
       },
       {
         "repo": "ansible/metrics-utility",
         "issue_number": 324,
         "title": "feat: Add Prometheus metrics exporter",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "ansible/metrics-utility"
       },
       {
         "repo": "ansible/django-ansible-base",
         "issue_number": 933,
         "title": "feat: Add comprehensive audit logging middleware",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "ansible/django-ansible-base"
       },
       {
         "repo": "app-sre/qontract-schemas",
         "issue_number": 974,
         "title": "feat: Add schema versioning and migration support",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "app-sre/qontract-schemas"
       },
       {
         "repo": "ansible/ansible-ai-connect-operator",
         "issue_number": 711,
         "title": "feat: Add AI model performance metrics and monitoring",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "ansible/ansible-ai-connect-operator"
       },
       {
         "repo": "Jackett/Jackett",
         "issue_number": 16571,
         "title": "feat: Add health monitoring dashboard with tracker uptime metrics",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "Jackett/Jackett"
       },
       {
         "repo": "Sonarr/Sonarr",
         "issue_number": 8402,
         "title": "feat: Add download client bandwidth scheduling and throttling",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "Sonarr/Sonarr"
       },
       {
         "repo": "flozz/cover-thumbnailer",
         "issue_number": 26,
         "title": "feat: Add batch regeneration mode with progress tracking",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "flozz/cover-thumbnailer"
       },
       {
         "repo": "sickcodes/Docker-OSX",
         "issue_number": 916,
         "title": "feat: Add snapshot and restore functionality for macOS VMs",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "sickcodes/Docker-OSX"
       },
       {
         "repo": "containers/podman",
         "issue_number": 28055,
         "title": "feat: Add container health check testing and validation CLI",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "containers/podman"
       },
       {
         "repo": "podman-desktop/podman-desktop",
         "issue_number": 16147,
         "title": "feat: Add container resource usage trends and historical metrics",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "podman-desktop/podman-desktop"
       },
       {
         "repo": "ansible/eda-server",
         "issue_number": 1470,
         "title": "feat: Add rulebook simulation and dry-run mode for testing",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "ansible/eda-server"
       },
       {
         "repo": "ansible/ansible-builder",
         "issue_number": 772,
         "title": "feat: Add dependency conflict detection and resolution suggestions",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "ansible/ansible-builder"
       },
       {
         "repo": "linuxmint/nemo-extensions",
         "issue_number": 573,
         "title": "feat: Add bulk file metadata editor extension for media files",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "linuxmint/nemo-extensions"
       },
       {
         "repo": "theotherp/nzbhydra2",
         "issue_number": 1041,
         "title": "feat: Add duplicate release detection and smart filtering",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "theotherp/nzbhydra2"
       },
       {
         "repo": "WiringPi/WiringPi",
         "issue_number": 418,
         "title": "feat: Add GPIO state persistence and restore functionality",
         "status": "open",
-        "created_at": "2026-02-09"
+        "created_at": "2026-02-09",
+        "upstream": "WiringPi/WiringPi"
       },
       {
         "repo": "ansible/ansible-compat",
         "issue_number": 558,
         "title": "feat: Add runtime Ansible version compatibility checker",
         "status": "open",
-        "created_at": "2026-02-10"
+        "created_at": "2026-02-10",
+        "upstream": "ansible/ansible-compat"
       },
       {
         "repo": "ansible/ansible-runner",
         "issue_number": 1478,
         "title": "feat: Add job execution history and replay capability",
         "status": "open",
-        "created_at": "2026-02-10"
+        "created_at": "2026-02-10",
+        "upstream": "ansible/ansible-runner"
       },
       {
         "repo": "ansible/ansible-creator",
         "issue_number": 516,
         "title": "feat: Add interactive template customization wizard",
         "status": "open",
-        "created_at": "2026-02-10"
+        "created_at": "2026-02-10",
+        "upstream": "ansible/ansible-creator"
       },
       {
         "repo": "containers/podman-compose",
         "issue_number": 1388,
         "title": "feat: Add compose file validation and compatibility checker",
         "status": "open",
-        "created_at": "2026-02-10"
+        "created_at": "2026-02-10",
+        "upstream": "containers/podman-compose"
       },
       {
         "repo": "RedHatInsights/insights-chrome",
         "issue_number": 3367,
         "title": "feat: Add performance monitoring and page load metrics dashboard",
         "status": "open",
-        "created_at": "2026-02-10"
+        "created_at": "2026-02-10",
+        "upstream": "RedHatInsights/insights-chrome"
       },
       {
         "repo": "zed-industries/zed",
         "issue_number": 48841,
         "title": "feat: Add integrated code review and diff comment annotations",
         "status": "open",
-        "created_at": "2026-02-10"
+        "created_at": "2026-02-10",
+        "upstream": "zed-industries/zed"
       },
       {
         "repo": "etcd-io/etcd",
         "issue_number": 21283,
         "title": "feat: Add built-in backup verification and integrity testing",
         "status": "open",
-        "created_at": "2026-02-10"
+        "created_at": "2026-02-10",
+        "upstream": "etcd-io/etcd"
       },
       {
         "repo": "asterisk/asterisk",
         "issue_number": 1763,
         "title": "feat: Add native WebRTC SFU mode for scalable conferencing",
         "status": "open",
-        "created_at": "2026-02-10"
+        "created_at": "2026-02-10",
+        "upstream": "asterisk/asterisk"
       },
       {
         "repo": "squizlabs/PHP_CodeSniffer",
         "issue_number": 3968,
         "title": "feat: Add incremental scanning for faster CI/CD pipeline integration",
         "status": "open",
-        "created_at": "2026-02-10"
+        "created_at": "2026-02-10",
+        "upstream": "squizlabs/PHP_CodeSniffer"
       },
       {
         "repo": "webpack/webpack",
         "issue_number": 20435,
         "title": "feat: Add build performance profiling and optimization suggestions",
         "status": "open",
-        "created_at": "2026-02-10"
+        "created_at": "2026-02-10",
+        "upstream": "webpack/webpack"
       },
       {
         "repo": "RedHatInsights/frontend-operator",
         "issue_number": 528,
         "title": "feat: Add automated frontend bundle health checks and rollback",
         "status": "open",
-        "created_at": "2026-02-10T06:34:00Z"
+        "created_at": "2026-02-10T06:34:00Z",
+        "upstream": "RedHatInsights/frontend-operator"
       },
       {
         "repo": "ansible/tower",
         "issue_number": 7294,
         "title": "feat: Add job template dependency graph visualization",
         "status": "open",
-        "created_at": "2026-02-10T06:34:00Z"
+        "created_at": "2026-02-10T06:34:00Z",
+        "upstream": "ansible/tower"
       },
       {
         "repo": "ansible/pytest-ansible",
         "issue_number": 545,
         "title": "feat: Add automatic fixture generation from Ansible inventory",
         "status": "open",
-        "created_at": "2026-02-10T06:34:00Z"
+        "created_at": "2026-02-10T06:34:00Z",
+        "upstream": "ansible/pytest-ansible"
       },
       {
         "repo": "ansible/event-driven-ansible",
         "issue_number": 508,
         "title": "feat: Add event replay and time-travel debugging for rulebook development",
         "status": "open",
-        "created_at": "2026-02-10T06:34:00Z"
+        "created_at": "2026-02-10T06:34:00Z",
+        "upstream": "ansible/event-driven-ansible"
       },
       {
         "repo": "FreePBX/core",
         "issue_number": 173,
         "title": "feat: Add bulk extension import/export with validation and rollback",
         "status": "open",
-        "created_at": "2026-02-10T10:30:00Z"
+        "created_at": "2026-02-10T10:30:00Z",
+        "upstream": "FreePBX/core"
       },
       {
         "repo": "rembo10/headphones",
         "issue_number": 3400,
         "title": "feat: Add integration with music streaming APIs for discovery and metadata enrichment",
         "status": "open",
-        "created_at": "2026-02-10T10:30:00Z"
+        "created_at": "2026-02-10T10:30:00Z",
+        "upstream": "rembo10/headphones"
       }
     ]
   },
