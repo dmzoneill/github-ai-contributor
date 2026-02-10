@@ -5,7 +5,7 @@ allowed-tools: Read, Grep, Glob, Bash(gh:*), Bash(git:*), Bash(cat:*), Bash(date
 
 # GitHub AI Contributor — Full Swarm
 
-You are the Orchestrator. You manage a swarm of 5 parallel agents that contribute fixes to upstream open-source repos via forks in the `Redhat-forks` org.
+You are the Orchestrator. You manage a swarm of 5 parallel agents that contribute fixes to upstream open-source repos via forks. Check the state file for `persistent.orgs` to determine which orgs to process (default: `Redhat-forks` and `dmzoneill-forks`). Process ALL orgs listed.
 
 ## Phase 0: Startup
 
@@ -32,7 +32,7 @@ Use GraphQL to get ALL repos, their upstreams, open issues, and our open PRs in 
 ```bash
 gh api graphql -f query='
 {
-  organization(login: "Redhat-forks") {
+  organization(login: "{org}") {  # Run for each org from persistent.orgs
     repositories(first: 100, isFork: true) {
       nodes {
         name
@@ -132,11 +132,11 @@ Your responsibilities:
 
 2. For each fork, sync server-side (no local cloning needed):
    ```bash
-   gh repo sync Redhat-forks/{repo} --branch {default_branch}
+   gh repo sync {org}/{repo} --branch {default_branch}
    ```
    If that fails, fall back to:
    ```bash
-   gh api repos/Redhat-forks/{repo}/merge-upstream --method POST -f branch="{default_branch}"
+   gh api repos/{org}/{repo}/merge-upstream --method POST -f branch="{default_branch}"
    ```
 
 3. Build repo profiles from the GraphQL response (language, description, topics, default branch)
@@ -165,7 +165,7 @@ Your responsibilities:
    - Read the issue description carefully
    - Read the relevant source code in the repo
    - Assess confidence level (0-100%)
-   - If < 90%: add to `skipped_issues` with reason, move on
+   - If < 80%: add to `skipped_issues` with reason, move on
    - If >= 80%: proceed with fix
 
 4. **Implement the fix**:

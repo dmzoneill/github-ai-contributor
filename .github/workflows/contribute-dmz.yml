@@ -121,52 +121,7 @@ jobs:
           CLOUD_ML_REGION: ${{ secrets.CLOUD_ML_REGION }}
           GITHUB_TOKEN: ${{ secrets.PROFILE_HOOK }}
         run: |
-          PROMPT="You are the contributor swarm orchestrator for github-ai-contributor. You MUST use tools to do real work. Do NOT just output text. TARGET ORG: dmzoneill-forks
-
-          STEP 1: Run this command to check rate limit:
-            gh api rate_limit --jq .rate.remaining
-          If remaining < 500, stop immediately and report.
-
-          STEP 2: Run this command to read the swarm state:
-            cat .claude/.swarm-state.json 2>/dev/null || echo {}
-
-          STEP 3: List all repos in target org and RANDOMIZE the order:
-            gh repo list dmzoneill-forks --limit 200 --json name,url -q .[].name | shuf
-
-          STEP 4: For each fork (in the randomized order), identify the upstream (parent) repo:
-            gh api repos/{org}/{repo} --jq .parent.full_name
-
-          STEP 5: Rebase all forks from their upstream repos to keep them current.
-
-          STEP 5.5: ALWAYS check existing open PRs and issues we have per upstream repo BEFORE doing any work:
-            - Count our open PRs per upstream repo. Max 4 open PRs per repo. Do NOT create more if at limit.
-            - Count our open issues (feature suggestions) per upstream repo. Max 2 open issues per repo. Do NOT create more if at limit.
-            Skip repos that are already at their limits.
-
-          STEP 6: Scan upstream repos for open issues. Skip issues we created ourselves.
-          For each issue, assess confidence we can fix it (>= 80% threshold).
-          Balance work across repos - max 4 open PRs per upstream repo.
-
-          STEP 7: For fixable issues:
-          - Create branch from upstream default branch (NOT origin): fix/issue-{number}-{short-description}
-          - Implement the fix
-          - Run available tests/linters
-          - Commit with commitlint-valid conventional message
-          - Push branch to fork
-          - Create PR from fork to upstream
-
-          STEP 8: Check our existing open PRs for:
-          - Reviewer comments needing response
-          - CI/pipeline failures needing fixes
-          - Merge conflicts needing rebase
-
-          STEP 9: Suggest at least 1 feature per repo (as issue on upstream) if not already done.
-
-          STEP 10: Write results to .claude/.swarm-state.json
-
-          STEP 11: Output a summary of all actions taken.
-
-          IMPORTANT: You must actually run commands and do work. Do not skip steps."
+          PROMPT="/swarm"
 
           # --- Background state commit loop ---
           STATE_FILE=".claude/.swarm-state.json"
