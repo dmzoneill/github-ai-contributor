@@ -7,14 +7,14 @@
     "repo_pr_counts": {
       "RedHatInsights/bonfire": 1,
       "ansible/awx": 3,
-      "ansible/ansible-lint": 3,
+      "ansible/ansible-lint": 2,
       "benthomasson/dataverse-integration": 1,
       "flozz/cover-thumbnailer": 1,
       "linuxmint/nemo-extensions": 1,
       "micheleg/dash-to-dock": 2,
       "gnome-terminator/terminator": 3,
       "deluge-torrent/deluge": 2,
-      "asterisk/asterisk": 2,
+      "asterisk/asterisk": 0,
       "rootpd/go-binance": 1,
       "WiringPi/WiringPi": 1,
       "nicolasff/webdis": 1,
@@ -23,9 +23,11 @@
       "rembo10/headphones": 0,
       "ansible/django-ansible-base": 1,
       "ansible/ansible-builder": 1,
-      "ansible/metrics-utility": 2,
-      "RedHatInsights/insights-chrome": 2,
-      "KittyCatTech/cryptopia-api-php": 1
+      "ansible/metrics-utility": 1,
+      "RedHatInsights/insights-chrome": 1,
+      "KittyCatTech/cryptopia-api-php": 1,
+      "squizlabs/PHP_CodeSniffer": 1,
+      "infusion/PHP-Daemon": 1
     },
     "open_prs": [
       {
@@ -54,15 +56,6 @@
         "status": "open",
         "ci_status": "No CI checks configured",
         "upstream": "ansible/awx"
-      },
-      {
-        "repo": "ansible/ansible-sign",
-        "pr_number": 101,
-        "title": "fix: handle symlink loops gracefully in manifest processing",
-        "url": "https://github.com/ansible/ansible-sign/pull/101",
-        "status": "open",
-        "ci_status": "All checks passing",
-        "upstream": "ansible/ansible-sign"
       },
       {
         "repo": "benthomasson/dataverse-integration",
@@ -107,18 +100,6 @@
         "upstream": "micheleg/dash-to-dock"
       },
       {
-        "repo": "ansible/ansible-lint",
-        "pr_number": 4959,
-        "title": "fix: update pre-commit hook to support Python 3.14",
-        "url": "https://github.com/ansible/ansible-lint/pull/4959",
-        "status": "open",
-        "fixes_issue": 4946,
-        "created_at": "2026-02-09T21:20:00Z",
-        "branch": "fix/issue-4946-python-3.14-pre-commit",
-        "fork": "Redhat-forks/ansible-lint",
-        "upstream": "ansible/ansible-lint"
-      },
-      {
         "repo": "deluge-torrent/deluge",
         "pr_number": 496,
         "title": "fix: close file handle in setup.py to prevent resource leak",
@@ -141,19 +122,6 @@
         "fork": "dmzoneill-forks/deluge",
         "ci_status": "No CI checks configured",
         "upstream": "deluge-torrent/deluge"
-      },
-      {
-        "repo": "asterisk/asterisk",
-        "pr_number": 1764,
-        "title": "docs: fix TALK_DETECT dsp_talking_threshold description",
-        "url": "https://github.com/asterisk/asterisk/pull/1764",
-        "status": "open",
-        "fixes_issue": 1761,
-        "created_at": "2026-02-10T00:00:00Z",
-        "branch": "fix/issue-1761-talkdetect-doc-typo",
-        "fork": "dmzoneill-forks/asterisk",
-        "ci_status": "CI failure - pre-existing flaky test (unrelated to doc changes)",
-        "upstream": "asterisk/asterisk"
       },
       {
         "repo": "rootpd/go-binance",
@@ -273,19 +241,6 @@
         "upstream": "micheleg/dash-to-dock"
       },
       {
-        "repo": "asterisk/asterisk",
-        "pr_number": 1765,
-        "title": "fix: resolve compilation warnings in utils.h and app_dial.c",
-        "url": "https://github.com/asterisk/asterisk/pull/1765",
-        "status": "open",
-        "fixes_issue": 1755,
-        "created_at": "2026-02-10T10:00:00Z",
-        "branch": "fix/issue-1755-compilation-warnings",
-        "fork": "dmzoneill-forks/asterisk",
-        "ci_status": "No CI checks configured",
-        "upstream": "asterisk/asterisk"
-      },
-      {
         "repo": "gnome-terminator/terminator",
         "pr_number": 1057,
         "title": "fix: remove unused GObject and Gtk imports with legacy aliases",
@@ -338,32 +293,6 @@
         "upstream": "ansible/ansible-builder"
       },
       {
-        "repo": "ansible/metrics-utility",
-        "pr_number": 326,
-        "title": "fix: prevent command injection in testathon scripts",
-        "url": "https://github.com/ansible/metrics-utility/pull/326",
-        "status": "open",
-        "fixes_issue": 325,
-        "created_at": "2026-02-10T09:22:46Z",
-        "branch": "fix/bug-command-injection-testathon",
-        "fork": "Redhat-forks/metrics-utility",
-        "ci_status": "Pending",
-        "upstream": "ansible/metrics-utility"
-      },
-      {
-        "repo": "RedHatInsights/insights-chrome",
-        "pr_number": 3371,
-        "title": "fix: sanitize HTML in search highlighting to prevent XSS",
-        "url": "https://github.com/RedHatInsights/insights-chrome/pull/3371",
-        "status": "open",
-        "fixes_issue": 3370,
-        "created_at": "2026-02-10T09:22:46Z",
-        "branch": "fix/bug-xss-search-highlight",
-        "fork": "Redhat-forks/insights-chrome",
-        "ci_status": "Pending",
-        "upstream": "RedHatInsights/insights-chrome"
-      },
-      {
         "upstream": "rembo10/headphones",
         "fork": "dmzoneill-forks/headphones",
         "pr_number": 3405,
@@ -384,6 +313,32 @@
         "created_at": "2026-02-10T21:25:26Z",
         "ci_status": "No CI checks configured",
         "upstream": "KittyCatTech/cryptopia-api-php"
+      },
+      {
+        "upstream": "squizlabs/PHP_CodeSniffer",
+        "fork": "dmzoneill-forks/PHP_CodeSniffer",
+        "pr_number": 3970,
+        "issue_number": 3917,
+        "branch": "fix/issue-3917-undefined-array-key",
+        "title": "fix: handle missing semicolon in abstract function declaration",
+        "url": "https://github.com/squizlabs/PHP_CodeSniffer/pull/3970",
+        "status": "open",
+        "created_at": "2026-02-10T22:58:00Z",
+        "comments_seen": 0,
+        "ci_status": "pending"
+      },
+      {
+        "upstream": "infusion/PHP-Daemon",
+        "fork": "dmzoneill-forks/PHP-Daemon",
+        "pr_number": 8,
+        "issue_number": 7,
+        "branch": "fix/bug-7-console-resource-leak",
+        "title": "fix: close console file handle on daemon shutdown",
+        "url": "https://github.com/infusion/PHP-Daemon/pull/8",
+        "status": "open",
+        "created_at": "2026-02-10T23:18:00Z",
+        "comments_seen": 0,
+        "ci_status": "pending"
       }
     ],
     "closed_prs": [
@@ -1209,6 +1164,34 @@
         "decision": "skipped",
         "reason": "Already being worked on - has open PRs #3402 and #3404 by our user",
         "evaluated_at": "2026-02-10T16:45:00Z"
+      },
+      "Jackett/Jackett#16492": {
+        "title": "[Bug] Filelist - some files are not downloaded from the Filelist",
+        "confidence": 30,
+        "decision": "skipped",
+        "reason": "requires deep knowledge of Jackett indexer architecture and Filelist-specific implementation",
+        "evaluated_at": "2026-02-10T22:54:00Z"
+      },
+      "etcd-io/etcd#21178": {
+        "title": "Panic: tocommit(...) out of range [lastIndex(0)] on fresh Learner join after member remove/add",
+        "confidence": 25,
+        "decision": "skipped",
+        "reason": "complex raft protocol issue involving learner promotion and state management",
+        "evaluated_at": "2026-02-10T22:54:30Z"
+      },
+      "theotherp/nzbhydra2#1029": {
+        "title": "Search attempt says no API hits available but UI says otherwise",
+        "confidence": 70,
+        "decision": "skipped",
+        "reason": "requires understanding codebase architecture to find API hit count discrepancy",
+        "evaluated_at": "2026-02-10T22:55:45Z"
+      },
+      "squizlabs/PHP_CodeSniffer#3917": {
+        "title": "Undefined index in FunctionDeclarationSniff",
+        "confidence": 90,
+        "decision": "fix_attempted",
+        "reason": "clear error message with file and line number, straightforward null check fix",
+        "evaluated_at": "2026-02-10T22:56:00Z"
       }
     },
     "repo_profiles": {
@@ -1328,23 +1311,12 @@
       "squizlabs/PHP_CodeSniffer": {
         "language": "PHP",
         "default_branch": "master",
-        "description": "PHP_CodeSniffer tokenizes PHP files and detects violations of a defined set of coding standards.",
+        "description": "PHP_CodeSniffer tokenizes PHP files and detects violations of a defined set of coding standards",
         "topics": [
           "php",
-          "coding-standards",
-          "automation",
-          "cli",
-          "qa",
-          "static-analysis"
+          "coding-standards"
         ],
-        "build_system": null,
-        "test_command": null,
-        "lint_command": null,
-        "has_contributing_md": null,
-        "has_tests": null,
-        "project_type": null,
-        "key_conventions": null,
-        "last_profiled": "2026-02-10T16:44:37Z"
+        "last_profiled": "2026-02-10T22:56:00Z"
       },
       "ccxt/node-binance-api": {
         "language": "TypeScript",
@@ -1372,7 +1344,7 @@
       "all-contributors/allcontributors.org": {
         "language": "MDX",
         "default_branch": "main",
-        "description": "✨ The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code ✨",
+        "description": "\u2728 The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code \u2728",
         "topics": [
           "contributors",
           "all-contributors",
@@ -1484,16 +1456,12 @@
       "infusion/PHP-Daemon": {
         "language": "PHP",
         "default_branch": "master",
-        "description": "",
-        "topics": [],
-        "build_system": null,
-        "test_command": null,
-        "lint_command": null,
-        "has_contributing_md": null,
-        "has_tests": null,
-        "project_type": null,
-        "key_conventions": null,
-        "last_profiled": "2026-02-10T16:44:37Z"
+        "description": "A daemon implementation in PHP",
+        "topics": [
+          "php",
+          "daemon"
+        ],
+        "last_profiled": "2026-02-10T23:15:00Z"
       },
       "KittyCatTech/cryptopia-api-php": {
         "language": "PHP",
@@ -2162,7 +2130,7 @@
       "jlowin/fastmcp": {
         "language": "Python",
         "default_branch": "main",
-        "description": "🚀 The fast, Pythonic way to build MCP servers and clients",
+        "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients",
         "topics": [
           "model-context-protocol",
           "fastmcp",
@@ -2186,7 +2154,7 @@
       "zed-industries/zed": {
         "language": "Rust",
         "default_branch": "main",
-        "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "description": "Code at the speed of thought \u2013 Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
         "topics": [
           "text-editor",
           "zed",
@@ -2208,19 +2176,32 @@
         "description": "Visual Studio Code",
         "topics": [
           "editor",
-          "electron",
-          "visual-studio-code",
           "typescript",
-          "microsoft"
+          "vscode"
         ],
-        "build_system": null,
-        "test_command": null,
-        "lint_command": null,
-        "has_contributing_md": null,
-        "has_tests": null,
-        "project_type": null,
-        "key_conventions": null,
-        "last_profiled": "2026-02-10T16:44:37Z"
+        "last_profiled": "2026-02-10T22:30:00Z"
+      },
+      "ansible/ansible": {
+        "language": "Python",
+        "default_branch": "devel",
+        "description": "Ansible is a radically simple IT automation platform",
+        "topics": [
+          "ansible",
+          "automation",
+          "python"
+        ],
+        "last_profiled": "2026-02-10T22:30:00Z"
+      },
+      "ansible/awx": {
+        "language": "Python",
+        "default_branch": "devel",
+        "description": "AWX provides a web-based user interface, REST API, and task engine built on top of Ansible",
+        "topics": [
+          "ansible",
+          "awx",
+          "automation"
+        ],
+        "last_profiled": "2026-02-10T22:30:00Z"
       }
     },
     "repo_last_rebased": {
@@ -2306,62 +2287,66 @@
         "severity": "high",
         "status": "open",
         "created_at": "2026-02-10T21:25:26Z"
+      },
+      {
+        "upstream": "infusion/PHP-Daemon",
+        "fork": "dmzoneill-forks/PHP-Daemon",
+        "issue_number": 7,
+        "pr_number": 8,
+        "branch": "fix/bug-7-console-resource-leak",
+        "title": "fix: close console file handle on daemon shutdown",
+        "file_path": "lib/main.php",
+        "line_number": 70,
+        "bug_type": "resource_leak",
+        "severity": "high",
+        "status": "open",
+        "created_at": "2026-02-10T23:18:00Z"
       }
     ]
   },
   "last_run": {
-    "timestamp": "2026-02-10T21:25:26Z",
+    "timestamp": "2026-02-10T22:56:22.340822Z",
+    "iteration": 2,
+    "rate_limit_remaining": 4900,
+    "repos_synced_count": 50,
+    "repos_synced_success": 47,
+    "repos_synced_diverged": 3,
+    "actions_taken": [
+      "Agent 1: Identified 6 PRs merged/closed - updated state",
+      "Agent 2: Checked CI on 9 PRs - 4 failures all unrelated to our code",
+      "Agent 3: Synced 50 repos (47 success, 3 diverged)",
+      "Agent 4: Created 1 PR fixing PHP_CodeSniffer issue #3917",
+      "Agent 5: Scanned 10 repos, found 2 bugs, submitted 1 fix (PHP-Daemon)"
+    ],
     "agent1_summary": {
-      "total_prs_checked": 28,
-      "prs_with_new_comments": 5,
-      "prs_responded_to": 3,
-      "prs_closed": 2,
-      "feature_suggestions_created": 0,
-      "feature_suggestions_skipped_at_limit": 8,
-      "notes": [
-        "All repos with open PRs already have 2+ open feature suggestions by us (at limit)",
-        "deluge-torrent/deluge has issues disabled",
-        "Responded to all actionable reviewer feedback on active PRs",
-        "PR 1765 (asterisk) was closed as duplicate by maintainer",
-        "PR 326 (ansible/metrics-utility) closed per reviewer recommendation",
-        "PR 14852 (ansible/awx) cannot be rebased - branch is on upstream repo, not fork",
-        "Rate limit status: 4932/5000 remaining"
-      ]
+      "prs_merged": 3,
+      "prs_closed": 3,
+      "prs_checked": 30,
+      "comments_addressed": 0,
+      "feature_suggestions_created": 0
     },
     "agent2_summary": {
-      "prs_checked": 4,
-      "prs_with_ci_issues": 2,
-      "prs_fixed": 3
+      "prs_checked": 9,
+      "ci_passing": 5,
+      "ci_failing_unrelated": 4,
+      "fixes_pushed": 0
     },
     "agent3_summary": {
-      "total": 57,
-      "synced": 51,
-      "up_to_date": 0,
-      "conflicts": 6,
-      "errors": 0
+      "total": 50,
+      "synced": 47,
+      "diverged": 3,
+      "profiles_created": 50
     },
     "agent4_summary": {
-      "repos_scanned": 1,
-      "issues_evaluated": 5,
+      "repos_scanned": 8,
+      "issues_evaluated": 14,
       "prs_created": 1,
-      "issues_skipped": 4
+      "issues_skipped": 13
     },
     "agent5_summary": {
-      "repos_scanned": 4,
+      "repos_scanned": 10,
       "bugs_found": 2,
-      "fixes_submitted": 0
-    },
-    "repos_synced_count": 152,
-    "repos_synced_success": 138,
-    "repos_synced_skipped": 14,
-    "iteration": 1,
-    "rate_limit_remaining": 4763,
-    "actions_taken": [
-      "Agent 1: Created 6 new feature suggestions",
-      "Agent 2: Checked CI status on 29 open PRs - no actionable failures",
-      "Agent 3: Synced 152 repos (138 success, 14 skipped)",
-      "Agent 4: Scanned 11 repos for fixable issues - none met 90% confidence threshold",
-      "Agent 5: Found and fixed 1 critical bug (SSL verification disabled in cryptopia-api-php)"
-    ]
+      "fixes_submitted": 1
+    }
   }
 }
