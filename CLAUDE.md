@@ -175,7 +175,7 @@ We own every PR from creation to merge/close:
 
 1. **Create**: Branch from latest upstream, implement fix, push to fork, open PR
 2. **Monitor**: Check for reviewer comments, CI status, merge conflicts every iteration
-3. **Respond**: Address all reviewer feedback — never leave a comment unanswered
+3. **Respond**: Act on direct code change requests and direct questions only — default to silence for everything else. Let the code speak. Never narrate actions, summarize threads, or post just to show engagement. Track all comments as seen in state.
 4. **Fix CI**: If pipeline fails on our PR, diagnose and fix it
 5. **Rebase**: If merge conflict, rebase from upstream and force-push to fork branch
 6. **Close**: Stop tracking when PR is merged or closed by upstream maintainer
@@ -353,7 +353,7 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 - **Run tests before pushing** (if available)
 - **Respectful PR descriptions** — contributing to others' projects
 - **Always branch from `upstream/{default_branch}`** — never from `origin/{default_branch}` (forks may have unsynced commits that would pollute the PR diff)
-- **Monitor and address ALL feedback** on our PRs — never abandon an open PR
+- **Monitor all comments on our PRs** — track every comment as seen in state, but only respond when directly asked a question or asked to change code. Default to silence. Never narrate actions, summarize threads, or post status updates. A missing response is less damaging than one that sounds like AI.
 - **Fix CI/pipeline failures** on our PRs proactively
 - **Never work on issues we created ourselves** — feature suggestions are for the community
 - **Max 1 bug fix PR per upstream repo** — bug scanner scans 20 repos per iteration, checks existing issues before reporting, checks existing issues before reporting

@@ -301,7 +301,7 @@
         "title": "fix: add helpful error message for missing tzdata package on Windows",
         "created_at": "2026-02-10T16:51:25Z",
         "ci_status": "pending",
-        "comments_seen": 0
+        "comments_seen_ids": []
       },
       {
         "repo": "KittyCatTech/cryptopia-api-php",
@@ -324,7 +324,7 @@
         "url": "https://github.com/squizlabs/PHP_CodeSniffer/pull/3970",
         "status": "open",
         "created_at": "2026-02-10T22:58:00Z",
-        "comments_seen": 0,
+        "comments_seen_ids": [],
         "ci_status": "pending"
       },
       {
@@ -337,7 +337,7 @@
         "url": "https://github.com/infusion/PHP-Daemon/pull/8",
         "status": "open",
         "created_at": "2026-02-10T23:18:00Z",
-        "comments_seen": 0,
+        "comments_seen_ids": [],
         "ci_status": "pending"
       },
       {
@@ -348,7 +348,7 @@
         "title": "fix: prevent resource leaks from unclosed file handles",
         "created_at": "2026-02-11T00:30:54.645319+00:00",
         "issue_number": 3410,
-        "comments_seen": 0,
+        "comments_seen_ids": [],
         "ci_status": "unknown",
         "review_state": "pending"
       },
@@ -362,7 +362,7 @@
         "created_at": "2026-02-11T07:54:00Z",
         "status": "open",
         "ci_status": "no_checks",
-        "comments_seen": 0
+        "comments_seen_ids": []
       },
       {
         "repo": "asterisk/asterisk",

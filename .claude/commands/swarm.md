@@ -65,7 +65,7 @@ For each tracked open PR, check current status. Use GraphQL to batch if there ar
 gh pr view {pr_number} -R {upstream} --json state,mergedAt,closedAt,reviewDecision,comments
 ```
 
-Move merged PRs to `merged_prs`, closed PRs to `closed_prs`. Update `comments_seen` and `review_state`.
+Move merged PRs to `merged_prs`, closed PRs to `closed_prs`. Update `comments_seen_ids` and `review_state`.
 
 ## Phase 1: Launch All 5 Agents (Parallel)
 
@@ -85,24 +85,25 @@ Your responsibilities:
    - Record it in your output as a feature suggestion
 
 2. **Feature suggestion follow-up**: For each open feature suggestion in the state's `feature_suggestions` array (status: "open" or "suggested"):
-   - Check for new comments on the issue: `gh issue view {issue_number} -R {upstream} --json comments`
-   - If maintainers have responded with feedback, questions, or suggestions — respond thoughtfully
-   - Acknowledge valid concerns, agree to narrow scope if asked, provide clarifications
-   - If they suggest closing in favor of another issue, agree gracefully
-   - Never leave a maintainer's comment on our feature suggestion unanswered
+   - Check for new comments on the issue
+   - **Only respond if someone is directly talking to us or asking us a question.** If others are discussing among themselves, stay silent — mark as seen.
+   - If a maintainer asks us to narrow scope or close: agree briefly — `"yeah makes sense, closing"`
+   - If a maintainer asks a direct question: answer in 1-2 sentences
+   - **Never summarize what others said, never narrate the thread, never post just to show engagement**
 
 3. **PR comment follow-up**: For each open PR in the state's `open_prs` array:
-   - Check for new comments since `comments_seen` count
-   - Read all new comments from reviewers
-   - For each comment: determine if it requests code changes, asks a question, or is informational
-   - For code change requests: implement the requested changes, commit with conventional message, push to the fork branch
-   - For questions: respond with a clear, helpful answer
-   - Never leave a reviewer comment unanswered
+   - Fetch all comments via GraphQL, compare IDs against `comments_seen_ids` in state
+   - For each unseen comment, decide: does this REQUIRE a response? (direct code change request or direct question to us)
+   - **Default is silence** — mark comment as seen without responding. Only respond when not responding would be conspicuously rude.
+   - For code change requests: implement the changes, push. Let the diff speak — only comment if the change isn't obvious from the diff (max 5-8 words).
+   - For direct questions: answer in 1-2 sentences max.
+   - For everything else (informational, bot comments, discussions between others): mark as seen silently.
+   - **Never narrate your actions** ("I've pushed a fix"), **never summarize threads**, **never post status updates**. Run the pre-post self-check before any comment.
 
 4. Return a JSON object with:
    - `feature_suggestions`: array of `{upstream, issue_number, title, status}`
    - `feature_followups`: array of `{upstream, issue_number, comments_responded}`
-   - `pr_followups`: array of `{upstream, pr_number, comments_addressed, commits_pushed}`
+   - `pr_followups`: array of `{upstream, pr_number, comments_seen_ids, comments_responded_to, comments_silently_marked_seen, commits_pushed}`
 
 ### Agent 2 — Pipeline Agent
 
@@ -250,7 +251,7 @@ Read the current state file, then merge agent results:
 
 1. **From Agent 1 (Issue & Feedback)**:
    - Append new feature suggestions to `persistent.feature_suggestions`
-   - Update `comments_seen` and `followups_done` on open PRs
+   - Merge `comments_seen_ids` into each open PR's tracking (append new IDs, deduplicate)
 
 2. **From Agent 2 (Pipeline)**:
    - Update `ci_status` on open PRs
