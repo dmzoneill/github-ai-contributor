@@ -141,7 +141,7 @@ graph TD
 
 **Agent 4 — Coding Fix**: The main worker. Scans upstream repos for open issues, assesses confidence, creates branches, implements fixes, runs tests, commits with conventional messages, pushes to fork, creates PRs to upstream. Balances work across repos.
 
-**Agent 5 — Bug Scanner**: Proactively scans upstream codebases for critical bugs (security vulnerabilities, null dereferences, resource leaks, etc.). Opens a bug report issue on upstream, then implements the fix and creates a PR referencing that issue. Max 1 bug fix PR per repo, scans 20 repos per iteration. Tracks all reported bugs in state to avoid duplicates.
+**Agent 5 — Bug Scanner**: Proactively scans upstream codebases for CRITICAL and SERIOUS bugs only — actively exploitable security vulnerabilities (SQL injection, command injection, auth bypass) and bugs that cause crashes or data loss in production code. Never reports bugs in example/test/demo code, resource leaks, theoretical vulnerabilities, or overly cautious "hardening" suggestions. Opens a bug report issue on upstream, then implements the fix and creates a PR referencing that issue. Max 1 bug fix PR per repo, scans 20 repos per iteration. Tracks all reported bugs in state to avoid duplicates.
 
 ### Orchestration Flow
 
@@ -357,7 +357,8 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 - **Monitor all comments on our PRs** — track every comment as seen in state, but only respond when directly asked a question or asked to change code. Default to silence. Never narrate actions, summarize threads, or post status updates. A missing response is less damaging than one that sounds like AI.
 - **Fix CI/pipeline failures** on our PRs proactively
 - **Never work on issues we created ourselves** — feature suggestions are for the community
-- **Max 1 bug fix PR per upstream repo** — bug scanner scans 20 repos per iteration, checks existing issues before reporting, checks existing issues before reporting
+- **Max 1 bug fix PR per upstream repo** — bug scanner scans 20 repos per iteration, checks existing issues before reporting
+- **Bug scanner: CRITICAL and SERIOUS only** — never report bugs in example/test/demo code, resource leaks, theoretical vulnerabilities, or speculative concerns. If you can't describe concrete real-world harm, don't report it.
 - **Read CONTRIBUTING.md** and upstream conventions before contributing
 - **Never push more than 20 fix commits per iteration**
 - **Track everything in state file** so next iteration doesn't redo work
