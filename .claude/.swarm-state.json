@@ -408,6 +408,30 @@
         "status": "open",
         "created_at": "2026-02-11T14:02:00Z",
         "comments_seen_ids": []
+      },
+      {
+        "upstream": "RABCbot/door-butler",
+        "fork": "dmzoneill-forks/DoorButler",
+        "pr_number": 2,
+        "issue_number": 1,
+        "branch": "fix/bug-1-mqtt-utf8-decoding",
+        "title": "fix: use UTF-8 decoding for MQTT payloads",
+        "status": "open",
+        "ci_status": "unknown",
+        "comments_seen_ids": [],
+        "created_at": "2026-02-11T15:28:00Z"
+      },
+      {
+        "upstream": "PicoI2/raspberry-pi-intercom",
+        "fork": "dmzoneill-forks/raspberry-pi-intercom",
+        "pr_number": 2,
+        "issue_number": 1,
+        "branch": "fix/bug-1-operator-precedence",
+        "title": "fix: correct operator precedence in error handling",
+        "status": "open",
+        "ci_status": "unknown",
+        "comments_seen_ids": [],
+        "created_at": "2026-02-11T15:28:00Z"
       }
     ],
     "closed_prs": [
@@ -3320,22 +3344,51 @@
         "bug_type": "resource_leak",
         "severity": "high",
         "status": "open"
+      },
+      {
+        "upstream": "RABCbot/door-butler",
+        "fork": "dmzoneill-forks/DoorButler",
+        "issue_number": 1,
+        "pr_number": 2,
+        "branch": "fix/bug-1-mqtt-utf8-decoding",
+        "title": "fix: use UTF-8 decoding for MQTT payloads",
+        "file_path": "old/butler_sensor.py",
+        "line_number": 102,
+        "bug_type": "encoding_error",
+        "severity": "critical",
+        "status": "open"
+      },
+      {
+        "upstream": "PicoI2/raspberry-pi-intercom",
+        "fork": "dmzoneill-forks/raspberry-pi-intercom",
+        "issue_number": 1,
+        "pr_number": 2,
+        "branch": "fix/bug-1-operator-precedence",
+        "title": "fix: correct operator precedence in error handling",
+        "file_path": "src/audio.cpp",
+        "line_number": 74,
+        "bug_type": "operator_precedence",
+        "severity": "critical",
+        "status": "open"
       }
     ]
   },
   "last_run": {
-    "timestamp": "2026-02-11T14:06:00Z",
-    "iteration": 3,
-    "rate_limit_remaining": 4859,
-    "repos_scanned": 20,
+    "timestamp": "2026-02-11T15:28:00Z",
+    "iteration": 4,
+    "rate_limit_remaining": 4898,
+    "repos_scanned": 57,
     "actions_taken": [
-      "Agent 1: Created 3 new feature suggestions on RedHat Insights repos",
-      "Agent 1: Monitored 29 open PRs, marked 5 as having new comments seen",
-      "Agent 2: Checked CI on all PRs - 3 policy/workflow failures (not code issues), 4 passing",
-      "Agent 3: Synced 102 fork repos from upstream (54 success, 46 failed, 2 conflicts)",
-      "Agent 4: Created 1 PR on grumpyp/blogging-with-ai (docker-compose volume fix)",
-      "Agent 4: Skipped 4 issues below confidence threshold",
-      "Agent 5: Scanned 20 repos, found no critical bugs with >= 90% confidence"
+      "Created 2 bug fix PRs (door-butler, raspberry-pi-intercom)",
+      "Synced 51 repos with upstream",
+      "Checked CI on 30 PRs",
+      "Followed up on 3 feature suggestion comments"
+    ],
+    "errors": [],
+    "next_run_priorities": [
+      "Monitor new bug fix PRs for comments/CI",
+      "Continue scanning for >= 90% confidence issues",
+      "Resolve merge conflicts on 6 repos"
     ]
   }
 }
