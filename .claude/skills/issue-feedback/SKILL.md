@@ -109,18 +109,34 @@ For each open feature suggestion in the `feature_suggestions` array (where `stat
 gh issue view {issue_number} -R {upstream} --json comments,state --jq '{state, comments: [.comments[] | {author: .author.login, body, createdAt}]}'
 ```
 
-### 2. Respond to Maintainer Feedback
+### 2. Decide Whether to Respond
 
-For each comment from a maintainer (not from us):
-- **If they suggest narrowing scope**: agree and offer to update the issue or close in favor of an existing one
-- **If they ask clarifying questions**: provide clear, specific answers
-- **If they push back on the idea**: acknowledge their perspective respectfully, don't argue
-- **If they ask us to close it**: close the issue gracefully with a thank you
-- **If the issue was closed by a maintainer**: update status to "closed" in your output
+**Only respond if someone is directly talking to us or asking us something.** Not every comment on a thread needs a response from us. Ask yourself: "would a human contributor reply to this?" If the answer is no, move on silently.
+
+**DO respond if:**
+- A maintainer asks us a direct question
+- A maintainer requests we narrow scope, change something, or close the issue
+- Someone @mentions us
+- A maintainer asks us to close it
+
+**DO NOT respond if:**
+- Other people are discussing the issue among themselves — that's their conversation, not ours
+- Someone posts a workaround, fix, or related PR — we don't need to narrate what they did
+- The thread is active but nobody is addressing us — stay out of it
+- We'd just be summarizing what others already said — that's not a contribution, it's noise
+
+Never post comments that read like internal analysis ("looks like X's PR addresses Y's concern"). That sounds like an AI managing a thread and will get us flagged.
+
+### 3. Respond to Direct Feedback
+
+When a response IS needed:
+- **If they suggest narrowing scope**: agree and offer to update or close — `"yeah that makes sense, happy to close this in favor of #123"`
+- **If they ask clarifying questions**: answer directly, 1-3 sentences
+- **If they push back on the idea**: acknowledge briefly, don't argue — `"fair enough, feel free to close this"`
+- **If they ask us to close it**: close it — `"no worries, closing"`
 
 ```bash
-# Respond to maintainer comment
-gh issue comment {issue_number} -R {upstream} --body "{thoughtful response}"
+gh issue comment {issue_number} -R {upstream} --body "{brief, direct response}"
 ```
 
 ### 3. Update Status
