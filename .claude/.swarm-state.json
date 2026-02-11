@@ -14,7 +14,7 @@
       "micheleg/dash-to-dock": 2,
       "gnome-terminator/terminator": 3,
       "deluge-torrent/deluge": 2,
-      "asterisk/asterisk": 0,
+      "asterisk/asterisk": 1,
       "rootpd/go-binance": 1,
       "WiringPi/WiringPi": 1,
       "nicolasff/webdis": 1,
@@ -363,6 +363,19 @@
         "status": "open",
         "ci_status": "no_checks",
         "comments_seen": 0
+      },
+      {
+        "repo": "asterisk/asterisk",
+        "pr_number": 1770,
+        "title": "docs: fix dsp_talking_threshold description in TALK_DETECT",
+        "url": "https://github.com/asterisk/asterisk/pull/1770",
+        "status": "open",
+        "fixes_issue": 1761,
+        "created_at": "2026-02-11T10:52:41Z",
+        "ci_status": "No CI checks configured",
+        "upstream": "asterisk/asterisk",
+        "branch": "fix/issue-1761-talk-detect-docs",
+        "fork": "dmzoneill-forks/asterisk"
       }
     ],
     "closed_prs": [
@@ -797,6 +810,14 @@
         "issue_number": 3543,
         "title": "feat: add host inventory bulk export with filtering",
         "status": "open"
+      },
+      {
+        "repo": "KittyCatTech/cryptopia-api-php",
+        "issue_number": 13,
+        "title": "Add built-in request rate limiting to prevent API throttling",
+        "status": "open",
+        "upstream": "KittyCatTech/cryptopia-api-php",
+        "created_at": "2026-02-11T10:52:04Z"
       }
     ],
     "attempted_issues": [],
@@ -2374,20 +2395,12 @@
     ]
   },
   "last_run": {
-    "timestamp": "2026-02-11T07:54:00Z",
-    "iteration": 7,
-    "rate_limit_remaining": 4575,
-    "repos_scanned": 26,
-    "actions_taken": [
-      "Responded to 13 feature suggestion comments from maintainers",
-      "Checked CI status on all 27 open PRs - 5 passing, 18 no CI, 2 policy failures (not code-fixable)",
-      "Synced 22 of 26 repos with upstream (4 have merge conflicts)",
-      "Updated 26 repo profiles from GraphQL",
-      "Scanned 3 repos for critical bugs",
-      "Found and fixed resource leak in rootpd/go-binance - created issue #15 and PR #16"
-    ],
-    "errors": [
-      "4 repos have merge conflicts: Redhat-forks/bonfire, Redhat-forks/insights-frontend-builder-common, Redhat-forks/insights-ingress-go, dmzoneill-forks/etcd"
-    ]
+    "timestamp": "2026-02-11T10:53:00Z",
+    "iteration": 1,
+    "rate_limit_remaining": 4900,
+    "repos_synced": 100,
+    "prs_created": 1,
+    "features_suggested": 1,
+    "bugs_reported": 0
   }
 }
