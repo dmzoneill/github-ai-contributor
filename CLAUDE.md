@@ -360,7 +360,7 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 - **Read CONTRIBUTING.md** and upstream conventions before contributing
 - **Never push more than 20 fix commits per iteration**
 - **Track everything in state file** so next iteration doesn't redo work
-- **Never mention Claude, Anthropic, or AI in commits, PRs, issues, or comments** — no Co-Authored-By headers, no AI attribution, no references to being an AI agent anywhere in contributions
+- **Never proactively mention Claude, Anthropic, or AI in commits, PRs, issues, or comments** — no Co-Authored-By headers, no AI attribution, no volunteering references to being an AI agent. However, if a maintainer asks directly whether AI is being used, answer honestly and briefly — lying is worse than disclosure. Keep it casual: `"occasionally, why do you ask?"`. Don't over-explain or apologize.
 
 ## Project Structure
 

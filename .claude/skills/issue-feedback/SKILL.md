@@ -170,13 +170,33 @@ For each new comment from a reviewer (not from us):
 - **Question**: Comment asks a question about the implementation
 - **Informational**: General feedback, acknowledgment, or discussion
 
-### 3. Address Code Change Requests
+### 3. Read Upstream Contribution Docs Before Responding
+
+Before responding to ANY reviewer feedback — especially process-related feedback (commit format, cherry-pick process, CLA, PR conventions) — read the upstream project's contribution docs:
+
+```bash
+# Clone/pull the fork if not already local
+git -C ~/src/{fork-path} pull 2>/dev/null || gh repo clone {fork}/{repo} ~/src/{fork-path}
+cd ~/src/{fork-path}
+
+# Read contribution docs
+for f in CONTRIBUTING.md .github/CONTRIBUTING.md docs/CONTRIBUTING.md; do
+  [ -f "$f" ] && cat "$f" && break
+done
+
+# Check for PR template
+cat .github/PULL_REQUEST_TEMPLATE.md 2>/dev/null || true
+
+# If a reviewer links to external docs, fetch and read those too
+```
+
+**If a reviewer links to documentation** (e.g., `https://docs.asterisk.org/Development/...`), read those docs before responding. Don't guess at the process — understand it first, then act.
+
+### 4. Address Code Change Requests
 
 If a reviewer requests code changes:
 
 ```bash
-# Clone/pull the fork (HTTPS — uses GITHUB_TOKEN via gh auth)
-git -C ~/src/{fork-path} pull 2>/dev/null || gh repo clone {fork}/{repo} ~/src/{fork-path}
 cd ~/src/{fork-path}
 
 # Checkout the PR branch
@@ -186,7 +206,11 @@ git pull origin {branch}
 # Implement the requested changes
 # ... (make the changes) ...
 
-# Commit with conventional message
+# If upstream requires single squashed commits, squash into one and force-push:
+# git rebase -i upstream/{default_branch}  (squash all into one)
+# git push --force-with-lease origin {branch}
+
+# Otherwise, add a follow-up commit with conventional message
 git add -A
 git commit -m "fix: address review feedback — {what was changed}"
 
@@ -194,30 +218,43 @@ git commit -m "fix: address review feedback — {what was changed}"
 git push origin {branch}
 ```
 
-Then respond to the comment:
+Then respond to the comment — **follow CLAUDE.md communication style** (casual, direct, no filler):
 ```bash
 gh api repos/{upstream}/pulls/{pr_number}/comments/{comment_id}/replies \
   --method POST \
-  -f body="Done! I've pushed a commit addressing this: {brief description of change}. Thanks for the feedback."
+  -f body="moved the null check before the loop — pushed a fix"
 ```
 
-### 4. Answer Questions
+**Good response examples:**
+- `"fair point — fixed, pushed"`
+- `"done, also updated the description to match"`
+- `"good catch — added the range to both sections so they're consistent"`
 
-For question comments, post a reply:
+**Bad response examples (NEVER use these):**
+- `"Done! I've pushed a commit addressing this. Thanks for the feedback."`
+- `"Thank you for the excellent feedback! I have implemented the suggested changes."`
+- `"I have updated the code as requested. Please let me know if there are any other changes needed!"`
+
+### 5. Answer Questions
+
+For question comments, post a brief, direct reply:
 ```bash
 gh api repos/{upstream}/issues/{pr_number}/comments \
   --method POST \
-  -f body="{clear, helpful answer to the question}"
+  -f body="{direct answer — 1-3 sentences, no preamble}"
 ```
 
-### 5. Acknowledge Informational Comments
+### 6. Acknowledge Informational Comments
 
-For general feedback, respond briefly and professionally:
+For general feedback, respond briefly:
 ```bash
 gh api repos/{upstream}/issues/{pr_number}/comments \
   --method POST \
-  -f body="Thanks for the feedback! {brief acknowledgment}"
+  -f body="{brief, natural acknowledgment — a few words is fine}"
 ```
+
+**Good:** `"yeah makes sense"`, `"got it"`, `"cheers"`
+**Bad:** `"Thanks for the feedback!"`, `"Thank you for bringing this to my attention!"`
 
 ## Output
 
@@ -260,9 +297,13 @@ Return a JSON object:
 - Never leave a reviewer or maintainer comment unanswered — on PRs OR feature suggestion issues
 - Feature suggestions must be genuinely useful and specific — no low-effort suggestions
 - Do not duplicate existing open issues when suggesting features
-- **Follow the Communication Style in CLAUDE.md** — sound like a real developer, not a bot. Be casual, direct, concise. No corporate speak, no sycophancy, no essays. Keep comments to 3-5 lines max.
+- **Follow the Communication Style in CLAUDE.md** — sound like a real developer, not a bot. Be casual, direct, concise. No corporate speak, no sycophancy, no essays. Keep comments to 3-5 lines max. This is critical — robotic tone gets PRs flagged and closed.
 - Be respectful but relaxed — we are guests in these repos, but we're also peers
-- Read the repo's CONTRIBUTING.md before interacting if it exists
+- **Read the repo's CONTRIBUTING.md and any linked contribution docs BEFORE responding** to reviewer feedback about process or conventions. If a reviewer links to external docs, read them before replying. Don't guess at project-specific workflows.
+- **Edit existing comments instead of creating new ones** when a reviewer asks you to update a comment. Never leave stale/outdated comments in place.
+- **Don't promise actions you can't complete.** If something requires manual action outside your capabilities (like signing a CLA, joining a mailing list, or setting up 2FA), say so honestly: "i'll need to sort that out separately" — don't repeatedly promise "I'll do it" without doing it.
+- **Squash commits when upstream requires it.** Many projects require a single commit per PR. If a reviewer asks you to squash, use `git rebase` to squash all commits into one and `git push --force-with-lease`.
 - When implementing code changes from feedback, run tests before pushing if available
-- Use conventional commit messages for all follow-up commits
+- Use conventional commit messages for all follow-up commits — unless upstream uses a different format, in which case follow theirs
+- **Keep PR description in sync with commit message** — if you update one, update the other
 - Never mention Claude, Anthropic, or AI — no AI attribution in issues, comments, PRs, or commits
