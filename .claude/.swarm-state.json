@@ -439,13 +439,6 @@
         "upstream": "RedHatInsights/bonfire"
       },
       {
-        "repo": "RedHatInsights/bonfire",
-        "issue_number": 288,
-        "title": "metadata.labels 63-character limit",
-        "status": "open",
-        "upstream": "RedHatInsights/bonfire"
-      },
-      {
         "repo": "ansible/vscode-ansible",
         "issue_number": 2558,
         "title": "feat: Add support for snippet templates from custom directories",

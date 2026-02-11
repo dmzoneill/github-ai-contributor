@@ -87,6 +87,8 @@ gh issue create -R {upstream} \
 
 ### 4. Record the Suggestion
 
+**Only record issues that you just created via `gh issue create` in this run.** Never adopt pre-existing issues into the `feature_suggestions` array — even if they were authored by our GitHub username. The `feature_suggestions` list tracks issues this agent created, not all issues we happen to have on a repo.
+
 Add to your output:
 ```json
 {
