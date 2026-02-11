@@ -27,7 +27,10 @@
       "RedHatInsights/insights-chrome": 1,
       "KittyCatTech/cryptopia-api-php": 1,
       "squizlabs/PHP_CodeSniffer": 1,
-      "infusion/PHP-Daemon": 1
+      "infusion/PHP-Daemon": 1,
+      "ansible/ansible-runner": 1,
+      "ansible/molecule": 1,
+      "ansible/ansible-dev-environment": 1
     },
     "open_prs": [
       {
@@ -177,7 +180,7 @@
         "created_at": "2026-02-10T00:00:00Z",
         "branch": "fix/issue-123-extension-input-type",
         "fork": "dmzoneill-forks/core",
-        "ci_status": "pending_cla",
+        "ci_status": "policy_failure_cla",
         "upstream": "FreePBX/core",
         "comments_seen_ids": [
           "IC_kwDOAO_Ows7m-qyC",
@@ -246,8 +249,9 @@
         "created_at": "2026-02-10T06:34:00Z",
         "branch": "fix/issue-2480-french-translation",
         "fork": "dmzoneill-forks/dash-to-dock",
-        "ci_status": "passing",
-        "upstream": "micheleg/dash-to-dock"
+        "ci_status": "no_checks",
+        "upstream": "micheleg/dash-to-dock",
+        "last_ci_fix": "2026-02-11T22:58:59.888612+00:00"
       },
       {
         "repo": "gnome-terminator/terminator",
@@ -285,13 +289,14 @@
         "created_at": "2026-02-10T09:22:46Z",
         "branch": "fix/issue-770-ldap-log-level",
         "fork": "Redhat-forks/django-ansible-base",
-        "ci_status": "policy_failure",
+        "ci_status": "policy_failure_jira",
         "upstream": "ansible/django-ansible-base",
         "comments_seen_ids": [
           "IC_kwDOKi6q-s7nQpgE",
           "IC_kwDOKi6q-s7nDctM",
           "IC_kwDOKi6q-s7nDu0O"
-        ]
+        ],
+        "last_ci_fix": "2026-02-11T22:58:59.888612+00:00"
       },
       {
         "upstream": "rembo10/headphones",
@@ -361,7 +366,9 @@
         "title": "feat: add htaccess volume mapping to docker-compose",
         "status": "open",
         "created_at": "2026-02-11T14:02:00Z",
-        "comments_seen_ids": []
+        "comments_seen_ids": [],
+        "ci_status": "no_checks",
+        "last_ci_fix": "2026-02-11T22:58:59.888612+00:00"
       },
       {
         "upstream": "RABCbot/door-butler",
@@ -371,9 +378,10 @@
         "branch": "fix/bug-1-mqtt-utf8-decoding",
         "title": "fix: use UTF-8 decoding for MQTT payloads",
         "status": "open",
-        "ci_status": "unknown",
+        "ci_status": "no_checks",
         "comments_seen_ids": [],
-        "created_at": "2026-02-11T15:28:00Z"
+        "created_at": "2026-02-11T15:28:00Z",
+        "last_ci_fix": "2026-02-11T22:58:59.888612+00:00"
       },
       {
         "upstream": "ansible/awx",
@@ -398,6 +406,42 @@
         "ci_status": "no_checks",
         "repo": "gnome-terminator/terminator",
         "comments_seen_ids": []
+      },
+      {
+        "upstream": "ansible/ansible-runner",
+        "fork": "Redhat-forks/ansible-runner",
+        "pr_number": 1483,
+        "issue_number": 1474,
+        "branch": "fix/issue-1474-add-github-link",
+        "title": "docs: add GitHub repository link to community page",
+        "created_at": "2026-02-11T22:58:59.888612+00:00",
+        "ci_status": "unknown",
+        "comments_seen_ids": [],
+        "status": "open"
+      },
+      {
+        "upstream": "ansible/molecule",
+        "fork": "Redhat-forks/molecule",
+        "pr_number": 4606,
+        "issue_number": 4597,
+        "branch": "fix/issue-4597-keyerror-molecule-yml-date",
+        "title": "fix: handle missing molecule_yml_date_modified key in state",
+        "created_at": "2026-02-11T22:58:59.888612+00:00",
+        "ci_status": "unknown",
+        "comments_seen_ids": [],
+        "status": "open"
+      },
+      {
+        "upstream": "ansible/ansible-dev-environment",
+        "fork": "Redhat-forks/ansible-dev-environment",
+        "pr_number": 405,
+        "issue_number": 349,
+        "branch": "fix/issue-349-exit-status-warning",
+        "title": "fix: change config update messages from warning to note",
+        "created_at": "2026-02-11T22:58:59.888612+00:00",
+        "ci_status": "unknown",
+        "comments_seen_ids": [],
+        "status": "open"
       }
     ],
     "closed_prs": [
@@ -854,16 +898,28 @@
         "title": "Add navigation config validation endpoint",
         "status": "open",
         "created_at": "2026-02-11T14:03:50Z"
+      },
+      {
+        "upstream": "RedHatInsights/content-service",
+        "issue_number": 715,
+        "title": "Add GraphQL endpoint for flexible rule metadata queries",
+        "status": "open",
+        "created_at": "2026-02-11T22:58:59.888612+00:00"
       }
     ],
-    "attempted_issues": [],
+    "attempted_issues": [
+      "ansible/ansible-runner#1474",
+      "ansible/molecule#4597",
+      "ansible/ansible-dev-environment#349"
+    ],
     "skipped_issues": [
       {
         "repo": "linuxmint/nemo-extensions",
         "issue_number": 569,
         "title": "Zip creation silently fails when filename contains a dot (.)",
         "reason": "Issue is in file-roller application, not in nemo-extensions codebase. Would require investigating and fixing a different upstream project."
-      }
+      },
+      "alexzorin/authy#28"
     ],
     "evaluated_issues": {
       "flozz/cover-thumbnailer#23": {
@@ -923,11 +979,9 @@
         "evaluated_at": "2026-02-09T21:20:00Z"
       },
       "ansible/ansible-runner#1474": {
-        "title": "Link to GitHub repo on docs page",
-        "confidence": 75,
-        "decision": "skipped",
-        "reason": "Requires understanding sphinx_ansible_theme configuration, below 90% threshold",
-        "evaluated_at": "2026-02-10T00:00:00Z"
+        "confidence": 95,
+        "result": "pr_created",
+        "evaluated_at": "2026-02-11T22:58:59.888612+00:00"
       },
       "containers/podman-compose#1357": {
         "title": "Variable on first line of .env ignored",
@@ -1328,6 +1382,22 @@
         "decision": "skipped",
         "reason": "Race condition in artifact rotation logic requiring careful testing and understanding of concurrent file operations, confidence ~75%, below 90% threshold",
         "evaluated_at": "2026-02-11T12:26:39.310916+00:00"
+      },
+      "ansible/molecule#4597": {
+        "confidence": 98,
+        "result": "pr_created",
+        "evaluated_at": "2026-02-11T22:58:59.888612+00:00"
+      },
+      "ansible/ansible-dev-environment#349": {
+        "confidence": 95,
+        "result": "pr_created",
+        "evaluated_at": "2026-02-11T22:58:59.888612+00:00"
+      },
+      "alexzorin/authy#28": {
+        "confidence": 0,
+        "decision": "skipped",
+        "reason": "Project is abandoned as of July 2024, no value in fixing documentation",
+        "evaluated_at": "2026-02-11T22:58:59.888612+00:00"
       }
     },
     "repo_profiles": {
@@ -3341,25 +3411,25 @@
     "last_sync": "2026-02-11T17:00:46.840757Z"
   },
   "last_run": {
-    "timestamp": "2026-02-11T17:00:46.840788Z",
-    "iteration": 5,
-    "rate_limit_remaining": 4463,
-    "repos_synced": 95,
+    "iteration": 6,
+    "timestamp": "2026-02-11T22:58:59.888612+00:00",
+    "rate_limit_remaining": 4900,
+    "repos_scanned": 132,
+    "repos_synced": 91,
     "actions_taken": [
-      "Checked 32 open PRs for new comments (Agent 1)",
-      "Removed 2 merged PRs from tracking (Agent 1)",
-      "Removed 2 closed PRs from tracking (Agent 1)",
-      "Updated CI status on 7 PRs (Agent 2)",
-      "Synced 95 repos from upstream (Agent 3)",
-      "Created PR #16275 on ansible/awx fixing pip version conflict (Agent 4)",
-      "Created PR #1062 on gnome-terminator/terminator fixing custom commands (Agent 4)",
-      "Scanned 10 repos for critical bugs, found 1 duplicate (Agent 5)"
+      "Synced 91 forks from upstream",
+      "Created feature suggestion on RedHatInsights/content-service #715",
+      "Created PR ansible/ansible-runner #1483 fixing issue #1474",
+      "Created PR ansible/molecule #4606 fixing issue #4597",
+      "Created PR ansible/ansible-dev-environment #405 fixing issue #349",
+      "Monitored 30 open PRs for CI status and comments",
+      "Updated CI status on 10 PRs",
+      "Scanned 3 repos for critical bugs (none found meeting strict criteria)"
     ],
-    "prs_created": 2,
-    "prs_merged": 2,
-    "prs_closed": 2,
-    "ci_fixes": 0,
-    "feature_suggestions": 0,
-    "bugs_found": 0
+    "prs_created": 3,
+    "feature_suggestions_created": 1,
+    "ci_fixes_pushed": 0,
+    "bugs_found": 0,
+    "errors": []
   }
 }
