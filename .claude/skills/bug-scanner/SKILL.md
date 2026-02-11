@@ -40,6 +40,7 @@ query($owner: String!, $repo: String!, $author: String!) {
 ### Pre-flight Checks
 
 From the GraphQL response:
+- **If the upstream repo owner is `dmzoneill`, skip entirely** — we never create issues or PRs on our own repos
 - Count PRs where `author.login` matches our username
 - **Max 1 total open PR per upstream repo** (shared limit with coding agent) — skip if at limit
 - Count how many of our open PRs are bug fixes from this agent (check `bug_fixes` state) — **max 1 bug fix PR per upstream repo**

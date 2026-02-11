@@ -56,6 +56,7 @@ This returns open issues AND our open PR count in **one call per repo** instead 
 ### Pre-flight Limits Check
 
 From the GraphQL response, count PRs where `author.login` matches our username:
+- **If the upstream repo owner is `dmzoneill`, skip entirely** — we never create PRs or issues on our own repos
 - **Max 1 open PR** — do NOT create more if at limit
 - **Max 1 open issue** (feature suggestion) — do NOT create more if at limit
 - Skip repos already at their limits entirely

@@ -341,6 +341,7 @@ Agents MUST check these caches before doing expensive operations (cloning repos,
 
 ## Safety Rails
 
+- **NEVER create issues, PRs, or comments on repos owned by `dmzoneill` directly.** This agent only works on upstream repos that are parents of forks in `Redhat-forks` and `dmzoneill-forks` orgs. Before creating any issue or PR, verify the target repo owner is NOT `dmzoneill` — if it is, skip it. We are not the maintainer agent.
 - **IMPORTANT: All rate limits and caps below apply ONLY to creating NEW PRs, issues, and feature suggestions.** Following up on existing PRs/issues (responding to reviewer comments, fixing CI failures, rebasing, addressing requested changes) is NEVER rate limited — always process ALL follow-up work regardless of limits.
 - **Max 1 new open PR per upstream repo**, balanced across repos
 - **90% confidence threshold** before attempting fixes

@@ -51,6 +51,7 @@ This returns repo metadata, all open issue titles (for duplicate checking), AND 
 ### 2. Check Limits
 
 From the GraphQL response:
+- **If the upstream repo owner is `dmzoneill`, skip entirely** — we never create issues on our own repos
 - If `ourIssues.totalCount >= 1`, skip this repo — **max 1 open feature suggestion per upstream repo**
 - Also check `feature_suggestions` from state for this upstream repo
 
