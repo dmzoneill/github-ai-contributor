@@ -1544,6 +1544,20 @@
         "decision": "skipped",
         "reason": "Unknown config required",
         "evaluated_at": "2026-02-12T04:03:45Z"
+      },
+      "Jackett/Jackett#16574": {
+        "title": "[bjshare] (updating) Your cookie did not work",
+        "confidence": 45,
+        "decision": "skipped",
+        "reason": "Complex parsing error in C# codebase",
+        "evaluated_at": "2026-02-12T07:59:46.850573"
+      },
+      "Sonarr/Sonarr#8402": {
+        "title": "feat: Add download client bandwidth scheduling",
+        "confidence": 0,
+        "decision": "skipped",
+        "reason": "Feature request, not a bug fix",
+        "evaluated_at": "2026-02-12T07:59:46.850589"
       }
     },
     "repo_profiles": {
@@ -1659,7 +1673,7 @@
       "all-contributors/allcontributors.org": {
         "language": "MDX",
         "default_branch": "main",
-        "description": "✨ The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code ✨",
+        "description": "\u2728 The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code \u2728",
         "topics": [
           "contributors",
           "all-contributors",
@@ -2221,7 +2235,7 @@
       "jlowin/fastmcp": {
         "language": "Python",
         "default_branch": "main",
-        "description": "🚀 The fast, Pythonic way to build MCP servers and clients",
+        "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients",
         "topics": [
           "model-context-protocol",
           "fastmcp",
@@ -2239,7 +2253,7 @@
       "zed-industries/zed": {
         "language": "Rust",
         "default_branch": "main",
-        "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "description": "Code at the speed of thought \u2013 Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
         "topics": [
           "text-editor",
           "zed",
@@ -2452,7 +2466,7 @@
       "ansible/awx-operator": {
         "language": "Jinja",
         "default_branch": "devel",
-        "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. 🤖",
+        "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. \ud83e\udd16",
         "topics": [
           "awx-operator",
           "awx",
@@ -2755,7 +2769,7 @@
       "podman-desktop/podman-desktop": {
         "language": "TypeScript",
         "default_branch": "main",
-        "description": "Podman Desktop is the best free and open source tool to work with Containers and Kubernetes for developers. Get an intuitive and user-friendly interface to effortlessly build, manage, and deploy containers and Kubernetes — all from your desktop.",
+        "description": "Podman Desktop is the best free and open source tool to work with Containers and Kubernetes for developers. Get an intuitive and user-friendly interface to effortlessly build, manage, and deploy containers and Kubernetes \u2014 all from your desktop.",
         "topics": [
           "containers",
           "ui",
@@ -3558,22 +3572,23 @@
     "last_rebase_sync": "2026-02-12T04:00:00Z"
   },
   "last_run": {
-    "timestamp": "2026-02-12T06:33:02.509174Z",
-    "iteration": 8,
-    "rate_limit_remaining": 4489,
-    "repos_synced": 53,
+    "timestamp": "2026-02-12T07:59:46.850593",
+    "iteration": 9,
+    "rate_limit_remaining": 4990,
+    "repos_scanned": 59,
     "actions_taken": [
-      "Agent 1: Created 7 new feature suggestions across 7 upstream repos",
-      "Agent 2: Monitored CI status for 35 open PRs (9 passing, 2 policy failures, 24 no CI)",
-      "Agent 3: Synced 90/157 forks with upstream (61 Redhat-forks, 51 dmzoneill-forks)",
-      "Agent 4: Scanned 82 upstream repos, found no issues meeting >= 90% confidence threshold",
-      "Agent 5: Scanned 3 new repos, found no CRITICAL bugs, all tracked repos at PR limit"
+      "Responded to 1 PR comment on micheleg/dash-to-dock #2494",
+      "Marked 1 PR comment as seen silently on micheleg/dash-to-dock #2494",
+      "Checked CI status on 35 open PRs - 10 passing, 23 no checks, 1 CLA pending, 1 policy check failure",
+      "Synced 53 repos (Redhat-forks: 2, dmzoneill-forks: 51), 6 failed",
+      "Scanned 10 upstream repos for fixable issues, all fell below 90% confidence threshold",
+      "Scanned 10 repos for critical bugs, found none"
     ],
     "errors": [],
     "next_run_priorities": [
-      "Monitor newly created PRs for CI status and comments",
-      "Follow up on ansible/django-ansible-base#934 DVCS check guidance",
-      "Continue issue scanning on remaining repos"
+      "Continue monitoring 35 open PRs for reviewer feedback",
+      "Look for high-confidence issues in remaining repos",
+      "Keep forks synced with upstream"
     ]
   }
 }
