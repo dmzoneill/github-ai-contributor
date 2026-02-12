@@ -110,7 +110,11 @@
         "fixes_issue": 2482,
         "created_at": "2026-02-09T20:38:00Z",
         "ci_status": "no_checks",
-        "upstream": "micheleg/dash-to-dock"
+        "upstream": "micheleg/dash-to-dock",
+        "comments_seen_ids": [
+          "IC_kwDOAEG9EM7nxmnh",
+          "IC_kwDOAEG9EM7nyTfL"
+        ]
       },
       {
         "repo": "deluge-torrent/deluge",
@@ -1655,7 +1659,7 @@
       "all-contributors/allcontributors.org": {
         "language": "MDX",
         "default_branch": "main",
-        "description": "\u2728 The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code \u2728",
+        "description": "✨ The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code ✨",
         "topics": [
           "contributors",
           "all-contributors",
@@ -2217,7 +2221,7 @@
       "jlowin/fastmcp": {
         "language": "Python",
         "default_branch": "main",
-        "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients",
+        "description": "🚀 The fast, Pythonic way to build MCP servers and clients",
         "topics": [
           "model-context-protocol",
           "fastmcp",
@@ -2235,7 +2239,7 @@
       "zed-industries/zed": {
         "language": "Rust",
         "default_branch": "main",
-        "description": "Code at the speed of thought \u2013 Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
         "topics": [
           "text-editor",
           "zed",
@@ -2448,7 +2452,7 @@
       "ansible/awx-operator": {
         "language": "Jinja",
         "default_branch": "devel",
-        "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. \ud83e\udd16",
+        "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. 🤖",
         "topics": [
           "awx-operator",
           "awx",
@@ -2751,7 +2755,7 @@
       "podman-desktop/podman-desktop": {
         "language": "TypeScript",
         "default_branch": "main",
-        "description": "Podman Desktop is the best free and open source tool to work with Containers and Kubernetes for developers. Get an intuitive and user-friendly interface to effortlessly build, manage, and deploy containers and Kubernetes \u2014 all from your desktop.",
+        "description": "Podman Desktop is the best free and open source tool to work with Containers and Kubernetes for developers. Get an intuitive and user-friendly interface to effortlessly build, manage, and deploy containers and Kubernetes — all from your desktop.",
         "topics": [
           "containers",
           "ui",
