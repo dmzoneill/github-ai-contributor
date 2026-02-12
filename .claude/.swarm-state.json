@@ -43,7 +43,8 @@
         "url": "https://github.com/ansible/awx/pull/14965",
         "status": "open",
         "ci_status": "no_checks",
-        "upstream": "ansible/awx"
+        "upstream": "ansible/awx",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "ansible/awx",
@@ -57,7 +58,8 @@
           "IC_kwDOBXWdec7nOPM_",
           "IC_kwDOBXWdec5zvPrn",
           "IC_kwDOBXWdec5zkluE"
-        ]
+        ],
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "ansible/awx",
@@ -66,7 +68,8 @@
         "url": "https://github.com/ansible/awx/pull/14838",
         "status": "open",
         "ci_status": "no_checks",
-        "upstream": "ansible/awx"
+        "upstream": "ansible/awx",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "benthomasson/dataverse-integration",
@@ -75,21 +78,8 @@
         "url": "https://github.com/benthomasson/dataverse-integration/pull/3",
         "status": "open",
         "ci_status": "no_checks",
-        "upstream": "benthomasson/dataverse-integration"
-      },
-      {
-        "repo": "flozz/cover-thumbnailer",
-        "pr_number": 25,
-        "title": "fix: create thumbnail directory if it doesn't exist",
-        "url": "https://github.com/flozz/cover-thumbnailer/pull/25",
-        "status": "merged",
-        "fixes_issue": 23,
-        "created_at": "2026-02-09T20:32:00Z",
-        "ci_status": "no_checks",
-        "upstream": "flozz/cover-thumbnailer",
-        "comments_seen_ids": [
-          "IC_kwDOBamCNs7npX-U"
-        ]
+        "upstream": "benthomasson/dataverse-integration",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "linuxmint/nemo-extensions",
@@ -100,7 +90,8 @@
         "fixes_issue": 560,
         "created_at": "2026-02-09T20:35:00Z",
         "ci_status": "no_checks",
-        "upstream": "linuxmint/nemo-extensions"
+        "upstream": "linuxmint/nemo-extensions",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "micheleg/dash-to-dock",
@@ -115,7 +106,8 @@
         "comments_seen_ids": [
           "IC_kwDOAEG9EM7nxmnh",
           "IC_kwDOAEG9EM7nyTfL"
-        ]
+        ],
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "deluge-torrent/deluge",
@@ -127,7 +119,8 @@
         "branch": "fix/resource-leak-setup-py",
         "fork": "dmzoneill-forks/deluge",
         "ci_status": "no_checks",
-        "upstream": "deluge-torrent/deluge"
+        "upstream": "deluge-torrent/deluge",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "deluge-torrent/deluge",
@@ -139,7 +132,8 @@
         "branch": "fix/resource-leak-gen-web-gettext",
         "fork": "dmzoneill-forks/deluge",
         "ci_status": "no_checks",
-        "upstream": "deluge-torrent/deluge"
+        "upstream": "deluge-torrent/deluge",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "rootpd/go-binance",
@@ -152,7 +146,8 @@
         "branch": "fix/issue-7-duplicate-json-tag",
         "fork": "dmzoneill-forks/go-binance",
         "ci_status": "no_checks",
-        "upstream": "rootpd/go-binance"
+        "upstream": "rootpd/go-binance",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "WiringPi/WiringPi",
@@ -165,7 +160,8 @@
         "branch": "fix/issue-404-i2c-close-function",
         "fork": "dmzoneill-forks/WiringPi",
         "ci_status": "no_checks",
-        "upstream": "WiringPi/WiringPi"
+        "upstream": "WiringPi/WiringPi",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "nicolasff/webdis",
@@ -178,7 +174,8 @@
         "branch": "fix/issue-245-integer-overflow-sds",
         "fork": "dmzoneill-forks/webdis",
         "ci_status": "no_checks",
-        "upstream": "nicolasff/webdis"
+        "upstream": "nicolasff/webdis",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "FreePBX/core",
@@ -195,7 +192,8 @@
         "comments_seen_ids": [
           "IC_kwDOAO_Ows7m-qyC",
           "IC_kwDOAO_Ows7m90zz"
-        ]
+        ],
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "RedHatInsights/bonfire",
@@ -208,7 +206,8 @@
         "branch": "fix/issue-362-github-token-validation",
         "fork": "Redhat-forks/bonfire",
         "ci_status": "passing",
-        "upstream": "RedHatInsights/bonfire"
+        "upstream": "RedHatInsights/bonfire",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "ansible/ansible-lint",
@@ -221,7 +220,8 @@
         "branch": "fix/issue-4898-format-option-schema",
         "fork": "Redhat-forks/ansible-lint",
         "ci_status": "passing",
-        "upstream": "ansible/ansible-lint"
+        "upstream": "ansible/ansible-lint",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "ansible/ansible-lint",
@@ -234,7 +234,8 @@
         "branch": "fix/issue-4943-no-git-directory",
         "fork": "Redhat-forks/ansible-lint",
         "ci_status": "passing",
-        "upstream": "ansible/ansible-lint"
+        "upstream": "ansible/ansible-lint",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "gnome-terminator/terminator",
@@ -247,21 +248,8 @@
         "branch": "fix/issue-1047-boolean-conversion",
         "fork": "dmzoneill-forks/terminator",
         "ci_status": "passing",
-        "upstream": "gnome-terminator/terminator"
-      },
-      {
-        "repo": "micheleg/dash-to-dock",
-        "pr_number": 2496,
-        "title": "fix: correct French translation typo in preferences",
-        "url": "https://github.com/micheleg/dash-to-dock/pull/2496",
-        "status": "merged",
-        "fixes_issue": 2480,
-        "created_at": "2026-02-10T06:34:00Z",
-        "branch": "fix/issue-2480-french-translation",
-        "fork": "dmzoneill-forks/dash-to-dock",
-        "ci_status": "no_checks",
-        "upstream": "micheleg/dash-to-dock",
-        "last_ci_fix": "2026-02-11T22:58:59.888612+00:00"
+        "upstream": "gnome-terminator/terminator",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "gnome-terminator/terminator",
@@ -274,7 +262,8 @@
         "branch": "fix/issue-1031-gobject-import",
         "fork": "dmzoneill-forks/terminator",
         "ci_status": "passing",
-        "upstream": "gnome-terminator/terminator"
+        "upstream": "gnome-terminator/terminator",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "DimitriFourny/seedmage",
@@ -287,7 +276,8 @@
         "branch": "fix/bug-4-resource-leak-file-handles",
         "fork": "dmzoneill-forks/seedmage",
         "ci_status": "no_checks",
-        "upstream": "DimitriFourny/seedmage"
+        "upstream": "DimitriFourny/seedmage",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "ansible/django-ansible-base",
@@ -307,7 +297,8 @@
           "IC_kwDOKi6q-s7nDu0O"
         ],
         "last_ci_fix": "2026-02-11T22:58:59.888612+00:00",
-        "notes": "DVCS check requires JIRA ticket - asked maintainers for guidance"
+        "notes": "DVCS check requires JIRA ticket - asked maintainers for guidance",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "upstream": "rembo10/headphones",
@@ -318,7 +309,8 @@
         "title": "fix: add helpful error message for missing tzdata package on Windows",
         "created_at": "2026-02-10T16:51:25Z",
         "ci_status": "no_checks",
-        "comments_seen_ids": []
+        "comments_seen_ids": [],
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "repo": "KittyCatTech/cryptopia-api-php",
@@ -329,7 +321,8 @@
         "fixes_issue": 11,
         "created_at": "2026-02-10T21:25:26Z",
         "ci_status": "no_checks",
-        "upstream": "KittyCatTech/cryptopia-api-php"
+        "upstream": "KittyCatTech/cryptopia-api-php",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "upstream": "infusion/PHP-Daemon",
@@ -342,7 +335,8 @@
         "status": "open",
         "created_at": "2026-02-10T23:18:00Z",
         "comments_seen_ids": [],
-        "ci_status": "no_checks"
+        "ci_status": "no_checks",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "upstream": "rembo10/headphones",
@@ -354,7 +348,8 @@
         "issue_number": 3410,
         "comments_seen_ids": [],
         "ci_status": "no_checks",
-        "review_state": "pending"
+        "review_state": "pending",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "upstream": "rootpd/go-binance",
@@ -366,7 +361,8 @@
         "created_at": "2026-02-11T07:54:00Z",
         "status": "open",
         "ci_status": "no_checks",
-        "comments_seen_ids": []
+        "comments_seen_ids": [],
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "upstream": "grumpyp/blogging-with-ai",
@@ -379,7 +375,8 @@
         "created_at": "2026-02-11T14:02:00Z",
         "comments_seen_ids": [],
         "ci_status": "no_checks",
-        "last_ci_fix": "2026-02-11T22:58:59.888612+00:00"
+        "last_ci_fix": "2026-02-11T22:58:59.888612+00:00",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "upstream": "RABCbot/door-butler",
@@ -392,7 +389,8 @@
         "ci_status": "no_checks",
         "comments_seen_ids": [],
         "created_at": "2026-02-11T15:28:00Z",
-        "last_ci_fix": "2026-02-11T22:58:59.888612+00:00"
+        "last_ci_fix": "2026-02-11T22:58:59.888612+00:00",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "upstream": "ansible/awx",
@@ -407,7 +405,9 @@
         "comments_seen_ids": [
           "IC_kwDOBXWdec7nmx8T",
           "IC_kwDOBXWdec7nnQTG"
-        ]
+        ],
+        "last_checked": "2026-02-12T15:26:17.699Z",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "upstream": "gnome-terminator/terminator",
@@ -419,31 +419,8 @@
         "created_at": "2026-02-11T17:00:00Z",
         "ci_status": "passing",
         "repo": "gnome-terminator/terminator",
-        "comments_seen_ids": []
-      },
-      {
-        "upstream": "ansible/ansible-runner",
-        "fork": "Redhat-forks/ansible-runner",
-        "pr_number": 1483,
-        "issue_number": 1474,
-        "branch": "fix/issue-1474-add-github-link",
-        "title": "docs: add GitHub repository link to community page",
-        "created_at": "2026-02-11T22:58:59.888612+00:00",
-        "ci_status": "passing",
         "comments_seen_ids": [],
-        "status": "open"
-      },
-      {
-        "upstream": "ansible/molecule",
-        "fork": "Redhat-forks/molecule",
-        "pr_number": 4606,
-        "issue_number": 4597,
-        "branch": "fix/issue-4597-keyerror-molecule-yml-date",
-        "title": "fix: handle missing molecule_yml_date_modified key in state",
-        "created_at": "2026-02-11T22:58:59.888612+00:00",
-        "ci_status": "unknown",
-        "comments_seen_ids": [],
-        "status": "merged"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "upstream": "ansible/ansible-dev-environment",
@@ -455,7 +432,8 @@
         "created_at": "2026-02-11T22:58:59.888612+00:00",
         "ci_status": "unknown",
         "comments_seen_ids": [],
-        "status": "open"
+        "status": "open",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "upstream": "Freenove/Freenove_RFID_Starter_Kit_for_Raspberry_Pi",
@@ -467,7 +445,8 @@
         "status": "open",
         "created_at": "2026-02-12T04:00:00Z",
         "comments_seen_ids": [],
-        "ci_status": "pending"
+        "ci_status": "pending",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "upstream": "Ileriayo/markdown-badges",
@@ -479,7 +458,8 @@
         "status": "open",
         "created_at": "2026-02-12T04:00:00Z",
         "comments_seen_ids": [],
-        "ci_status": "pending"
+        "ci_status": "pending",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       },
       {
         "upstream": "ansible/ansible-creator",
@@ -493,7 +473,8 @@
         "repo": "ansible/ansible-creator",
         "comments_seen_ids": [],
         "branch": "fix/issue-514-package-data-resources",
-        "fork": "Redhat-forks/ansible-creator"
+        "fork": "Redhat-forks/ansible-creator",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z"
       }
     ],
     "closed_prs": [
@@ -546,6 +527,62 @@
         "url": "https://github.com/gnome-terminator/terminator/pull/1054",
         "merged_at": "2026-02-10T06:34:00Z",
         "fixes_issue": null
+      },
+      {
+        "repo": "flozz/cover-thumbnailer",
+        "pr_number": 25,
+        "title": "fix: create thumbnail directory if it doesn't exist",
+        "url": "https://github.com/flozz/cover-thumbnailer/pull/25",
+        "status": "merged",
+        "fixes_issue": 23,
+        "created_at": "2026-02-09T20:32:00Z",
+        "ci_status": "no_checks",
+        "upstream": "flozz/cover-thumbnailer",
+        "comments_seen_ids": [
+          "IC_kwDOBamCNs7npX-U"
+        ],
+        "merged_at": "2026-02-12T15:26:17.699Z"
+      },
+      {
+        "repo": "micheleg/dash-to-dock",
+        "pr_number": 2496,
+        "title": "fix: correct French translation typo in preferences",
+        "url": "https://github.com/micheleg/dash-to-dock/pull/2496",
+        "status": "merged",
+        "fixes_issue": 2480,
+        "created_at": "2026-02-10T06:34:00Z",
+        "branch": "fix/issue-2480-french-translation",
+        "fork": "dmzoneill-forks/dash-to-dock",
+        "ci_status": "no_checks",
+        "upstream": "micheleg/dash-to-dock",
+        "last_ci_fix": "2026-02-11T22:58:59.888612+00:00",
+        "merged_at": "2026-02-12T15:26:17.699Z"
+      },
+      {
+        "upstream": "ansible/ansible-runner",
+        "fork": "Redhat-forks/ansible-runner",
+        "pr_number": 1483,
+        "issue_number": 1474,
+        "branch": "fix/issue-1474-add-github-link",
+        "title": "docs: add GitHub repository link to community page",
+        "created_at": "2026-02-11T22:58:59.888612+00:00",
+        "ci_status": "passing",
+        "comments_seen_ids": [],
+        "status": "open",
+        "merged_at": "2026-02-12T15:26:17.699Z"
+      },
+      {
+        "upstream": "ansible/molecule",
+        "fork": "Redhat-forks/molecule",
+        "pr_number": 4606,
+        "issue_number": 4597,
+        "branch": "fix/issue-4597-keyerror-molecule-yml-date",
+        "title": "fix: handle missing molecule_yml_date_modified key in state",
+        "created_at": "2026-02-11T22:58:59.888612+00:00",
+        "ci_status": "unknown",
+        "comments_seen_ids": [],
+        "status": "merged",
+        "merged_at": "2026-02-12T15:26:17.699Z"
       }
     ],
     "feature_suggestions": [
@@ -3563,7 +3600,48 @@
       "Redhat-forks/ansible-backstage-plugins": "2026-02-11T12:25:23.684403+00:00",
       "Redhat-forks/receptor-1": "2026-02-11T12:25:23.729950+00:00",
       "Redhat-forks/awx-operator-1": "2026-02-11T12:25:23.750300+00:00",
-      "Redhat-forks/event-driven-ansible-1": "2026-02-11T12:25:23.774048+00:00"
+      "Redhat-forks/event-driven-ansible-1": "2026-02-11T12:25:23.774048+00:00",
+      "RedHatInsights/ansible-automation-platform-setup-bundle": "2026-02-12T15:26:17.699Z",
+      "RedHatInsights/eda-partner-testing": "2026-02-12T15:26:17.699Z",
+      "ansible/ansible-lint": "2026-02-12T15:26:17.699Z",
+      "ansible/ansible-builder": "2026-02-12T15:26:17.699Z",
+      "ansible/ansible-dev-environment": "2026-02-12T15:26:17.699Z",
+      "ansible/ansible-navigator": "2026-02-12T15:26:17.699Z",
+      "ansible/ansible-compat": "2026-02-12T15:26:17.699Z",
+      "ansible/ansible-runner": "2026-02-12T15:26:17.699Z",
+      "ansible/pytest-ansible": "2026-02-12T15:26:17.699Z",
+      "ansible/ansible-sign": "2026-02-12T15:26:17.699Z",
+      "ansible/creator-ee": "2026-02-12T15:26:17.699Z",
+      "ansible/ansible-creator": "2026-02-12T15:26:17.699Z",
+      "ansible/molecule": "2026-02-12T15:26:17.699Z",
+      "ansible/receptor": "2026-02-12T15:26:17.699Z",
+      "ansible/vscode-ansible": "2026-02-12T15:26:17.699Z",
+      "ansible/eda-server": "2026-02-12T15:26:17.699Z",
+      "ansible/awx": "2026-02-12T15:26:17.699Z",
+      "benthomasson/dataverse-integration": "2026-02-12T15:26:17.699Z",
+      "linuxmint/nemo-extensions": "2026-02-12T15:26:17.699Z",
+      "micheleg/dash-to-dock": "2026-02-12T15:26:17.699Z",
+      "flozz/cover-thumbnailer": "2026-02-12T15:26:17.699Z",
+      "deluge-torrent/deluge": "2026-02-12T15:26:17.699Z",
+      "gnome-terminator/terminator": "2026-02-12T15:26:17.699Z",
+      "rootpd/go-binance": "2026-02-12T15:26:17.699Z",
+      "WiringPi/WiringPi": "2026-02-12T15:26:17.699Z",
+      "nicolasff/webdis": "2026-02-12T15:26:17.699Z",
+      "FreePBX/core": "2026-02-12T15:26:17.699Z",
+      "KittyCatTech/cryptopia-api-php": "2026-02-12T15:26:17.699Z",
+      "infusion/PHP-Daemon": "2026-02-12T15:26:17.699Z",
+      "grumpyp/blogging-with-ai": "2026-02-12T15:26:17.699Z",
+      "RABCbot/door-butler": "2026-02-12T15:26:17.699Z",
+      "DimitriFourny/seedmage": "2026-02-12T15:26:17.699Z",
+      "Freenove/Freenove_RFID_Starter_Kit_for_Raspberry_Pi": "2026-02-12T15:26:17.699Z",
+      "Ileriayo/markdown-badges": "2026-02-12T15:26:17.699Z",
+      "Jackett/Jackett": "2026-02-12T15:26:17.699Z",
+      "Sonarr/Sonarr": "2026-02-12T15:26:17.699Z",
+      "SynoCommunity/spksrc": "2026-02-12T15:26:17.699Z",
+      "etcd-io/etcd": "2026-02-12T15:26:17.699Z",
+      "binance-exchange/binance-official-api-docs": "2026-02-12T15:26:17.699Z",
+      "pablobs/filebot": "2026-02-12T15:26:17.699Z",
+      "filebot/scripts": "2026-02-12T15:26:17.699Z"
     },
     "bug_fixes": [
       {
@@ -3716,22 +3794,25 @@
     "last_rebase_sync": "2026-02-12T12:21:32.267387+00:00"
   },
   "last_run": {
-    "timestamp": "2026-02-12T14:05:03Z",
-    "iteration": 12,
-    "rate_limit_remaining": 4803,
-    "repos_scanned": 109,
+    "timestamp": "2026-02-12T15:26:17.699Z",
+    "iteration": 13,
+    "rate_limit_remaining": 5000,
+    "repos_scanned": 97,
     "actions_taken": [
-      "ansible/ansible-creator#521: NEW PR created fixing Python package data inclusion (fixes #514)",
-      "ansible/awx#16275: 2 bot comments marked as seen",
-      "Synced 83/109 forks with upstream",
-      "Checked CI status on 32 open PRs - all passing or policy failures",
-      "Scanned 6 repos for critical bugs - none found"
+      "Identified 4 merged PRs (removed from tracking)",
+      "Monitored 31 open PRs for CI status (all passing or no CI)",
+      "Synced 84 repositories with upstream (13 failed due to conflicts)",
+      "Marked 2 bot comments as seen on ansible/awx#16275",
+      "Scanned 4 repos for critical bugs (none found)",
+      "Evaluated 3 issues (all below 90% confidence threshold)"
     ],
-    "errors": [],
+    "errors": [
+      "13 repos failed to sync due to merge conflicts or missing branches"
+    ],
     "next_run_priorities": [
-      "Monitor 32 open PRs for comments and CI status",
-      "Continue scanning for fixable issues on repos below PR limits",
-      "Address any new reviewer comments on existing PRs"
+      "Monitor 32 open PRs for comments and CI failures",
+      "29 repos at PR limit - wait for merges before new PRs",
+      "Continue scanning for high-confidence issues (>= 90%)"
     ]
   }
 }
