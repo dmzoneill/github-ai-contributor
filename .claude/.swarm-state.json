@@ -73,7 +73,7 @@
         "title": "AAP-64892 - docs: Update dbt setup & dataproduct-config status",
         "url": "https://github.com/benthomasson/dataverse-integration/pull/3",
         "status": "open",
-        "ci_status": "passing",
+        "ci_status": "no_checks",
         "upstream": "benthomasson/dataverse-integration"
       },
       {
@@ -272,7 +272,7 @@
         "created_at": "2026-02-10T10:15:00Z",
         "branch": "fix/issue-1031-gobject-import",
         "fork": "dmzoneill-forks/terminator",
-        "ci_status": "no_checks",
+        "ci_status": "passing",
         "upstream": "gnome-terminator/terminator"
       },
       {
@@ -298,7 +298,7 @@
         "created_at": "2026-02-10T09:22:46Z",
         "branch": "fix/issue-770-ldap-log-level",
         "fork": "Redhat-forks/django-ansible-base",
-        "ci_status": "failing_dvcs_check",
+        "ci_status": "policy_failure_dvcs",
         "upstream": "ansible/django-ansible-base",
         "comments_seen_ids": [
           "IC_kwDOKi6q-s7nQpgE",
@@ -401,7 +401,7 @@
         "status": "open",
         "fixes_issue": 16272,
         "created_at": "2026-02-11T17:00:00Z",
-        "ci_status": "no_checks",
+        "ci_status": "passing",
         "repo": "ansible/awx",
         "comments_seen_ids": [
           "IC_kwDOBXWdec7nmx8T",
@@ -416,7 +416,7 @@
         "status": "open",
         "fixes_issue": 1047,
         "created_at": "2026-02-11T17:00:00Z",
-        "ci_status": "no_checks",
+        "ci_status": "passing",
         "repo": "gnome-terminator/terminator",
         "comments_seen_ids": []
       },
@@ -428,7 +428,7 @@
         "branch": "fix/issue-1474-add-github-link",
         "title": "docs: add GitHub repository link to community page",
         "created_at": "2026-02-11T22:58:59.888612+00:00",
-        "ci_status": "unknown",
+        "ci_status": "passing",
         "comments_seen_ids": [],
         "status": "open"
       },
@@ -1071,6 +1071,12 @@
         "issue_number": 1711,
         "title": "Query caching for frequently-requested vulnerability data",
         "status": "open"
+      },
+      {
+        "upstream": "RedHatInsights/ccx-notification-writer",
+        "issue_number": 754,
+        "title": "Add dead letter queue support for malformed messages",
+        "status": "open"
       }
     ],
     "attempted_issues": [
@@ -1085,7 +1091,61 @@
         "title": "Zip creation silently fails when filename contains a dot (.)",
         "reason": "Issue is in file-roller application, not in nemo-extensions codebase. Would require investigating and fixing a different upstream project."
       },
-      "alexzorin/authy#28"
+      "alexzorin/authy#28",
+      {
+        "upstream": "RedHatInsights/clowder",
+        "issue_number": 1092,
+        "confidence": 60,
+        "reason": "Requires complex Go code refactoring to migrate from kube-rbac-proxy to controller-runtime WithAuthenticationAndAuthorization - multi-file architectural change with insufficient test coverage to verify correctness"
+      },
+      {
+        "upstream": "RedHatInsights/insights-client",
+        "issue_number": 83,
+        "confidence": 40,
+        "reason": "Feature request to add new --archive CLI flag, not a bug fix"
+      },
+      {
+        "upstream": "RedHatInsights/insights-client",
+        "issue_number": 82,
+        "confidence": 30,
+        "reason": "Issue appears resolved based on comments demonstrating working behavior"
+      },
+      {
+        "upstream": "RedHatInsights/insights-client",
+        "issue_number": 65,
+        "confidence": 50,
+        "reason": "Large refactoring task to replace sed with Python regex - requires extensive testing and understanding of obfuscation patterns"
+      },
+      {
+        "upstream": "RedHatInsights/insights-client",
+        "issue_number": 61,
+        "confidence": 55,
+        "reason": "Requires understanding RPM packaging and upgrade scripts - unclear where symlink cleanup should be implemented"
+      },
+      {
+        "upstream": "RedHatInsights/insights-host-inventory",
+        "issue_number": 403,
+        "confidence": 20,
+        "reason": "Issue from 2019 is outdated - codebase migrated from kafka-python to confluent_kafka, referenced files no longer exist"
+      },
+      {
+        "upstream": "RedHatInsights/insights-host-inventory",
+        "issue_number": 330,
+        "confidence": 10,
+        "reason": "LICENSE file already exists in repo - issue is outdated"
+      },
+      {
+        "upstream": "RABCbot/door-butler",
+        "issue_number": 3,
+        "confidence": 0,
+        "reason": "Issue created by dmzoneill (repo owner) - skipping per project rules"
+      },
+      {
+        "upstream": "PicoI2/raspberry-pi-intercom",
+        "issue_number": 3,
+        "confidence": 0,
+        "reason": "Issue created by dmzoneill (repo owner) - skipping per project rules"
+      }
     ],
     "evaluated_issues": {
       "flozz/cover-thumbnailer#23": {
@@ -1742,7 +1802,7 @@
       "all-contributors/allcontributors.org": {
         "language": "MDX",
         "default_branch": "main",
-        "description": "✨ The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code ✨",
+        "description": "\u2728 The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code \u2728",
         "topics": [
           "contributors",
           "all-contributors",
@@ -1807,7 +1867,7 @@
           "redis"
         ],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:11.915400+00:00"
+        "last_profiled": "2026-02-12T12:20:11Z"
       },
       "infusion/PHP-Daemon": {
         "language": "PHP",
@@ -1823,7 +1883,7 @@
         "description": "Cryptopia API Wrapper in PHP and Sample Trading Bot",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:02.707381+00:00"
+        "last_profiled": "2026-02-12T12:19:29Z"
       },
       "kubernetes-retired/contrib": {
         "language": "Go",
@@ -1911,7 +1971,7 @@
           "hacktoberfest"
         ],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:21:58.231908+00:00"
+        "last_profiled": "2026-02-12T12:19:29Z"
       },
       "firecat53/dockerfiles": {
         "language": "Dockerfile",
@@ -1944,7 +2004,7 @@
         "description": "Smart PVR for newsgroup and bittorrent users.",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:17.548152+00:00"
+        "last_profiled": "2026-02-12T12:20:10Z"
       },
       "deluge-torrent/deluge": {
         "language": "Python",
@@ -1987,7 +2047,7 @@
         "description": "Apply to FNK0025",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:09.070989+00:00"
+        "last_profiled": "2026-02-12T12:19:27Z"
       },
       "WiringPi/WiringPi": {
         "language": "C",
@@ -2023,7 +2083,7 @@
         "description": "Module of FreePBX (Core) :: ",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:06.545721+00:00"
+        "last_profiled": "2026-02-12T12:19:26Z"
       },
       "PicoI2/raspberry-pi-intercom": {
         "language": "C++",
@@ -2031,7 +2091,7 @@
         "description": "All you need to make an intercom with raspberry pi (not finished yet)",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:18.686861+00:00"
+        "last_profiled": "2026-02-12T12:19:31Z"
       },
       "RABCbot/door-butler": {
         "language": "Python",
@@ -2039,7 +2099,7 @@
         "description": "Raspberry Pi door video/audio intercom",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:09.564371+00:00"
+        "last_profiled": "2026-02-12T12:19:32Z"
       },
       "mapuo/intercom": {
         "language": "Erlang",
@@ -2127,7 +2187,7 @@
           "torrent"
         ],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:05.572010+00:00"
+        "last_profiled": "2026-02-12T12:19:25Z"
       },
       "trossr32/sonarr-radarr-lidarr-autosearch-browser-extension": {
         "language": "JavaScript",
@@ -2252,7 +2312,7 @@
           "badges-markdown"
         ],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:20.897648+00:00"
+        "last_profiled": "2026-02-12T12:19:28Z"
       },
       "progfay/shields-with-icon": {
         "language": "Go",
@@ -2271,7 +2331,7 @@
         "description": "A npm package that extracts ai generated image from Craiyon website and returns base64 of the image",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:20.267939+00:00"
+        "last_profiled": "2026-02-12T12:19:30Z"
       },
       "fregante/chrome-webstore-upload-cli": {
         "language": "JavaScript",
@@ -2304,7 +2364,7 @@
       "jlowin/fastmcp": {
         "language": "Python",
         "default_branch": "main",
-        "description": "🚀 The fast, Pythonic way to build MCP servers and clients",
+        "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients",
         "topics": [
           "model-context-protocol",
           "fastmcp",
@@ -2322,7 +2382,7 @@
       "zed-industries/zed": {
         "language": "Rust",
         "default_branch": "main",
-        "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "description": "Code at the speed of thought \u2013 Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
         "topics": [
           "text-editor",
           "zed",
@@ -2391,7 +2451,7 @@
         "description": "Orchestrates ephemeral environments for testing cloud.redhat.com applications",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:29.593599+00:00"
+        "last_profiled": "2026-02-12T12:19:33Z"
       },
       "RedHatInsights/tower-analytics-frontend": {
         "language": "TypeScript",
@@ -2399,7 +2459,7 @@
         "description": "Automation Analytics provides data analytics for Ansible Tower that provides visualization and insight into how automation is used in your organization.",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:30.641716+00:00"
+        "last_profiled": "2026-02-12T12:20:03Z"
       },
       "RedHatInsights/insights-frontend-builder-common": {
         "language": "Python",
@@ -2407,7 +2467,7 @@
         "description": "Common stuff for the frontend builder",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:31.643718+00:00"
+        "last_profiled": "2026-02-12T12:19:51Z"
       },
       "RedHatInsights/clowder": {
         "language": "Go",
@@ -2419,7 +2479,7 @@
           "redhat"
         ],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:32.743589+00:00"
+        "last_profiled": "2026-02-12T12:19:37Z"
       },
       "RedHatInsights/edge-api": {
         "language": "Go",
@@ -2427,7 +2487,7 @@
         "description": "An API server for fleet edge management capabilities",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:33.776023+00:00"
+        "last_profiled": "2026-02-12T12:19:42Z"
       },
       "RedHatInsights/edge-frontend": {
         "language": "JavaScript",
@@ -2435,7 +2495,7 @@
         "description": "",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:34.821526+00:00"
+        "last_profiled": "2026-02-12T12:19:43Z"
       },
       "ansible/galaxy_ng": {
         "language": "Python",
@@ -2455,7 +2515,7 @@
         "description": "",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:37.123262+00:00"
+        "last_profiled": "2026-02-12T12:19:48Z"
       },
       "app-sre/qontract-schemas": {
         "language": "Python",
@@ -2473,7 +2533,7 @@
           "hacktoberfest"
         ],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:39.259069+00:00"
+        "last_profiled": "2026-02-12T12:19:53Z"
       },
       "ansible/tower": {
         "language": "Python",
@@ -2530,12 +2590,12 @@
         "description": "",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:47.088007+00:00"
+        "last_profiled": "2026-02-12T12:19:34Z"
       },
       "ansible/awx-operator": {
         "language": "Jinja",
         "default_branch": "devel",
-        "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. 🤖",
+        "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. \ud83e\udd16",
         "topics": [
           "awx-operator",
           "awx",
@@ -2838,7 +2898,7 @@
       "podman-desktop/podman-desktop": {
         "language": "TypeScript",
         "default_branch": "main",
-        "description": "Podman Desktop is the best free and open source tool to work with Containers and Kubernetes for developers. Get an intuitive and user-friendly interface to effortlessly build, manage, and deploy containers and Kubernetes — all from your desktop.",
+        "description": "Podman Desktop is the best free and open source tool to work with Containers and Kubernetes for developers. Get an intuitive and user-friendly interface to effortlessly build, manage, and deploy containers and Kubernetes \u2014 all from your desktop.",
         "topics": [
           "containers",
           "ui",
@@ -2882,7 +2942,7 @@
         "description": "Chroming for Insights apps",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:21.757760+00:00"
+        "last_profiled": "2026-02-12T12:19:49Z"
       },
       "RedHatInsights/frontend-operator": {
         "language": "Go",
@@ -2890,7 +2950,7 @@
         "description": "",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:22.688885+00:00"
+        "last_profiled": "2026-02-12T12:19:46Z"
       },
       "RedHatInsights/insights-host-inventory": {
         "language": "Python",
@@ -2900,7 +2960,7 @@
           "hacktoberfest"
         ],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:23.798109+00:00"
+        "last_profiled": "2026-02-12T12:19:52Z"
       },
       "RedHatInsights/rhsm-subscriptions": {
         "language": "Java",
@@ -2908,7 +2968,7 @@
         "description": "Subscriptions-related services for the Insights Platform",
         "topics": [],
         "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:24:24.856356+00:00"
+        "last_profiled": "2026-02-12T12:20:00Z"
       },
       "RedHatInsights/insights-mcp": {
         "language": "Python",
@@ -2916,7 +2976,7 @@
         "description": "An MCP server to connect insights functionality to an AI / LLM",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:25.907197+00:00"
+        "last_profiled": "2026-02-12T12:19:55Z"
       },
       "RedHatInsights/insights-client": {
         "language": "Python",
@@ -2924,7 +2984,7 @@
         "description": "insights-client",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:26.910179+00:00"
+        "last_profiled": "2026-02-12T12:19:50Z"
       },
       "RedHatInsights/frontend-experience-docs": {
         "language": "Shell",
@@ -2932,7 +2992,7 @@
         "description": "A repository for the Platform Experience UI team best practices and guidelines",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:27.987727+00:00"
+        "last_profiled": "2026-02-12T12:19:45Z"
       },
       "RedHatInsights/widget-layout": {
         "language": "TypeScript",
@@ -2940,7 +3000,7 @@
         "description": "Reusable drag and drop UI layout and utilities for frontends",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:28.988356+00:00"
+        "last_profiled": "2026-02-12T12:20:08Z"
       },
       "RedHatInsights/chrome-service-backend": {
         "language": "Go",
@@ -2948,7 +3008,7 @@
         "description": "Source code repository for chrome backend",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:30.033500+00:00"
+        "last_profiled": "2026-02-12T12:19:36Z"
       },
       "RedHatInsights/vulnerability-ui": {
         "language": "JavaScript",
@@ -2956,7 +3016,7 @@
         "description": "Frontend for vulnerabilities detection service for RHEL system. ",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:31.035246+00:00"
+        "last_profiled": "2026-02-12T12:20:07Z"
       },
       "RedHatInsights/insights-inventory-frontend": {
         "language": "JavaScript",
@@ -2964,7 +3024,7 @@
         "description": "The Insights Inventory Frontend",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:32.079587+00:00"
+        "last_profiled": "2026-02-12T12:19:54Z"
       },
       "RedHatInsights/rhc": {
         "language": "Go",
@@ -2975,7 +3035,7 @@
           "rhel"
         ],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:33.171357+00:00"
+        "last_profiled": "2026-02-12T12:19:58Z"
       },
       "RedHatInsights/insights-advisor-frontend": {
         "language": "JavaScript",
@@ -2983,7 +3043,7 @@
         "description": "The Advisor Frontend",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:34.190220+00:00"
+        "last_profiled": "2026-02-12T12:19:47Z"
       },
       "RedHatInsights/patchman-ui": {
         "language": "JavaScript",
@@ -2991,7 +3051,7 @@
         "description": "System Patch Manager User Interface ",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:35.164995+00:00"
+        "last_profiled": "2026-02-12T12:19:56Z"
       },
       "RedHatInsights/processing-tools": {
         "language": "Python",
@@ -2999,7 +3059,7 @@
         "description": "Tools / scripts / automations used by ObsInt Processing team",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:36.224758+00:00"
+        "last_profiled": "2026-02-12T12:19:57Z"
       },
       "RedHatInsights/ccx-notification-writer": {
         "language": "Go",
@@ -3007,7 +3067,7 @@
         "description": "CCX notification writer service",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:37.202054+00:00"
+        "last_profiled": "2026-02-12T12:19:36Z"
       },
       "RedHatInsights/yuptoo": {
         "language": "Python",
@@ -3015,7 +3075,7 @@
         "description": "The Yupana Upload Processor II",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:38.332108+00:00"
+        "last_profiled": "2026-02-12T12:20:09Z"
       },
       "RedHatInsights/insights-puptoo": {
         "language": "Python",
@@ -3023,7 +3083,7 @@
         "description": "Fact extraction and inventory updates for advisor archives",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:39.304230+00:00"
+        "last_profiled": "2026-02-12T12:19:56Z"
       },
       "RedHatInsights/floorist": {
         "language": "Python",
@@ -3033,7 +3093,7 @@
           "hacktoberfest"
         ],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:40.349377+00:00"
+        "last_profiled": "2026-02-12T12:19:43Z"
       },
       "RedHatInsights/floorist-operator": {
         "language": "Makefile",
@@ -3043,7 +3103,7 @@
           "hacktoberfest"
         ],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:41.390724+00:00"
+        "last_profiled": "2026-02-12T12:19:44Z"
       },
       "RedHatInsights/rhsm-api-proxy": {
         "language": "Go",
@@ -3051,7 +3111,7 @@
         "description": "Reverse proxy for subscription management APIs",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:42.407427+00:00"
+        "last_profiled": "2026-02-12T12:19:59Z"
       },
       "RedHatInsights/vulnerability-engine": {
         "language": "Python",
@@ -3059,7 +3119,7 @@
         "description": "Vulnerability Engine",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:43.600585+00:00"
+        "last_profiled": "2026-02-12T12:20:06Z"
       },
       "RedHatInsights/vulnerability-docs": {
         "language": "HTML",
@@ -3067,7 +3127,7 @@
         "description": "Documentations for vulnerability/vmaas parts.",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:44.750007+00:00"
+        "last_profiled": "2026-02-12T12:20:05Z"
       },
       "RedHatInsights/vmaas": {
         "language": "Python",
@@ -3075,7 +3135,7 @@
         "description": "Vulnerability Metadata as a Service",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:45.782313+00:00"
+        "last_profiled": "2026-02-12T12:20:04Z"
       },
       "RedHatInsights/compliance-backend": {
         "language": "Ruby",
@@ -3088,7 +3148,7 @@
           "security-audit"
         ],
         "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:24:46.931636+00:00"
+        "last_profiled": "2026-02-12T12:19:38Z"
       },
       "RedHatInsights/data-pipeline": {
         "language": "HTML",
@@ -3096,7 +3156,7 @@
         "description": "External and internal (CCX) data pipeline archive processors definitions",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:47.981376+00:00"
+        "last_profiled": "2026-02-12T12:19:40Z"
       },
       "RedHatInsights/content-service": {
         "language": "Go",
@@ -3104,7 +3164,7 @@
         "description": "",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:49.090279+00:00"
+        "last_profiled": "2026-02-12T12:19:39Z"
       },
       "RedHatInsights/sources-superkey-worker": {
         "language": "Go",
@@ -3114,7 +3174,7 @@
           "hacktoberfest"
         ],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:50.156190+00:00"
+        "last_profiled": "2026-02-12T12:20:02Z"
       },
       "RedHatInsights/ccx-notification-service": {
         "language": "Go",
@@ -3122,7 +3182,7 @@
         "description": "CCX notification service",
         "topics": [],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:51.093145+00:00"
+        "last_profiled": "2026-02-12T12:19:35Z"
       },
       "RedHatInsights/sources-api-go": {
         "language": "Go",
@@ -3132,7 +3192,7 @@
           "hacktoberfest"
         ],
         "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:52.161040+00:00"
+        "last_profiled": "2026-02-12T12:20:01Z"
       },
       "ansible/product-demos": {
         "language": "Jinja",
@@ -3638,27 +3698,25 @@
       }
     ],
     "last_sync": "2026-02-11T17:00:46.840757Z",
-    "last_rebase_sync": "2026-02-12T04:00:00Z"
+    "last_rebase_sync": "2026-02-12T12:21:32.267387+00:00"
   },
   "last_run": {
-    "timestamp": "2026-02-12T10:53:30Z",
-    "iteration": 10,
-    "rate_limit_remaining": 4800,
-    "repos_scanned": 145,
+    "timestamp": "2026-02-12T12:21:32.529069+00:00",
+    "iteration": 11,
+    "rate_limit_remaining": 4783,
+    "repos_scanned": 12,
     "actions_taken": [
-      "Checked 35 open PRs - 3 merged (cover-thumbnailer#25, dash-to-dock#2496, molecule#4606)",
-      "Updated 53 feature suggestions to 'closed' status",
-      "No new PR or feature suggestion comments requiring response",
-      "Checked CI status on 35 PRs - 10 passing, 23 no checks, 1 CLA pending, 1 policy check",
-      "Synced 130 repos (Redhat-forks: 78/87, dmzoneill-forks: 52/57), 15 failed",
-      "Scanned 10 upstream repos for fixable issues - 3 evaluated, all below 90% confidence threshold",
-      "Scanned 10 repos for critical bugs - none found meeting CRITICAL criteria"
+      "Created 4 feature suggestions",
+      "Updated CI status on 32 PRs",
+      "Updated 50 repo profiles",
+      "Evaluated 9 issues (all skipped - below 90% confidence)",
+      "Bug scanner: 0 repos scanned (all at PR limit)"
     ],
     "errors": [],
     "next_run_priorities": [
-      "Continue monitoring 32 open PRs (3 were merged this run)",
-      "Look for high-confidence issues in remaining eligible repos",
-      "Keep forks synced with upstream"
+      "Monitor 32 open PRs for comments and CI status",
+      "Continue scanning for fixable issues on repos below PR limits",
+      "Address any new reviewer comments on existing PRs"
     ]
   }
 }
