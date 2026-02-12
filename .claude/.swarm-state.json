@@ -81,7 +81,7 @@
         "pr_number": 25,
         "title": "fix: create thumbnail directory if it doesn't exist",
         "url": "https://github.com/flozz/cover-thumbnailer/pull/25",
-        "status": "open",
+        "status": "merged",
         "fixes_issue": 23,
         "created_at": "2026-02-09T20:32:00Z",
         "ci_status": "no_checks",
@@ -253,7 +253,7 @@
         "pr_number": 2496,
         "title": "fix: correct French translation typo in preferences",
         "url": "https://github.com/micheleg/dash-to-dock/pull/2496",
-        "status": "open",
+        "status": "merged",
         "fixes_issue": 2480,
         "created_at": "2026-02-10T06:34:00Z",
         "branch": "fix/issue-2480-french-translation",
@@ -442,7 +442,7 @@
         "created_at": "2026-02-11T22:58:59.888612+00:00",
         "ci_status": "unknown",
         "comments_seen_ids": [],
-        "status": "open"
+        "status": "merged"
       },
       {
         "upstream": "ansible/ansible-dev-environment",
@@ -538,63 +538,63 @@
         "repo": "RedHatInsights/bonfire",
         "issue_number": 527,
         "title": "Add namespace cost estimation and resource quota warnings",
-        "status": "open",
+        "status": "closed",
         "upstream": "RedHatInsights/bonfire"
       },
       {
         "repo": "ansible/vscode-ansible",
         "issue_number": 2558,
         "title": "feat: Add support for snippet templates from custom directories",
-        "status": "open",
+        "status": "closed",
         "upstream": "ansible/vscode-ansible"
       },
       {
         "repo": "ansible/vscode-ansible",
         "issue_number": 2557,
         "title": "Add inline variable value preview on hover",
-        "status": "open",
+        "status": "closed",
         "upstream": "ansible/vscode-ansible"
       },
       {
         "repo": "ansible/awx",
         "issue_number": 16270,
         "title": "Add bulk operations support for job templates",
-        "status": "open",
+        "status": "closed",
         "upstream": "ansible/awx"
       },
       {
         "repo": "ansible/ansible-lint",
         "issue_number": 4958,
         "title": "feat: Add JSON output format for CI/CD pipeline integration",
-        "status": "open",
+        "status": "closed",
         "upstream": "ansible/ansible-lint"
       },
       {
         "repo": "ansible/ansible-lint",
         "issue_number": 4957,
         "title": "Add support for custom rule templates via configuration",
-        "status": "open",
+        "status": "closed",
         "upstream": "ansible/ansible-lint"
       },
       {
         "repo": "RedHatInsights/clowder",
         "issue_number": 1670,
         "title": "Add ClowdApp validation webhook for early error detection",
-        "status": "open",
+        "status": "closed",
         "upstream": "RedHatInsights/clowder"
       },
       {
         "repo": "ansible/receptor",
         "issue_number": 1521,
         "title": "Add built-in health check and metrics endpoints",
-        "status": "open",
+        "status": "closed",
         "upstream": "ansible/receptor"
       },
       {
         "repo": "ansible/ansible-navigator",
         "issue_number": 2095,
         "title": "feat: Add session replay capability for debugging",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
         "upstream": "ansible/ansible-navigator"
       },
@@ -602,7 +602,7 @@
         "repo": "ansible/metrics-utility",
         "issue_number": 324,
         "title": "feat: Add Prometheus metrics exporter",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
         "upstream": "ansible/metrics-utility"
       },
@@ -610,7 +610,7 @@
         "repo": "ansible/django-ansible-base",
         "issue_number": 933,
         "title": "feat: Add comprehensive audit logging middleware",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
         "upstream": "ansible/django-ansible-base"
       },
@@ -618,7 +618,7 @@
         "repo": "app-sre/qontract-schemas",
         "issue_number": 974,
         "title": "feat: Add schema versioning and migration support",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
         "upstream": "app-sre/qontract-schemas"
       },
@@ -626,7 +626,7 @@
         "repo": "ansible/ansible-ai-connect-operator",
         "issue_number": 711,
         "title": "feat: Add AI model performance metrics and monitoring",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
         "upstream": "ansible/ansible-ai-connect-operator"
       },
@@ -634,23 +634,31 @@
         "repo": "Jackett/Jackett",
         "issue_number": 16571,
         "title": "feat: Add health monitoring dashboard with tracker uptime metrics",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
-        "upstream": "Jackett/Jackett"
+        "upstream": "Jackett/Jackett",
+        "comments_seen_ids": [
+          "IC_kwDOArGhXs7m5QK-",
+          "IC_kwDOArGhXs7nSeYp"
+        ]
       },
       {
         "repo": "Sonarr/Sonarr",
         "issue_number": 8402,
         "title": "feat: Add download client bandwidth scheduling and throttling",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
-        "upstream": "Sonarr/Sonarr"
+        "upstream": "Sonarr/Sonarr",
+        "comments_seen_ids": [
+          "IC_kwDOACWfu87m5AUS",
+          "IC_kwDOACWfu87nSfB8"
+        ]
       },
       {
         "repo": "flozz/cover-thumbnailer",
         "issue_number": 26,
         "title": "feat: Add batch regeneration mode with progress tracking",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
         "upstream": "flozz/cover-thumbnailer"
       },
@@ -658,7 +666,7 @@
         "repo": "sickcodes/Docker-OSX",
         "issue_number": 916,
         "title": "feat: Add snapshot and restore functionality for macOS VMs",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
         "upstream": "sickcodes/Docker-OSX"
       },
@@ -666,15 +674,28 @@
         "repo": "containers/podman",
         "issue_number": 28055,
         "title": "feat: Add container health check testing and validation CLI",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
-        "upstream": "containers/podman"
+        "upstream": "containers/podman",
+        "comments_seen_ids": [
+          "IC_kwDOBoFt0c7nEy6r",
+          "IC_kwDOBoFt0c7nEzfD",
+          "IC_kwDOBoFt0c7nF8xj",
+          "IC_kwDOBoFt0c7nIsyx",
+          "IC_kwDOBoFt0c7nJpDo",
+          "IC_kwDOBoFt0c7nMZm5",
+          "IC_kwDOBoFt0c7nR2IW",
+          "IC_kwDOBoFt0c7nYocS",
+          "IC_kwDOBoFt0c7nYoc7",
+          "IC_kwDOBoFt0c7neWGC",
+          "IC_kwDOBoFt0c7nswnu"
+        ]
       },
       {
         "repo": "podman-desktop/podman-desktop",
         "issue_number": 16147,
         "title": "feat: Add container resource usage trends and historical metrics",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
         "upstream": "podman-desktop/podman-desktop"
       },
@@ -682,7 +703,7 @@
         "repo": "ansible/eda-server",
         "issue_number": 1470,
         "title": "feat: Add rulebook simulation and dry-run mode for testing",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
         "upstream": "ansible/eda-server"
       },
@@ -690,15 +711,19 @@
         "repo": "ansible/ansible-builder",
         "issue_number": 772,
         "title": "feat: Add dependency conflict detection and resolution suggestions",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
-        "upstream": "ansible/ansible-builder"
+        "upstream": "ansible/ansible-builder",
+        "comments_seen_ids": [
+          "IC_kwDODqIFc87m6P7O",
+          "IC_kwDODqIFc87nYpdn"
+        ]
       },
       {
         "repo": "linuxmint/nemo-extensions",
         "issue_number": 573,
         "title": "feat: Add bulk file metadata editor extension for media files",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
         "upstream": "linuxmint/nemo-extensions"
       },
@@ -706,15 +731,21 @@
         "repo": "theotherp/nzbhydra2",
         "issue_number": 1041,
         "title": "feat: Add duplicate release detection and smart filtering",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
-        "upstream": "theotherp/nzbhydra2"
+        "upstream": "theotherp/nzbhydra2",
+        "comments_seen_ids": [
+          "IC_kwDOBi0O0c7m8x1D",
+          "IC_kwDOBi0O0c7m__EO",
+          "IC_kwDOBi0O0c7nSgdg",
+          "IC_kwDOBi0O0c7nswva"
+        ]
       },
       {
         "repo": "WiringPi/WiringPi",
         "issue_number": 418,
         "title": "feat: Add GPIO state persistence and restore functionality",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-09",
         "upstream": "WiringPi/WiringPi"
       },
@@ -722,7 +753,7 @@
         "repo": "ansible/ansible-compat",
         "issue_number": 558,
         "title": "feat: Add runtime Ansible version compatibility checker",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10",
         "upstream": "ansible/ansible-compat"
       },
@@ -730,7 +761,7 @@
         "repo": "ansible/ansible-runner",
         "issue_number": 1478,
         "title": "feat: Add job execution history and replay capability",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10",
         "upstream": "ansible/ansible-runner"
       },
@@ -738,7 +769,7 @@
         "repo": "ansible/ansible-creator",
         "issue_number": 516,
         "title": "feat: Add interactive template customization wizard",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10",
         "upstream": "ansible/ansible-creator"
       },
@@ -746,7 +777,7 @@
         "repo": "containers/podman-compose",
         "issue_number": 1388,
         "title": "feat: Add compose file validation and compatibility checker",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10",
         "upstream": "containers/podman-compose"
       },
@@ -754,7 +785,7 @@
         "repo": "RedHatInsights/insights-chrome",
         "issue_number": 3367,
         "title": "feat: Add performance monitoring and page load metrics dashboard",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10",
         "upstream": "RedHatInsights/insights-chrome"
       },
@@ -762,47 +793,68 @@
         "repo": "zed-industries/zed",
         "issue_number": 48841,
         "title": "feat: Add integrated code review and diff comment annotations",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10",
-        "upstream": "zed-industries/zed"
+        "upstream": "zed-industries/zed",
+        "comments_seen_ids": [
+          "IC_kwDOFExXwM7nBwK8",
+          "IC_kwDOFExXwM7nSgfQ"
+        ]
       },
       {
         "repo": "etcd-io/etcd",
         "issue_number": 21283,
         "title": "feat: Add built-in backup verification and integrity testing",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10",
-        "upstream": "etcd-io/etcd"
+        "upstream": "etcd-io/etcd",
+        "comments_seen_ids": [
+          "IC_kwDOAKtHts7nCLuB",
+          "IC_kwDOAKtHts7nYpeV",
+          "IC_kwDOAKtHts7nsw11"
+        ]
       },
       {
         "repo": "asterisk/asterisk",
         "issue_number": 1763,
         "title": "feat: Add native WebRTC SFU mode for scalable conferencing",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10",
-        "upstream": "asterisk/asterisk"
+        "upstream": "asterisk/asterisk",
+        "comments_seen_ids": [
+          "IC_kwDOAgOC1c7m-SBh",
+          "IC_kwDOAgOC1c7nDOIj"
+        ]
       },
       {
         "repo": "squizlabs/PHP_CodeSniffer",
         "issue_number": 3968,
         "title": "feat: Add incremental scanning for faster CI/CD pipeline integration",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10",
-        "upstream": "squizlabs/PHP_CodeSniffer"
+        "upstream": "squizlabs/PHP_CodeSniffer",
+        "comments_seen_ids": [
+          "IC_kwDOACkyn87nC95W",
+          "IC_kwDOACkyn87nZbS1"
+        ]
       },
       {
         "repo": "webpack/webpack",
         "issue_number": 20435,
         "title": "feat: Add build performance profiling and optimization suggestions",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10",
-        "upstream": "webpack/webpack"
+        "upstream": "webpack/webpack",
+        "comments_seen_ids": [
+          "IC_kwDOADgiC87nGXmk",
+          "IC_kwDOADgiC87nSghS"
+        ]
       },
       {
         "repo": "RedHatInsights/frontend-operator",
         "issue_number": 528,
         "title": "feat: Add automated frontend bundle health checks and rollback",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10T06:34:00Z",
         "upstream": "RedHatInsights/frontend-operator"
       },
@@ -810,7 +862,7 @@
         "repo": "ansible/tower",
         "issue_number": 7294,
         "title": "feat: Add job template dependency graph visualization",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10T06:34:00Z",
         "upstream": "ansible/tower"
       },
@@ -818,7 +870,7 @@
         "repo": "ansible/pytest-ansible",
         "issue_number": 545,
         "title": "feat: Add automatic fixture generation from Ansible inventory",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10T06:34:00Z",
         "upstream": "ansible/pytest-ansible"
       },
@@ -826,7 +878,7 @@
         "repo": "ansible/event-driven-ansible",
         "issue_number": 508,
         "title": "feat: Add event replay and time-travel debugging for rulebook development",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10T06:34:00Z",
         "upstream": "ansible/event-driven-ansible"
       },
@@ -834,7 +886,7 @@
         "repo": "FreePBX/core",
         "issue_number": 173,
         "title": "feat: Add bulk extension import/export with validation and rollback",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10T10:30:00Z",
         "upstream": "FreePBX/core"
       },
@@ -842,7 +894,7 @@
         "repo": "rembo10/headphones",
         "issue_number": 3400,
         "title": "feat: Add integration with music streaming APIs for discovery and metadata enrichment",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10T10:30:00Z",
         "upstream": "rembo10/headphones"
       },
@@ -850,68 +902,81 @@
         "upstream": "DimitriFourny/seedmage",
         "issue_number": 8,
         "title": "feat: add tracker response simulation for private trackers",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10T21:25:26Z"
       },
       {
         "upstream": "gnome-terminator/terminator",
         "issue_number": 1061,
         "title": "feat: add session autosave and crash recovery",
-        "status": "open",
-        "created_at": "2026-02-10T21:25:26Z"
+        "status": "closed",
+        "created_at": "2026-02-10T21:25:26Z",
+        "comments_seen_ids": [
+          "IC_kwDODwi0d87nWK8y",
+          "IC_kwDODwi0d87nYpfo"
+        ]
       },
       {
         "upstream": "micheleg/dash-to-dock",
         "issue_number": 2498,
         "title": "feat: add window preview thumbnails on hover",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10T21:25:26Z"
       },
       {
         "upstream": "nicolasff/webdis",
         "issue_number": 266,
         "title": "feat: add request rate limiting per client IP",
-        "status": "open",
-        "created_at": "2026-02-10T21:25:26Z"
+        "status": "closed",
+        "created_at": "2026-02-10T21:25:26Z",
+        "comments_seen_ids": [
+          "IC_kwDOABITps7nclRP",
+          "IC_kwDOABITps7ndW5i"
+        ]
       },
       {
         "upstream": "rootpd/go-binance",
         "issue_number": 14,
         "title": "feat: add automatic exponential backoff for rate limit handling",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10T21:25:26Z"
       },
       {
         "upstream": "benthomasson/dataverse-integration",
         "issue_number": 7,
         "title": "feat: add data quality validation checks for telemetry schema compatibility",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-10T21:25:26Z"
       },
       {
         "upstream": "infusion/PHP-Daemon",
         "issue_number": 9,
         "title": "feat: Add status monitoring and health check support",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-11T00:30:54.645302+00:00"
       },
       {
         "upstream": "RedHatInsights/insights-client",
         "issue_number": 644,
         "title": "feat: add dry-run mode with validation report",
-        "status": "open"
+        "status": "closed",
+        "comments_seen_ids": [
+          "IC_kwDOBXV2P87nafNV",
+          "IC_kwDOBXV2P87na6BF",
+          "IC_kwDOBXV2P87nsw8g"
+        ]
       },
       {
         "upstream": "RedHatInsights/insights-host-inventory",
         "issue_number": 3543,
         "title": "feat: add host inventory bulk export with filtering",
-        "status": "open"
+        "status": "closed"
       },
       {
         "repo": "KittyCatTech/cryptopia-api-php",
         "issue_number": 13,
         "title": "Add built-in request rate limiting to prevent API throttling",
-        "status": "open",
+        "status": "closed",
         "upstream": "KittyCatTech/cryptopia-api-php",
         "created_at": "2026-02-11T10:52:04Z"
       },
@@ -919,22 +984,26 @@
         "upstream": "RedHatInsights/bonfire-tekton",
         "issue_number": 88,
         "title": "Add pipeline failure diagnostics and debug mode",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-11T14:03:33Z"
       },
       {
         "upstream": "RedHatInsights/ccx-notification-service",
         "issue_number": 1059,
         "title": "Add notification batching and digest mode",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-11T14:03:42Z"
       },
       {
         "upstream": "RedHatInsights/chrome-service-backend",
         "issue_number": 1030,
         "title": "Add navigation config validation endpoint",
-        "status": "open",
-        "created_at": "2026-02-11T14:03:50Z"
+        "status": "closed",
+        "created_at": "2026-02-11T14:03:50Z",
+        "comments_seen_ids": [
+          "IC_kwDOHsgN5s7njago",
+          "IC_kwDOHsgN5s7n2Dff"
+        ]
       },
       {
         "upstream": "RedHatInsights/content-service",
