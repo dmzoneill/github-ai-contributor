@@ -18,7 +18,7 @@
       "rootpd/go-binance": 1,
       "WiringPi/WiringPi": 1,
       "nicolasff/webdis": 1,
-      "FreePBX/core": 1,
+      "FreePBX/core": 2,
       "DimitriFourny/seedmage": 1,
       "rembo10/headphones": 1,
       "ansible/django-ansible-base": 1,
@@ -44,7 +44,8 @@
         "status": "open",
         "ci_status": "no_checks",
         "upstream": "ansible/awx",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555100+00:00"
       },
       {
         "repo": "ansible/awx",
@@ -59,7 +60,8 @@
           "IC_kwDOBXWdec5zvPrn",
           "IC_kwDOBXWdec5zkluE"
         ],
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555121+00:00"
       },
       {
         "repo": "ansible/awx",
@@ -69,7 +71,8 @@
         "status": "open",
         "ci_status": "no_checks",
         "upstream": "ansible/awx",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555127+00:00"
       },
       {
         "repo": "benthomasson/dataverse-integration",
@@ -79,7 +82,8 @@
         "status": "open",
         "ci_status": "no_checks",
         "upstream": "benthomasson/dataverse-integration",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555131+00:00"
       },
       {
         "repo": "linuxmint/nemo-extensions",
@@ -91,7 +95,8 @@
         "created_at": "2026-02-09T20:35:00Z",
         "ci_status": "no_checks",
         "upstream": "linuxmint/nemo-extensions",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555136+00:00"
       },
       {
         "repo": "micheleg/dash-to-dock",
@@ -107,7 +112,8 @@
           "IC_kwDOAEG9EM7nxmnh",
           "IC_kwDOAEG9EM7nyTfL"
         ],
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555140+00:00"
       },
       {
         "repo": "deluge-torrent/deluge",
@@ -120,7 +126,8 @@
         "fork": "dmzoneill-forks/deluge",
         "ci_status": "no_checks",
         "upstream": "deluge-torrent/deluge",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555144+00:00"
       },
       {
         "repo": "deluge-torrent/deluge",
@@ -133,7 +140,8 @@
         "fork": "dmzoneill-forks/deluge",
         "ci_status": "no_checks",
         "upstream": "deluge-torrent/deluge",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555148+00:00"
       },
       {
         "repo": "rootpd/go-binance",
@@ -147,7 +155,8 @@
         "fork": "dmzoneill-forks/go-binance",
         "ci_status": "no_checks",
         "upstream": "rootpd/go-binance",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555152+00:00"
       },
       {
         "repo": "WiringPi/WiringPi",
@@ -161,7 +170,8 @@
         "fork": "dmzoneill-forks/WiringPi",
         "ci_status": "no_checks",
         "upstream": "WiringPi/WiringPi",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555156+00:00"
       },
       {
         "repo": "nicolasff/webdis",
@@ -175,7 +185,8 @@
         "fork": "dmzoneill-forks/webdis",
         "ci_status": "no_checks",
         "upstream": "nicolasff/webdis",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555160+00:00"
       },
       {
         "repo": "FreePBX/core",
@@ -193,7 +204,8 @@
           "IC_kwDOAO_Ows7m-qyC",
           "IC_kwDOAO_Ows7m90zz"
         ],
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555164+00:00"
       },
       {
         "repo": "RedHatInsights/bonfire",
@@ -207,7 +219,8 @@
         "fork": "Redhat-forks/bonfire",
         "ci_status": "passing",
         "upstream": "RedHatInsights/bonfire",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555167+00:00"
       },
       {
         "repo": "ansible/ansible-lint",
@@ -221,7 +234,8 @@
         "fork": "Redhat-forks/ansible-lint",
         "ci_status": "passing",
         "upstream": "ansible/ansible-lint",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555172+00:00"
       },
       {
         "repo": "ansible/ansible-lint",
@@ -235,7 +249,8 @@
         "fork": "Redhat-forks/ansible-lint",
         "ci_status": "passing",
         "upstream": "ansible/ansible-lint",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555179+00:00"
       },
       {
         "repo": "gnome-terminator/terminator",
@@ -249,7 +264,8 @@
         "fork": "dmzoneill-forks/terminator",
         "ci_status": "passing",
         "upstream": "gnome-terminator/terminator",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555183+00:00"
       },
       {
         "repo": "gnome-terminator/terminator",
@@ -263,7 +279,8 @@
         "fork": "dmzoneill-forks/terminator",
         "ci_status": "passing",
         "upstream": "gnome-terminator/terminator",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555187+00:00"
       },
       {
         "repo": "DimitriFourny/seedmage",
@@ -277,7 +294,8 @@
         "fork": "dmzoneill-forks/seedmage",
         "ci_status": "no_checks",
         "upstream": "DimitriFourny/seedmage",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555191+00:00"
       },
       {
         "repo": "ansible/django-ansible-base",
@@ -298,7 +316,8 @@
         ],
         "last_ci_fix": "2026-02-11T22:58:59.888612+00:00",
         "notes": "DVCS check requires JIRA ticket - asked maintainers for guidance",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555195+00:00"
       },
       {
         "upstream": "rembo10/headphones",
@@ -310,7 +329,8 @@
         "created_at": "2026-02-10T16:51:25Z",
         "ci_status": "no_checks",
         "comments_seen_ids": [],
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555201+00:00"
       },
       {
         "repo": "KittyCatTech/cryptopia-api-php",
@@ -322,7 +342,8 @@
         "created_at": "2026-02-10T21:25:26Z",
         "ci_status": "no_checks",
         "upstream": "KittyCatTech/cryptopia-api-php",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555205+00:00"
       },
       {
         "upstream": "infusion/PHP-Daemon",
@@ -336,7 +357,8 @@
         "created_at": "2026-02-10T23:18:00Z",
         "comments_seen_ids": [],
         "ci_status": "no_checks",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555209+00:00"
       },
       {
         "upstream": "rembo10/headphones",
@@ -349,7 +371,8 @@
         "comments_seen_ids": [],
         "ci_status": "no_checks",
         "review_state": "pending",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555213+00:00"
       },
       {
         "upstream": "rootpd/go-binance",
@@ -362,7 +385,8 @@
         "status": "open",
         "ci_status": "no_checks",
         "comments_seen_ids": [],
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555217+00:00"
       },
       {
         "upstream": "grumpyp/blogging-with-ai",
@@ -376,7 +400,8 @@
         "comments_seen_ids": [],
         "ci_status": "no_checks",
         "last_ci_fix": "2026-02-11T22:58:59.888612+00:00",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555221+00:00"
       },
       {
         "upstream": "RABCbot/door-butler",
@@ -390,7 +415,8 @@
         "comments_seen_ids": [],
         "created_at": "2026-02-11T15:28:00Z",
         "last_ci_fix": "2026-02-11T22:58:59.888612+00:00",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555225+00:00"
       },
       {
         "upstream": "ansible/awx",
@@ -408,7 +434,8 @@
           "PRR_kwDOBXWdec7iBxqz"
         ],
         "last_checked": "2026-02-12T15:26:17.699Z",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555229+00:00"
       },
       {
         "upstream": "gnome-terminator/terminator",
@@ -421,7 +448,8 @@
         "ci_status": "passing",
         "repo": "gnome-terminator/terminator",
         "comments_seen_ids": [],
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555233+00:00"
       },
       {
         "upstream": "ansible/ansible-dev-environment",
@@ -431,10 +459,11 @@
         "branch": "fix/issue-349-exit-status-warning",
         "title": "fix: change config update messages from warning to note",
         "created_at": "2026-02-11T22:58:59.888612+00:00",
-        "ci_status": "unknown",
+        "ci_status": "passing",
         "comments_seen_ids": [],
         "status": "open",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555237+00:00"
       },
       {
         "upstream": "Freenove/Freenove_RFID_Starter_Kit_for_Raspberry_Pi",
@@ -446,8 +475,9 @@
         "status": "open",
         "created_at": "2026-02-12T04:00:00Z",
         "comments_seen_ids": [],
-        "ci_status": "pending",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_status": "no_checks",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555240+00:00"
       },
       {
         "upstream": "Ileriayo/markdown-badges",
@@ -459,8 +489,9 @@
         "status": "open",
         "created_at": "2026-02-12T04:00:00Z",
         "comments_seen_ids": [],
-        "ci_status": "pending",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_status": "no_checks",
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555244+00:00"
       },
       {
         "upstream": "ansible/ansible-creator",
@@ -470,12 +501,25 @@
         "status": "open",
         "fixes_issue": 514,
         "created_at": "2026-02-12T14:05:03Z",
-        "ci_status": "unknown",
+        "ci_status": "passing",
         "repo": "ansible/ansible-creator",
         "comments_seen_ids": [],
         "branch": "fix/issue-514-package-data-resources",
         "fork": "Redhat-forks/ansible-creator",
-        "ci_last_checked": "2026-02-12T15:26:17.699Z"
+        "ci_last_checked": "2026-02-12T15:26:17.699Z",
+        "last_ci_check": "2026-02-12T18:28:48.555248+00:00"
+      },
+      {
+        "upstream": "FreePBX/core",
+        "fork": "dmzoneill-forks/core",
+        "pr_number": 177,
+        "issue_number": 176,
+        "branch": "fix/bug-176-xss-extdisplay",
+        "title": "fix: sanitize extdisplay parameter to prevent XSS",
+        "created_at": "2026-02-12T18:26:00Z",
+        "ci_status": "unknown",
+        "comments_seen_ids": [],
+        "type": "bug_fix"
       }
     ],
     "closed_prs": [
@@ -1192,7 +1236,10 @@
         "issue_number": 16578,
         "title": "add rate limit status to indexer health checks",
         "status": "open",
-        "created_at": "2026-02-12T16:55:57Z"
+        "created_at": "2026-02-12T16:55:57Z",
+        "comments_seen_ids": [
+          "IC_kwDOArGhXs7n_YHM"
+        ]
       }
     ],
     "attempted_issues": [
@@ -1826,16 +1873,14 @@
           "thumbnailer",
           "thumbnail-generator"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:21:58.746517+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "linuxmint/nemo-extensions": {
         "language": "C",
         "default_branch": "master",
         "description": "A set of extensions for Nemo",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:08.609821+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "micheleg/dash-to-dock": {
         "language": "JavaScript",
@@ -1846,8 +1891,7 @@
           "gnome",
           "linux"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:00.204101+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "gnome-terminator/terminator": {
         "language": "Python",
@@ -1860,16 +1904,14 @@
           "linux",
           "gtk"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:05.090468+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "SynoCommunity/spksrc": {
         "language": "C",
         "default_branch": "master",
-        "description": "Cross compilation framework to create native packages for the Synology'''s NAS",
+        "description": "Cross compilation framework to create native packages for the Synology's NAS",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:20:18.796069Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "etcd-io/etcd": {
         "language": "Go",
@@ -1887,8 +1929,7 @@
           "distributed-database",
           "cncf"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:24.118589+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "squizlabs/PHP_CodeSniffer": {
         "language": "PHP",
@@ -1902,8 +1943,7 @@
           "qa",
           "static-analysis"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:01.205394+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ccxt/node-binance-api": {
         "language": "TypeScript",
@@ -1919,13 +1959,12 @@
           "crypto",
           "trading"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:15.099476+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "all-contributors/allcontributors.org": {
         "language": "MDX",
         "default_branch": "main",
-        "description": "✨ The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code ✨",
+        "description": "\u2728 The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code \u2728",
         "topics": [
           "contributors",
           "all-contributors",
@@ -1935,48 +1974,42 @@
           "acknowledgements",
           "recognition"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:13.513982+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "sebastianheinz/stockprediction": {
         "language": "Python",
         "default_branch": "master",
         "description": "Data and code of my Medium story on stock prediction with TensorFlow",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:25.738681+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "where-are-the-faces/binance-enhancement-suite": {
         "language": "JavaScript",
         "default_branch": "master",
         "description": "Chrome extension that provides UI enhancements for the Binance cryptocurrency trading exchange",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:24.639287+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "binance-exchange/binance-java-api": {
         "language": "Java",
         "default_branch": "master",
         "description": "binance-java-api is a lightweight Java library for the Binance API, supporting synchronous and asynchronous requests, as well as event streaming using WebSockets.",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:12.895144+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "rootpd/go-binance": {
         "language": "Go",
         "default_branch": "master",
         "description": "Go wrapper for Binance API",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:21:59.735512+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "akalongman/fmt": {
         "language": "PHP",
         "default_branch": "master",
         "description": "Tooling for PHP - testing, code coverage and formatting",
         "topics": [],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:22:26.236993+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "Superbalist/php-pubsub-redis": {
         "language": "PHP",
@@ -1989,40 +2022,35 @@
           "superbalist",
           "redis"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:20:11Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "infusion/PHP-Daemon": {
         "language": "PHP",
         "default_branch": "master",
-        "description": "",
+        "description": null,
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:01.722974+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "KittyCatTech/cryptopia-api-php": {
         "language": "PHP",
         "default_branch": "master",
         "description": "Cryptopia API Wrapper in PHP and Sample Trading Bot",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:29Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "kubernetes-retired/contrib": {
         "language": "Go",
         "default_branch": "master",
         "description": "[EOL] This is a place for various components in the Kubernetes ecosystem that aren't part of the Kubernetes core.",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:12.402037+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "binance-exchange/binance-official-api-docs": {
         "language": null,
         "default_branch": "master",
         "description": "Official Documentation for the Binance APIs and Streams",
         "topics": [],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:22:23.491705+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "nicolasff/webdis": {
         "language": "C",
@@ -2035,8 +2063,7 @@
           "json",
           "websocket"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:07.132810+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "docker-archive/docker-ce": {
         "language": "Go",
@@ -2048,24 +2075,21 @@
           "moby",
           "golang"
         ],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:22:16.026405+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "openSUSE/trollolo": {
         "language": "Ruby",
         "default_branch": "master",
         "description": "Trello command line client",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:10.579469+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "pablobs/filebot": {
         "language": "Java",
         "default_branch": "master",
         "description": "FileBot",
         "topics": [],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:22:22.996062+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "Jackett/Jackett": {
         "language": "C#",
@@ -2081,20 +2105,9 @@
           "couchpotato",
           "sonarr",
           "indexer",
-          "radarr",
-          "medusa",
-          "lidarr",
-          "duckietv",
-          "api",
-          "jackett",
-          "trackers",
-          "proxy",
-          "mylar3",
-          "nefarious",
-          "hacktoberfest"
+          "radarr"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:29Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "firecat53/dockerfiles": {
         "language": "Dockerfile",
@@ -2110,24 +2123,16 @@
           "gollum-wiki",
           "transmission",
           "unifi-controller",
-          "miniflux",
-          "sabnzbd",
-          "sonarr-pvr",
-          "syncthing",
-          "plex",
-          "qbittorrent",
-          "self-hosted"
+          "miniflux"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:18.166288+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "Sonarr/Sonarr": {
         "language": "C#",
         "default_branch": "v5-develop",
         "description": "Smart PVR for newsgroup and bittorrent users.",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:20:10Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "deluge-torrent/deluge": {
         "language": "Python",
@@ -2141,16 +2146,14 @@
           "extjs",
           "gtk"
         ],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:22:08.131889+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "rembo10/headphones": {
         "language": "Python",
         "default_branch": "master",
         "description": "Automatic music downloader for SABnzbd",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:00.648530+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "theotherp/nzbhydra2": {
         "language": "JavaScript",
@@ -2161,24 +2164,21 @@
           "usenet",
           "metasearch"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:04.451097+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "Freenove/Freenove_RFID_Starter_Kit_for_Raspberry_Pi": {
         "language": "Processing",
         "default_branch": "master",
         "description": "Apply to FNK0025",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:27Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "WiringPi/WiringPi": {
         "language": "C",
         "default_branch": "master",
         "description": "The arguably fastest GPIO Library for the Raspberry Pi",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:07.610441+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "asterisk/asterisk": {
         "language": "C",
@@ -2205,32 +2205,28 @@
         "default_branch": "release/17.0",
         "description": "Module of FreePBX (Core) :: ",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:26Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "PicoI2/raspberry-pi-intercom": {
         "language": "C++",
         "default_branch": "master",
         "description": "All you need to make an intercom with raspberry pi (not finished yet)",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:31Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "RABCbot/door-butler": {
         "language": "Python",
         "default_branch": "master",
         "description": "Raspberry Pi door video/audio intercom",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:32Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "mapuo/intercom": {
         "language": "Erlang",
         "default_branch": "master",
         "description": "Intercom system for Raspberry Pi",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:06.027481+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "r0bs/doorbell-pi": {
         "language": "Python",
@@ -2243,8 +2239,7 @@
           "telegram-bot",
           "home-automation"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:25.164417+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "motom001/DoorPi": {
         "language": "Python",
@@ -2260,8 +2255,7 @@
           "iot",
           "door-intercomstation"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:22.517019+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "sboily/incrediblepbx": {
         "language": "PHP",
@@ -2272,16 +2266,14 @@
           "php7",
           "wazo-platform"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:14.593851+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "timsavage/asyncmock": {
         "language": "Python",
         "default_branch": "master",
         "description": "Awaitable mocks for async code. (For Python 3.6+, use the new builtin AsyncMock or Mock>=4.0)",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:16.501427+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "sickcodes/Docker-OSX": {
         "language": "Shell",
@@ -2299,8 +2291,7 @@
           "os",
           "x"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:14.082443+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "DimitriFourny/seedmage": {
         "language": "Python",
@@ -2309,8 +2300,7 @@
         "topics": [
           "torrent"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:25Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "trossr32/sonarr-radarr-lidarr-autosearch-browser-extension": {
         "language": "JavaScript",
@@ -2326,51 +2316,37 @@
           "extension-edge",
           "search",
           "context-menu",
-          "firefox-addon",
-          "firefox-extension",
-          "firefox",
-          "chrome-extension",
-          "edge-extension",
-          "trakt",
-          "trakt-tv",
-          "tmdb",
-          "tvdb",
-          "imdb",
-          "chromium-microsoft-edge"
+          "firefox-addon"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:11.366458+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "linuxserver/docker-deluge": {
         "language": "Dockerfile",
         "default_branch": "master",
-        "description": "",
+        "description": null,
         "topics": [
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:10.043181+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "dimqua/Amazon-video-downloader": {
         "language": "Python",
         "default_branch": "main",
-        "description": "",
+        "description": null,
         "topics": [],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:22:21.955097+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "filebot/scripts": {
         "language": "Groovy",
         "default_branch": "master",
         "description": "Groovy Scripts for FileBot",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:21.462297+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "mikeeq/mbp-fedora": {
         "language": "Shell",
         "default_branch": "main",
-        "description": "",
+        "description": null,
         "topics": [
           "fedora",
           "linux",
@@ -2381,20 +2357,9 @@
           "2019",
           "2018",
           "touchbar",
-          "iso",
-          "os",
-          "operating-system",
-          "kernel",
-          "operating",
-          "system",
-          "operatingsystem",
-          "anaconda",
-          "redhat",
-          "2020",
-          "mbp"
+          "iso"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:17.065841+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "webpack/webpack": {
         "language": "JavaScript",
@@ -2410,16 +2375,9 @@
           "web",
           "web-performance",
           "compiler",
-          "javascript-compiler",
-          "commonjs",
-          "amd",
-          "esm",
-          "es6",
-          "es2015",
-          "javascript-modules"
+          "javascript-compiler"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:03.843351+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "Ileriayo/markdown-badges": {
         "language": "SCSS",
@@ -2434,8 +2392,7 @@
           "markdown",
           "badges-markdown"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:28Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "progfay/shields-with-icon": {
         "language": "Go",
@@ -2445,24 +2402,21 @@
           "badges",
           "shields-io"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:15.571152+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "Lekhak123/text-to-img-craiyon-scrapper": {
         "language": "JavaScript",
         "default_branch": "main",
         "description": "A npm package that extracts ai generated image from Craiyon website and returns base64 of the image",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:30Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "fregante/chrome-webstore-upload-cli": {
         "language": "JavaScript",
         "default_branch": "main",
         "description": "CLI tool to upload Chrome Extensions to the Chrome Web Store",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:19.702349+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "alexzorin/authy": {
         "language": "Go",
@@ -2473,21 +2427,19 @@
           "totp",
           "golang"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:19.207112+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "grumpyp/blogging-with-ai": {
         "language": "Python",
         "default_branch": "main",
         "description": "Introducing AI-blogger, a cutting-edge tool that utilizes OpenAI API, WordPress, and Python to simplify the process of creating blog posts. Generate high-quality, engaging content in seconds with the help of advanced AI capabilities that understand and analyze your topic. ",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:03.216381+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "jlowin/fastmcp": {
         "language": "Python",
         "default_branch": "main",
-        "description": "🚀 The fast, Pythonic way to build MCP servers and clients",
+        "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients",
         "topics": [
           "model-context-protocol",
           "fastmcp",
@@ -2499,21 +2451,19 @@
           "mcp-tools",
           "python"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:22:02.230174+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "zed-industries/zed": {
         "language": "Rust",
         "default_branch": "main",
-        "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "description": "Code at the speed of thought \u2013 Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
         "topics": [
           "text-editor",
           "zed",
           "gpui",
           "rust-lang"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:21:59.277383+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "microsoft/vscode": {
         "language": "TypeScript",
@@ -2521,11 +2471,12 @@
         "description": "Visual Studio Code",
         "topics": [
           "editor",
+          "electron",
+          "visual-studio-code",
           "typescript",
-          "vscode"
+          "microsoft"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:20:18.796085Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/ansible": {
         "language": "Python",
@@ -2552,8 +2503,7 @@
           "reactjs",
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:41.566014+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "agrahn/Android-Password-Store": {
         "language": "Kotlin",
@@ -2565,32 +2515,28 @@
           "password-manager",
           "password-store"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:21:57.563563+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "RedHatInsights/bonfire": {
         "language": "Python",
         "default_branch": "master",
         "description": "Orchestrates ephemeral environments for testing cloud.redhat.com applications",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:33Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "RedHatInsights/tower-analytics-frontend": {
         "language": "TypeScript",
         "default_branch": "devel",
         "description": "Automation Analytics provides data analytics for Ansible Tower that provides visualization and insight into how automation is used in your organization.",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:20:03Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "RedHatInsights/insights-frontend-builder-common": {
         "language": "Python",
         "default_branch": "master",
         "description": "Common stuff for the frontend builder",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:51Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "RedHatInsights/clowder": {
         "language": "Go",
@@ -2601,24 +2547,21 @@
           "operator-sdk",
           "redhat"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:37Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "RedHatInsights/edge-api": {
         "language": "Go",
         "default_branch": "main",
         "description": "An API server for fleet edge management capabilities",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:42Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "RedHatInsights/edge-frontend": {
         "language": "JavaScript",
         "default_branch": "master",
-        "description": "",
+        "description": null,
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:43Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/galaxy_ng": {
         "language": "Python",
@@ -2629,50 +2572,44 @@
           "python",
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:23:36.099365+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "RedHatInsights/insights-analytics-collector": {
         "language": "Python",
         "default_branch": "main",
-        "description": "",
+        "description": null,
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:48Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "app-sre/qontract-schemas": {
         "language": "Python",
         "default_branch": "main",
-        "description": "",
+        "description": null,
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:38.163478+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "RedHatInsights/insights-ingress-go": {
         "language": "Go",
         "default_branch": "master",
-        "description": "",
+        "description": null,
         "topics": [
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:53Z"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/tower": {
         "language": "Python",
         "default_branch": "devel",
         "description": "Ansible Tower",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:40.331011+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/django-ansible-base": {
         "language": "Python",
         "default_branch": "devel",
-        "description": "",
+        "description": "A Django reusable app for building Ansible applications",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:23:42.659812+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/ansible-sign": {
         "language": "Python",
@@ -2718,7 +2655,7 @@
       "ansible/awx-operator": {
         "language": "Jinja",
         "default_branch": "devel",
-        "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. 🤖",
+        "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. \ud83e\udd16",
         "topics": [
           "awx-operator",
           "awx",
@@ -2837,8 +2774,7 @@
         "default_branch": "devel",
         "description": "Project Receptor is a flexible multi-service relayer with remote execution and orchestration capabilities linking controllers with executors across a mesh of nodes.",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:00.012929+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/handbook": {
         "language": "Jinja",
@@ -2862,15 +2798,11 @@
       "ansible/ansible-dev-tools": {
         "language": "Python",
         "default_branch": "main",
-        "description": "Ansible automation developer tools",
+        "description": "Ansible Dev Tools (ADT) - a Python package that installs Ansible-related development packages",
         "topics": [
-          "ansible-dev-tools",
-          "hacktoberfest",
-          "ansible-execution-environment",
-          "openshift-devspaces"
+          "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:03.177051+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/platform-services-utilities": {
         "language": "Python",
@@ -3021,7 +2953,7 @@
       "podman-desktop/podman-desktop": {
         "language": "TypeScript",
         "default_branch": "main",
-        "description": "Podman Desktop is the best free and open source tool to work with Containers and Kubernetes for developers. Get an intuitive and user-friendly interface to effortlessly build, manage, and deploy containers and Kubernetes — all from your desktop.",
+        "description": "Podman Desktop is the best free and open source tool to work with Containers and Kubernetes for developers. Get an intuitive and user-friendly interface to effortlessly build, manage, and deploy containers and Kubernetes \u2014 all from your desktop.",
         "topics": [
           "containers",
           "ui",
@@ -3368,10 +3300,9 @@
       "ansible/ansible-rulebook": {
         "language": "Python",
         "default_branch": "main",
-        "description": "",
+        "description": "The Ansible Rulebook CLI. The Ansible rulebook plugin for running Event-Driven Ansible",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:59.471070+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/ansible-chatbot-stack": {
         "language": "Python",
@@ -3406,13 +3337,12 @@
       "ansible/team-devtools": {
         "language": "Python",
         "default_branch": "main",
-        "description": "Shared practices, workflows and decisions impacting Ansible devtools projects",
+        "description": "Repository for tracking team-devtools projects",
         "topics": [
           "ansible-devtools",
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:25:03.913199+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/actions": {
         "language": "Python",
@@ -3421,32 +3351,28 @@
         "topics": [
           "github-actions"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:25:04.960343+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/galaxy-importer": {
         "language": "Python",
         "default_branch": "master",
         "description": "Galaxy content importer",
         "topics": [],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:25:05.958308+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/gh-action-record-test-results": {
         "language": null,
         "default_branch": "main",
-        "description": "",
+        "description": null,
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:25:07.924678+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/ansible.platform": {
         "language": "Python",
         "default_branch": "devel",
         "description": "This collection contains modules that can be used to automate the creation of resources on an install of Ansible Automation Platform.",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:25:08.944593+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/pylibssh": {
         "language": "Cython",
@@ -3455,32 +3381,28 @@
         "topics": [
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:25:10.101923+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/tower-qa": {
         "language": "Python",
         "default_branch": "devel",
         "description": "Automation and playbooks for testing Ansible Tower",
         "topics": [],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:25:11.192711+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/terraform-provider-ansible": {
         "language": "Go",
         "default_branch": "main",
         "description": "community terraform provider for ansible",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:25:12.251217+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/metrics-service": {
         "language": "Python",
         "default_branch": "devel",
-        "description": "",
+        "description": null,
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:25:13.329675+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/molecule": {
         "language": "Python",
@@ -3496,12 +3418,9 @@
           "podman",
           "cookiecutter-ansible",
           "hacktoberfest",
-          "supports-dot-config",
-          "pep-621",
-          "ansible-dev-tools"
+          "supports-dot-config"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:25:14.452379+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       },
       "ansible/ansible-backstage-plugins": {
         "language": "TypeScript",
@@ -3515,8 +3434,57 @@
           "developer-experience",
           "idp"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:25:15.569996+00:00"
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
+      },
+      "ansible/automation-analytics": {
+        "language": "Python",
+        "default_branch": "main",
+        "description": "Automation Analytics integration plugin for Ansible and Event-Driven Ansible",
+        "topics": [],
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
+      },
+      "ansible/creator-ee": {
+        "language": "Python",
+        "default_branch": "main",
+        "description": "Ansible Creator Execution Environment",
+        "topics": [],
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
+      },
+      "ansible/lightspeed-service": {
+        "language": "Python",
+        "default_branch": "main",
+        "description": "The backend logic for IBM Watson Code Assistant for Red Hat Ansible Lightspeed",
+        "topics": [
+          "ansible",
+          "ai",
+          "ansible-lightspeed"
+        ],
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
+      },
+      "ReimuNotMoe/ydotool": {
+        "language": "C",
+        "default_branch": "master",
+        "description": "Generic command-line automation tool",
+        "topics": [],
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
+      },
+      "prantlf/ovai": {
+        "language": "Go",
+        "default_branch": "master",
+        "description": "HTTP proxy for accessing Vertex AI with the REST API interface of ollama or OpenAI. Optionally forwarding requests for other models to ollama. Written in Go.",
+        "topics": [
+          "ai",
+          "api-proxy",
+          "google",
+          "ollama",
+          "ollama-api",
+          "ollama-interface",
+          "vertex-ai",
+          "vertexai",
+          "openai",
+          "openai-api"
+        ],
+        "last_profiled": "2026-02-12T18:27:07.823983Z"
       }
     },
     "repo_last_rebased": {
@@ -3859,30 +3827,43 @@
         "bug_type": "operator_precedence",
         "severity": "critical",
         "status": "open"
+      },
+      {
+        "upstream": "FreePBX/core",
+        "fork": "dmzoneill-forks/core",
+        "issue_number": 176,
+        "pr_number": 177,
+        "branch": "fix/bug-176-xss-extdisplay",
+        "title": "fix: sanitize extdisplay parameter to prevent XSS",
+        "file_path": "views/devices.php",
+        "line_number": 2,
+        "bug_type": "xss",
+        "severity": "critical",
+        "status": "open",
+        "created_at": "2026-02-12T18:26:00Z"
       }
     ],
     "last_sync": "2026-02-12T16:56:30Z",
     "last_rebase_sync": "2026-02-12T12:21:32.267387+00:00"
   },
   "last_run": {
-    "timestamp": "2026-02-12T16:56:30.000Z",
-    "iteration": 14,
-    "rate_limit_remaining": 4814,
-    "repos_scanned": 158,
+    "timestamp": "2026-02-12T18:28:48.555269+00:00",
+    "iteration": 15,
+    "rate_limit_remaining": 4845,
+    "repos_scanned": 109,
     "actions_taken": [
-      "Created 9 new feature suggestions across multiple repos",
-      "Monitored 32 open PRs - 9 passing CI, 21 no CI, 2 policy failures",
-      "Synced 149/158 repositories with upstream (94.3% success rate)",
-      "Marked 3 new bot/maintainer comments as seen on ansible/awx#16275",
-      "Scanned 20 repos for high-confidence bug fixes (0 found above 90% threshold)",
-      "Scanned 3 repos for critical security bugs (0 found meeting severity criteria)"
+      "Responded to 1 feature suggestion comment (Jackett/Jackett #16578)",
+      "Monitored 32 open PRs - 8 passing, 22 no CI, 2 policy failures",
+      "Synced 89 repositories with upstream",
+      "Updated 89 repo profiles from GraphQL",
+      "Coding agent evaluated 5 issues (all skipped - low confidence or at PR limit)",
+      "Bug scanner scanned 20 repos, found 1 CRITICAL XSS bug in FreePBX/core, created issue #176 and PR #177"
     ],
     "errors": [],
     "next_run_priorities": [
-      "Monitor 32 open PRs for new comments and CI failures",
+      "Monitor 33 open PRs (including new FreePBX/core bug fix PR)",
       "29 repos at PR limit - wait for merges before new PRs",
-      "Continue scanning for high-confidence issues (>= 90%)",
-      "9 repos failed to sync - manual intervention needed for branch mismatches"
+      "Continue scanning for high-confidence issues >= 90% and critical bugs"
     ]
   }
 }
