@@ -404,7 +404,8 @@
         "repo": "ansible/awx",
         "comments_seen_ids": [
           "IC_kwDOBXWdec7nmx8T",
-          "IC_kwDOBXWdec7nnQTG"
+          "IC_kwDOBXWdec7nnQTG",
+          "PRR_kwDOBXWdec7iBxqz"
         ],
         "last_checked": "2026-02-12T15:26:17.699Z",
         "ci_last_checked": "2026-02-12T15:26:17.699Z"
@@ -1129,6 +1130,69 @@
         "issue_number": 754,
         "title": "Add dead letter queue support for malformed messages",
         "status": "open"
+      },
+      {
+        "upstream": "RedHatInsights/data-pipeline",
+        "issue_number": 15,
+        "title": "add support for dead letter queue to handle failed processing",
+        "status": "open",
+        "created_at": "2026-02-12T16:55:57Z"
+      },
+      {
+        "upstream": "RedHatInsights/bonfire",
+        "issue_number": 533,
+        "title": "add resource usage estimates before environment creation",
+        "status": "open",
+        "created_at": "2026-02-12T16:55:57Z"
+      },
+      {
+        "upstream": "RedHatInsights/frontend-experience-docs",
+        "issue_number": 159,
+        "title": "add search functionality to documentation",
+        "status": "open",
+        "created_at": "2026-02-12T16:55:57Z"
+      },
+      {
+        "upstream": "RedHatInsights/insights-advisor-frontend",
+        "issue_number": 1753,
+        "title": "add bulk remediation action support",
+        "status": "open",
+        "created_at": "2026-02-12T16:55:57Z"
+      },
+      {
+        "upstream": "RedHatInsights/rhc",
+        "issue_number": 348,
+        "title": "add connection health check command",
+        "status": "open",
+        "created_at": "2026-02-12T16:55:57Z"
+      },
+      {
+        "upstream": "FreePBX/core",
+        "issue_number": 175,
+        "title": "add api endpoint for bulk extension management",
+        "status": "open",
+        "created_at": "2026-02-12T16:55:57Z"
+      },
+      {
+        "upstream": "RedHatInsights/sources-api-go",
+        "issue_number": 1172,
+        "title": "add pagination metadata to list endpoints",
+        "status": "open",
+        "created_at": "2026-02-12T16:55:57Z"
+      },
+      {
+        "upstream": "ansible/awx",
+        "issue_number": 16279,
+        "title": "add job template dry-run mode",
+        "status": "open",
+        "created_at": "2026-02-12T16:55:57Z"
+      },
+      {
+        "upstream": "Jackett/Jackett",
+        "issue_number": 16578,
+        "title": "add rate limit status to indexer health checks",
+        "status": "open",
+        "created_at": "2026-02-12T16:55:57Z"
       }
     ],
     "attempted_issues": [
@@ -1739,6 +1803,13 @@
         "decision": "skipped",
         "reason": "Feature request, not a bug fix",
         "evaluated_at": "2026-02-12T07:59:46.850589"
+      },
+      "ReimuNotMoe/ydotool#304": {
+        "title": "Misinterpretation of minus/dash at the start of a type command string",
+        "confidence": 45,
+        "decision": "skipped",
+        "reason": "Not actually a bug - getopt_long already supports '--' to terminate option parsing. This is a documentation/user-education issue, not a code fix.",
+        "evaluated_at": "2026-02-12T16:53:00Z"
       }
     },
     "repo_profiles": {
@@ -3790,29 +3861,28 @@
         "status": "open"
       }
     ],
-    "last_sync": "2026-02-11T17:00:46.840757Z",
+    "last_sync": "2026-02-12T16:56:30Z",
     "last_rebase_sync": "2026-02-12T12:21:32.267387+00:00"
   },
   "last_run": {
-    "timestamp": "2026-02-12T15:26:17.699Z",
-    "iteration": 13,
-    "rate_limit_remaining": 5000,
-    "repos_scanned": 97,
+    "timestamp": "2026-02-12T16:56:30.000Z",
+    "iteration": 14,
+    "rate_limit_remaining": 4814,
+    "repos_scanned": 158,
     "actions_taken": [
-      "Identified 4 merged PRs (removed from tracking)",
-      "Monitored 31 open PRs for CI status (all passing or no CI)",
-      "Synced 84 repositories with upstream (13 failed due to conflicts)",
-      "Marked 2 bot comments as seen on ansible/awx#16275",
-      "Scanned 4 repos for critical bugs (none found)",
-      "Evaluated 3 issues (all below 90% confidence threshold)"
+      "Created 9 new feature suggestions across multiple repos",
+      "Monitored 32 open PRs - 9 passing CI, 21 no CI, 2 policy failures",
+      "Synced 149/158 repositories with upstream (94.3% success rate)",
+      "Marked 3 new bot/maintainer comments as seen on ansible/awx#16275",
+      "Scanned 20 repos for high-confidence bug fixes (0 found above 90% threshold)",
+      "Scanned 3 repos for critical security bugs (0 found meeting severity criteria)"
     ],
-    "errors": [
-      "13 repos failed to sync due to merge conflicts or missing branches"
-    ],
+    "errors": [],
     "next_run_priorities": [
-      "Monitor 32 open PRs for comments and CI failures",
+      "Monitor 32 open PRs for new comments and CI failures",
       "29 repos at PR limit - wait for merges before new PRs",
-      "Continue scanning for high-confidence issues (>= 90%)"
+      "Continue scanning for high-confidence issues (>= 90%)",
+      "9 repos failed to sync - manual intervention needed for branch mismatches"
     ]
   }
 }
