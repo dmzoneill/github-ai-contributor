@@ -219,7 +219,7 @@
         "created_at": "2026-02-10T00:00:00Z",
         "branch": "fix/issue-123-extension-input-type",
         "fork": "dmzoneill-forks/core",
-        "ci_status": "pending_cla",
+        "ci_status": "failing_cla",
         "upstream": "FreePBX/core",
         "comments_seen_ids": [
           "IC_kwDOAO_Ows7m90zz",
@@ -341,7 +341,7 @@
         "created_at": "2026-02-10T09:22:46Z",
         "branch": "fix/issue-770-ldap-log-level",
         "fork": "Redhat-forks/django-ansible-base",
-        "ci_status": "policy_failure",
+        "ci_status": "failing_dvcs",
         "upstream": "ansible/django-ansible-base",
         "comments_seen_ids": [
           "IC_kwDOKi6q-s7nQpgE",
@@ -536,7 +536,7 @@
         "status": "open",
         "created_at": "2026-02-12T04:00:00Z",
         "comments_seen_ids": [],
-        "ci_status": "no_checks",
+        "ci_status": "failing_labeler",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
         "last_ci_check": "2026-02-13T02:30:00.482736+00:00",
         "mergeable": "MERGEABLE"
@@ -566,7 +566,7 @@
         "branch": "fix/bug-176-xss-extdisplay",
         "title": "fix: sanitize extdisplay parameter to prevent XSS",
         "created_at": "2026-02-12T18:26:00Z",
-        "ci_status": "pending_cla",
+        "ci_status": "failing_cla",
         "comments_seen_ids": [
           "IC_kwDOAO_Ows7oBUoq"
         ],
@@ -580,7 +580,7 @@
         "title": "chore(ui): export Icon component from main ui library",
         "url": "https://github.com/podman-desktop/podman-desktop/pull/16220",
         "status": "open",
-        "ci_status": "pending",
+        "ci_status": "failing_dco",
         "upstream": "podman-desktop/podman-desktop",
         "fork": "Redhat-forks/podman-desktop",
         "branch": "fix/issue-16141-export-icon-component",
@@ -1454,9 +1454,9 @@
       "ansible/pytest-ansible#523": {
         "title": "Dependency to ansible-compat package is missing",
         "confidence": 100,
-        "decision": "already_fixed",
-        "reason": "Already fixed by PR #526 (merged 2025-11-12), dependency present in pyproject.toml",
-        "evaluated_at": "2026-02-09T21:20:00Z"
+        "decision": "skipped",
+        "reason": "Already fixed in upstream",
+        "evaluated_at": "2026-02-13T03:55:00Z"
       },
       "ansible/ansible-lint#4946": {
         "title": "Pre-commit hook not supported with Python 3.14",
@@ -1908,11 +1908,11 @@
         "evaluated_at": "2026-02-12T04:02:00Z"
       },
       "alexzorin/authy#24": {
-        "title": "Add reminder to sync time",
+        "title": "Add reminder to sync time in documentation",
         "confidence": 92,
         "decision": "skipped",
-        "reason": "Repository is archived",
-        "evaluated_at": "2026-02-12T04:00:30Z"
+        "reason": "Repository archived - cannot accept PRs",
+        "evaluated_at": "2026-02-13T03:56:00Z"
       },
       "Superbalist/php-pubsub-redis#4": {
         "title": "pub/sub not working",
@@ -5105,7 +5105,11 @@
       "dmzoneill-forks/ovai": "2026-02-13T02:25:19Z",
       "Redhat-forks/bonfire": "2026-02-13T02:23:47Z",
       "Redhat-forks/insights-frontend-builder-common": "2026-02-13T02:23:48Z",
-      "Redhat-forks/insights-ingress-go": "2026-02-13T02:23:52Z"
+      "Redhat-forks/insights-ingress-go": "2026-02-13T02:23:52Z",
+      "RedHatInsights/bonfire": "2026-02-13T03:58:28.469870+00:00",
+      "ansible/django-ansible-base": "2026-02-13T03:58:28.469870+00:00",
+      "rembo10/headphones": "2026-02-13T03:58:28.469870+00:00",
+      "podman-desktop/podman-desktop": "2026-02-13T03:58:28.469870+00:00"
     },
     "bug_fixes": [
       {
@@ -5272,28 +5276,26 @@
     "last_rebase_sync": "2026-02-12T12:21:32.267387+00:00"
   },
   "last_run": {
-    "timestamp": "2026-02-13T02:30:00.482933+00:00",
-    "iteration": 17,
-    "actions_taken": {
-      "repos_synced": 161,
-      "prs_created": 1,
-      "issues_evaluated": 9,
-      "pr_followups": 1,
-      "feature_suggestions_created": 0,
-      "feature_followups": 1,
-      "ci_checks": 33,
-      "bug_scans": 7
-    },
-    "summary": {
-      "agent1_feature_suggestions": 0,
-      "agent1_pr_followups": 32,
-      "agent2_prs_checked": 33,
-      "agent2_ci_passing": 12,
-      "agent3_repos_synced": 0,
-      "agent3_repos_up_to_date": 155,
-      "agent4_prs_created": 1,
-      "agent4_issues_skipped": 8,
-      "agent5_bug_fixes_created": 0
-    }
+    "timestamp": "2026-02-13T03:58:28.469870+00:00",
+    "iteration": 18,
+    "rate_limit_remaining": 4999,
+    "repos_scanned": 121,
+    "actions_taken": [
+      "Checked all 34 open PRs for new comments - stayed silent on all (only bot activity)",
+      "Reviewed 74 feature suggestions - no new comments requiring response",
+      "Checked CI status on all 34 PRs - 9 passing, 4 failing (non-fixable), 21 no CI",
+      "Synced 97 forks with upstream (42 Redhat-forks, 55 dmzoneill-forks)",
+      "Evaluated 2 new issues - both skipped (already fixed, repo archived)",
+      "Bug scanner: Most repos at PR limit, API constraints"
+    ],
+    "errors": [
+      "3 Redhat-forks repos failed sync (404 Not Found)",
+      "6 dmzoneill-forks repos failed sync (merge conflicts)"
+    ],
+    "next_run_priorities": [
+      "Continue monitoring 34 open PRs for comments and CI changes",
+      "Address CLA/DVCS/DCO failures if possible",
+      "Look for new fixable issues in repos below PR limits"
+    ]
   }
 }
