@@ -2244,7 +2244,7 @@
       "all-contributors/allcontributors.org": {
         "language": "MDX",
         "default_branch": "main",
-        "description": "\u2728 The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code \u2728",
+        "description": "✨ The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code ✨",
         "topics": [
           "contributors",
           "all-contributors",
@@ -3121,7 +3121,7 @@
       "jlowin/fastmcp": {
         "language": "Python",
         "default_branch": "main",
-        "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients",
+        "description": "🚀 The fast, Pythonic way to build MCP servers and clients",
         "topics": [
           "model-context-protocol",
           "fastmcp",
@@ -3146,7 +3146,7 @@
       "zed-industries/zed": {
         "language": "Rust",
         "default_branch": "main",
-        "description": "Code at the speed of thought \u2013 Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
         "topics": [
           "text-editor",
           "zed",
@@ -3508,7 +3508,7 @@
       "ansible/awx-operator": {
         "language": "Jinja",
         "default_branch": "devel",
-        "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. \ud83e\udd16",
+        "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. 🤖",
         "topics": [
           "awx-operator",
           "awx",
@@ -5310,8 +5310,8 @@
     "last_rebase_sync": "2026-02-12T12:21:32.267387+00:00"
   },
   "last_run": {
-    "timestamp": "2026-02-13T06:30:22.728707Z",
-    "iteration": 20,
+    "timestamp": "2026-02-13T07:56:52Z",
+    "iteration": 21,
     "rate_limit_remaining": 4477,
     "repos_scanned": 96,
     "actions_taken": [
