@@ -33,7 +33,8 @@
       "ansible/ansible-dev-environment": 1,
       "Freenove/Freenove_RFID_Starter_Kit_for_Raspberry_Pi": 1,
       "Ileriayo/markdown-badges": 1,
-      "ansible/ansible-creator": 1
+      "ansible/ansible-creator": 1,
+      "podman-desktop/podman-desktop": 1
     },
     "open_prs": [
       {
@@ -45,7 +46,9 @@
         "ci_status": "no_checks",
         "upstream": "ansible/awx",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555100+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482599+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "ansible/awx",
@@ -61,7 +64,8 @@
           "IC_kwDOBXWdec5zvPrn"
         ],
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555121+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482618+00:00",
+        "mergeable": "UNKNOWN"
       },
       {
         "repo": "ansible/awx",
@@ -72,7 +76,9 @@
         "ci_status": "no_checks",
         "upstream": "ansible/awx",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555127+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482625+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "UNKNOWN"
       },
       {
         "repo": "benthomasson/dataverse-integration",
@@ -83,7 +89,9 @@
         "ci_status": "no_checks",
         "upstream": "benthomasson/dataverse-integration",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555131+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482629+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "linuxmint/nemo-extensions",
@@ -96,7 +104,9 @@
         "ci_status": "no_checks",
         "upstream": "linuxmint/nemo-extensions",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555136+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482633+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "micheleg/dash-to-dock",
@@ -113,7 +123,8 @@
           "IC_kwDOAEG9EM7nyTfL"
         ],
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555140+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482636+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "deluge-torrent/deluge",
@@ -127,7 +138,9 @@
         "ci_status": "no_checks",
         "upstream": "deluge-torrent/deluge",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555144+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482639+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "deluge-torrent/deluge",
@@ -141,7 +154,9 @@
         "ci_status": "no_checks",
         "upstream": "deluge-torrent/deluge",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555148+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482643+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "rootpd/go-binance",
@@ -156,7 +171,9 @@
         "ci_status": "no_checks",
         "upstream": "rootpd/go-binance",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555152+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482646+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "WiringPi/WiringPi",
@@ -171,7 +188,9 @@
         "ci_status": "no_checks",
         "upstream": "WiringPi/WiringPi",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555156+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482649+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "nicolasff/webdis",
@@ -186,7 +205,9 @@
         "ci_status": "no_checks",
         "upstream": "nicolasff/webdis",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555160+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482653+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "FreePBX/core",
@@ -198,14 +219,15 @@
         "created_at": "2026-02-10T00:00:00Z",
         "branch": "fix/issue-123-extension-input-type",
         "fork": "dmzoneill-forks/core",
-        "ci_status": "pending",
+        "ci_status": "pending_cla",
         "upstream": "FreePBX/core",
         "comments_seen_ids": [
           "IC_kwDOAO_Ows7m90zz",
           "IC_kwDOAO_Ows7m-qyC"
         ],
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555164+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482656+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "RedHatInsights/bonfire",
@@ -220,7 +242,9 @@
         "ci_status": "passing",
         "upstream": "RedHatInsights/bonfire",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555167+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482660+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "ansible/ansible-lint",
@@ -235,7 +259,9 @@
         "ci_status": "passing",
         "upstream": "ansible/ansible-lint",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555172+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482664+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "ansible/ansible-lint",
@@ -250,7 +276,9 @@
         "ci_status": "passing",
         "upstream": "ansible/ansible-lint",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555179+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482667+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "gnome-terminator/terminator",
@@ -265,7 +293,9 @@
         "ci_status": "passing",
         "upstream": "gnome-terminator/terminator",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555183+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482671+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "gnome-terminator/terminator",
@@ -280,7 +310,9 @@
         "ci_status": "passing",
         "upstream": "gnome-terminator/terminator",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555187+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482675+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "DimitriFourny/seedmage",
@@ -295,7 +327,9 @@
         "ci_status": "no_checks",
         "upstream": "DimitriFourny/seedmage",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555191+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482679+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "ansible/django-ansible-base",
@@ -317,7 +351,8 @@
         "last_ci_fix": "2026-02-11T22:58:59.888612+00:00",
         "notes": "DVCS check requires JIRA ticket - asked maintainers for guidance",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555195+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482683+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "upstream": "rembo10/headphones",
@@ -330,7 +365,8 @@
         "ci_status": "no_checks",
         "comments_seen_ids": [],
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555201+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482687+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "repo": "KittyCatTech/cryptopia-api-php",
@@ -343,7 +379,9 @@
         "ci_status": "no_checks",
         "upstream": "KittyCatTech/cryptopia-api-php",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555205+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482691+00:00",
+        "comments_seen_ids": [],
+        "mergeable": "MERGEABLE"
       },
       {
         "upstream": "infusion/PHP-Daemon",
@@ -358,7 +396,8 @@
         "comments_seen_ids": [],
         "ci_status": "no_checks",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555209+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482695+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "upstream": "rembo10/headphones",
@@ -372,7 +411,8 @@
         "ci_status": "no_checks",
         "review_state": "pending",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555213+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482699+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "upstream": "rootpd/go-binance",
@@ -386,7 +426,8 @@
         "ci_status": "no_checks",
         "comments_seen_ids": [],
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555217+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482704+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "upstream": "grumpyp/blogging-with-ai",
@@ -401,7 +442,8 @@
         "ci_status": "no_checks",
         "last_ci_fix": "2026-02-11T22:58:59.888612+00:00",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555221+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482708+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "upstream": "RABCbot/door-butler",
@@ -416,7 +458,8 @@
         "created_at": "2026-02-11T15:28:00Z",
         "last_ci_fix": "2026-02-11T22:58:59.888612+00:00",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555225+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482713+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "upstream": "ansible/awx",
@@ -435,7 +478,8 @@
         ],
         "last_checked": "2026-02-12T15:26:17.699Z",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555229+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482717+00:00",
+        "mergeable": "UNKNOWN"
       },
       {
         "upstream": "gnome-terminator/terminator",
@@ -449,7 +493,8 @@
         "repo": "gnome-terminator/terminator",
         "comments_seen_ids": [],
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555233+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482722+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "upstream": "ansible/ansible-dev-environment",
@@ -463,7 +508,8 @@
         "comments_seen_ids": [],
         "status": "open",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555237+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482727+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "upstream": "Freenove/Freenove_RFID_Starter_Kit_for_Raspberry_Pi",
@@ -477,7 +523,8 @@
         "comments_seen_ids": [],
         "ci_status": "no_checks",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555240+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482732+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "upstream": "Ileriayo/markdown-badges",
@@ -491,7 +538,8 @@
         "comments_seen_ids": [],
         "ci_status": "no_checks",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555244+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482736+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "upstream": "ansible/ansible-creator",
@@ -507,7 +555,8 @@
         "branch": "fix/issue-514-package-data-resources",
         "fork": "Redhat-forks/ansible-creator",
         "ci_last_checked": "2026-02-12T15:26:17.699Z",
-        "last_ci_check": "2026-02-12T18:28:48.555248+00:00"
+        "last_ci_check": "2026-02-13T02:30:00.482741+00:00",
+        "mergeable": "MERGEABLE"
       },
       {
         "upstream": "FreePBX/core",
@@ -517,9 +566,26 @@
         "branch": "fix/bug-176-xss-extdisplay",
         "title": "fix: sanitize extdisplay parameter to prevent XSS",
         "created_at": "2026-02-12T18:26:00Z",
+        "ci_status": "pending_cla",
+        "comments_seen_ids": [
+          "IC_kwDOAO_Ows7oBUoq"
+        ],
+        "type": "bug_fix",
+        "last_ci_check": "2026-02-13T02:30:00.482746+00:00",
+        "mergeable": "MERGEABLE"
+      },
+      {
+        "repo": "podman-desktop/podman-desktop",
+        "pr_number": 16220,
+        "title": "chore(ui): export Icon component from main ui library",
+        "url": "https://github.com/podman-desktop/podman-desktop/pull/16220",
+        "status": "open",
         "ci_status": "pending",
-        "comments_seen_ids": [],
-        "type": "bug_fix"
+        "upstream": "podman-desktop/podman-desktop",
+        "fork": "Redhat-forks/podman-desktop",
+        "branch": "fix/issue-16141-export-icon-component",
+        "fixes_issue": 16141,
+        "created_at": "2026-02-13T02:30:00.482892Z"
       }
     ],
     "closed_prs": [
@@ -1235,7 +1301,7 @@
         "upstream": "Jackett/Jackett",
         "issue_number": 16578,
         "title": "add rate limit status to indexer health checks",
-        "status": "open",
+        "status": "closed",
         "created_at": "2026-02-12T16:55:57Z",
         "comments_seen_ids": [
           "IC_kwDOArGhXs7n_YHM"
@@ -1245,7 +1311,8 @@
     "attempted_issues": [
       "ansible/ansible-runner#1474",
       "ansible/molecule#4597",
-      "ansible/ansible-dev-environment#349"
+      "ansible/ansible-dev-environment#349",
+      "podman-desktop/podman-desktop#16141"
     ],
     "skipped_issues": [
       {
@@ -1338,7 +1405,15 @@
         "issue_number": 2092,
         "reason": "Interactive mode hang - complex debugging requiring container environment and step mode interaction. Confidence < 60%.",
         "skipped_at": "2026-02-12T22:54:10.063410+00:00"
-      }
+      },
+      "RedHatInsights/content-service#715",
+      "RedHatInsights/content-service#283",
+      "RedHatInsights/content-service#105",
+      "podman-desktop/podman-desktop#16163",
+      "podman-desktop/podman-desktop#16142",
+      "etcd-io/etcd#21178",
+      "theotherp/nzbhydra2#953",
+      "theotherp/nzbhydra2#908"
     ],
     "evaluated_issues": {
       "flozz/cover-thumbnailer#23": {
@@ -1746,11 +1821,11 @@
         "evaluated_at": "2026-02-10T22:54:00Z"
       },
       "etcd-io/etcd#21178": {
-        "title": "Panic: tocommit(...) out of range [lastIndex(0)] on fresh Learner join after member remove/add",
-        "confidence": 25,
+        "title": "Panic: tocommit(...) out of range on fresh Learner join",
+        "confidence": 20,
         "decision": "skipped",
-        "reason": "complex raft protocol issue involving learner promotion and state management",
-        "evaluated_at": "2026-02-10T22:54:30Z"
+        "reason": "Complex distributed systems consensus bug - requires deep etcd knowledge",
+        "evaluated_at": "2026-02-13T00:00:00Z"
       },
       "theotherp/nzbhydra2#1029": {
         "title": "Search attempt says no API hits available but UI says otherwise",
@@ -1908,225 +1983,648 @@
         "decision": "skipped",
         "reason": "VS Code extension TypeScript code - requires extension API knowledge and testing environment",
         "evaluated_at": "2026-02-12T00:00:00Z"
+      },
+      "podman-desktop/podman-desktop#16141": {
+        "title": "Icon component is not exported in ui-svelte",
+        "confidence": 95,
+        "decision": "fix_attempted",
+        "reason": "Simple fix - just add export line to index.ts. Clear problem with file path provided, labeled good first issue, straightforward implementation",
+        "evaluated_at": "2026-02-13T00:00:00Z"
+      },
+      "podman-desktop/podman-desktop#16163": {
+        "title": "Update paths for Icon component in Podman Desktop",
+        "confidence": 85,
+        "decision": "skipped",
+        "reason": "Multi-file refactoring dependent on #16141 - slightly below 90% confidence threshold",
+        "evaluated_at": "2026-02-13T00:00:00Z"
+      },
+      "podman-desktop/podman-desktop#16142": {
+        "title": "Stop all selected containers",
+        "confidence": 80,
+        "decision": "skipped",
+        "reason": "Feature request requiring UI + backend implementation - below 90% threshold",
+        "evaluated_at": "2026-02-13T00:00:00Z"
+      },
+      "RedHatInsights/content-service#715": {
+        "title": "Add GraphQL endpoint for flexible rule metadata queries",
+        "confidence": 0,
+        "decision": "skipped",
+        "reason": "Our own feature suggestion - never work on these per CLAUDE.md",
+        "evaluated_at": "2026-02-13T00:00:00Z"
+      },
+      "RedHatInsights/content-service#283": {
+        "title": "Several metrics is not displayed on Content Service grafana dashboard",
+        "confidence": 45,
+        "decision": "skipped",
+        "reason": "Too vague, requires deep metrics infrastructure knowledge",
+        "evaluated_at": "2026-02-13T00:00:00Z"
+      },
+      "RedHatInsights/content-service#105": {
+        "title": "One of the rules fails to be processed by smart-proxy",
+        "confidence": 0,
+        "decision": "skipped",
+        "reason": "References unavailable JIRA ticket - no actionable information",
+        "evaluated_at": "2026-02-13T00:00:00Z"
+      },
+      "theotherp/nzbhydra2#953": {
+        "title": "Windows wrapper Open web UI only works once",
+        "confidence": 65,
+        "decision": "skipped",
+        "reason": "Windows-specific bug requiring Windows environment and tray interaction debugging",
+        "evaluated_at": "2026-02-13T00:00:00Z"
+      },
+      "theotherp/nzbhydra2#908": {
+        "title": "Error while getting latest version",
+        "confidence": 30,
+        "decision": "skipped",
+        "reason": "Vague network error without clear reproduction or root cause",
+        "evaluated_at": "2026-02-13T00:00:00Z"
       }
     },
     "repo_profiles": {
       "flozz/cover-thumbnailer": {
         "language": "Python",
         "default_branch": "master",
-        "description": "Generates thumbnails for Nautilus folders (music album covers,...)",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "description": "Generates folder thumbnails for various file browser on Linux to display music album covers, preview of pictures which are in a folder and more.",
+        "topics": [
+          "nautilus",
+          "thunar",
+          "caja",
+          "gnome",
+          "xfce",
+          "thumbnailer",
+          "thumbnail-generator"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:50Z"
       },
       "linuxmint/nemo-extensions": {
         "language": "C",
         "default_branch": "master",
-        "description": "",
+        "description": "A set of extensions for Nemo",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:53Z"
       },
       "micheleg/dash-to-dock": {
         "language": "JavaScript",
         "default_branch": "master",
         "description": "A dock for the Gnome Shell. This extension   moves the dash out of the overview transforming it in a dock for an easier   launching of applications and a faster switching between windows and desktops.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "dock",
+          "gnome",
+          "linux"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:55Z"
       },
       "gnome-terminator/terminator": {
         "language": "Python",
         "default_branch": "master",
         "description": "multiple GNOME terminals in one window",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "gnome",
+          "terminal-emulators",
+          "terminal",
+          "linux",
+          "gtk"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:51Z"
       },
       "SynoCommunity/spksrc": {
         "language": "C",
         "default_branch": "master",
         "description": "Cross compilation framework to create native packages for the Synology's NAS",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:10Z"
       },
       "etcd-io/etcd": {
         "language": "Go",
         "default_branch": "main",
         "description": "Distributed reliable key-value store for the most critical data of a distributed system",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "etcd",
+          "raft",
+          "distributed-systems",
+          "kubernetes",
+          "go",
+          "database",
+          "key-value",
+          "consensus",
+          "distributed-database",
+          "cncf"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:49Z"
       },
       "squizlabs/PHP_CodeSniffer": {
         "language": "PHP",
         "default_branch": "master",
-        "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "description": "PHP_CodeSniffer tokenizes PHP files and detects violations of a defined set of coding standards.",
+        "topics": [
+          "php",
+          "coding-standards",
+          "automation",
+          "cli",
+          "qa",
+          "static-analysis"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:02Z"
       },
       "ccxt/node-binance-api": {
         "language": "TypeScript",
         "default_branch": "master",
         "description": "Node Binance API is an asynchronous node.js library for the Binance API designed to be easy to use.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "binance",
+          "cryptocurrency-exchanges",
+          "cryptocurrency",
+          "javascript",
+          "node",
+          "algorithmic-trading",
+          "crypto",
+          "trading"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:45Z"
       },
       "all-contributors/allcontributors.org": {
         "language": "MDX",
         "default_branch": "main",
-        "description": "\u2728 Recognize all contributors, not just the ones who push code \u2728",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "description": "\u2728 The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code \u2728",
+        "topics": [
+          "contributors",
+          "all-contributors",
+          "opensource",
+          "opensource-management",
+          "open-source-tooling",
+          "acknowledgements",
+          "recognition"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:13Z"
       },
       "sebastianheinz/stockprediction": {
         "language": "Python",
         "default_branch": "master",
         "description": "Data and code of my Medium story on stock prediction with TensorFlow",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:01Z"
       },
       "where-are-the-faces/binance-enhancement-suite": {
         "language": "JavaScript",
         "default_branch": "master",
         "description": "Chrome extension that provides UI enhancements for the Binance cryptocurrency trading exchange",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:05Z"
       },
       "binance-exchange/binance-java-api": {
         "language": "Java",
         "default_branch": "master",
         "description": "binance-java-api is a lightweight Java library for the Binance API, supporting synchronous and asynchronous requests, as well as event streaming using WebSockets.",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:44Z"
       },
       "rootpd/go-binance": {
         "language": "Go",
         "default_branch": "master",
         "description": "Go wrapper for Binance API",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:00Z"
       },
       "akalongman/fmt": {
         "language": "PHP",
         "default_branch": "master",
         "description": "Tooling for PHP - testing, code coverage and formatting",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:12Z"
       },
       "Superbalist/php-pubsub-redis": {
         "language": "PHP",
         "default_branch": "master",
         "description": "A Redis adapter for the php-pubsub package",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "php-pubsub",
+          "php",
+          "php-pubsub-redis",
+          "superbalist",
+          "redis"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:10Z"
       },
       "infusion/PHP-Daemon": {
         "language": "PHP",
         "default_branch": "master",
         "description": "",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:52Z"
       },
       "KittyCatTech/cryptopia-api-php": {
         "language": "PHP",
         "default_branch": "master",
         "description": "Cryptopia API Wrapper in PHP and Sample Trading Bot",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:46Z"
       },
       "kubernetes-retired/contrib": {
         "language": "Go",
         "default_branch": "master",
-        "description": "This is a place for various components in the Kubernetes ecosystem that aren't part of the Kubernetes core. Consider creating a new repo instead.",
+        "description": "[EOL] This is a place for various components in the Kubernetes ecosystem that aren't part of the Kubernetes core.",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:53Z"
       },
       "binance-exchange/binance-official-api-docs": {
         "language": "unknown",
         "default_branch": "master",
         "description": "Official Documentation for the Binance APIs and Streams",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:44Z"
       },
       "nicolasff/webdis": {
         "language": "C",
         "default_branch": "master",
         "description": "A Redis HTTP interface with JSON output",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "webdis",
+          "redis",
+          "http",
+          "json",
+          "websocket"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:57Z"
       },
       "docker-archive/docker-ce": {
         "language": "Go",
         "default_branch": "master",
-        "description": "Docker CE",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "description": ":warning: This repository is deprecated and will be archived (Docker CE itself is NOT deprecated) see the https://github.com/docker/docker-ce/blob/master/README.md :warning:",
+        "topics": [
+          "docker",
+          "git",
+          "moby",
+          "golang"
+        ],
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:48Z"
       },
       "openSUSE/trollolo": {
         "language": "Ruby",
         "default_branch": "master",
         "description": "Trello command line client",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:57Z"
       },
       "pablobs/filebot": {
         "language": "Java",
         "default_branch": "master",
         "description": "FileBot",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:58Z"
       },
       "Jackett/Jackett": {
         "language": "C#",
         "default_branch": "master",
-        "description": "API Support for your favorite torrent trackers.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "description": "API Support for your favorite torrent trackers",
+        "topics": [
+          "torrent",
+          "torznab",
+          "newznab",
+          "rss",
+          "rss-proxy",
+          "sickrage",
+          "couchpotato",
+          "sonarr",
+          "indexer",
+          "radarr",
+          "medusa",
+          "lidarr",
+          "duckietv",
+          "api",
+          "jackett",
+          "trackers",
+          "proxy",
+          "mylar3",
+          "nefarious",
+          "hacktoberfest"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:45Z"
       },
       "firecat53/dockerfiles": {
         "language": "Dockerfile",
         "default_branch": "main",
-        "description": "Dockerfiles: Check_Mk, Couchpotato, Deluge, Gollum, Headphones, Lazy Librarian, OpenVPN PIA client, Plex, Sabnzbd, Samba, SSH Socks Proxy server, Sickrage, Syncthing, Stringer and Transmission.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "description": "Dockerfiles: Gollum, Jackett, Miniflux, Nginx/PHP-FPM, Plex, Privatebin, Qbittorrent, Radarr, Sabnzbd, Samba, SSH Socks Proxy server, Sonarr, Syncthing, Transmission, Unifi Controller.",
+        "topics": [
+          "docker",
+          "gollum",
+          "jackett",
+          "privatebin",
+          "sonarr",
+          "radarr",
+          "gollum-wiki",
+          "transmission",
+          "unifi-controller",
+          "miniflux",
+          "sabnzbd",
+          "sonarr-pvr",
+          "syncthing",
+          "plex",
+          "qbittorrent",
+          "self-hosted"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:50Z"
       },
       "Sonarr/Sonarr": {
         "language": "C#",
         "default_branch": "v5-develop",
         "description": "Smart PVR for newsgroup and bittorrent users.",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:09Z"
       },
       "deluge-torrent/deluge": {
         "language": "Python",
         "default_branch": "develop",
         "description": "Deluge BitTorrent client - Git mirror, PRs only",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "python",
+          "bittorrent-client",
+          "thin-clients",
+          "daemon",
+          "extjs",
+          "gtk"
+        ],
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:47Z"
       },
       "rembo10/headphones": {
         "language": "Python",
         "default_branch": "master",
         "description": "Automatic music downloader for SABnzbd",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:00Z"
       },
       "theotherp/nzbhydra2": {
         "language": "JavaScript",
         "default_branch": "master",
         "description": "Usenet meta search",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "nzb",
+          "usenet",
+          "metasearch"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:03Z"
       },
       "Freenove/Freenove_RFID_Starter_Kit_for_Raspberry_Pi": {
         "language": "Processing",
         "default_branch": "master",
         "description": "Apply to FNK0025",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:44Z"
       },
       "WiringPi/WiringPi": {
         "language": "C",
         "default_branch": "master",
-        "description": "Gordon's Arduino wiring-like WiringPi Library for the Raspberry Pi (Unofficial Mirror for WiringPi bindings)",
+        "description": "The arguably fastest GPIO Library for the Raspberry Pi",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:11Z"
       },
       "asterisk/asterisk": {
         "language": "C",
@@ -2153,385 +2651,1035 @@
         "default_branch": "release/17.0",
         "description": "Module of FreePBX (Core) :: ",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:44Z"
       },
       "PicoI2/raspberry-pi-intercom": {
         "language": "C++",
         "default_branch": "master",
         "description": "All you need to make an intercom with raspberry pi (not finished yet)",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:47Z"
       },
       "RABCbot/door-butler": {
         "language": "Python",
         "default_branch": "master",
         "description": "Raspberry Pi door video/audio intercom",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:47Z"
       },
       "mapuo/intercom": {
         "language": "Erlang",
         "default_branch": "master",
         "description": "Intercom system for Raspberry Pi",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:54Z"
       },
       "r0bs/doorbell-pi": {
         "language": "Python",
         "default_branch": "master",
         "description": "chat with your home's intercom - control ringer and buzzer from a Raspberry Pi via Telegram bot",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "raspberry-pi-3",
+          "gpio",
+          "doorbell",
+          "telegram-bot",
+          "home-automation"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:00Z"
       },
       "motom001/DoorPi": {
         "language": "Python",
         "default_branch": "master",
         "description": "OpenSource VoIP Door-Intercomstation",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "python",
+          "intercom",
+          "tuersprechanlage",
+          "voip",
+          "internetphone",
+          "internet-of-things",
+          "iot",
+          "door-intercomstation"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:56Z"
       },
       "sboily/incrediblepbx": {
         "language": "PHP",
         "default_branch": "master",
-        "description": "",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "description": "Php dashboard wazo-platform",
+        "topics": [
+          "dahsboard",
+          "php7",
+          "wazo-platform"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:01Z"
       },
       "timsavage/asyncmock": {
         "language": "Python",
         "default_branch": "master",
         "description": "Awaitable mocks for async code. (For Python 3.6+, use the new builtin AsyncMock or Mock>=4.0)",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:03Z"
       },
       "sickcodes/Docker-OSX": {
         "language": "Shell",
         "default_branch": "master",
-        "description": "Run Mac in a Docker! Run near native OSX-KVM in Docker! X11 Forwarding! CI/CD for OS X!",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "description": "Run macOS VM in a Docker! Run near native OSX-KVM in Docker! X11 Forwarding! CI/CD for OS X Security Research! Docker mac Containers.",
+        "topics": [
+          "docker",
+          "osx",
+          "macos",
+          "x11",
+          "container",
+          "kvm",
+          "osx-kvm",
+          "docker-osx",
+          "os",
+          "x"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:02Z"
       },
       "DimitriFourny/seedmage": {
         "language": "Python",
         "default_branch": "master",
         "description": "Fake torrent seeder",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "torrent"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:43Z"
       },
       "trossr32/sonarr-radarr-lidarr-autosearch-browser-extension": {
         "language": "JavaScript",
         "default_branch": "master",
-        "description": "An extension for Chromium and Firefox browsers that automates searching on Sonarr, Radarr and Lidarr instances based on a modified URL, and adds context menus for direct searching from any selected text. Adds icons as direct search links on IMDb, TVDb, TMDb, Trakt, MusicBrainz, letterboxd, TV Calendar, Rotten Tomatoes, metacritic and simkl websites.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "description": "An extension for Chromium and Firefox browsers that automates searching on Servarr instances based on a modified URL, and adds context menus for direct searching from any selected text. Adds icons as direct search links on IMDb, TVDb, TMDb, Trakt, MusicBrainz, letterboxd, TV Calendar, Rotten Tomatoes, metacritic and simkl websites.",
+        "topics": [
+          "sonarr",
+          "lidarr",
+          "radarr",
+          "edge",
+          "chrome",
+          "extension-chrome",
+          "extension-edge",
+          "search",
+          "context-menu",
+          "firefox-addon",
+          "firefox-extension",
+          "firefox",
+          "chrome-extension",
+          "edge-extension",
+          "trakt",
+          "trakt-tv",
+          "tmdb",
+          "tvdb",
+          "imdb",
+          "chromium-microsoft-edge"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:04Z"
       },
       "linuxserver/docker-deluge": {
         "language": "Dockerfile",
         "default_branch": "master",
         "description": "",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "hacktoberfest"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:54Z"
       },
       "dimqua/Amazon-video-downloader": {
-        "language": "Python",
+        "language": "unknown",
         "default_branch": "main",
         "description": "",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:48Z"
       },
       "filebot/scripts": {
         "language": "Groovy",
         "default_branch": "master",
         "description": "Groovy Scripts for FileBot",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:49Z"
       },
       "mikeeq/mbp-fedora": {
         "language": "Shell",
         "default_branch": "main",
         "description": "",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "fedora",
+          "linux",
+          "apple-t2",
+          "macbook-pro",
+          "macbook",
+          "apple",
+          "2019",
+          "2018",
+          "touchbar",
+          "iso",
+          "os",
+          "operating-system",
+          "kernel",
+          "operating",
+          "system",
+          "operatingsystem",
+          "anaconda",
+          "redhat",
+          "2020",
+          "mbp"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:56Z"
       },
       "webpack/webpack": {
         "language": "JavaScript",
         "default_branch": "main",
         "description": "A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through \"loaders\", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "webpack",
+          "javascript",
+          "module-bundler",
+          "loaders",
+          "plugins",
+          "build-tool",
+          "web",
+          "web-performance",
+          "compiler",
+          "javascript-compiler",
+          "commonjs",
+          "amd",
+          "esm",
+          "es6",
+          "es2015",
+          "javascript-modules"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:04Z"
       },
       "Ileriayo/markdown-badges": {
         "language": "SCSS",
         "default_branch": "master",
         "description": "Badges for your personal developer branding, profile, and projects.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "github-profile-readme",
+          "github-profile",
+          "hacktoberfest",
+          "branding",
+          "developer-portfolio",
+          "markdown",
+          "badges-markdown"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:45Z"
       },
       "progfay/shields-with-icon": {
         "language": "Go",
         "default_branch": "master",
         "description": "Enjoy https://shields.io",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "badges",
+          "shields-io"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:59Z"
       },
       "Lekhak123/text-to-img-craiyon-scrapper": {
         "language": "JavaScript",
         "default_branch": "main",
         "description": "A npm package that extracts ai generated image from Craiyon website and returns base64 of the image",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:46Z"
       },
       "fregante/chrome-webstore-upload-cli": {
         "language": "JavaScript",
         "default_branch": "main",
         "description": "CLI tool to upload Chrome Extensions to the Chrome Web Store",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:50Z"
       },
       "alexzorin/authy": {
         "language": "Go",
         "default_branch": "master",
         "description": "Go library and program to access your Authy TOTP secrets.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "authy",
+          "totp",
+          "golang"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:12Z"
       },
       "grumpyp/blogging-with-ai": {
         "language": "Python",
         "default_branch": "main",
         "description": "Introducing AI-blogger, a cutting-edge tool that utilizes OpenAI API, WordPress, and Python to simplify the process of creating blog posts. Generate high-quality, engaging content in seconds with the help of advanced AI capabilities that understand and analyze your topic. ",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:51Z"
       },
       "jlowin/fastmcp": {
         "language": "Python",
         "default_branch": "main",
         "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "model-context-protocol",
+          "fastmcp",
+          "mcp",
+          "agents",
+          "llms",
+          "mcp-clients",
+          "mcp-servers",
+          "mcp-tools",
+          "python"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:52Z"
       },
       "zed-industries/zed": {
         "language": "Rust",
         "default_branch": "main",
         "description": "Code at the speed of thought \u2013 Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "text-editor",
+          "zed",
+          "gpui",
+          "rust-lang"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:28:05Z"
       },
       "microsoft/vscode": {
         "language": "TypeScript",
         "default_branch": "main",
         "description": "Visual Studio Code",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "editor",
+          "electron",
+          "visual-studio-code",
+          "typescript",
+          "microsoft"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:55Z"
       },
       "ansible/ansible": {
         "language": "Python",
         "default_branch": "devel",
         "description": "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "topics": [
+          "python",
+          "ansible"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:16Z"
       },
       "ansible/awx": {
         "language": "Python",
         "default_branch": "devel",
         "description": "AWX provides a web-based user interface, REST API, and task engine built on top of Ansible. It is one of the upstream projects for Red Hat Ansible Automation Platform.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "topics": [
+          "python",
+          "ansible",
+          "django",
+          "django-rest-framework",
+          "awx",
+          "automation",
+          "reactjs",
+          "hacktoberfest"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:28Z"
       },
       "agrahn/Android-Password-Store": {
         "language": "Kotlin",
         "default_branch": "develop",
         "description": "Android application compatible with ZX2C4's Pass command line application",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "android",
+          "openpgp",
+          "password-manager",
+          "password-store"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:11Z"
       },
       "RedHatInsights/bonfire": {
         "language": "Python",
         "default_branch": "master",
         "description": "Orchestrates ephemeral environments for testing cloud.redhat.com applications",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:48Z"
       },
       "RedHatInsights/tower-analytics-frontend": {
         "language": "TypeScript",
         "default_branch": "devel",
         "description": "Automation Analytics provides data analytics for Ansible Tower that provides visualization and insight into how automation is used in your organization.",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:05Z"
       },
       "RedHatInsights/insights-frontend-builder-common": {
-        "language": "Shell",
+        "language": "Python",
         "default_branch": "master",
         "description": "Common stuff for the frontend builder",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:58Z"
       },
       "RedHatInsights/clowder": {
         "language": "Go",
         "default_branch": "master",
         "description": "Operator for operating cloud.redhat.com ",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "topics": [
+          "operator",
+          "operator-sdk",
+          "redhat"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:50Z"
       },
       "RedHatInsights/edge-api": {
         "language": "Go",
         "default_branch": "main",
         "description": "An API server for fleet edge management capabilities",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:53Z"
       },
       "RedHatInsights/edge-frontend": {
         "language": "JavaScript",
         "default_branch": "master",
-        "description": null,
+        "description": "",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:53Z"
       },
       "ansible/galaxy_ng": {
         "language": "Python",
         "default_branch": "main",
-        "description": "Galaxy NextGen",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "description": "Ansible Galaxy Server - Issues on https://forum.ansible.com Docs on https://galaxy-ng.readthedocs.io/",
+        "topics": [
+          "ansible",
+          "python",
+          "hacktoberfest"
+        ],
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:32Z"
       },
       "RedHatInsights/insights-analytics-collector": {
         "language": "Python",
         "default_branch": "main",
-        "description": null,
+        "description": "",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:57Z"
       },
       "app-sre/qontract-schemas": {
         "language": "Python",
         "default_branch": "main",
-        "description": null,
+        "description": "",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:43Z"
       },
       "RedHatInsights/insights-ingress-go": {
         "language": "Go",
         "default_branch": "master",
-        "description": null,
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "description": "",
+        "topics": [
+          "hacktoberfest"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:59Z"
       },
       "ansible/tower": {
         "language": "Python",
         "default_branch": "devel",
         "description": "Ansible Tower",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:40Z"
       },
       "ansible/django-ansible-base": {
         "language": "Python",
         "default_branch": "devel",
-        "description": null,
+        "description": "",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:30Z"
       },
       "ansible/ansible-sign": {
         "language": "Python",
         "default_branch": "main",
         "description": "The `ansible-sign` utility for signing and verifying Ansible project directory contents.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "topics": [
+          "ansible",
+          "awx",
+          "cryptography",
+          "gpg",
+          "security",
+          "ansible-dev-tools"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:26Z"
       },
       "ansible/ansible-builder": {
         "language": "Python",
         "default_branch": "devel",
         "description": "An Ansible execution environment builder",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "topics": [
+          "ansible-dev-tools"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:18Z"
       },
       "ansible/metrics-utility": {
         "language": "Python",
         "default_branch": "devel",
         "description": "Standalone utility for https://github.com/ansible/awx/",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:34Z"
       },
       "RedHatInsights/bonfire-tekton": {
         "language": "Shell",
         "default_branch": "main",
-        "description": null,
+        "description": "",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:48Z"
       },
       "ansible/awx-operator": {
         "language": "Jinja",
         "default_branch": "devel",
         "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. \ud83e\udd16",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "topics": [
+          "awx-operator",
+          "awx",
+          "operator-sdk",
+          "operators",
+          "kubernetes",
+          "kubernetes-operator",
+          "openshift",
+          "hacktoberfest"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:29Z"
       },
       "ansible/ansible-runner": {
         "language": "Python",
         "default_branch": "devel",
         "description": "A tool and python library that helps when interfacing with Ansible directly or as part of another system whether that be through a container image interface, as a standalone tool, or as a Python module that can be imported. The goal is to provide a stable and consistent interface abstraction to Ansible.",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:25Z"
       },
       "ansible/eda-server": {
         "language": "Python",
         "default_branch": "main",
         "description": " Event Driven Ansible for AAP",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:31Z"
       },
       "ansible-collections/azure": {
         "language": "Python",
         "default_branch": "dev",
         "description": "Development area for Azure Collections",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "topics": [
+          "ansible-collection",
+          "hacktoberfest",
+          "azure"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:13Z"
       },
       "benthomasson/dataverse-integration": {
         "language": "Python",
         "default_branch": "main",
         "description": "dataverse-integration",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:44Z"
       },
       "ansible/ansible-ai-connect-operator": {
         "language": "Jinja",
         "default_branch": "main",
-        "description": null,
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "description": "",
+        "topics": [
+          "ansible-lightspeed"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:16Z"
       },
       "ansible/ansible-lint": {
         "language": "Python",
         "default_branch": "main",
         "description": "ansible-lint checks playbooks for practices and behavior that could potentially be improved and can fix some of the most common ones for you",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "topics": [
+          "ansible",
+          "ansible-lint",
+          "pre-commit-hook",
+          "hacktoberfest",
+          "dot-config",
+          "pep-621",
+          "ansible-dev-tools"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:23Z"
       },
       "ansible/ansible-navigator": {
         "language": "Python",
         "default_branch": "main",
         "description": "A text-based user interface (TUI) for Ansible.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "topics": [
+          "ansible",
+          "ansible-commands",
+          "tui",
+          "playbook",
+          "inventory",
+          "network",
+          "network-automation",
+          "curses",
+          "python",
+          "pep-621",
+          "ansible-devtools",
+          "ansible-dev-tools",
+          "hacktoberfest"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:24Z"
       },
       "ansible/vscode-ansible": {
         "language": "TypeScript",
         "default_branch": "main",
         "description": "Ansible IDE extension: auto-completion and integrating quality assurance tools like ansible-lint, ansible syntax check, yamllint, molecule and ansible-test.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "topics": [
+          "vscode-extension",
+          "ansible-lint",
+          "molecule",
+          "ansible-language-server",
+          "lsp",
+          "taskfile",
+          "ansible-dev-tools"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:42Z"
       },
       "ansible/receptor": {
         "language": "Go",
         "default_branch": "devel",
         "description": "Project Receptor is a flexible multi-service relayer with remote execution and orchestration capabilities linking controllers with executors across a mesh of nodes.",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:38Z"
       },
       "ansible/handbook": {
         "language": "Jinja",
         "default_branch": "main",
         "description": "Internal Ansible Engineering handbook",
         "topics": [],
-        "last_profiled": "2026-02-12T22:51:51Z"
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:33Z"
       },
       "ansible/aap-azurerm": {
         "language": "Shell",
@@ -2541,49 +3689,95 @@
           "azure",
           "aap"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:02.061539+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:14Z"
       },
       "ansible/ansible-dev-tools": {
         "language": "Python",
         "default_branch": "main",
-        "description": "Ansible Dev Tools (ADT) - a Python package that installs Ansible-related development packages",
+        "description": "Ansible automation developer tools",
         "topics": [
-          "hacktoberfest"
+          "ansible-dev-tools",
+          "hacktoberfest",
+          "ansible-execution-environment",
+          "openshift-devspaces"
         ],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:22Z"
       },
       "ansible/platform-services-utilities": {
         "language": "Python",
         "default_branch": "devel",
         "description": "",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:04.283370+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:35Z"
       },
       "ansible/zuul-config": {
         "language": "Python",
         "default_branch": "master",
         "description": "Global configuration for Software Factory Zuul instance",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:05.323978+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:43Z"
       },
       "ansible/ansible-azure-mgmt": {
         "language": "Python",
         "default_branch": "main",
         "description": "",
         "topics": [],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:24:06.485381+00:00"
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:17Z"
       },
       "ansible/tower-packaging": {
         "language": "Groovy",
         "default_branch": "devel",
         "description": "Packaging scripts and build configuration for Ansible Tower",
         "topics": [],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:24:07.570271+00:00"
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:41Z"
       },
       "ansible/ansible-documentation": {
         "language": "Python",
@@ -2594,16 +3788,30 @@
           "documentation",
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:08.633893+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:22Z"
       },
       "ansible/awx-plugins": {
         "language": "Python",
         "default_branch": "devel",
         "description": "",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:09.698442+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:29Z"
       },
       "ansible/ansible-compat": {
         "language": "Python",
@@ -2614,8 +3822,15 @@
           "hacktoberfest",
           "pep-621"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:10.761321+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:20Z"
       },
       "ansible/ansible-dev-environment": {
         "language": "Python",
@@ -2624,8 +3839,15 @@
         "topics": [
           "ansible-dev-tools"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:11.852471+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:21Z"
       },
       "ansible/pytest-ansible": {
         "language": "Python",
@@ -2634,8 +3856,15 @@
         "topics": [
           "ansible-dev-tools"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:12.956643+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:37Z"
       },
       "ansible/ansible-creator": {
         "language": "Python",
@@ -2649,8 +3878,15 @@
           "ansible-devtools",
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:13.984262+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:21Z"
       },
       "ansible/event-driven-ansible": {
         "language": "Python",
@@ -2659,8 +3895,15 @@
         "topics": [
           "ansible-collection"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:15.005684+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:31Z"
       },
       "ansible/ansible-chatbot-service": {
         "language": "Python",
@@ -2669,8 +3912,15 @@
         "topics": [
           "ansible-lightspeed"
         ],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-11T12:24:16.144990+00:00"
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:19Z"
       },
       "containers/podman": {
         "language": "Go",
@@ -2683,8 +3933,15 @@
           "linux",
           "oci"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:17.205675+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:46Z"
       },
       "containers/podman-compose": {
         "language": "Python",
@@ -2696,27 +3953,34 @@
           "linux-containers",
           "rootless-containers"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:18.439903+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:47Z"
       },
       "podman-desktop/podman-desktop": {
         "language": "TypeScript",
         "default_branch": "main",
-        "description": "Podman Desktop is the best free and open source tool to work with Containers and Kubernetes for developers. Get an intuitive and user-friendly interface to effortlessly build, manage, and deploy containers and Kubernetes \u2014 all from your desktop.",
+        "description": "Podman Desktop - A graphical tool for developing on containers and Kubernetes",
         "topics": [
-          "containers",
-          "ui",
-          "tray-application",
-          "desktop",
           "podman",
-          "podman-desktop",
-          "container",
+          "containers",
           "kubernetes",
-          "hacktoberfest",
-          "docker"
+          "desktop"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:19.522869+00:00"
+        "build_system": "pnpm",
+        "test_command": "pnpm run test",
+        "lint_command": "pnpm run lint",
+        "has_contributing_md": true,
+        "has_tests": true,
+        "project_type": "electron-typescript",
+        "key_conventions": "Uses conventional commits (chore, fix, feat, refactor), pnpm package manager, vitest for testing, svelte for UI components",
+        "last_profiled": "2026-02-13T00:00:00Z"
       },
       "containers/ansible-podman-collections": {
         "language": "Python",
@@ -2737,24 +4001,45 @@
           "devops-tools",
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:20.789806+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:46Z"
       },
       "RedHatInsights/insights-chrome": {
         "language": "TypeScript",
         "default_branch": "master",
         "description": "Chroming for Insights apps",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:49Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:57Z"
       },
       "RedHatInsights/frontend-operator": {
         "language": "Go",
         "default_branch": "main",
         "description": "",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:46Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:56Z"
       },
       "RedHatInsights/insights-host-inventory": {
         "language": "Python",
@@ -2763,72 +4048,135 @@
         "topics": [
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:52Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:59Z"
       },
       "RedHatInsights/rhsm-subscriptions": {
         "language": "Java",
         "default_branch": "main",
         "description": "Subscriptions-related services for the Insights Platform",
         "topics": [],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-12T12:20:00Z"
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:03Z"
       },
       "RedHatInsights/insights-mcp": {
         "language": "Python",
         "default_branch": "main",
         "description": "An MCP server to connect insights functionality to an AI / LLM",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:55Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:00Z"
       },
       "RedHatInsights/insights-client": {
         "language": "Python",
         "default_branch": "main",
         "description": "insights-client",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:50Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:58Z"
       },
       "RedHatInsights/frontend-experience-docs": {
         "language": "Shell",
         "default_branch": "master",
         "description": "A repository for the Platform Experience UI team best practices and guidelines",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:45Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:55Z"
       },
       "RedHatInsights/widget-layout": {
         "language": "TypeScript",
         "default_branch": "master",
         "description": "Reusable drag and drop UI layout and utilities for frontends",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:20:08Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:08Z"
       },
       "RedHatInsights/chrome-service-backend": {
         "language": "Go",
         "default_branch": "main",
         "description": "Source code repository for chrome backend",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:50Z"
       },
       "RedHatInsights/vulnerability-ui": {
         "language": "JavaScript",
         "default_branch": "master",
         "description": "Frontend for vulnerabilities detection service for RHEL system. ",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:20:07Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:07Z"
       },
       "RedHatInsights/insights-inventory-frontend": {
         "language": "JavaScript",
         "default_branch": "master",
         "description": "The Insights Inventory Frontend",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:54Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:00Z"
       },
       "RedHatInsights/rhc": {
         "language": "Go",
@@ -2838,56 +4186,105 @@
           "redhat",
           "rhel"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:58Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:02Z"
       },
       "RedHatInsights/insights-advisor-frontend": {
         "language": "JavaScript",
         "default_branch": "master",
         "description": "The Advisor Frontend",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:47Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:56Z"
       },
       "RedHatInsights/patchman-ui": {
         "language": "JavaScript",
         "default_branch": "master",
         "description": "System Patch Manager User Interface ",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:56Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:01Z"
       },
       "RedHatInsights/processing-tools": {
         "language": "Python",
         "default_branch": "master",
         "description": "Tools / scripts / automations used by ObsInt Processing team",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:57Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:02Z"
       },
       "RedHatInsights/ccx-notification-writer": {
         "language": "Go",
         "default_branch": "master",
         "description": "CCX notification writer service",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:49Z"
       },
       "RedHatInsights/yuptoo": {
         "language": "Python",
         "default_branch": "main",
         "description": "The Yupana Upload Processor II",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:20:09Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:08Z"
       },
       "RedHatInsights/insights-puptoo": {
         "language": "Python",
         "default_branch": "master",
         "description": "Fact extraction and inventory updates for advisor archives",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:56Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:01Z"
       },
       "RedHatInsights/floorist": {
         "language": "Python",
@@ -2896,8 +4293,15 @@
         "topics": [
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:43Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:54Z"
       },
       "RedHatInsights/floorist-operator": {
         "language": "Makefile",
@@ -2906,40 +4310,75 @@
         "topics": [
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:44Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:54Z"
       },
       "RedHatInsights/rhsm-api-proxy": {
         "language": "Go",
         "default_branch": "main",
         "description": "Reverse proxy for subscription management APIs",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:59Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:03Z"
       },
       "RedHatInsights/vulnerability-engine": {
         "language": "Python",
         "default_branch": "master",
         "description": "Vulnerability Engine",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:20:06Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:07Z"
       },
       "RedHatInsights/vulnerability-docs": {
         "language": "HTML",
         "default_branch": "master",
         "description": "Documentations for vulnerability/vmaas parts.",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:20:05Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:06Z"
       },
       "RedHatInsights/vmaas": {
         "language": "Python",
         "default_branch": "master",
         "description": "Vulnerability Metadata as a Service",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:20:04Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:06Z"
       },
       "RedHatInsights/compliance-backend": {
         "language": "Ruby",
@@ -2951,24 +4390,45 @@
           "policy",
           "security-audit"
         ],
-        "hasIssuesEnabled": false,
-        "last_profiled": "2026-02-12T12:19:38Z"
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:51Z"
       },
       "RedHatInsights/data-pipeline": {
         "language": "HTML",
         "default_branch": "main",
         "description": "External and internal (CCX) data pipeline archive processors definitions",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:40Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:52Z"
       },
       "RedHatInsights/content-service": {
         "language": "Go",
         "default_branch": "main",
         "description": "",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:39Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:52Z"
       },
       "RedHatInsights/sources-superkey-worker": {
         "language": "Go",
@@ -2977,16 +4437,30 @@
         "topics": [
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:20:02Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:05Z"
       },
       "RedHatInsights/ccx-notification-service": {
         "language": "Go",
         "default_branch": "master",
         "description": "CCX notification service",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:19:35Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:26:49Z"
       },
       "RedHatInsights/sources-api-go": {
         "language": "Go",
@@ -2995,63 +4469,120 @@
         "topics": [
           "hacktoberfest"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-12T12:20:01Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:04Z"
       },
       "ansible/product-demos": {
         "language": "Jinja",
         "default_branch": "main",
         "description": "",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:53.290572+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:36Z"
       },
       "ansible/ansible-sandbox-sre": {
         "language": "Jinja",
         "default_branch": "main",
         "description": "This repo is used by the Ansible SRE team for maintaining AAP on the dev-sandbox",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:54.364182+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:26Z"
       },
       "ansible/test-playbooks": {
         "language": "Python",
         "default_branch": "main",
         "description": "playbook-tests",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:55.388490+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:40Z"
       },
       "ansible/ansible-rhdh-templates": {
-        "language": null,
+        "language": "unknown",
         "default_branch": "main",
         "description": "",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:56.408082+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:24Z"
       },
       "ansible/aap-docs": {
-        "language": null,
+        "language": "unknown",
         "default_branch": "main",
         "description": "Asciidoc technical content for Ansible Automation Platform",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:57.448919+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:15Z"
       },
       "ansible/automation-reports": {
         "language": "Python",
         "default_branch": "main",
         "description": "",
         "topics": [],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:24:58.420796+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:28Z"
       },
       "ansible/ansible-rulebook": {
         "language": "Python",
         "default_branch": "main",
-        "description": "The Ansible Rulebook CLI. The Ansible rulebook plugin for running Event-Driven Ansible",
+        "description": "",
         "topics": [],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:25Z"
       },
       "ansible/ansible-chatbot-stack": {
         "language": "Python",
@@ -3060,8 +4591,15 @@
         "topics": [
           "ansible-lightspeed"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:25:00.651819+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:20Z"
       },
       "ansible/ansible-wisdom-ops": {
         "language": "Jinja",
@@ -3070,8 +4608,15 @@
         "topics": [
           "ansible-lightspeed"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:25:01.713762+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:27Z"
       },
       "ansible/ansible-ai-connect-service": {
         "language": "Python",
@@ -3080,18 +4625,33 @@
         "topics": [
           "ansible-lightspeed"
         ],
-        "hasIssuesEnabled": true,
-        "last_profiled": "2026-02-11T12:25:02.757845+00:00"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:17Z"
       },
       "ansible/team-devtools": {
         "language": "Python",
         "default_branch": "main",
-        "description": "Repository for tracking team-devtools projects",
+        "description": "Shared practices, workflows and decisions impacting Ansible devtools projects",
         "topics": [
           "ansible-devtools",
           "hacktoberfest"
         ],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:38Z"
       },
       "ansible/actions": {
         "language": "Python",
@@ -3100,28 +4660,60 @@
         "topics": [
           "github-actions"
         ],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:15Z"
       },
       "ansible/galaxy-importer": {
         "language": "Python",
         "default_branch": "master",
         "description": "Galaxy content importer",
         "topics": [],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:32Z"
       },
       "ansible/gh-action-record-test-results": {
-        "language": null,
+        "language": "unknown",
         "default_branch": "main",
-        "description": null,
+        "description": "",
         "topics": [],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:33Z"
       },
       "ansible/ansible.platform": {
         "language": "Python",
         "default_branch": "devel",
         "description": "This collection contains modules that can be used to automate the creation of resources on an install of Ansible Automation Platform.",
         "topics": [],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:27Z"
       },
       "ansible/pylibssh": {
         "language": "Cython",
@@ -3130,28 +4722,60 @@
         "topics": [
           "hacktoberfest"
         ],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:37Z"
       },
       "ansible/tower-qa": {
         "language": "Python",
         "default_branch": "devel",
         "description": "Automation and playbooks for testing Ansible Tower",
         "topics": [],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": false,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:41Z"
       },
       "ansible/terraform-provider-ansible": {
         "language": "Go",
         "default_branch": "main",
         "description": "community terraform provider for ansible",
         "topics": [],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:39Z"
       },
       "ansible/metrics-service": {
         "language": "Python",
         "default_branch": "devel",
-        "description": null,
+        "description": "",
         "topics": [],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:34Z"
       },
       "ansible/molecule": {
         "language": "Python",
@@ -3167,9 +4791,19 @@
           "podman",
           "cookiecutter-ansible",
           "hacktoberfest",
-          "supports-dot-config"
+          "supports-dot-config",
+          "pep-621",
+          "ansible-dev-tools"
         ],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:35Z"
       },
       "ansible/ansible-backstage-plugins": {
         "language": "TypeScript",
@@ -3183,7 +4817,15 @@
           "developer-experience",
           "idp"
         ],
-        "last_profiled": "2026-02-12T18:27:07.823983Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:18Z"
       },
       "ansible/automation-analytics": {
         "language": "Python",
@@ -3215,14 +4857,41 @@
         "default_branch": "master",
         "description": "Generic command-line automation tool",
         "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:09Z"
       },
       "prantlf/ovai": {
         "language": "Go",
         "default_branch": "master",
         "description": "HTTP proxy for accessing Vertex AI with the REST API interface of ollama or OpenAI. Optionally forwarding requests for other models to ollama. Written in Go.",
-        "topics": [],
-        "last_profiled": "2026-02-12T22:49:36Z"
+        "topics": [
+          "ai",
+          "api-proxy",
+          "google",
+          "ollama",
+          "ollama-api",
+          "ollama-interface",
+          "vertex-ai",
+          "vertexai",
+          "openai",
+          "openai-api"
+        ],
+        "has_issues_enabled": true,
+        "build_system": null,
+        "test_command": null,
+        "lint_command": null,
+        "has_contributing_md": null,
+        "has_tests": null,
+        "project_type": null,
+        "key_conventions": null,
+        "last_profiled": "2026-02-13T02:27:59Z"
       },
       "ansible-automation-platform/aap-gateway": {
         "language": "Python",
@@ -3235,156 +4904,156 @@
     "repo_last_rebased": {
       "Redhat-forks": "2026-02-10T21:25:26Z",
       "dmzoneill-forks": "2026-02-10T21:25:26Z",
-      "dmzoneill-forks/Android-Password-Store": "2026-02-12T22:49:26Z",
-      "dmzoneill-forks/vscode": "2026-02-12T22:49:25Z",
-      "dmzoneill-forks/go-binance": "2026-02-12T22:48:39Z",
-      "dmzoneill-forks/headphones": "2026-02-12T22:48:55Z",
-      "dmzoneill-forks/Jackett": "2026-02-12T22:48:52Z",
-      "dmzoneill-forks/cover-thumbnailer": "2026-02-12T22:48:57Z",
-      "dmzoneill-forks/dash-to-dock": "2026-02-12T22:49:21Z",
-      "dmzoneill-forks/zed": "2026-02-12T22:49:24Z",
-      "dmzoneill-forks/PHP_CodeSniffer": "2026-02-12T22:48:34Z",
-      "dmzoneill-forks/fastmcp": "2026-02-12T22:49:23Z",
-      "dmzoneill-forks/spksrc": "2026-02-12T22:48:31Z",
-      "dmzoneill-forks/blogging-with-ai": "2026-02-12T22:49:20Z",
-      "dmzoneill-forks/cryptopia-api-php": "2026-02-12T22:48:42Z",
-      "dmzoneill-forks/PHP-Daemon": "2026-02-12T22:48:41Z",
-      "dmzoneill-forks/nzbhydra2": "2026-02-12T22:48:56Z",
-      "dmzoneill-forks/webpack": "2026-02-12T22:49:14Z",
-      "dmzoneill-forks/terminator": "2026-02-12T22:49:22Z",
-      "dmzoneill-forks/intercom": "2026-02-12T22:49:02Z",
-      "dmzoneill-forks/core": "2026-02-12T22:49:00Z",
-      "dmzoneill-forks/seedmage": "2026-02-12T22:49:08Z",
-      "dmzoneill-forks/WiringPi": "2026-02-12T22:48:59Z",
-      "dmzoneill-forks/webdis": "2026-02-12T22:48:46Z",
-      "dmzoneill-forks/deluge": "2026-02-12T22:48:55Z",
-      "dmzoneill-forks/nemo-extensions": "2026-02-12T22:48:32Z",
-      "dmzoneill-forks/Freenove_RFID_Starter_Kit_for_Raspberry_Pi": "2026-02-12T22:48:58Z",
-      "dmzoneill-forks/DoorButler": "2026-02-12T22:49:01Z",
-      "dmzoneill-forks/trollolo": "2026-02-12T22:48:48Z",
-      "dmzoneill-forks/docker-deluge": "2026-02-12T22:49:10Z",
-      "dmzoneill-forks/sonarr-radarr-lidarr-autosearch-browser-extension": "2026-02-12T22:49:09Z",
-      "dmzoneill-forks/php-pubsub-redis": "2026-02-12T22:48:41Z",
-      "dmzoneill-forks/contrib": "2026-02-12T22:48:43Z",
-      "dmzoneill-forks/binance-java-api": "2026-02-12T22:48:38Z",
-      "dmzoneill-forks/all-contributors": "2026-02-12T22:48:35Z",
-      "dmzoneill-forks/Docker-OSX": "2026-02-12T22:49:07Z",
-      "dmzoneill-forks/incrediblepbx": "2026-02-12T22:49:05Z",
-      "dmzoneill-forks/node-binance-api": "2026-02-12T22:48:34Z",
-      "dmzoneill-forks/docker-ce": "2026-02-12T22:48:47Z",
-      "dmzoneill-forks/shields-with-icon": "2026-02-12T22:49:17Z",
-      "dmzoneill-forks/asyncmock": "2026-02-12T22:49:06Z",
-      "dmzoneill-forks/mbp-fedora": "2026-02-12T22:49:13Z",
-      "dmzoneill-forks/dockerfiles": "2026-02-12T22:48:53Z",
-      "dmzoneill-forks/raspberry-pi-intercom": "2026-02-12T22:49:01Z",
-      "dmzoneill-forks/authy": "2026-02-12T22:49:19Z",
-      "dmzoneill-forks/chrome-webstore-upload-cli": "2026-02-12T22:49:18Z",
-      "dmzoneill-forks/text-to-img-craiyon-scrapper": "2026-02-12T22:49:17Z",
-      "dmzoneill-forks/Amazon-video-downloader": "2026-02-12T22:49:11Z",
-      "dmzoneill-forks/DoorPi": "2026-02-12T22:49:04Z",
-      "dmzoneill-forks/binance-enhancement-suite": "2026-02-12T22:48:37Z",
-      "dmzoneill-forks/doorbell-pi": "2026-02-12T22:49:03Z",
-      "dmzoneill-forks/stockprediction": "2026-02-12T22:48:36Z",
-      "dmzoneill-forks/fmt": "2026-02-12T22:48:40Z",
-      "Redhat-forks/edge-frontend": "2026-02-12T22:51:20Z",
-      "Redhat-forks/edge-api": "2026-02-12T22:51:19Z",
-      "Redhat-forks/insights-analytics-collector": "2026-02-12T22:51:22Z",
-      "Redhat-forks/clowder": "2026-02-12T22:51:18Z",
-      "Redhat-forks/galaxy_ng": "2026-02-12T22:51:21Z",
-      "Redhat-forks/tower-analytics-frontend": "2026-02-12T22:51:16Z",
-      "Redhat-forks/awx": "2026-02-12T22:51:26Z",
-      "Redhat-forks/qontract-schemas": "2026-02-12T22:51:23Z",
-      "Redhat-forks/django-ansible-base": "2026-02-12T22:51:27Z",
-      "Redhat-forks/ansible-sign": "2026-02-12T22:51:28Z",
-      "Redhat-forks/tower": "2026-02-12T22:51:25Z",
-      "Redhat-forks/ansible-builder": "2026-02-12T22:51:29Z",
-      "Redhat-forks/awx-operator": "2026-02-12T22:51:33Z",
-      "Redhat-forks/bonfire-tekton": "2026-02-12T22:51:31Z",
-      "Redhat-forks/metrics-utility": "2026-02-12T22:51:30Z",
-      "Redhat-forks/aap-gateway": "2026-02-12T22:51:32Z",
-      "Redhat-forks/ansible-runner": "2026-02-12T22:51:34Z",
-      "Redhat-forks/eda-server": "2026-02-12T22:51:34Z",
-      "Redhat-forks/azure": "2026-02-12T22:51:35Z",
-      "Redhat-forks/ansible-ai-connect-operator": "2026-02-12T22:51:37Z",
-      "Redhat-forks/dataverse-integration": "2026-02-12T22:51:36Z",
-      "Redhat-forks/ansible": "2026-02-12T22:51:38Z",
-      "Redhat-forks/ansible-navigator": "2026-02-12T22:51:40Z",
-      "Redhat-forks/receptor": "2026-02-12T22:51:42Z",
-      "Redhat-forks/ansible-lint": "2026-02-12T22:51:39Z",
-      "Redhat-forks/vscode-ansible": "2026-02-12T22:51:41Z",
-      "Redhat-forks/aap-azurerm": "2026-02-11T12:25:19.307757+00:00",
-      "Redhat-forks/handbook": "2026-02-12T22:51:42Z",
-      "Redhat-forks/ansible-dev-tools": "2026-02-11T12:25:19.524814+00:00",
-      "Redhat-forks/platform-services-utilities": "2026-02-11T12:25:19.618510+00:00",
-      "Redhat-forks/zuul-config": "2026-02-11T12:25:19.698057+00:00",
-      "Redhat-forks/ansible-azure-mgmt": "2026-02-11T12:25:19.727408+00:00",
-      "Redhat-forks/ansible-documentation": "2026-02-11T12:25:19.815523+00:00",
-      "Redhat-forks/awx-plugins": "2026-02-11T12:25:19.837317+00:00",
-      "Redhat-forks/tower-packaging": "2026-02-11T12:25:19.815147+00:00",
-      "Redhat-forks/ansible-compat": "2026-02-11T12:25:19.865602+00:00",
-      "Redhat-forks/ansible-dev-environment": "2026-02-11T12:25:20.066769+00:00",
-      "Redhat-forks/pytest-ansible": "2026-02-11T12:25:20.138302+00:00",
-      "Redhat-forks/ansible-creator": "2026-02-11T12:25:20.156205+00:00",
-      "Redhat-forks/event-driven-ansible": "2026-02-11T12:25:20.222215+00:00",
-      "Redhat-forks/ansible-chatbot-service": "2026-02-11T12:25:20.315415+00:00",
-      "Redhat-forks/podman": "2026-02-11T12:25:20.315876+00:00",
-      "Redhat-forks/podman-compose": "2026-02-11T12:25:20.344541+00:00",
-      "Redhat-forks/insights-chrome": "2026-02-11T12:25:20.571163+00:00",
-      "Redhat-forks/ansible-podman-collections": "2026-02-11T12:25:20.529600+00:00",
-      "Redhat-forks/frontend-operator": "2026-02-11T12:25:20.628472+00:00",
-      "Redhat-forks/insights-mcp": "2026-02-11T12:25:20.806432+00:00",
-      "Redhat-forks/podman-desktop": "2026-02-11T12:25:20.489825+00:00",
-      "Redhat-forks/rhsm-subscriptions": "2026-02-11T12:25:20.794851+00:00",
-      "Redhat-forks/insights-host-inventory": "2026-02-11T12:25:20.699061+00:00",
-      "Redhat-forks/insights-client": "2026-02-11T12:25:20.859374+00:00",
-      "Redhat-forks/frontend-experience-docs": "2026-02-11T12:25:20.988535+00:00",
-      "Redhat-forks/widget-layout": "2026-02-11T12:25:21.043137+00:00",
-      "Redhat-forks/chrome-service-backend": "2026-02-11T12:25:21.105364+00:00",
-      "Redhat-forks/vulnerability-ui": "2026-02-11T12:25:21.243735+00:00",
-      "Redhat-forks/insights-advisor-frontend": "2026-02-11T12:25:21.308262+00:00",
-      "Redhat-forks/rhc": "2026-02-11T12:25:21.289788+00:00",
-      "Redhat-forks/insights-inventory-frontend": "2026-02-11T12:25:21.274688+00:00",
-      "Redhat-forks/patchman-ui": "2026-02-11T12:25:21.341337+00:00",
-      "Redhat-forks/processing-tools": "2026-02-11T12:25:21.417664+00:00",
-      "Redhat-forks/ccx-notification-writer": "2026-02-11T12:25:21.486227+00:00",
-      "Redhat-forks/yuptoo": "2026-02-11T12:25:21.581142+00:00",
-      "Redhat-forks/insights-puptoo": "2026-02-11T12:25:21.669067+00:00",
-      "Redhat-forks/rhsm-api-proxy": "2026-02-11T12:25:21.771840+00:00",
-      "Redhat-forks/floorist": "2026-02-11T12:25:21.769493+00:00",
-      "Redhat-forks/floorist-operator": "2026-02-11T12:25:21.770992+00:00",
-      "Redhat-forks/vulnerability-docs": "2026-02-11T12:25:21.879684+00:00",
-      "Redhat-forks/vmaas": "2026-02-11T12:25:21.960425+00:00",
-      "Redhat-forks/vulnerability-engine": "2026-02-11T12:25:21.809892+00:00",
-      "Redhat-forks/compliance-backend": "2026-02-11T12:25:22.056789+00:00",
-      "Redhat-forks/data-pipeline": "2026-02-11T12:25:22.161814+00:00",
-      "Redhat-forks/content-service": "2026-02-11T12:25:22.238626+00:00",
-      "Redhat-forks/ccx-notification-service": "2026-02-11T12:25:22.282803+00:00",
-      "Redhat-forks/sources-superkey-worker": "2026-02-11T12:25:22.239127+00:00",
-      "Redhat-forks/sources-api-go": "2026-02-11T12:25:22.378740+00:00",
-      "Redhat-forks/product-demos": "2026-02-11T12:25:22.409014+00:00",
-      "Redhat-forks/test-playbooks": "2026-02-11T12:25:22.499757+00:00",
-      "Redhat-forks/ansible-sandbox-sre": "2026-02-11T12:25:22.411456+00:00",
-      "Redhat-forks/ansible-rhdh-templates": "2026-02-11T12:25:22.641061+00:00",
-      "Redhat-forks/ansible-rulebook": "2026-02-11T12:25:22.753359+00:00",
-      "Redhat-forks/automation-reports": "2026-02-11T12:25:22.730105+00:00",
-      "Redhat-forks/aap-docs": "2026-02-11T12:25:22.694829+00:00",
-      "Redhat-forks/ansible-chatbot-stack": "2026-02-11T12:25:22.864308+00:00",
-      "Redhat-forks/ansible-wisdom-ops": "2026-02-11T12:25:22.866736+00:00",
-      "Redhat-forks/ansible-ai-connect-service": "2026-02-11T12:25:22.949942+00:00",
-      "Redhat-forks/team-devtools": "2026-02-11T12:25:23.037052+00:00",
-      "Redhat-forks/actions": "2026-02-11T12:25:23.224913+00:00",
-      "Redhat-forks/galaxy-importer": "2026-02-11T12:25:23.233905+00:00",
-      "Redhat-forks/gh-action-record-test-results": "2026-02-11T12:25:23.240313+00:00",
-      "Redhat-forks/pylibssh": "2026-02-11T12:25:23.320850+00:00",
-      "Redhat-forks/ansible.platform": "2026-02-11T12:25:23.305456+00:00",
-      "Redhat-forks/terraform-provider-ansible": "2026-02-11T12:25:23.435152+00:00",
-      "Redhat-forks/tower-qa": "2026-02-11T12:25:23.364178+00:00",
-      "Redhat-forks/metrics-service": "2026-02-11T12:25:23.510700+00:00",
-      "Redhat-forks/molecule": "2026-02-11T12:25:23.667114+00:00",
-      "Redhat-forks/ansible-backstage-plugins": "2026-02-11T12:25:23.684403+00:00",
-      "Redhat-forks/receptor-1": "2026-02-11T12:25:23.729950+00:00",
-      "Redhat-forks/awx-operator-1": "2026-02-11T12:25:23.750300+00:00",
-      "Redhat-forks/event-driven-ansible-1": "2026-02-11T12:25:23.774048+00:00",
+      "dmzoneill-forks/Android-Password-Store": "2026-02-13T02:25:18Z",
+      "dmzoneill-forks/vscode": "2026-02-13T02:25:17Z",
+      "dmzoneill-forks/go-binance": "2026-02-13T02:24:50Z",
+      "dmzoneill-forks/headphones": "2026-02-13T02:24:59Z",
+      "dmzoneill-forks/Jackett": "2026-02-13T02:24:57Z",
+      "dmzoneill-forks/cover-thumbnailer": "2026-02-13T02:25:00Z",
+      "dmzoneill-forks/dash-to-dock": "2026-02-13T02:25:15Z",
+      "dmzoneill-forks/zed": "2026-02-13T02:25:17Z",
+      "dmzoneill-forks/PHP_CodeSniffer": "2026-02-13T02:24:47Z",
+      "dmzoneill-forks/fastmcp": "2026-02-13T02:25:16Z",
+      "dmzoneill-forks/spksrc": "2026-02-13T02:24:45Z",
+      "dmzoneill-forks/blogging-with-ai": "2026-02-13T02:25:14Z",
+      "dmzoneill-forks/cryptopia-api-php": "2026-02-13T02:24:52Z",
+      "dmzoneill-forks/PHP-Daemon": "2026-02-13T02:24:52Z",
+      "dmzoneill-forks/nzbhydra2": "2026-02-13T02:25:00Z",
+      "dmzoneill-forks/webpack": "2026-02-13T02:25:11Z",
+      "dmzoneill-forks/terminator": "2026-02-13T02:25:16Z",
+      "dmzoneill-forks/intercom": "2026-02-13T02:25:04Z",
+      "dmzoneill-forks/core": "2026-02-13T02:25:02Z",
+      "dmzoneill-forks/seedmage": "2026-02-13T02:25:07Z",
+      "dmzoneill-forks/WiringPi": "2026-02-13T02:25:02Z",
+      "dmzoneill-forks/webdis": "2026-02-13T02:24:54Z",
+      "dmzoneill-forks/deluge": "2026-02-13T02:24:59Z",
+      "dmzoneill-forks/nemo-extensions": "2026-02-13T02:24:45Z",
+      "dmzoneill-forks/Freenove_RFID_Starter_Kit_for_Raspberry_Pi": "2026-02-13T02:25:01Z",
+      "dmzoneill-forks/DoorButler": "2026-02-13T02:25:03Z",
+      "dmzoneill-forks/trollolo": "2026-02-13T02:24:56Z",
+      "dmzoneill-forks/docker-deluge": "2026-02-13T02:25:09Z",
+      "dmzoneill-forks/sonarr-radarr-lidarr-autosearch-browser-extension": "2026-02-13T02:25:08Z",
+      "dmzoneill-forks/php-pubsub-redis": "2026-02-13T02:24:51Z",
+      "dmzoneill-forks/contrib": "2026-02-13T02:24:53Z",
+      "dmzoneill-forks/binance-java-api": "2026-02-13T02:24:50Z",
+      "dmzoneill-forks/all-contributors": "2026-02-13T02:24:48Z",
+      "dmzoneill-forks/Docker-OSX": "2026-02-13T02:25:07Z",
+      "dmzoneill-forks/incrediblepbx": "2026-02-13T02:25:05Z",
+      "dmzoneill-forks/node-binance-api": "2026-02-13T02:24:47Z",
+      "dmzoneill-forks/docker-ce": "2026-02-13T02:24:55Z",
+      "dmzoneill-forks/shields-with-icon": "2026-02-13T02:25:12Z",
+      "dmzoneill-forks/asyncmock": "2026-02-13T02:25:06Z",
+      "dmzoneill-forks/mbp-fedora": "2026-02-13T02:25:10Z",
+      "dmzoneill-forks/dockerfiles": "2026-02-13T02:24:58Z",
+      "dmzoneill-forks/raspberry-pi-intercom": "2026-02-13T02:25:03Z",
+      "dmzoneill-forks/authy": "2026-02-13T02:25:14Z",
+      "dmzoneill-forks/chrome-webstore-upload-cli": "2026-02-13T02:25:13Z",
+      "dmzoneill-forks/text-to-img-craiyon-scrapper": "2026-02-13T02:25:13Z",
+      "dmzoneill-forks/Amazon-video-downloader": "2026-02-13T02:25:09Z",
+      "dmzoneill-forks/DoorPi": "2026-02-13T02:25:05Z",
+      "dmzoneill-forks/binance-enhancement-suite": "2026-02-13T02:24:49Z",
+      "dmzoneill-forks/doorbell-pi": "2026-02-13T02:25:04Z",
+      "dmzoneill-forks/stockprediction": "2026-02-13T02:24:48Z",
+      "dmzoneill-forks/fmt": "2026-02-13T02:24:51Z",
+      "Redhat-forks/edge-frontend": "2026-02-13T02:23:50Z",
+      "Redhat-forks/edge-api": "2026-02-13T02:23:49Z",
+      "Redhat-forks/insights-analytics-collector": "2026-02-13T02:23:51Z",
+      "Redhat-forks/clowder": "2026-02-13T02:23:49Z",
+      "Redhat-forks/galaxy_ng": "2026-02-13T02:23:51Z",
+      "Redhat-forks/tower-analytics-frontend": "2026-02-13T02:23:48Z",
+      "Redhat-forks/awx": "2026-02-13T02:23:53Z",
+      "Redhat-forks/qontract-schemas": "2026-02-13T02:23:52Z",
+      "Redhat-forks/django-ansible-base": "2026-02-13T02:23:54Z",
+      "Redhat-forks/ansible-sign": "2026-02-13T02:23:54Z",
+      "Redhat-forks/tower": "2026-02-13T02:23:53Z",
+      "Redhat-forks/ansible-builder": "2026-02-13T02:23:55Z",
+      "Redhat-forks/awx-operator": "2026-02-13T02:23:57Z",
+      "Redhat-forks/bonfire-tekton": "2026-02-13T02:23:56Z",
+      "Redhat-forks/metrics-utility": "2026-02-13T02:23:56Z",
+      "Redhat-forks/aap-gateway": "2026-02-13T02:23:57Z",
+      "Redhat-forks/ansible-runner": "2026-02-13T02:23:58Z",
+      "Redhat-forks/eda-server": "2026-02-13T02:23:59Z",
+      "Redhat-forks/azure": "2026-02-13T02:23:59Z",
+      "Redhat-forks/ansible-ai-connect-operator": "2026-02-13T02:24:00Z",
+      "Redhat-forks/dataverse-integration": "2026-02-13T02:24:00Z",
+      "Redhat-forks/ansible": "2026-02-13T02:24:01Z",
+      "Redhat-forks/ansible-navigator": "2026-02-13T02:24:02Z",
+      "Redhat-forks/receptor": "2026-02-13T02:24:03Z",
+      "Redhat-forks/ansible-lint": "2026-02-13T02:24:01Z",
+      "Redhat-forks/vscode-ansible": "2026-02-13T02:24:03Z",
+      "Redhat-forks/aap-azurerm": "2026-02-13T02:24:04Z",
+      "Redhat-forks/handbook": "2026-02-13T02:24:04Z",
+      "Redhat-forks/ansible-dev-tools": "2026-02-13T02:24:05Z",
+      "Redhat-forks/platform-services-utilities": "2026-02-13T02:24:06Z",
+      "Redhat-forks/zuul-config": "2026-02-13T02:24:06Z",
+      "Redhat-forks/ansible-azure-mgmt": "2026-02-13T02:24:07Z",
+      "Redhat-forks/ansible-documentation": "2026-02-13T02:24:08Z",
+      "Redhat-forks/awx-plugins": "2026-02-13T02:24:09Z",
+      "Redhat-forks/tower-packaging": "2026-02-13T02:24:08Z",
+      "Redhat-forks/ansible-compat": "2026-02-13T02:24:09Z",
+      "Redhat-forks/ansible-dev-environment": "2026-02-13T02:24:10Z",
+      "Redhat-forks/pytest-ansible": "2026-02-13T02:24:10Z",
+      "Redhat-forks/ansible-creator": "2026-02-13T02:24:11Z",
+      "Redhat-forks/event-driven-ansible": "2026-02-13T02:24:12Z",
+      "Redhat-forks/ansible-chatbot-service": "2026-02-13T02:24:12Z",
+      "Redhat-forks/podman": "2026-02-13T02:24:13Z",
+      "Redhat-forks/podman-compose": "2026-02-13T02:24:13Z",
+      "Redhat-forks/insights-chrome": "2026-02-13T02:24:15Z",
+      "Redhat-forks/ansible-podman-collections": "2026-02-13T02:24:14Z",
+      "Redhat-forks/frontend-operator": "2026-02-13T02:24:16Z",
+      "Redhat-forks/insights-mcp": "2026-02-13T02:24:17Z",
+      "Redhat-forks/podman-desktop": "2026-02-13T02:24:14Z",
+      "Redhat-forks/rhsm-subscriptions": "2026-02-13T02:24:17Z",
+      "Redhat-forks/insights-host-inventory": "2026-02-13T02:24:16Z",
+      "Redhat-forks/insights-client": "2026-02-13T02:24:18Z",
+      "Redhat-forks/frontend-experience-docs": "2026-02-13T02:24:18Z",
+      "Redhat-forks/widget-layout": "2026-02-13T02:24:19Z",
+      "Redhat-forks/chrome-service-backend": "2026-02-13T02:24:19Z",
+      "Redhat-forks/vulnerability-ui": "2026-02-13T02:24:20Z",
+      "Redhat-forks/insights-advisor-frontend": "2026-02-13T02:24:22Z",
+      "Redhat-forks/rhc": "2026-02-13T02:24:21Z",
+      "Redhat-forks/insights-inventory-frontend": "2026-02-13T02:24:20Z",
+      "Redhat-forks/patchman-ui": "2026-02-13T02:24:22Z",
+      "Redhat-forks/processing-tools": "2026-02-13T02:24:23Z",
+      "Redhat-forks/ccx-notification-writer": "2026-02-13T02:24:23Z",
+      "Redhat-forks/yuptoo": "2026-02-13T02:24:24Z",
+      "Redhat-forks/insights-puptoo": "2026-02-13T02:24:24Z",
+      "Redhat-forks/rhsm-api-proxy": "2026-02-13T02:24:26Z",
+      "Redhat-forks/floorist": "2026-02-13T02:24:25Z",
+      "Redhat-forks/floorist-operator": "2026-02-13T02:24:25Z",
+      "Redhat-forks/vulnerability-docs": "2026-02-13T02:24:27Z",
+      "Redhat-forks/vmaas": "2026-02-13T02:24:27Z",
+      "Redhat-forks/vulnerability-engine": "2026-02-13T02:24:26Z",
+      "Redhat-forks/compliance-backend": "2026-02-13T02:24:28Z",
+      "Redhat-forks/data-pipeline": "2026-02-13T02:24:29Z",
+      "Redhat-forks/content-service": "2026-02-13T02:24:29Z",
+      "Redhat-forks/ccx-notification-service": "2026-02-13T02:24:30Z",
+      "Redhat-forks/sources-superkey-worker": "2026-02-13T02:24:30Z",
+      "Redhat-forks/sources-api-go": "2026-02-13T02:24:31Z",
+      "Redhat-forks/product-demos": "2026-02-13T02:24:31Z",
+      "Redhat-forks/test-playbooks": "2026-02-13T02:24:33Z",
+      "Redhat-forks/ansible-sandbox-sre": "2026-02-13T02:24:32Z",
+      "Redhat-forks/ansible-rhdh-templates": "2026-02-13T02:24:33Z",
+      "Redhat-forks/ansible-rulebook": "2026-02-13T02:24:35Z",
+      "Redhat-forks/automation-reports": "2026-02-13T02:24:34Z",
+      "Redhat-forks/aap-docs": "2026-02-13T02:24:34Z",
+      "Redhat-forks/ansible-chatbot-stack": "2026-02-13T02:24:35Z",
+      "Redhat-forks/ansible-wisdom-ops": "2026-02-13T02:24:36Z",
+      "Redhat-forks/ansible-ai-connect-service": "2026-02-13T02:24:36Z",
+      "Redhat-forks/team-devtools": "2026-02-13T02:24:37Z",
+      "Redhat-forks/actions": "2026-02-13T02:24:37Z",
+      "Redhat-forks/galaxy-importer": "2026-02-13T02:24:38Z",
+      "Redhat-forks/gh-action-record-test-results": "2026-02-13T02:24:39Z",
+      "Redhat-forks/pylibssh": "2026-02-13T02:24:40Z",
+      "Redhat-forks/ansible.platform": "2026-02-13T02:24:39Z",
+      "Redhat-forks/terraform-provider-ansible": "2026-02-13T02:24:41Z",
+      "Redhat-forks/tower-qa": "2026-02-13T02:24:40Z",
+      "Redhat-forks/metrics-service": "2026-02-13T02:24:41Z",
+      "Redhat-forks/molecule": "2026-02-13T02:24:42Z",
+      "Redhat-forks/ansible-backstage-plugins": "2026-02-13T02:24:43Z",
+      "Redhat-forks/receptor-1": "2026-02-13T02:24:43Z",
+      "Redhat-forks/awx-operator-1": "2026-02-13T02:24:44Z",
+      "Redhat-forks/event-driven-ansible-1": "2026-02-13T02:24:44Z",
       "RedHatInsights/ansible-automation-platform-setup-bundle": "2026-02-12T15:26:17.699Z",
       "RedHatInsights/eda-partner-testing": "2026-02-12T15:26:17.699Z",
       "ansible/ansible-lint": "2026-02-12T15:26:17.699Z",
@@ -3432,11 +5101,11 @@
       "dmzoneill-forks/Sonarr": "2026-02-12T22:48:54Z",
       "dmzoneill-forks/scripts": "2026-02-12T22:49:12Z",
       "dmzoneill-forks/markdown-badges": "2026-02-12T22:49:15Z",
-      "dmzoneill-forks/ydotool": "2026-02-12T22:49:27Z",
-      "dmzoneill-forks/ovai": "2026-02-12T22:49:27Z",
-      "Redhat-forks/bonfire": "2026-02-12T22:51:14Z",
-      "Redhat-forks/insights-frontend-builder-common": "2026-02-12T22:51:17Z",
-      "Redhat-forks/insights-ingress-go": "2026-02-12T22:51:23Z"
+      "dmzoneill-forks/ydotool": "2026-02-13T02:25:18Z",
+      "dmzoneill-forks/ovai": "2026-02-13T02:25:19Z",
+      "Redhat-forks/bonfire": "2026-02-13T02:23:47Z",
+      "Redhat-forks/insights-frontend-builder-common": "2026-02-13T02:23:48Z",
+      "Redhat-forks/insights-ingress-go": "2026-02-13T02:23:52Z"
     },
     "bug_fixes": [
       {
@@ -3603,24 +5272,28 @@
     "last_rebase_sync": "2026-02-12T12:21:32.267387+00:00"
   },
   "last_run": {
-    "iteration": 16,
-    "timestamp": "2026-02-12T22:54:10.063412+00:00",
-    "rate_limit_remaining": 4632,
-    "repos_scanned": 89,
-    "actions_taken": [
-      "Agent 1: Monitored 33 PRs, responded to 2 comments",
-      "Agent 1: Followed up on 2 feature suggestions",
-      "Agent 2: Checked CI on 33 PRs, 9 passing",
-      "Agent 3: Synced 89 repos (59 dmzoneill-forks, 30 Redhat-forks)",
-      "Agent 3: Updated 89 repo profiles",
-      "Agent 4: Evaluated 5 issues, skipped 5 (below confidence threshold or already addressed)",
-      "Agent 5: Scanned 3 repos for critical bugs, found 0 (none met >= 90% confidence)"
-    ],
-    "errors": [],
-    "next_run_priorities": [
-      "Continue monitoring open PRs for reviewer feedback",
-      "Look for new issues on upstream repos with available PR slots",
-      "Monitor CI status on all open PRs"
-    ]
+    "timestamp": "2026-02-13T02:30:00.482933+00:00",
+    "iteration": 17,
+    "actions_taken": {
+      "repos_synced": 161,
+      "prs_created": 1,
+      "issues_evaluated": 9,
+      "pr_followups": 1,
+      "feature_suggestions_created": 0,
+      "feature_followups": 1,
+      "ci_checks": 33,
+      "bug_scans": 7
+    },
+    "summary": {
+      "agent1_feature_suggestions": 0,
+      "agent1_pr_followups": 32,
+      "agent2_prs_checked": 33,
+      "agent2_ci_passing": 12,
+      "agent3_repos_synced": 0,
+      "agent3_repos_up_to_date": 155,
+      "agent4_prs_created": 1,
+      "agent4_issues_skipped": 8,
+      "agent5_bug_fixes_created": 0
+    }
   }
 }
