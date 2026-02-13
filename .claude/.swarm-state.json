@@ -34,7 +34,8 @@
       "Freenove/Freenove_RFID_Starter_Kit_for_Raspberry_Pi": 1,
       "Ileriayo/markdown-badges": 1,
       "ansible/ansible-creator": 1,
-      "podman-desktop/podman-desktop": 1
+      "podman-desktop/podman-desktop": 1,
+      "r0bs/doorbell-pi": 1
     },
     "open_prs": [
       {
@@ -590,6 +591,19 @@
           "IC_kwDOG8Q6e87oIN10"
         ],
         "last_ci_check": "2026-02-13T06:30:22.728679Z"
+      },
+      {
+        "upstream": "r0bs/doorbell-pi",
+        "pr_number": 16,
+        "fork": "dmzoneill-forks/doorbell-pi",
+        "branch": "fix/bug-authorization-crash-messagelistener",
+        "title": "fix: correct authorization check to prevent NameError crash",
+        "issue_number": 15,
+        "created_at": "2026-02-13T09:22:00Z",
+        "status": "open",
+        "ci_status": "no_checks",
+        "comments_seen_ids": [],
+        "review_state": null
       }
     ],
     "closed_prs": [
@@ -1340,6 +1354,111 @@
         "issue_number": 1775,
         "title": "[improvement]: built-in HTTP health check endpoint for monitoring and orchestration",
         "status": "suggested"
+      },
+      {
+        "upstream": "DimitriFourny/seedmage",
+        "issue_number": 12,
+        "title": "Add config file support for managing multiple torrent profiles",
+        "status": "open",
+        "created_at": "2026-02-13T09:18:00Z"
+      },
+      {
+        "upstream": "KittyCatTech/cryptopia-api-php",
+        "issue_number": 14,
+        "title": "Add rate limit handling with automatic retry and backoff",
+        "status": "open",
+        "created_at": "2026-02-13T09:18:00Z"
+      },
+      {
+        "upstream": "WiringPi/WiringPi",
+        "issue_number": 422,
+        "title": "Add Python bindings for easier cross-language integration",
+        "status": "open",
+        "created_at": "2026-02-13T09:19:00Z"
+      },
+      {
+        "upstream": "ansible/ansible-creator",
+        "issue_number": 522,
+        "title": "Add template customization via user-defined template directory",
+        "status": "open",
+        "created_at": "2026-02-13T09:19:00Z"
+      },
+      {
+        "upstream": "ansible/ansible-lint",
+        "issue_number": 4966,
+        "title": "Add auto-fix capability for safe, deterministic rule violations",
+        "status": "open",
+        "created_at": "2026-02-13T09:19:00Z"
+      },
+      {
+        "upstream": "ansible/django-ansible-base",
+        "issue_number": 941,
+        "title": "Add configurable session timeout per user role",
+        "status": "open",
+        "created_at": "2026-02-13T09:19:00Z"
+      },
+      {
+        "upstream": "benthomasson/dataverse-integration",
+        "issue_number": 8,
+        "title": "Add validation step before dataverse sync to catch schema mismatches early",
+        "status": "open",
+        "created_at": "2026-02-13T09:20:00Z"
+      },
+      {
+        "upstream": "gnome-terminator/terminator",
+        "issue_number": 1064,
+        "title": "Add command history search across all terminal panes",
+        "status": "open",
+        "created_at": "2026-02-13T09:20:00Z"
+      },
+      {
+        "upstream": "infusion/PHP-Daemon",
+        "issue_number": 10,
+        "title": "Add systemd unit file generator for easier deployment",
+        "status": "open",
+        "created_at": "2026-02-13T09:20:00Z"
+      },
+      {
+        "upstream": "linuxmint/nemo-extensions",
+        "issue_number": 574,
+        "title": "Add bulk file renaming extension with regex and pattern support",
+        "status": "open",
+        "created_at": "2026-02-13T09:20:00Z"
+      },
+      {
+        "upstream": "micheleg/dash-to-dock",
+        "issue_number": 2504,
+        "title": "Add per-workspace app pinning for context-specific docks",
+        "status": "open",
+        "created_at": "2026-02-13T09:20:00Z"
+      },
+      {
+        "upstream": "nicolasff/webdis",
+        "issue_number": 267,
+        "title": "Add websocket support for real-time redis pub/sub over http",
+        "status": "open",
+        "created_at": "2026-02-13T09:21:00Z"
+      },
+      {
+        "upstream": "podman-desktop/podman-desktop",
+        "issue_number": 16231,
+        "title": "Add container resource usage graphs and historical metrics tracking",
+        "status": "open",
+        "created_at": "2026-02-13T09:21:00Z"
+      },
+      {
+        "upstream": "rembo10/headphones",
+        "issue_number": 3413,
+        "title": "Add support for matching releases by musicbrainz release group id",
+        "status": "open",
+        "created_at": "2026-02-13T09:21:00Z"
+      },
+      {
+        "upstream": "rootpd/go-binance",
+        "issue_number": 17,
+        "title": "Add context support for request cancellation and timeout control",
+        "status": "open",
+        "created_at": "2026-02-13T09:21:00Z"
       }
     ],
     "attempted_issues": [
@@ -5304,36 +5423,45 @@
         "severity": "critical",
         "status": "open",
         "created_at": "2026-02-12T18:26:00Z"
+      },
+      {
+        "upstream": "r0bs/doorbell-pi",
+        "fork": "dmzoneill-forks/doorbell-pi",
+        "issue_number": 15,
+        "pr_number": 16,
+        "branch": "fix/bug-authorization-crash-messagelistener",
+        "title": "fix: correct authorization check to prevent NameError crash",
+        "file_path": "messageListener.py",
+        "line_number": 13,
+        "bug_type": "name_error_crash",
+        "severity": "critical",
+        "status": "open",
+        "created_at": "2026-02-13T09:21:00Z"
       }
     ],
     "last_sync": "2026-02-12T16:56:30Z",
     "last_rebase_sync": "2026-02-12T12:21:32.267387+00:00"
   },
   "last_run": {
-    "timestamp": "2026-02-13T07:56:52Z",
-    "iteration": 21,
-    "rate_limit_remaining": 4477,
+    "timestamp": "2026-02-13T09:24:34Z",
+    "iteration": 22,
+    "rate_limit_remaining": 4642,
     "repos_scanned": 96,
     "actions_taken": [
-      "Created 5 new feature suggestions",
-      "Fixed DCO check on podman-desktop PR #16220",
-      "Rebased markdown-badges PR #951 from upstream",
-      "Marked 1 comment as seen on podman-desktop PR #16220",
-      "Synced 87 forks with upstream",
-      "Checked CI status on 34 open PRs",
-      "Scanned 3 repos for critical bugs"
+      "Created 15 new feature suggestions",
+      "Checked CI status on 34 open PRs - all passing or unfixable",
+      "Synced 21 forks with upstream",
+      "Updated 21 repo profiles",
+      "Scanned 10 repos for critical bugs",
+      "Found and fixed 1 critical authorization crash bug in r0bs/doorbell-pi",
+      "Created PR #16 on r0bs/doorbell-pi",
+      "Created issue #15 on r0bs/doorbell-pi"
     ],
-    "errors": [
-      "2 CLA failures on FreePBX PRs - cannot fix programmatically",
-      "1 DVCS policy failure on django-ansible-base - requires JIRA reference",
-      "9 forks failed to sync due to conflicts or missing repos"
-    ],
+    "errors": [],
     "next_run_priorities": [
-      "Monitor podman-desktop PR #16220 for reviewer feedback",
-      "Monitor markdown-badges PR #951 for CI completion",
-      "Resolve merge conflicts on 6 dmzoneill-forks repos",
-      "Continue feature suggestions for remaining repos",
-      "Monitor all open PRs for new comments"
+      "Monitor all 35 open PRs for new comments",
+      "Continue monitoring CI status",
+      "Look for new fixable issues in repos below PR limit"
     ]
   }
 }
