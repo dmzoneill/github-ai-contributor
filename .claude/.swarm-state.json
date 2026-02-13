@@ -580,12 +580,16 @@
         "title": "chore(ui): export Icon component from main ui library",
         "url": "https://github.com/podman-desktop/podman-desktop/pull/16220",
         "status": "open",
-        "ci_status": "failing_dco",
+        "ci_status": "passing",
         "upstream": "podman-desktop/podman-desktop",
         "fork": "Redhat-forks/podman-desktop",
         "branch": "fix/issue-16141-export-icon-component",
         "fixes_issue": 16141,
-        "created_at": "2026-02-13T02:30:00.482892Z"
+        "created_at": "2026-02-13T02:30:00.482892Z",
+        "comments_seen_ids": [
+          "IC_kwDOG8Q6e87oIN10"
+        ],
+        "last_ci_check": "2026-02-13T06:30:22.728679Z"
       }
     ],
     "closed_prs": [
@@ -1306,6 +1310,36 @@
         "comments_seen_ids": [
           "IC_kwDOArGhXs7n_YHM"
         ]
+      },
+      {
+        "upstream": "podman-desktop/podman-desktop",
+        "issue_number": 16226,
+        "title": "container resource trend visualization in list view",
+        "status": "suggested"
+      },
+      {
+        "upstream": "gnome-terminator/terminator",
+        "issue_number": 1063,
+        "title": "session manager to save/restore terminal layouts and working directories",
+        "status": "suggested"
+      },
+      {
+        "upstream": "ansible/ansible-builder",
+        "issue_number": 778,
+        "title": "dry-run mode to preview dependencies and image structure without building",
+        "status": "suggested"
+      },
+      {
+        "upstream": "ansible/ansible-runner",
+        "issue_number": 1484,
+        "title": "simple progress callback for python API usage",
+        "status": "suggested"
+      },
+      {
+        "upstream": "asterisk/asterisk",
+        "issue_number": 1775,
+        "title": "[improvement]: built-in HTTP health check endpoint for monitoring and orchestration",
+        "status": "suggested"
       }
     ],
     "attempted_issues": [
@@ -2210,7 +2244,7 @@
       "all-contributors/allcontributors.org": {
         "language": "MDX",
         "default_branch": "main",
-        "description": "✨ The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code ✨",
+        "description": "\u2728 The all-contributors bot website and documentation. Recognize all contributors, not just the ones who push code \u2728",
         "topics": [
           "contributors",
           "all-contributors",
@@ -3087,7 +3121,7 @@
       "jlowin/fastmcp": {
         "language": "Python",
         "default_branch": "main",
-        "description": "🚀 The fast, Pythonic way to build MCP servers and clients",
+        "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients",
         "topics": [
           "model-context-protocol",
           "fastmcp",
@@ -3112,7 +3146,7 @@
       "zed-industries/zed": {
         "language": "Rust",
         "default_branch": "main",
-        "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "description": "Code at the speed of thought \u2013 Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
         "topics": [
           "text-editor",
           "zed",
@@ -3474,7 +3508,7 @@
       "ansible/awx-operator": {
         "language": "Jinja",
         "default_branch": "devel",
-        "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. 🤖",
+        "description": "An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. \ud83e\udd16",
         "topics": [
           "awx-operator",
           "awx",
@@ -5276,24 +5310,30 @@
     "last_rebase_sync": "2026-02-12T12:21:32.267387+00:00"
   },
   "last_run": {
-    "timestamp": "2026-02-13T05:15:25Z",
-    "iteration": 19,
-    "rate_limit_remaining": 4870,
-    "repos_scanned": 106,
+    "timestamp": "2026-02-13T06:30:22.728707Z",
+    "iteration": 20,
+    "rate_limit_remaining": 4477,
+    "repos_scanned": 96,
     "actions_taken": [
-      "Checked 34 open PRs for new comments - no new comments requiring response",
-      "Checked 20 feature suggestions for updates - all remain stable",
-      "Monitored CI status on all 34 PRs - 9 passing, 20 no CI, 5 policy failures (CLA/DCO)",
-      "Synced 93 fork repos with upstream (13 failed due to 404/divergence)",
-      "Scanned 15 issues across multiple repos - none met 90% confidence threshold",
-      "Scanned 5 repos for critical bugs - no CRITICAL bugs found"
+      "Created 5 new feature suggestions",
+      "Fixed DCO check on podman-desktop PR #16220",
+      "Rebased markdown-badges PR #951 from upstream",
+      "Marked 1 comment as seen on podman-desktop PR #16220",
+      "Synced 87 forks with upstream",
+      "Checked CI status on 34 open PRs",
+      "Scanned 3 repos for critical bugs"
     ],
-    "errors": [],
+    "errors": [
+      "2 CLA failures on FreePBX PRs - cannot fix programmatically",
+      "1 DVCS policy failure on django-ansible-base - requires JIRA reference",
+      "9 forks failed to sync due to conflicts or missing repos"
+    ],
     "next_run_priorities": [
-      "Continue monitoring 34 open PRs for reviewer comments",
-      "Investigate trollolo issues to push above 90% confidence threshold",
-      "Resolve diverged repos in dmzoneill-forks (5 repos with local changes)",
-      "Address 8 missing repos in Redhat-forks (404 errors - may need cleanup)"
+      "Monitor podman-desktop PR #16220 for reviewer feedback",
+      "Monitor markdown-badges PR #951 for CI completion",
+      "Resolve merge conflicts on 6 dmzoneill-forks repos",
+      "Continue feature suggestions for remaining repos",
+      "Monitor all open PRs for new comments"
     ]
   }
 }
