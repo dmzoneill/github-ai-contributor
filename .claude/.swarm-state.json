@@ -1322,7 +1322,8 @@
         "status": "closed",
         "created_at": "2026-02-12T16:55:57Z",
         "comments_seen_ids": [
-          "IC_kwDOArGhXs7n_YHM"
+          "IC_kwDOArGhXs7n_YHM",
+          "IC_kwDOArGhXs7oBQ-V"
         ]
       },
       {
@@ -1459,6 +1460,13 @@
         "title": "Add context support for request cancellation and timeout control",
         "status": "open",
         "created_at": "2026-02-13T09:21:00Z"
+      },
+      {
+        "upstream": "r0bs/doorbell-pi",
+        "issue_number": 17,
+        "title": "Add visitor history log with timestamps and telegram user tracking",
+        "status": "open",
+        "created_at": "2026-02-13T10:51:33Z"
       }
     ],
     "attempted_issues": [
@@ -2274,19 +2282,15 @@
         "last_profiled": "2026-02-13T02:27:51Z"
       },
       "SynoCommunity/spksrc": {
-        "language": "C",
+        "language": "Makefile",
         "default_branch": "master",
-        "description": "Cross compilation framework to create native packages for the Synology's NAS",
-        "topics": [],
+        "description": "Cross compilation framework for Synology packages",
+        "topics": [
+          "synology",
+          "package"
+        ],
         "has_issues_enabled": true,
-        "build_system": null,
-        "test_command": null,
-        "lint_command": null,
-        "has_contributing_md": null,
-        "has_tests": null,
-        "project_type": null,
-        "key_conventions": null,
-        "last_profiled": "2026-02-13T02:27:10Z"
+        "last_profiled": "2026-02-13T10:51:33Z"
       },
       "etcd-io/etcd": {
         "language": "Go",
@@ -2615,36 +2619,12 @@
         "default_branch": "master",
         "description": "API Support for your favorite torrent trackers",
         "topics": [
-          "torrent",
           "torznab",
-          "newznab",
-          "rss",
-          "rss-proxy",
-          "sickrage",
-          "couchpotato",
-          "sonarr",
-          "indexer",
-          "radarr",
-          "medusa",
-          "lidarr",
-          "duckietv",
-          "api",
-          "jackett",
-          "trackers",
-          "proxy",
-          "mylar3",
-          "nefarious",
-          "hacktoberfest"
+          "torrent",
+          "indexer"
         ],
         "has_issues_enabled": true,
-        "build_system": null,
-        "test_command": null,
-        "lint_command": null,
-        "has_contributing_md": null,
-        "has_tests": null,
-        "project_type": null,
-        "key_conventions": null,
-        "last_profiled": "2026-02-13T02:26:45Z"
+        "last_profiled": "2026-02-13T10:51:33Z"
       },
       "firecat53/dockerfiles": {
         "language": "Dockerfile",
@@ -2680,18 +2660,15 @@
       },
       "Sonarr/Sonarr": {
         "language": "C#",
-        "default_branch": "v5-develop",
-        "description": "Smart PVR for newsgroup and bittorrent users.",
-        "topics": [],
+        "default_branch": "develop",
+        "description": "Smart PVR for newsgroup and bittorrent users",
+        "topics": [
+          "pvr",
+          "usenet",
+          "torrent"
+        ],
         "has_issues_enabled": true,
-        "build_system": null,
-        "test_command": null,
-        "lint_command": null,
-        "has_contributing_md": null,
-        "has_tests": null,
-        "project_type": null,
-        "key_conventions": null,
-        "last_profiled": "2026-02-13T02:27:09Z"
+        "last_profiled": "2026-02-13T10:51:33Z"
       },
       "deluge-torrent/deluge": {
         "language": "Python",
@@ -2862,23 +2839,13 @@
       "r0bs/doorbell-pi": {
         "language": "Python",
         "default_branch": "master",
-        "description": "chat with your home's intercom - control ringer and buzzer from a Raspberry Pi via Telegram bot",
+        "description": "Home automation doorbell system",
         "topics": [
-          "raspberry-pi-3",
-          "gpio",
-          "doorbell",
-          "telegram-bot",
-          "home-automation"
+          "raspberry-pi",
+          "telegram"
         ],
         "has_issues_enabled": true,
-        "build_system": null,
-        "test_command": null,
-        "lint_command": null,
-        "has_contributing_md": null,
-        "has_tests": null,
-        "project_type": null,
-        "key_conventions": null,
-        "last_profiled": "2026-02-13T02:28:00Z"
+        "last_profiled": "2026-02-13T10:51:33Z"
       },
       "motom001/DoorPi": {
         "language": "Python",
@@ -2925,18 +2892,15 @@
       },
       "timsavage/asyncmock": {
         "language": "Python",
-        "default_branch": "master",
-        "description": "Awaitable mocks for async code. (For Python 3.6+, use the new builtin AsyncMock or Mock>=4.0)",
-        "topics": [],
+        "default_branch": "main",
+        "description": "Async variation of mock for python",
+        "topics": [
+          "async",
+          "mock",
+          "python"
+        ],
         "has_issues_enabled": true,
-        "build_system": null,
-        "test_command": null,
-        "lint_command": null,
-        "has_contributing_md": null,
-        "has_tests": null,
-        "project_type": null,
-        "key_conventions": null,
-        "last_profiled": "2026-02-13T02:28:03Z"
+        "last_profiled": "2026-02-13T10:51:33Z"
       },
       "sickcodes/Docker-OSX": {
         "language": "Shell",
@@ -3156,22 +3120,12 @@
         "last_profiled": "2026-02-13T02:26:45Z"
       },
       "progfay/shields-with-icon": {
-        "language": "Go",
-        "default_branch": "master",
-        "description": "Enjoy https://shields.io",
-        "topics": [
-          "badges",
-          "shields-io"
-        ],
+        "language": "TypeScript",
+        "default_branch": "main",
+        "description": "Deprecated: Shields.io with icon support",
+        "topics": [],
         "has_issues_enabled": true,
-        "build_system": null,
-        "test_command": null,
-        "lint_command": null,
-        "has_contributing_md": null,
-        "has_tests": null,
-        "project_type": null,
-        "key_conventions": null,
-        "last_profiled": "2026-02-13T02:27:59Z"
+        "last_profiled": "2026-02-13T10:51:33Z"
       },
       "Lekhak123/text-to-img-craiyon-scrapper": {
         "language": "JavaScript",
@@ -3265,22 +3219,14 @@
       "zed-industries/zed": {
         "language": "Rust",
         "default_branch": "main",
-        "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "description": "Code at the speed of thought",
         "topics": [
-          "text-editor",
-          "zed",
-          "gpui",
-          "rust-lang"
+          "editor",
+          "performance",
+          "zed"
         ],
         "has_issues_enabled": true,
-        "build_system": null,
-        "test_command": null,
-        "lint_command": null,
-        "has_contributing_md": null,
-        "has_tests": null,
-        "project_type": null,
-        "key_conventions": null,
-        "last_profiled": "2026-02-13T02:28:05Z"
+        "last_profiled": "2026-02-13T10:51:33Z"
       },
       "microsoft/vscode": {
         "language": "TypeScript",
@@ -5062,12 +5008,12 @@
       "dmzoneill-forks/go-binance": "2026-02-13T02:24:50Z",
       "dmzoneill-forks/headphones": "2026-02-13T02:24:59Z",
       "dmzoneill-forks/Jackett": "2026-02-13T02:24:57Z",
-      "dmzoneill-forks/cover-thumbnailer": "2026-02-13T02:25:00Z",
-      "dmzoneill-forks/dash-to-dock": "2026-02-13T02:25:15Z",
-      "dmzoneill-forks/zed": "2026-02-13T02:25:17Z",
+      "dmzoneill-forks/cover-thumbnailer": "2026-02-13T10:51:33Z",
+      "dmzoneill-forks/dash-to-dock": "2026-02-13T10:51:33Z",
+      "dmzoneill-forks/zed": "2026-02-13T10:51:33Z",
       "dmzoneill-forks/PHP_CodeSniffer": "2026-02-13T02:24:47Z",
       "dmzoneill-forks/fastmcp": "2026-02-13T02:25:16Z",
-      "dmzoneill-forks/spksrc": "2026-02-13T02:24:45Z",
+      "dmzoneill-forks/spksrc": "2026-02-13T10:51:33Z",
       "dmzoneill-forks/blogging-with-ai": "2026-02-13T02:25:14Z",
       "dmzoneill-forks/cryptopia-api-php": "2026-02-13T02:24:52Z",
       "dmzoneill-forks/PHP-Daemon": "2026-02-13T02:24:52Z",
@@ -5075,12 +5021,12 @@
       "dmzoneill-forks/webpack": "2026-02-13T02:25:11Z",
       "dmzoneill-forks/terminator": "2026-02-13T02:25:16Z",
       "dmzoneill-forks/intercom": "2026-02-13T02:25:04Z",
-      "dmzoneill-forks/core": "2026-02-13T02:25:02Z",
+      "dmzoneill-forks/core": "2026-02-13T10:51:33Z",
       "dmzoneill-forks/seedmage": "2026-02-13T02:25:07Z",
       "dmzoneill-forks/WiringPi": "2026-02-13T02:25:02Z",
       "dmzoneill-forks/webdis": "2026-02-13T02:24:54Z",
-      "dmzoneill-forks/deluge": "2026-02-13T02:24:59Z",
-      "dmzoneill-forks/nemo-extensions": "2026-02-13T02:24:45Z",
+      "dmzoneill-forks/deluge": "2026-02-13T10:51:33Z",
+      "dmzoneill-forks/nemo-extensions": "2026-02-13T10:51:33Z",
       "dmzoneill-forks/Freenove_RFID_Starter_Kit_for_Raspberry_Pi": "2026-02-13T02:25:01Z",
       "dmzoneill-forks/DoorButler": "2026-02-13T02:25:03Z",
       "dmzoneill-forks/trollolo": "2026-02-13T02:24:56Z",
@@ -5094,8 +5040,8 @@
       "dmzoneill-forks/incrediblepbx": "2026-02-13T02:25:05Z",
       "dmzoneill-forks/node-binance-api": "2026-02-13T02:24:47Z",
       "dmzoneill-forks/docker-ce": "2026-02-13T02:24:55Z",
-      "dmzoneill-forks/shields-with-icon": "2026-02-13T02:25:12Z",
-      "dmzoneill-forks/asyncmock": "2026-02-13T02:25:06Z",
+      "dmzoneill-forks/shields-with-icon": "2026-02-13T10:51:33Z",
+      "dmzoneill-forks/asyncmock": "2026-02-13T10:51:33Z",
       "dmzoneill-forks/mbp-fedora": "2026-02-13T02:25:10Z",
       "dmzoneill-forks/dockerfiles": "2026-02-13T02:24:58Z",
       "dmzoneill-forks/raspberry-pi-intercom": "2026-02-13T02:25:03Z",
@@ -5105,26 +5051,26 @@
       "dmzoneill-forks/Amazon-video-downloader": "2026-02-13T02:25:09Z",
       "dmzoneill-forks/DoorPi": "2026-02-13T02:25:05Z",
       "dmzoneill-forks/binance-enhancement-suite": "2026-02-13T02:24:49Z",
-      "dmzoneill-forks/doorbell-pi": "2026-02-13T02:25:04Z",
+      "dmzoneill-forks/doorbell-pi": "2026-02-13T10:51:33Z",
       "dmzoneill-forks/stockprediction": "2026-02-13T02:24:48Z",
       "dmzoneill-forks/fmt": "2026-02-13T02:24:51Z",
       "Redhat-forks/edge-frontend": "2026-02-13T02:23:50Z",
       "Redhat-forks/edge-api": "2026-02-13T02:23:49Z",
       "Redhat-forks/insights-analytics-collector": "2026-02-13T02:23:51Z",
-      "Redhat-forks/clowder": "2026-02-13T02:23:49Z",
+      "Redhat-forks/clowder": "2026-02-13T10:51:33Z",
       "Redhat-forks/galaxy_ng": "2026-02-13T02:23:51Z",
       "Redhat-forks/tower-analytics-frontend": "2026-02-13T02:23:48Z",
-      "Redhat-forks/awx": "2026-02-13T02:23:53Z",
+      "Redhat-forks/awx": "2026-02-13T10:51:33Z",
       "Redhat-forks/qontract-schemas": "2026-02-13T02:23:52Z",
-      "Redhat-forks/django-ansible-base": "2026-02-13T02:23:54Z",
+      "Redhat-forks/django-ansible-base": "2026-02-13T10:51:33Z",
       "Redhat-forks/ansible-sign": "2026-02-13T02:23:54Z",
       "Redhat-forks/tower": "2026-02-13T02:23:53Z",
-      "Redhat-forks/ansible-builder": "2026-02-13T02:23:55Z",
+      "Redhat-forks/ansible-builder": "2026-02-13T10:51:33Z",
       "Redhat-forks/awx-operator": "2026-02-13T02:23:57Z",
       "Redhat-forks/bonfire-tekton": "2026-02-13T02:23:56Z",
       "Redhat-forks/metrics-utility": "2026-02-13T02:23:56Z",
       "Redhat-forks/aap-gateway": "2026-02-13T02:23:57Z",
-      "Redhat-forks/ansible-runner": "2026-02-13T02:23:58Z",
+      "Redhat-forks/ansible-runner": "2026-02-13T10:51:33Z",
       "Redhat-forks/eda-server": "2026-02-13T02:23:59Z",
       "Redhat-forks/azure": "2026-02-13T02:23:59Z",
       "Redhat-forks/ansible-ai-connect-operator": "2026-02-13T02:24:00Z",
@@ -5132,7 +5078,7 @@
       "Redhat-forks/ansible": "2026-02-13T02:24:01Z",
       "Redhat-forks/ansible-navigator": "2026-02-13T02:24:02Z",
       "Redhat-forks/receptor": "2026-02-13T02:24:03Z",
-      "Redhat-forks/ansible-lint": "2026-02-13T02:24:01Z",
+      "Redhat-forks/ansible-lint": "2026-02-13T10:51:33Z",
       "Redhat-forks/vscode-ansible": "2026-02-13T02:24:03Z",
       "Redhat-forks/aap-azurerm": "2026-02-13T02:24:04Z",
       "Redhat-forks/handbook": "2026-02-13T02:24:04Z",
@@ -5144,7 +5090,7 @@
       "Redhat-forks/awx-plugins": "2026-02-13T02:24:09Z",
       "Redhat-forks/tower-packaging": "2026-02-13T02:24:08Z",
       "Redhat-forks/ansible-compat": "2026-02-13T02:24:09Z",
-      "Redhat-forks/ansible-dev-environment": "2026-02-13T02:24:10Z",
+      "Redhat-forks/ansible-dev-environment": "2026-02-13T10:51:33Z",
       "Redhat-forks/pytest-ansible": "2026-02-13T02:24:10Z",
       "Redhat-forks/ansible-creator": "2026-02-13T02:24:11Z",
       "Redhat-forks/event-driven-ansible": "2026-02-13T02:24:12Z",
@@ -5155,16 +5101,16 @@
       "Redhat-forks/ansible-podman-collections": "2026-02-13T02:24:14Z",
       "Redhat-forks/frontend-operator": "2026-02-13T02:24:16Z",
       "Redhat-forks/insights-mcp": "2026-02-13T02:24:17Z",
-      "Redhat-forks/podman-desktop": "2026-02-13T02:24:14Z",
+      "Redhat-forks/podman-desktop": "2026-02-13T10:51:33Z",
       "Redhat-forks/rhsm-subscriptions": "2026-02-13T02:24:17Z",
       "Redhat-forks/insights-host-inventory": "2026-02-13T02:24:16Z",
-      "Redhat-forks/insights-client": "2026-02-13T02:24:18Z",
+      "Redhat-forks/insights-client": "2026-02-13T10:51:33Z",
       "Redhat-forks/frontend-experience-docs": "2026-02-13T02:24:18Z",
       "Redhat-forks/widget-layout": "2026-02-13T02:24:19Z",
       "Redhat-forks/chrome-service-backend": "2026-02-13T02:24:19Z",
       "Redhat-forks/vulnerability-ui": "2026-02-13T02:24:20Z",
       "Redhat-forks/insights-advisor-frontend": "2026-02-13T02:24:22Z",
-      "Redhat-forks/rhc": "2026-02-13T02:24:21Z",
+      "Redhat-forks/rhc": "2026-02-13T10:51:33Z",
       "Redhat-forks/insights-inventory-frontend": "2026-02-13T02:24:20Z",
       "Redhat-forks/patchman-ui": "2026-02-13T02:24:22Z",
       "Redhat-forks/processing-tools": "2026-02-13T02:24:23Z",
@@ -5251,18 +5197,25 @@
       "dmzoneill-forks/etcd": "2026-02-12T22:48:33Z",
       "dmzoneill-forks/binance-official-api-docs": "2026-02-12T22:48:44Z",
       "dmzoneill-forks/filebot": "2026-02-12T22:48:50Z",
-      "dmzoneill-forks/Sonarr": "2026-02-12T22:48:54Z",
+      "dmzoneill-forks/Sonarr": "2026-02-13T10:51:33Z",
       "dmzoneill-forks/scripts": "2026-02-12T22:49:12Z",
       "dmzoneill-forks/markdown-badges": "2026-02-12T22:49:15Z",
       "dmzoneill-forks/ydotool": "2026-02-13T02:25:18Z",
       "dmzoneill-forks/ovai": "2026-02-13T02:25:19Z",
-      "Redhat-forks/bonfire": "2026-02-13T02:23:47Z",
+      "Redhat-forks/bonfire": "2026-02-13T10:51:33Z",
       "Redhat-forks/insights-frontend-builder-common": "2026-02-13T02:23:48Z",
       "Redhat-forks/insights-ingress-go": "2026-02-13T02:23:52Z",
       "RedHatInsights/bonfire": "2026-02-13T03:58:28.469870+00:00",
       "ansible/django-ansible-base": "2026-02-13T03:58:28.469870+00:00",
       "rembo10/headphones": "2026-02-13T03:58:28.469870+00:00",
-      "podman-desktop/podman-desktop": "2026-02-13T03:58:28.469870+00:00"
+      "podman-desktop/podman-desktop": "2026-02-13T03:58:28.469870+00:00",
+      "Redhat-forks/insights-core": "2026-02-13T10:51:33Z",
+      "Redhat-forks/insights-rbac": "2026-02-13T10:51:33Z",
+      "Redhat-forks/terminator": "2026-02-13T10:51:33Z",
+      "dmzoneill-forks/molecule": "2026-02-13T10:51:33Z",
+      "dmzoneill-forks/ansible-creator": "2026-02-13T10:51:33Z",
+      "dmzoneill-forks/metrics-utility": "2026-02-13T10:51:33Z",
+      "dmzoneill-forks/dataverse-integration": "2026-02-13T10:51:33Z"
     },
     "bug_fixes": [
       {
@@ -5443,25 +5396,28 @@
     "last_rebase_sync": "2026-02-12T12:21:32.267387+00:00"
   },
   "last_run": {
-    "timestamp": "2026-02-13T09:24:34Z",
-    "iteration": 22,
-    "rate_limit_remaining": 4642,
-    "repos_scanned": 96,
+    "timestamp": "2026-02-13T10:51:33Z",
+    "iteration": 23,
+    "rate_limit_remaining": 4905,
+    "repos_scanned": 10,
+    "repos_synced": 29,
     "actions_taken": [
-      "Created 15 new feature suggestions",
-      "Checked CI status on 34 open PRs - all passing or unfixable",
-      "Synced 21 forks with upstream",
-      "Updated 21 repo profiles",
-      "Scanned 10 repos for critical bugs",
-      "Found and fixed 1 critical authorization crash bug in r0bs/doorbell-pi",
-      "Created PR #16 on r0bs/doorbell-pi",
-      "Created issue #15 on r0bs/doorbell-pi"
+      "Created feature suggestion on r0bs/doorbell-pi #17",
+      "Synced 29 forks with upstream (2 failed: etcd, markdown-badges)",
+      "Verified CI status on 35 open PRs (12 passing, 4 external failures, 19 no-CI)",
+      "Scanned 10 repos for critical bugs (0 found in production code)",
+      "All 25 tracked upstream repos at max capacity (1 PR each)",
+      "Marked Jackett/Jackett #16578 comment as seen"
     ],
-    "errors": [],
+    "errors": [
+      "dmzoneill-forks/etcd sync failed: upstream changed default branch from master to main",
+      "dmzoneill-forks/markdown-badges sync failed: diverging changes require force flag"
+    ],
     "next_run_priorities": [
-      "Monitor all 35 open PRs for new comments",
-      "Continue monitoring CI status",
-      "Look for new fixable issues in repos below PR limit"
+      "Map remaining ~134 untracked forks to upstreams for new PR opportunities",
+      "Investigate data integrity issue with repo_pr_counts mismatches",
+      "Monitor CLA signatures on FreePBX/core PRs #172, #177",
+      "Monitor DVCS check on ansible/django-ansible-base #934"
     ]
   }
 }
