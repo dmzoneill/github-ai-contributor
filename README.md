@@ -1,8 +1,13 @@
 # github-ai-contributor
 
-Prompt-driven, headless AI system that autonomously contributes to open-source repositories. It monitors repos forked into the [`Redhat-forks`](https://github.com/Redhat-forks) and [`dmzoneill-forks`](https://github.com/dmzoneill-forks) GitHub orgs, scans their upstream repos for open issues, assesses whether it can fix them with >= 90% confidence, and submits PRs back to the upstream. It also suggests features.
+Prompt-driven, headless AI system that autonomously contributes to open-source
+repositories. It monitors repos forked into the
+[`Redhat-forks`](https://github.com/Redhat-forks) and
+[`dmzoneill-forks`](https://github.com/dmzoneill-forks) GitHub orgs, scans their
+upstream repos for open issues, assesses whether it can fix them with >= 90%
+confidence, and submits PRs back to the upstream. It also suggests features.
 
-Runs every 3 hours via GitHub Actions (1-hour timeout per run), fully headless using `claude -p`. Contains **no application code** — entirely orchestrated by [Claude Code](https://claude.ai/code) via markdown prompts.
+Runs every 3 hours via GitHub Actions (1-hour timeout per run), fully headless using `claude -p`. Contains **no application code** — entirely orchestrated by [Claude Code](https://claude.ai/code) via Markdown prompts.
 
 ## How It Works
 
@@ -60,13 +65,13 @@ graph TD
     style FK fill:#30363d,color:#fff
 ```
 
-| Agent | Role |
-|---|---|
+| Agent                | Role                                                                                  |
+| -------------------- | ------------------------------------------------------------------------------------- |
 | **Issue & Feedback** | Suggests features on upstream repos. Follows up on reviewer comments on our open PRs. |
-| **Pipeline Fix** | Monitors CI status on our PRs. Diagnoses and fixes failures. Handles merge conflicts. |
-| **Rebase Sync** | Keeps all forks synced with upstream via rebase. |
-| **Coding Fix** | The main worker. Scans issues, assesses confidence, implements fixes, creates PRs. |
-| **Bug Scanner** | Scans codebases for critical bugs, opens bug reports, implements fixes, creates PRs. |
+| **Pipeline Fix**     | Monitors CI status on our PRs. Diagnoses and fixes failures. Handles merge conflicts. |
+| **Rebase Sync**      | Keeps all forks synced with upstream via rebase.                                      |
+| **Coding Fix**       | The main worker. Scans issues, assesses confidence, implements fixes, creates PRs.    |
+| **Bug Scanner**      | Scans codebases for critical bugs, opens bug reports, implements fixes, creates PRs.  |
 
 ## Orchestration Flow
 
@@ -101,7 +106,7 @@ graph TD
 ## Safety Rails
 
 - **90% confidence threshold** before attempting any fix
-- **Max 3 open PRs per upstream repo**, balanced across repos
+- **Max 3 open PRs per upstream repository**, balanced across repos
 - **Max 5 fix attempts per iteration**, max 20 iterations per run
 - **Rate limit monitoring** — won't start if < 500 remaining, stops if < 200
 - **Commitlint validation** on all commits (conventional commit format)
@@ -110,11 +115,11 @@ graph TD
 - **Reads CONTRIBUTING.md** and upstream conventions before contributing
 - **Full PR ownership** — monitors, responds to reviews, fixes CI, rebases on conflicts
 - **Never works on self-created issues** — feature suggestions are for the community
-- **Max 2 bug fix PRs per upstream repo** — checks existing issues before reporting bugs
+- **Max 2 bugfix PRs per upstream repository** — checks existing issues before reporting bugs
 
 ## Project Structure
 
-```
+```text
 github-ai-contributor/
 ├── CLAUDE.md                     # Master specification for Claude Code
 ├── version                       # v0.0.1
@@ -132,7 +137,8 @@ github-ai-contributor/
 │       └── bug-scanner/          # Agent 5: critical bug detection + fix
 ├── .github/workflows/
 │   ├── contribute.yml            # Redhat-forks — every 3 hours
-│   ├── contribute-dmz.yml       # dmzoneill-forks — every 3 hours (offset)
+│   ├── contribute-dmz.yml        # dmzoneill-forks — every 3 hours (offset)
+│   ├── contribute-run.yml        # Shared contributor job
 │   └── main.yml                  # CI/CD dispatch wrapper
 └── .gitignore
 ```
@@ -142,6 +148,7 @@ github-ai-contributor/
 ### Automated (GitHub Actions)
 
 Two separate workflows run every 3 hours (offset by 1.5 hours so they don't overlap), each with a 1-hour timeout:
+
 - `contribute.yml` — Redhat-forks
 - `contribute-dmz.yml` — dmzoneill-forks
 
@@ -159,12 +166,12 @@ claude -p "/unleash"
 
 ## Environment Variables
 
-| Variable | Purpose |
-|---|---|
-| `GITHUB_TOKEN` / `PROFILE_HOOK` | GitHub API access |
-| `CLAUDE_CODE_USE_VERTEX` | Enable Vertex AI backend |
-| `ANTHROPIC_VERTEX_PROJECT_ID` | GCP project for Vertex |
-| `CLOUD_ML_REGION` | GCP region |
+| Variable                         | Purpose                      |
+| -------------------------------- | ---------------------------- |
+| `GITHUB_TOKEN` / `PROFILE_HOOK`  | GitHub API access            |
+| `CLAUDE_CODE_USE_VERTEX`         | Enable Vertex AI backend     |
+| `ANTHROPIC_VERTEX_PROJECT_ID`    | GCP project for Vertex       |
+| `CLOUD_ML_REGION`                | GCP region                   |
 | `GOOGLE_APPLICATION_CREDENTIALS` | Path to GCP credentials JSON |
 
 ## License
