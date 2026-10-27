@@ -1,5 +1,9 @@
 # github-ai-contributor
 
+<p align="center">
+  <img src=".github/logo.png" alt="github-ai-contributor logo" width="128" />
+</p>
+
 Prompt-driven, headless AI system that autonomously contributes to open-source
 repositories. It monitors repos forked into the
 [`Redhat-forks`](https://github.com/Redhat-forks) and
