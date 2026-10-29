@@ -11,7 +11,7 @@ permissions:
   contents: write
   issues: write
   pull-requests: write
-  id-token: write
+  id-token: write  # OIDC permission scope, not a token; nosemgrep
 
 jobs:
   contribute:
